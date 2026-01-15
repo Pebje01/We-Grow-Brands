@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
+    font-family: "PolySans Trial", "DM Sans", -apple-system, sans-serif;
     color: var(--text-dark);
     overflow-x: hidden;
     background: var(--cream);
