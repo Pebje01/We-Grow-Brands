@@ -1,0 +1,94 @@
+/**
+ * Button Components
+ */
+
+.hero-btn {
+    background: var(--white);
+    color: var(--green-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.cta-btn-primary {
+    background: var(--green-dark);
+    color: var(--white);
+    padding: 0.9rem 1.75rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.cta-btn-primary:hover {
+    background: var(--green-darker);
+    transform: translateY(-2px);
+}
+
+.cta-btn-secondary {
+    background: var(--white);
+    color: var(--text-dark);
+    padding: 0.9rem 1.75rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    border: 1px solid #ddd;
+}
+
+.cta-btn-secondary:hover {
+    background: var(--cream-dark);
+}
+
+/* Feature Link */
+.feature-link {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: gap 0.3s;
+}
+
+.feature-link:hover {
+    gap: 0.75rem;
+}
+
+/* CTA Box Button */
+.cta-box-btn {
+    background: var(--lila);
+    color: var(--green-dark);
+    padding: 0.6rem 1.25rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}

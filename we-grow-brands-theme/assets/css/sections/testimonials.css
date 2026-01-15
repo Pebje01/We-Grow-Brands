@@ -1,0 +1,33 @@
+/**
+ * Testimonials Section
+ */
+
+.testimonials-section {
+    background: var(--green-dark);
+    padding: 6rem 2rem;
+}
+
+.testimonials-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.testimonials-title {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--white);
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+.testimonials-title span {
+    color: var(--lila);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}

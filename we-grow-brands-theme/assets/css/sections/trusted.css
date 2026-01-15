@@ -1,0 +1,36 @@
+/**
+ * Trusted Logos Section
+ */
+
+.trusted-section {
+    background: var(--cream);
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.trusted-text {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.trusted-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    opacity: 0.5;
+}
+
+.trusted-logo {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}

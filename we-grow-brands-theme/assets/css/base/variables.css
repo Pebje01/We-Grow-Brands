@@ -1,0 +1,28 @@
+/**
+ * Variables & Fonts
+ * Theme color palette and typography
+ */
+
+@font-face {
+    font-family: "PolySans Trial";
+    src: url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.woff2") format("woff2"),
+         url("https://db.onlinewebfonts.com/t/e11df7e4dd48a1610e5daa2afb643b75.woff") format("woff");
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    /* Brand Colors */
+    --lila: #EAD7FF;
+    --lila-light: #F5EDFF;
+    --green-dark: #03483A;
+    --green-darker: #022E26;
+    --green-accent: #0A5C4A;
+
+    /* Neutral Colors */
+    --cream: #F7F3ED;
+    --cream-dark: #EBE5DC;
+    --white: #FFFFFF;
+    --text-dark: #1a1a1a;
+    --text-muted: #6B6B6B;
+}

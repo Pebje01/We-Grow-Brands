@@ -1,0 +1,244 @@
+/**
+ * Hero Section
+ */
+
+.hero {
+    min-height: 100vh;
+    background: var(--green-dark);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-top-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--green-accent);
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 2rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Hero Typography */
+.hero h1 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--white);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.15;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    text-align: center;
+    max-width: 480px;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Curved Icon Path */
+.curved-icons-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.curved-path-wrapper {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    left: -50%;
+    top: 10%;
+}
+
+.app-icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.app-icon:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Position icons along S-curve - Left side going down-right */
+.app-icon:nth-child(1) { left: 8%; top: 25%; background: linear-gradient(135deg, #00D4AA, #00B894); }
+.app-icon:nth-child(2) { left: 12%; top: 35%; background: #7B68EE; color: white; }
+.app-icon:nth-child(3) { left: 14%; top: 45%; background: #FFE135; }
+.app-icon:nth-child(4) { left: 18%; top: 52%; background: #4ECDC4; }
+.app-icon:nth-child(5) { left: 22%; top: 58%; background: #FF6B6B; color: white; }
+.app-icon:nth-child(6) { left: 27%; top: 62%; background: #45B7D1; }
+.app-icon:nth-child(7) { left: 32%; top: 65%; background: #F39C12; }
+.app-icon:nth-child(8) { left: 37%; top: 66%; background: #9B59B6; color: white; }
+.app-icon:nth-child(9) { left: 42%; top: 65%; background: var(--white); }
+.app-icon:nth-child(10) { left: 47%; top: 62%; background: #1DA1F2; color: white; }
+
+/* Right side going up */
+.app-icon:nth-child(11) { left: 55%; top: 58%; background: #FF4757; color: white; }
+.app-icon:nth-child(12) { left: 60%; top: 52%; background: #2ED573; }
+.app-icon:nth-child(13) { left: 65%; top: 44%; background: #5352ED; color: white; }
+.app-icon:nth-child(14) { left: 69%; top: 36%; background: #FF6348; color: white; }
+.app-icon:nth-child(15) { left: 72%; top: 28%; background: #00D9FF; }
+.app-icon:nth-child(16) { left: 76%; top: 22%; background: var(--lila); }
+.app-icon:nth-child(17) { left: 80%; top: 18%; background: #26DE81; }
+.app-icon:nth-child(18) { left: 85%; top: 20%; background: #4834D4; color: white; }
+.app-icon:nth-child(19) { left: 88%; top: 26%; background: #EB3B5A; color: white; }
+.app-icon:nth-child(20) { left: 90%; top: 34%; background: #20BF6B; }
+
+/* Phone Mockup */
+.phone-mockup {
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    height: 560px;
+    background: var(--green-darker);
+    border-radius: 40px;
+    border: 3px solid rgba(255,255,255,0.1);
+    padding: 12px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+    z-index: 20;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+    border-radius: 32px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.phone-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.phone-name {
+    color: white;
+    font-size: 0.95rem;
+}
+
+.phone-messages {
+    flex: 1;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.message {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.message.received {
+    background: #2a2a2a;
+    color: rgba(255,255,255,0.9);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.message.sent {
+    background: #3a3a3a;
+    color: rgba(255,255,255,0.8);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.phone-input {
+    padding: 1rem;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phone-mic {
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.voice-wave {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 0.5rem;
+}
+
+.voice-wave span {
+    width: 3px;
+    background: white;
+    border-radius: 2px;
+    animation: wave 1s ease-in-out infinite;
+}
+
+.voice-wave span:nth-child(1) { height: 8px; animation-delay: 0s; }
+.voice-wave span:nth-child(2) { height: 16px; animation-delay: 0.1s; }
+.voice-wave span:nth-child(3) { height: 12px; animation-delay: 0.2s; }
+.voice-wave span:nth-child(4) { height: 20px; animation-delay: 0.3s; }
+.voice-wave span:nth-child(5) { height: 8px; animation-delay: 0.4s; }
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.5); }
+}
+
+/* Bottom Accent Line */
+.hero-bottom-accent {
+    height: 8px;
+    background: var(--green-accent);
+    width: 100%;
+}
