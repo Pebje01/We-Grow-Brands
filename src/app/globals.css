@@ -22,6 +22,16 @@ h6 {
   font-weight: 400;
 }
 
+h1 {
+  font-size: 80px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 70px;
+  line-height: 1.1;
+}
+
 h3 {
   font-style: italic;
 }
@@ -36,17 +46,26 @@ h3 {
 
 .btn-spring {
   transition: background-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.btn-uniform {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .btn-spring:hover .btn-text {
-  animation: grow-pop 600ms cubic-bezier(0.2, 0.8, 0.2, 1.2);
+  animation: grow-wave 520ms cubic-bezier(0.2, 0.8, 0.2, 1.1);
 }
 
-@keyframes grow-pop {
-  0% { transform: scale(1); }
-  55% { transform: scale(1.18); }
-  85% { transform: scale(0.96); }
-  100% { transform: scale(1); }
+@keyframes grow-wave {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.1) translateY(-2px); }
+  55% { transform: scale(1.04) translateY(3px); }
+  75% { transform: scale(1.06) translateY(-1px); }
+  100% { transform: scale(1) translateY(0); }
 }
 
 .serif-header {
@@ -56,6 +75,34 @@ h3 {
   font-size: 1em;
   line-height: 1;
   letter-spacing: -0.01em;
+}
+
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  animation: logo-scroll 24s linear infinite;
+  opacity: 0.55;
+}
+
+.logo-item {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 1.1rem;
+  color: #3b3b3b;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* Custom animations */

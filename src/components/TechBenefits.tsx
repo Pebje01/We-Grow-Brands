@@ -1,82 +1,72 @@
 const benefits = [
   {
-    tech: 'AI-powered performance optimization',
     icon: '🤖',
+    tech: 'AI-powered performance optimization',
     description: 'Slimme AI houdt automatisch de techniek van je website in orde, zodat alles gewoon lekker blijft werken.',
-    color: 'bg-lila',
-    textColor: 'text-green-dark',
+    bgColor: 'bg-lila-light',
   },
   {
-    tech: 'Core Web Vitals',
     icon: '✓✓✓',
+    tech: 'Core Web Vitals',
     description: 'Snelle websites, minder afhakers en goed voor je Google ranking',
-    color: 'bg-cream',
-    textColor: 'text-green-dark',
+    bgColor: 'bg-cream',
   },
   {
-    tech: 'Google Cloud Hosting',
     icon: '☁️',
+    tech: 'Google Cloud Hosting',
     description: 'Je website draait op dezelfde techniek als Google zelf. Supersnel, superbetrouwbaar.',
-    color: 'bg-green-dark',
-    textColor: 'text-white',
+    bgColor: 'bg-lila-light',
   },
   {
-    tech: '99.9% Uptime',
     icon: '⚡',
+    tech: '99.9% Uptime',
     description: 'Je website is praktisch altijd online.',
-    color: 'bg-lila-light',
-    textColor: 'text-green-dark',
+    bgColor: 'bg-cream',
   },
   {
-    tech: 'SSL · Firewall · DDoS protection · Malware scanning',
     icon: '🔒',
+    tech: 'SSL · Firewall · DDoS protection · Malware scanning',
     description: 'Alles wat voorkomt dat je site wordt gehackt of misbruikt.',
-    color: 'bg-green-dark',
-    textColor: 'text-white',
+    bgColor: 'bg-lila-light',
   },
   {
-    tech: 'Automatische backups · One-click restore',
     icon: '💾',
+    tech: 'Automatische backups · One-click restore',
     description: 'Alles om fouten of problemen direct te kunnen herstellen.',
-    color: 'bg-cream',
-    textColor: 'text-green-dark',
+    bgColor: 'bg-cream',
   },
   {
-    tech: 'Caching · Image Optimization · Server-side optimization',
     icon: '🚀',
+    tech: 'Caching · Image Optimization · Server-side optimization',
     description: 'Alles wat zorgt dat je site snel laadt en prettig werkt.',
-    color: 'bg-lila',
-    textColor: 'text-green-dark',
+    bgColor: 'bg-lila-light',
   },
 ]
 
 export default function TechBenefits() {
   return (
-    <section className="bg-[#1a1a1a] py-20 px-8">
+    <section className="bg-cream py-20 px-8">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-4">
+          <h2 className="text-text-dark leading-tight mb-4">
             <span className="font-serif">Oké, en nu even in </span>{' '}
-            <span className="serif-header text-lila">gewone mensentaal</span>
+            <span className="serif-header">gewone mensentaal</span>
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-text-muted max-w-2xl mx-auto">
             Achter elke website zit solide techniek. Dit is wat jouw website krijgt.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className={`${benefit.color} p-6 rounded-[30px] hover:-translate-y-1 transition-transform duration-300`}
-            >
-              <span className="text-2xl block mb-3">{benefit.icon}</span>
-              <p className={`${benefit.textColor} text-sm font-medium mb-2`}>{benefit.tech}</p>
-              <p className={`${benefit.textColor === 'text-white' ? 'text-white/70' : 'text-text-muted'} text-xs leading-relaxed`}>
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+        <div className="bg-white rounded-3xl p-8 border border-black/5 max-w-lg mx-auto">
+          <div className="space-y-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className={`${benefit.bgColor} p-5 rounded-xl`}>
+                <span className="text-2xl block mb-2">{benefit.icon}</span>
+                <p className="text-green-dark text-sm font-medium mb-1">{benefit.tech}</p>
+                <p className="text-text-muted text-xs leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

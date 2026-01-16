@@ -1,34 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-
-const WavyText = ({ text }: { text: string }) => {
-  return (
-    <span className="wave-text">
-      {text.split('').map((char, i) => (
-        <span key={i} style={{ animationDelay: `${i * 0.05}s` }}>
-          {char === ' ' ? '\u00A0' : char}
-        </span>
-      ))}
-    </span>
-  )
-}
+import WavyText from '@/components/WavyText'
 
 export default function Features() {
   return (
-    <section id="features" className="bg-cream py-20 px-8">
+    <section id="features" className="bg-[#1a1a1a] py-20 px-8 rounded-[30px]">
       <div className="max-w-6xl mx-auto">
         {/* Feature 1 */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight mb-5">
+            <h2 className="text-white leading-tight mb-5">
               <span className="font-serif">Strategische websites</span>{' '}
-              <span className="serif-header">voor merkversterking</span>
+              <span className="serif-header text-lila">voor merkversterking</span>
             </h2>
-            <p className="text-text-muted leading-relaxed mb-6">
+            <p className="text-white/70 leading-relaxed mb-6">
               Elk project begint met diepgaande strategie. We analyseren uw doelgroep, concurrentie en ambities om een website te creëren die niet alleen esthetisch uitblinkt, maar ook daadwerkelijk resultaten behaalt.
             </p>
-            <Link href="#" className="link-wave text-green-dark text-sm">
+            <Link href="#" className="link-wave text-lila text-sm">
               <WavyText text="Bekijk onze aanpak" />
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -66,14 +55,14 @@ export default function Features() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-text-dark leading-tight mb-5">
+            <h2 className="text-white leading-tight mb-5">
               <span className="font-serif">SEO & Performance</span>{' '}
-              <span className="serif-header">geïntegreerd</span>
+              <span className="serif-header text-lila">geïntegreerd</span>
             </h2>
-            <p className="text-text-muted leading-relaxed mb-6">
+            <p className="text-white/70 leading-relaxed mb-6">
               Elke website wordt gebouwd met zoekmachineoptimalisatie en prestaties als fundament. Geen nazorg nodig - vanaf de lancering bent u optimaal vindbaar en snel.
             </p>
-            <Link href="#" className="link-wave text-green-dark text-sm">
+            <Link href="#" className="link-wave text-lila text-sm">
               <WavyText text="Meer over onze tech stack" />
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>

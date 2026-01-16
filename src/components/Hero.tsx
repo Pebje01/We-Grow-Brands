@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 import Link from 'next/link'
+import WavyText from '@/components/WavyText'
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -26,7 +27,7 @@ export default function Hero() {
   }, [])
 
   return (
- <section className="min-h-screen bg-green-dark relative overflow-hidden flex flex-col pt-6">       {/* Floating Icons */}
+ <section className="min-h-screen bg-green-dark relative overflow-hidden flex flex-col pt-6 rounded-b-[30px]">       {/* Floating Icons */}
  <div ref={containerRef} className="absolute inset-0 pointer-events-none overflow-hidden">  <div className="absolute inset-0">           <div
             data-parallax="1.2"
  className="absolute left-[6%] bottom-[2%] w-[520px] max-w-[70vw] aspect-[5/3] rounded-[28px] bg-cream border-2 border-cream/80 shadow-[0_25px_80px_rgba(0,0,0,0.35)]"           >
@@ -44,21 +45,28 @@ export default function Hero() {
 
       {/* Hero Content */}
  <div className="flex-1 flex flex-col items-center justify-center pt-20 px-8 relative z-10">         {/* Platform Pills */}
- <div className="flex gap-2 mb-8">  <span className="bg-white text-text-dark px-4 py-2 rounded-full text-sm flex items-center gap-2">  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">               <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+ <div className="flex gap-1.5 mb-4">
+          <span className="bg-white text-text-dark px-3 py-1 rounded-full text-xs flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+              <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
             </svg>
             Websites
           </span>
- <span className="bg-white text-text-dark px-4 py-2 rounded-full text-sm flex items-center gap-2">  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <span className="bg-white text-text-dark px-3 py-1 rounded-full text-xs flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
             </svg>
             Branding
           </span>
- <span className="bg-white text-text-dark px-4 py-2 rounded-full text-sm flex items-center gap-2">  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">               <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <span className="bg-white text-text-dark px-3 py-1 rounded-full text-xs flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
             </svg>
             Webshops
           </span>
         </div>
 
- <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight text-center max-w-3xl mb-6">  <span className="font-serif ">Meer dan websites.</span>           <br />
+ <h1 className="text-white leading-tight text-center max-w-3xl mb-6">  <span className="font-serif ">Meer dan websites.</span>           <br />
  <span className="serif-header">Wij bouwen merken.</span>         </h1>
 
  <p className="text-white/70 text-center max-w-lg leading-relaxed mb-8">           Professionele websites die uw merk versterken en converteren. Nu ook bereikbaar voor ambitieuze ondernemers dankzij flexibele betalingsmogelijkheden.
@@ -66,8 +74,8 @@ export default function Hero() {
 
         <Link
           href="#diensten"
- className="btn-spring bg-white text-green-dark px-6 py-3 rounded-full hover:bg-lila hover:text-green-dark hover:shadow-xl transition-all"         >
-          <span className="btn-text inline-block">Bekijk ons werk</span>
+ className="btn-spring btn-uniform link-wave bg-white text-green-dark hover:bg-lila hover:text-green-dark hover:shadow-xl transition-all"         >
+          <WavyText text="Bekijk ons werk" />
         </Link>
       </div>
 

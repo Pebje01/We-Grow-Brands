@@ -1,8 +1,9 @@
 import Link from 'next/link'
+import WavyText from '@/components/WavyText'
 
 export default function Stats() {
   return (
- <section className="bg-cream py-24 px-8">  <div className="max-w-6xl mx-auto text-center">  <h2 className="text-4xl md:text-5xl lg:text-6xl text-text-dark leading-tight mb-2">  <span className="highlight-title">  <span className="font-serif ">Premium kwaliteit,</span>{' '}  <span className="serif-header">snelle realisatie</span>           </span>
+ <section className="bg-cream py-24 px-8">  <div className="max-w-6xl mx-auto text-center">  <h2 className="text-text-dark leading-tight mb-2">  <span className="highlight-title">  <span className="font-serif ">Premium kwaliteit,</span>{' '}  <span className="serif-header">snelle realisatie</span>           </span>
         </h2>
 
  <p className="text-text-muted text-lg max-w-2xl mx-auto mt-8 mb-10 leading-relaxed">           Voor mooie merken die uitblinken. Wij leveren high-end websites met professionele kwaliteit,
@@ -12,13 +13,13 @@ export default function Stats() {
         {/* CTA Buttons */}
  <div className="flex gap-4 justify-center mb-16">           <Link
             href="#contact"
- className="btn-spring bg-green-dark text-white px-7 py-3 rounded-full flex items-center gap-2 hover:bg-lila hover:text-green-dark transition-all"           >
-            <span className="btn-text inline-flex items-center gap-2"><span>🚀</span> Start Project</span>
+ className="btn-spring btn-uniform link-wave bg-green-dark text-white flex items-center gap-2 hover:bg-lila hover:text-green-dark transition-all"           >
+            <WavyText text="🚀 Start Project" />
           </Link>
           <Link
             href="#diensten"
- className="btn-spring bg-white text-text-dark px-7 py-3 rounded-full flex items-center gap-2 border border-gray-200 hover:bg-lila hover:text-green-dark transition-all"           >
-            <span className="btn-text inline-flex items-center gap-2"><span>📋</span> Bekijk Pakketten</span>
+ className="btn-spring btn-uniform link-wave bg-white text-text-dark flex items-center gap-2 hover:bg-lila hover:text-green-dark transition-all"           >
+            <WavyText text="📋 Bekijk Pakketten" />
           </Link>
         </div>
 

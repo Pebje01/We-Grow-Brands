@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import WavyText from '@/components/WavyText'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -33,8 +34,8 @@ export default function Navbar() {
 
  <div className="flex items-center gap-6">         <Link
           href="#contact"
- className="btn-spring bg-white text-green-dark px-5 py-2 rounded-lg text-sm hover:bg-lila hover:text-green-dark hover:shadow-lg transition-all"         >
-          <span className="btn-text inline-block">Start Project →</span>
+ className="btn-spring btn-uniform link-wave bg-white text-green-dark hover:bg-lila hover:text-green-dark hover:shadow-lg transition-all"         >
+          <WavyText text="Start Project →" />
         </Link>
       </div>
     </nav>

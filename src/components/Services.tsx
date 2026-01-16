@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <section id="diensten" className="bg-lila-light py-24 px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-text-dark mb-4">
+        <h2 className="text-text-dark mb-4">
           <span className="font-serif">Kies een website</span>{' '}
           <span className="serif-header">bij de fase van jouw bedrijf</span>
         </h2>

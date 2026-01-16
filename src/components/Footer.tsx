@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import WavyText from '@/components/WavyText'
 
 export default function Footer() {
   return (
@@ -30,11 +31,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
- <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">  <p className="text-white/40 text-sm">© 2026 We Grow Brands. Alle rechten voorbehouden.</p>  <div className="flex gap-3">  <Link href="#" className="btn-spring w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <span className="btn-text inline-block">in</span>
+ <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">  <p className="text-white/40 text-sm">© 2026 We Grow Brands. Alle rechten voorbehouden.</p>  <div className="flex gap-3">  <Link href="#" className="btn-spring link-wave w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <WavyText text="in" />
             </Link>
- <Link href="#" className="btn-spring w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <span className="btn-text inline-block">ig</span>
+ <Link href="#" className="btn-spring link-wave w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <WavyText text="ig" />
             </Link>
- <Link href="#" className="btn-spring w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <span className="btn-text inline-block">wa</span>
+ <Link href="#" className="btn-spring link-wave w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-lila hover:bg-lila hover:text-green-dark transition-all text-sm">               <WavyText text="wa" />
             </Link>
           </div>
         </div>
