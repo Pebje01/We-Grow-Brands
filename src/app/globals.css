@@ -104,10 +104,11 @@ h3 {
   border-radius: 4px;
 }
 
-/* Link wave hover effect */
+/* Wavy text hover effect */
 .link-wave {
-  position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: color 300ms ease;
 }
 
@@ -115,28 +116,20 @@ h3 {
   color: #EAD7FF;
 }
 
-.link-wave::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #EAD7FF;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 300ms ease;
+.link-wave:hover .wave-text span {
+  animation: text-wave 1s ease-in-out infinite;
 }
 
-.link-wave:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-  animation: link-wave 600ms ease-in-out;
+.wave-text {
+  display: inline-flex;
 }
 
-@keyframes link-wave {
-  0%, 100% { transform: scaleX(1) scaleY(1); }
-  25% { transform: scaleX(1) scaleY(1.5); }
-  50% { transform: scaleX(1) scaleY(0.8); }
-  75% { transform: scaleX(1) scaleY(1.2); }
+.wave-text span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+@keyframes text-wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
