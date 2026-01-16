@@ -22,6 +22,7 @@ const config: Config = {
       fontFamily: {
         'serif': ['Instrument Serif', 'Georgia', 'serif'],
         'sans': ['DM Sans', '-apple-system', 'sans-serif'],
+        'uxum': ['Uxum Grotesque', 'DM Sans', 'sans-serif'],
       },
     },
   },

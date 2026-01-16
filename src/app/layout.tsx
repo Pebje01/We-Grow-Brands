@@ -1,7 +1,25 @@
 import type { Metadata } from 'next'
+import { Instrument_Serif } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-instrument-serif',
+  display: 'swap',
+})
+
+const polysansSlim = localFont({
+  src: '../../public/fonts/polysanstrial-slim.otf',
+  weight: '400',
+  style: 'normal',
+  variable: '--font-polysans',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'We Grow Brands | Premium Website Diensten',
@@ -15,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl">
-      <body className="font-sans text-text-dark bg-cream">
+    <html lang="nl" className={`${instrumentSerif.variable} ${polysansSlim.variable}`}>
+      <body className={`${polysansSlim.className} text-text-dark bg-cream`}>
         <Navbar />
         <main>{children}</main>
         <Footer />
