@@ -20,13 +20,13 @@ export default function Footer() {
           {/* Bedrijf */}
           <div className="lg:text-center">
  <h4 className="text-white text-base mb-5 font-serif italic">Bedrijf</h4>
- <ul className="space-y-1">  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Over Ons</Link></li>  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Portfolio</Link></li>  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Blog</Link></li>  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Contact</Link></li>             </ul>
+ <ul className="space-y-1">  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Over Ons</Link></li>  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Portfolio</Link></li>  <li><Link href="/faq" className="text-white/60 hover:text-lila text-sm transition-colors">FAQ</Link></li>  <li><Link href="#" className="text-white/60 hover:text-lila text-sm transition-colors">Blog</Link></li>  <li><Link href="/contact" className="text-white/60 hover:text-lila text-sm transition-colors">Contact</Link></li>             </ul>
           </div>
 
           {/* Contact */}
           <div className="lg:text-center">
  <h4 className="text-white text-base mb-5 font-serif italic">Contact</h4>
- <ul className="space-y-1">  <li><Link href="mailto:hello@wegrowbrands.nl" className="text-white/60 hover:text-lila text-sm transition-colors">hello@wegrowbrands.nl</Link></li>  <li><Link href="tel:+31612345678" className="text-white/60 hover:text-lila text-sm transition-colors">+31 6 12345678</Link></li>  <li><span className="text-white/60 text-sm">KvK: 12345678</span></li>             </ul>
+ <ul className="space-y-1">  <li><Link href="mailto:hello@wegrowbrands.online" className="text-white/60 hover:text-lila text-sm transition-colors">hello@wegrowbrands.online</Link></li>  <li><Link href="tel:+31636162639" className="text-white/60 hover:text-lila text-sm transition-colors">06 36 16 26 39</Link></li>  <li><span className="text-white/60 text-sm">KvK: 12345678</span></li>             </ul>
           </div>
         </div>
 

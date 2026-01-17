@@ -12,13 +12,13 @@ export default function Stats() {
 
         {/* CTA Buttons */}
  <div className="flex gap-4 justify-center mb-16">           <Link
-            href="#contact"
+            href="/contact"
  className="btn-spring btn-uniform link-wave bg-green-dark text-white flex items-center gap-2 hover:bg-lila hover:text-green-dark transition-all"           >
-            <WavyText text="🚀 Start Project" />
+            <WavyText text="→ Vraag website aan" />
           </Link>
           <Link
             href="#diensten"
- className="btn-spring btn-uniform link-wave bg-white text-text-dark flex items-center gap-2 hover:bg-lila hover:text-green-dark transition-all"           >
+ className="btn-spring btn-uniform link-wave bg-lila text-green-dark flex items-center gap-2 hover:bg-[#D6BCFF] hover:text-green-dark transition-all"           >
             <WavyText text="📋 Bekijk Pakketten" />
           </Link>
         </div>

@@ -23,6 +23,17 @@ const config: Config = {
         'serif': ['Instrument Serif', 'Georgia', 'serif'],
         'sans': ['DM Sans', '-apple-system', 'sans-serif'],
         'uxum': ['Uxum Grotesque', 'DM Sans', 'sans-serif'],
+        'polysans-wide': ['var(--font-polysans-wide)', 'sans-serif'],
+      },
+      animation: {
+        'shimmer': 'shimmer 2s ease-in-out infinite',
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '100% 50%' },
+          '50%': { backgroundPosition: '0% 50%' },
+          '100%': { backgroundPosition: '100% 50%' },
+        },
       },
     },
   },

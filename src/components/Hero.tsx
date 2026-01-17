@@ -1,50 +1,110 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import WavyText from '@/components/WavyText'
+import WavyTitle from '@/components/WavyTitle'
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const layers = container.querySelectorAll('[data-parallax]')
+
     const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current) return
-      const layers = containerRef.current.querySelectorAll('[data-parallax]')
       const mouseX = e.clientX / window.innerWidth
       const mouseY = e.clientY / window.innerHeight
 
       layers.forEach((layer) => {
         const speed = Number((layer as HTMLElement).dataset.parallax) || 1
-        const x = (mouseX - 0.5) * speed * 18
-        const y = (mouseY - 0.5) * speed * 18
-        ;(layer as HTMLElement).style.transform = `translate(${x}px, ${y}px)`
+        const x = (mouseX - 0.5) * speed * 50
+        const y = (mouseY - 0.5) * speed * 50
+        ;(layer as HTMLElement).style.transform = `translate3d(${x}px, ${y}px, 0)`
       })
     }
 
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    document.addEventListener('mousemove', handleMouseMove)
+    return () => document.removeEventListener('mousemove', handleMouseMove)
   }, [])
 
   return (
- <section className="min-h-screen bg-green-dark relative overflow-hidden flex flex-col pt-6 rounded-b-[30px]">       {/* Floating Icons */}
- <div ref={containerRef} className="absolute inset-0 pointer-events-none overflow-hidden">  <div className="absolute inset-0">           <div
-            data-parallax="1.2"
- className="absolute left-[6%] bottom-[2%] w-[520px] max-w-[70vw] aspect-[5/3] rounded-[28px] bg-cream border-2 border-cream/80 shadow-[0_25px_80px_rgba(0,0,0,0.35)]"           >
- <div className="absolute top-3 left-4 flex gap-2">  <span className="w-3 h-3 rounded-full bg-red-400"></span>  <span className="w-3 h-3 rounded-full bg-yellow-300"></span>  <span className="w-3 h-3 rounded-full bg-green-400"></span>             </div>
- <div className="absolute top-10 left-6 right-6 h-8 rounded-full bg-white/80 border border-black/10"></div>  <div className="absolute top-24 left-6 right-6 bottom-6 rounded-2xl bg-black/90 border border-black/10 overflow-hidden">  <div className="absolute top-5 left-5 right-5 h-10 rounded-xl bg-white/10"></div>  <div className="absolute top-20 left-5 w-1/2 h-6 rounded-lg bg-white/10"></div>  <div className="absolute top-30 left-5 w-3/4 h-6 rounded-lg bg-white/10"></div>  <div className="absolute bottom-6 left-5 w-2/3 h-10 rounded-xl bg-white/10"></div>             </div>
+    <section className="min-h-screen md:min-h-screen lg:min-h-[110vh] xl:min-h-[115vh] bg-green-dark relative overflow-hidden flex flex-col pt-8 pb-24 rounded-b-[30px]">
+      {/* Device Mockups */}
+      <div ref={containerRef} className="absolute inset-0 pointer-events-none">
+        {/* Laptop Mockup - Floating below text on mobile/tablet, parallax on desktop */}
+        <div
+          data-parallax="1.2"
+          className="absolute left-1/2 animate-float-laptop lg:animate-none lg:-translate-x-0 lg:left-[10%] lg:translate-x-0 bottom-[3%] md:bottom-[12%] lg:bottom-auto lg:top-[48%] w-[280px] md:w-[420px] lg:w-[580px] 2xl:w-[720px] max-w-[75vw] md:max-w-[65vw] aspect-[5/3] rounded-[24px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_30px_100px_rgba(0,0,0,0.6)] lg:transition-transform lg:duration-150 lg:ease-out"
+        >
+          {/* Browser dots */}
+          <div className="absolute top-2.5 left-4 flex gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-red-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500"></span>
           </div>
+          {/* URL bar */}
+          <div className="absolute top-8 left-4 right-4 h-6 rounded-full bg-[#333] border border-[#444]"></div>
+          {/* Screen content */}
+          <div className="absolute top-16 left-4 right-4 bottom-4 rounded-xl bg-black overflow-hidden">
+            <Image
+              src="/header-screenshot-laptop.jpeg"
+              alt="Website preview"
+              fill
+              sizes="(min-width: 1024px) 520px, 65vw"
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
 
-          <div
-            data-parallax="2"
- className="absolute right-[10%] top-[28%] w-[200px] max-w-[42vw] aspect-[9/19] rounded-[34px] bg-cream border-2 border-cream/80 shadow-[0_18px_60px_rgba(0,0,0,0.35)]"           >
- <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-2 rounded-full bg-black/10"></div>  <div className="absolute top-8 left-3 right-3 bottom-3 rounded-[28px] bg-black/90 border border-black/10 overflow-hidden">  <div className="absolute top-4 left-4 right-4 h-8 rounded-xl bg-white/10"></div>  <div className="absolute top-16 left-4 w-2/3 h-5 rounded-lg bg-white/10"></div>  <div className="absolute top-24 left-4 w-3/4 h-5 rounded-lg bg-white/10"></div>  <div className="absolute top-32 left-4 right-4 h-20 rounded-2xl bg-white/10"></div>  <div className="absolute bottom-6 left-4 right-4 h-10 rounded-xl bg-white/10"></div>             </div>
+        {/* iPhone Mockup 1 - Right side front - hidden on tablet and mobile */}
+        <div
+          data-parallax="2"
+          className="hidden lg:block absolute right-[8%] lg:right-[12%] top-[32%] lg:top-[28%] w-[140px] lg:w-[180px] 2xl:w-[220px] aspect-[9/19] rounded-[36px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.6)] transition-transform duration-150 ease-out z-10"
+        >
+          {/* Notch */}
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
+          {/* Screen content */}
+          <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
+            <Image
+              src="/iphone-screenshot.jpeg"
+              alt="Mobile website preview"
+              fill
+              sizes="(min-width: 1024px) 150px, 25vw"
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* iPhone Mockup 2 - Right side back - hidden on tablet and mobile */}
+        <div
+          data-parallax="1.5"
+          className="hidden lg:block absolute right-[18%] lg:right-[22%] top-[38%] lg:top-[32%] w-[120px] lg:w-[160px] 2xl:w-[200px] aspect-[9/19] rounded-[36px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.6)] transition-transform duration-150 ease-out -rotate-6"
+        >
+          {/* Notch */}
+          <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
+          {/* Screen content */}
+          <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
+            <Image
+              src="/header-screenshot-laptop.jpeg"
+              alt="Mobile website preview 2"
+              fill
+              sizes="(min-width: 1024px) 130px, 22vw"
+              className="object-cover object-top"
+              priority
+            />
           </div>
         </div>
       </div>
 
       {/* Hero Content */}
- <div className="flex-1 flex flex-col items-center justify-center pt-20 px-8 relative z-10">         {/* Platform Pills */}
+      <div className="flex-1 flex flex-col items-center justify-start pt-32 lg:pt-28 px-8 relative z-10">
+        {/* Platform Pills */}
  <div className="flex gap-1.5 mb-4">
           <span className="bg-white text-text-dark px-3 py-1 rounded-full text-xs flex items-center gap-1.5">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
@@ -66,20 +126,20 @@ export default function Hero() {
           </span>
         </div>
 
- <h1 className="text-white leading-tight text-center max-w-3xl mb-6">  <span className="font-serif ">Meer dan websites.</span>           <br />
- <span className="serif-header">Wij bouwen merken.</span>         </h1>
+        <h1 className="hero-title-wave text-[clamp(64px,8vw,104px)] 2xl:text-[120px] leading-[1.02] text-center max-w-5xl 2xl:max-w-6xl mb-6">
+          <WavyTitle line1="Meer dan websites." line2="Wij bouwen merken." />
+        </h1>
 
- <p className="text-white/70 text-center max-w-lg leading-relaxed mb-8">           Professionele websites die uw merk versterken en converteren. Nu ook bereikbaar voor ambitieuze ondernemers dankzij flexibele betalingsmogelijkheden.
+ <p className="text-white/70 text-center max-w-lg 2xl:max-w-xl 2xl:text-lg leading-relaxed mb-8">           Professionele websites die uw merk versterken en converteren. Nu ook bereikbaar voor ambitieuze ondernemers dankzij flexibele betalingsmogelijkheden.
         </p>
 
         <Link
           href="#diensten"
- className="btn-spring btn-uniform link-wave bg-white text-green-dark hover:bg-lila hover:text-green-dark hover:shadow-xl transition-all"         >
+ className="btn-spring btn-uniform link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:text-green-dark hover:shadow-xl transition-all"         >
           <WavyText text="Bekijk ons werk" />
         </Link>
       </div>
 
-      {/* Bottom Accent */}
- <div className="h-2 bg-green-accent w-full"></div>     </section>
+    </section>
   )
 }

@@ -28,7 +28,7 @@ export default function Features() {
             <span className="bg-lila text-green-dark px-3 py-1.5 rounded-full text-xs inline-block mb-4">
               ✨ Premium Kwaliteit
             </span>
-            <h3 className="text-white text-2xl mb-3">
+            <h3 className="text-white mb-3">
               <span className="font-serif">Custom</span>{' '}
               <span className="font-serif">Design</span>
             </h3>

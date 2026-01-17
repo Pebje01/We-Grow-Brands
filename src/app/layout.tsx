@@ -21,6 +21,14 @@ const polysansSlim = localFont({
   display: 'swap',
 })
 
+const polysansNeutralWide = localFont({
+  src: '../../public/fonts/polysanstrial-neutralwide.otf',
+  weight: '400',
+  style: 'normal',
+  variable: '--font-polysans-wide',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
   title: 'We Grow Brands | Premium Website Diensten',
   description: 'Professionele websites die uw merk versterken en converteren. High-end webdesign voor ambitieuze ondernemers.',
@@ -33,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="nl" className={`${instrumentSerif.variable} ${polysansSlim.variable}`}>
+    <html lang="nl" className={`${instrumentSerif.variable} ${polysansSlim.variable} ${polysansNeutralWide.variable}`}>
       <body className={`${polysansSlim.className} text-text-dark bg-cream`}>
         <Navbar />
         <main>{children}</main>

@@ -47,7 +47,7 @@ export default function Services() {
               <div className="w-14 h-14 bg-lila rounded-2xl flex items-center justify-center text-2xl mb-5">
                 {service.icon}
               </div>
-              <h3 className="text-3xl text-text-dark mb-2 font-serif italic">{service.title}</h3>
+              <h3 className="text-text-dark mb-2">{service.title}</h3>
               <p className="text-text-muted text-sm leading-relaxed mb-6">{service.description}</p>
               <p className="font-serif text-3xl text-green-dark">
                 {service.price} <span className="text-sm text-text-muted font-serif">{service.unit}</span>

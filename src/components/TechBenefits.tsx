@@ -1,42 +1,35 @@
 const benefits = [
   {
-    icon: '🤖',
     tech: 'AI-powered performance optimization',
-    description: 'Slimme AI houdt automatisch de techniek van je website in orde, zodat alles gewoon lekker blijft werken.',
+    description: 'Slimme AI zorgt ervoor dat je website goed blijft werken.',
     bgColor: 'bg-lila-light',
   },
   {
-    icon: '✓✓✓',
     tech: 'Core Web Vitals',
     description: 'Snelle websites, minder afhakers en goed voor je Google ranking',
     bgColor: 'bg-cream',
   },
   {
-    icon: '☁️',
     tech: 'Google Cloud Hosting',
     description: 'Je website draait op dezelfde techniek als Google zelf. Supersnel, superbetrouwbaar.',
     bgColor: 'bg-lila-light',
   },
   {
-    icon: '⚡',
     tech: '99.9% Uptime',
     description: 'Je website is praktisch altijd online.',
     bgColor: 'bg-cream',
   },
   {
-    icon: '🔒',
     tech: 'SSL · Firewall · DDoS protection · Malware scanning',
     description: 'Alles wat voorkomt dat je site wordt gehackt of misbruikt.',
     bgColor: 'bg-lila-light',
   },
   {
-    icon: '💾',
     tech: 'Automatische backups · One-click restore',
     description: 'Alles om fouten of problemen direct te kunnen herstellen.',
     bgColor: 'bg-cream',
   },
   {
-    icon: '🚀',
     tech: 'Caching · Image Optimization · Server-side optimization',
     description: 'Alles wat zorgt dat je site snel laadt en prettig werkt.',
     bgColor: 'bg-lila-light',
@@ -57,13 +50,15 @@ export default function TechBenefits() {
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl p-8 border border-black/5 max-w-lg mx-auto">
-          <div className="space-y-4">
+        <div className="bg-white rounded-3xl p-8 border border-black/5 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className={`${benefit.bgColor} p-5 rounded-xl`}>
-                <span className="text-2xl block mb-2">{benefit.icon}</span>
-                <p className="text-green-dark text-sm font-medium mb-1">{benefit.tech}</p>
-                <p className="text-text-muted text-xs leading-relaxed">{benefit.description}</p>
+                <p className="text-text-muted text-xs mb-1">{benefit.tech}</p>
+                <p className="font-serif text-lg text-green-dark flex items-start gap-2">
+                  <span className="text-green-dark">✓</span>
+                  <span>{benefit.description}</span>
+                </p>
               </div>
             ))}
           </div>

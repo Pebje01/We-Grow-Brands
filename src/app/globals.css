@@ -33,7 +33,24 @@ h2 {
 }
 
 h3 {
+  font-size: 24px;
+  line-height: 2rem;
   font-style: italic;
+}
+
+h4 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 1.3;
 }
 
 .font-serif {
@@ -54,6 +71,7 @@ h3 {
   padding: 0.5rem 1.25rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-family: var(--font-polysans), sans-serif;
 }
 
 .btn-spring:hover .btn-text {
@@ -105,6 +123,7 @@ h3 {
   to { transform: translateX(-50%); }
 }
 
+
 /* Custom animations */
 @keyframes wave {
   0%, 100% { transform: scaleY(1); }
@@ -123,6 +142,16 @@ h3 {
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+/* Floating laptop animation for mobile/tablet */
+@keyframes float-laptop {
+  0%, 100% { transform: translateX(-50%) translateY(0px) rotate(-2deg); }
+  50% { transform: translateX(-50%) translateY(-15px) rotate(2deg); }
+}
+
+.animate-float-laptop {
+  animation: float-laptop 4s ease-in-out infinite;
 }
 
 /* Gradient text */
@@ -179,4 +208,29 @@ h3 {
 @keyframes text-wave {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
+}
+
+/* Hero title wave effect on hover */
+.hero-title-wave {
+  color: #ffffff;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-title-wave .wave-char {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-title-wave .wave-char:hover {
+  animation: char-wave 0.6s ease;
+}
+
+@keyframes char-wave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-12px); }
+  50% { transform: translateY(4px); }
+  75% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
 }
