@@ -281,6 +281,77 @@ export default function PakkettenPage() {
         </div>
       </section>
 
+      {/* Add-ons Section */}
+      <section className="bg-cream pt-4 md:pt-6 pb-20 md:pb-28">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10">
+          <div className="text-center mb-12">
+            <h2 className="text-text-dark mb-4">
+              <span className="font-serif">Website</span>{' '}
+              <span className="serif-header italic text-green-dark">add-ons</span>
+            </h2>
+            <p className="text-text-muted max-w-2xl mx-auto">
+              Breid je website uit met extra functionaliteiten.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {[
+              'Extra pagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'A/B testing', 'Cookiebanner (AVG)', 'Snelheidsoptimalisatie', 'Extra feedbackrondes', 'Spoedondersteuning'
+            ].map((addon, index) => {
+              const colors = [
+                'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                'bg-[#F0EDE8] border-[#E0DDD8] hover:bg-[#E0DDD8]',
+              ]
+              const colorClass = colors[index % colors.length]
+              return (
+                <span key={addon} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
+                  {addon}
+                </span>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Extra Services Section */}
+      <section className="bg-[#1a1a1a] py-20 md:py-28">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10">
+          <div className="text-center mb-12">
+            <h2 className="text-white mb-4">
+              <span className="font-serif">Extra</span>{' '}
+              <span className="serif-header italic text-lila">services</span>
+            </h2>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Wij kunnen je naast een strakke website ook helpen met andere diensten.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2 justify-center">
+            {[
+              'Logo ontwerp', 'Huisstijl / brand guidelines', 'Brand fundament', 'Naamgeving / naming',
+              'AI-content', 'Copywriting / webteksten', 'Social media content', 'E-mail marketing setup', 'SEO', 'Google Ads beheer', 'Contentkalender', 'Leadgeneratie',
+              'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk',
+              'AI & automatisering', 'CRM setup', 'Strategiesessie', 'Brand audit', 'Website analyse'
+            ].map((service, index) => {
+              const colors = [
+                'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                'bg-lila border-[#D6BCFF] hover:bg-[#D6BCFF]',
+              ]
+              const colorClass = colors[index % colors.length]
+              return (
+                <span key={service} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
+                  {service}
+                </span>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* Ownership Section - Donker vlak met afbeelding links en tekst rechts */}
       <section className="bg-[#1a1a1a] relative overflow-hidden py-20 md:py-28">
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10 relative z-10">

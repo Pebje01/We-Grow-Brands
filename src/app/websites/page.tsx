@@ -318,27 +318,15 @@ export default function WebsitesPage() {
             direction="up"
           />
 
-          {/* Lila lijn - Mobiel: begint linksboven, kronkelt naar beneden, dan naar rechtsonder */}
-          <svg
-            className="lg:hidden absolute inset-0 w-full h-full pointer-events-none z-[1]"
+          {/* Lila lijn - Mobiel */}
+          <WavyLineScroll
+            className="lg:hidden absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
             viewBox="0 0 400 600"
-            preserveAspectRatio="none"
-            fill="none"
-          >
-            <path
-              d="M0 0
-                 C 30 80, 60 120, 40 200
-                 C 20 280, 60 350, 100 420
-                 C 140 490, 200 520, 280 550
-                 C 360 580, 420 590, 500 600"
-              stroke="#EAD7FF"
-              strokeWidth="8"
-              strokeLinecap="round"
-              fill="none"
-              opacity="1"
-              className="animate-wavy-line-delay"
-            />
-          </svg>
+            path="M-30 -10 C 80 -60, 0 120, 100 100 C 200 80, 120 220, 240 200 C 360 180, 280 320, 420 300"
+            strokeColor="#EAD7FF"
+            strokeWidth={5}
+            direction="up"
+          />
 
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -475,37 +463,117 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Technische sectie - Je website altijd online */}
-      <section id="technisch" className="relative py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
+      {/* Add-ons Section */}
+      <section className="relative pt-4 md:pt-6 pb-16 md:pb-24 lg:pb-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
+        <div className="absolute inset-0 bg-cream rounded-[20px] md:rounded-[30px] z-0"></div>
+
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
+          <ScrollReveal className="text-center mb-12" animation="fade-up">
+            <h2 className="text-text-dark mb-4">
+              <span className="font-serif">Website</span>{' '}
+              <span className="serif-header italic text-green-dark">add-ons</span>
+            </h2>
+            <p className="text-text-muted max-w-2xl mx-auto">
+              Breid je website uit met extra functionaliteiten.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {[
+                'Extra pagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'A/B testing', 'Cookiebanner (AVG)', 'Snelheidsoptimalisatie', 'Extra feedbackrondes', 'Spoedondersteuning'
+              ].map((addon, index) => {
+                const colors = [
+                  'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                  'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                  'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                  'bg-[#F0EDE8] border-[#E0DDD8] hover:bg-[#E0DDD8]',
+                ]
+                const colorClass = colors[index % colors.length]
+                return (
+                  <span key={addon} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
+                    {addon}
+                  </span>
+                )
+              })}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Extra Services Section */}
+      <section className="relative py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
         <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] z-0"></div>
 
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
+          <ScrollReveal className="text-center mb-12" animation="fade-up">
+            <h2 className="text-white mb-4">
+              <span className="font-serif">Extra</span>{' '}
+              <span className="serif-header italic text-lila">services</span>
+            </h2>
+            <p className="text-white/70 max-w-2xl mx-auto">
+              Wij kunnen je naast een strakke website ook helpen met andere diensten.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {[
+                'Logo ontwerp', 'Huisstijl / brand guidelines', 'Brand fundament', 'Naamgeving / naming',
+                'AI-content', 'Copywriting / webteksten', 'Social media content', 'E-mail marketing setup', 'SEO', 'Google Ads beheer', 'Contentkalender', 'Leadgeneratie',
+                'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk',
+                'AI & automatisering', 'CRM setup', 'Strategiesessie', 'Brand audit', 'Website analyse'
+              ].map((service, index) => {
+                const colors = [
+                  'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                  'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                  'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                  'bg-lila border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                ]
+                const colorClass = colors[index % colors.length]
+                return (
+                  <span key={service} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
+                    {service}
+                  </span>
+                )
+              })}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Website Trajecten Section - Green dark background */}
+      <WebsiteTrajecten />
+
+      {/* Technische sectie - Je website altijd online */}
+      <section id="technisch" className="bg-cream py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full">
           <ScrollReveal className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 md:gap-12 lg:gap-16 items-start" animation="fade-up">
             <div className="grid grid-cols-2 gap-3 md:gap-4 order-2 lg:order-1">
               {technicalFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl border border-white/10 p-3 md:p-5 flex items-start gap-2 md:gap-4 hover:bg-white/15 transition-all"
+                  className="bg-white rounded-xl md:rounded-2xl border border-green-dark/10 p-3 md:p-5 flex items-start gap-2 md:gap-4 hover:bg-white/80 transition-all"
                 >
                   <span className="text-lg md:text-2xl">{feature.icon}</span>
                   <div>
-                    <p className="text-white font-serif text-sm md:text-base">{feature.title}</p>
-                    <p className="text-white/60 text-xs md:text-sm">{feature.description}</p>
+                    <p className="text-text-dark font-serif text-sm md:text-base">{feature.title}</p>
+                    <p className="text-text-muted text-xs md:text-sm">{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-white mb-4 md:mb-8" style={{ lineHeight: 0.95 }}>
+              <h2 className="text-text-dark mb-4 md:mb-8" style={{ lineHeight: 0.95 }}>
                 <span className="font-serif">Je website</span>
                 <br />
-                <span className="relative inline-block serif-header italic text-lila">
+                <span className="relative inline-block serif-header italic text-green-dark">
                   altijd online
-                  <WavyUnderline color="#EAD7FF" strokeWidth={6} />
+                  <WavyUnderline color="#02362B" strokeWidth={6} />
                 </span>
               </h2>
-              <p className="text-white/60 leading-relaxed">
+              <p className="text-text-muted leading-relaxed">
                 ...en dit hoort er natuurlijk ook standaard bij.
               </p>
             </div>
@@ -513,177 +581,6 @@ export default function WebsitesPage() {
         </div>
       </section>
       </div>{/* Einde wrapper voor Waarom Ons + Inbegrepen */}
-
-      {/* Website Trajecten Section - Green dark background */}
-      <WebsiteTrajecten />
-
-      {/* Services Section - Cream background */}
-      <section id="andere-services" className="bg-cream py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px]">
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full">
-          {/* Header */}
-          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 mb-12 md:mb-16 lg:mb-20" animation="fade-up">
-            <div>
-              <h2 className="text-text-dark" style={{ lineHeight: 0.95 }}>
-                <span className="font-serif">Ook je merk</span>
-                <br />
-                <span className="serif-header italic text-green-dark">strakker neerzetten</span>
-              </h2>
-            </div>
-            <div className="flex items-center">
-              <p className="text-text-muted leading-relaxed">
-                Een sterke website begint bij een sterk merk. Als daar behoefte aan is, helpen we je ook met branding, content, fotografie en slimme AI-tools.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Service Cards */}
-          <ScrollReveal className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4" animation="fade-up" stagger={0.1}>
-            {/* Branding */}
-            <div className="group relative aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1B3D2F] via-[#2D5A47] to-[#1B3D2F]" />
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 md:w-20 md:h-20 text-white/90 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 64 64" fill="none">
-                  {/* Isometric cube/brand block */}
-                  <path d="M32 8L52 20V44L32 56L12 44V20L32 8Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M32 32L52 20" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M32 32L12 20" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M32 32V56" stroke="currentColor" strokeWidth="2"/>
-                  {/* Star accent */}
-                  <path d="M32 18L34 24L40 24L35 28L37 34L32 30L27 34L29 28L24 24L30 24L32 18Z" fill="currentColor"/>
-                </svg>
-              </div>
-              <div className="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 bg-gradient-to-t from-black/50 to-transparent">
-                <p className="text-white font-serif text-sm md:text-base leading-tight">Branding & visuele identiteit</p>
-              </div>
-            </div>
-
-            {/* Content */}
-            <div className="group relative aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#4A3728] via-[#6B4D35] to-[#4A3728]" />
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 md:w-20 md:h-20 text-white/90 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 64 64" fill="none">
-                  {/* Isometric document/content */}
-                  <path d="M16 16L40 8V48L16 56V16Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M40 8L48 16V56L40 48" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M16 16L24 8L48 16" stroke="currentColor" strokeWidth="2"/>
-                  {/* Text lines */}
-                  <path d="M22 24L34 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M22 32L34 28" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <path d="M22 40L30 37" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div className="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 bg-gradient-to-t from-black/50 to-transparent">
-                <p className="text-white font-serif text-sm md:text-base leading-tight">Content</p>
-              </div>
-            </div>
-
-            {/* Fotografie */}
-            <div className="group relative aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#2C3E50] via-[#3D5266] to-[#2C3E50]" />
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 md:w-20 md:h-20 text-white/90 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 64 64" fill="none">
-                  {/* Isometric camera */}
-                  <path d="M12 28L32 18L52 28V44L32 54L12 44V28Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2"/>
-                  <ellipse cx="32" cy="36" rx="8" ry="6" stroke="currentColor" strokeWidth="2"/>
-                  <circle cx="32" cy="36" r="3" fill="currentColor"/>
-                  {/* Flash */}
-                  <path d="M44 20L48 16L52 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <div className="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 bg-gradient-to-t from-black/50 to-transparent">
-                <p className="text-white font-serif text-sm md:text-base leading-tight">Fotografie</p>
-              </div>
-            </div>
-
-            {/* Vormgeving */}
-            <div className="group relative aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#5D4E6D] via-[#7A6B8A] to-[#5D4E6D]" />
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 md:w-20 md:h-20 text-white/90 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 64 64" fill="none">
-                  {/* Isometric pen/brush tool */}
-                  <path d="M20 48L12 52L16 44L44 16L52 24L20 48Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M44 16L48 12L56 20L52 24" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M16 44L20 48" stroke="currentColor" strokeWidth="2"/>
-                  {/* Color palette dots */}
-                  <circle cx="24" cy="20" r="3" fill="currentColor"/>
-                  <circle cx="32" cy="16" r="3" fill="currentColor" fillOpacity="0.6"/>
-                  <circle cx="40" cy="12" r="3" fill="currentColor" fillOpacity="0.3"/>
-                </svg>
-              </div>
-              <div className="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 bg-gradient-to-t from-black/50 to-transparent">
-                <p className="text-white font-serif text-sm md:text-base leading-tight">Vormgeving</p>
-              </div>
-            </div>
-
-            {/* AI & Automatisering */}
-            <div className="group relative aspect-[3/4] rounded-2xl md:rounded-3xl overflow-hidden cursor-pointer">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1A1A2E] via-[#2D2D44] to-[#1A1A2E]" />
-              <div className="absolute inset-0 opacity-30">
-                <div className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-white/10 blur-2xl" />
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="w-16 h-16 md:w-20 md:h-20 text-white/90 group-hover:scale-110 transition-transform duration-300" viewBox="0 0 64 64" fill="none">
-                  {/* Isometric chip/AI brain */}
-                  <path d="M32 12L48 22V42L32 52L16 42V22L32 12Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="2"/>
-                  {/* Circuit lines */}
-                  <path d="M32 22L32 42" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M24 27L40 27" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M24 37L40 37" stroke="currentColor" strokeWidth="2"/>
-                  {/* Connection nodes */}
-                  <circle cx="32" cy="32" r="4" fill="currentColor"/>
-                  <circle cx="24" cy="32" r="2" fill="currentColor"/>
-                  <circle cx="40" cy="32" r="2" fill="currentColor"/>
-                  {/* External connections */}
-                  <path d="M16 22L8 18" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M48 22L56 18" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M16 42L8 46" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M48 42L56 46" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-              </div>
-              <div className="absolute top-3 right-3 w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 bg-gradient-to-t from-black/50 to-transparent">
-                <p className="text-white font-serif text-sm md:text-base leading-tight">AI & Automatisering</p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* CTA Section - Dark background */}
       <section id="plan-traject" className="bg-[#1a1a1a] py-16 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6 mb-[105px]">
