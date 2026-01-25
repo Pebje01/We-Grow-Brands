@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(xargs kill -9)",
+      "Bash(ffmpeg:*)",
+      "Bash(ffprobe:*)",
+      "Bash(convert:*)",
+      "Bash(identify:*)"
+    ]
+  }
+}

@@ -1,0 +1,669 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FBF8F4; /* cream voor safe area randen */
+  overscroll-behavior: none; /* Voorkom iOS Safari bounce scroll */
+}
+
+body {
+  overflow-x: hidden;
+  overscroll-behavior: none; /* Voorkom iOS Safari bounce scroll */
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-instrument-serif), serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(5rem, 5vw, 5rem);
+  line-height: 0.9;
+}
+
+/* Larger typography for ultra-wide screens (2200px+) */
+@media (min-width: 2200px) {
+  h1 {
+    font-size: 9rem;
+  }
+
+  h2 {
+    font-size: 6.5rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 3.25rem;
+  }
+
+  body {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: clamp(3rem, 4vw, 4.375rem);
+  line-height: 0.95;
+}
+
+h3 {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+  line-height: 1.25;
+}
+
+h6 {
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  line-height: 1.3;
+}
+
+.font-serif {
+  font-family: var(--font-instrument-serif), serif;
+}
+
+.font-sans {
+  font-family: var(--font-polysans), sans-serif;
+}
+
+.btn-spring {
+  transition: background-color 400ms ease, color 400ms ease, box-shadow 400ms ease, transform 400ms ease;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+.btn-uniform {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: var(--font-polysans), sans-serif;
+}
+
+.btn-spring:hover .btn-text {
+  animation: grow-wave 520ms cubic-bezier(0.2, 0.8, 0.2, 1.1);
+}
+
+@keyframes grow-wave {
+  0% { transform: scale(1) translateY(0); }
+  30% { transform: scale(1.1) translateY(-2px); }
+  55% { transform: scale(1.04) translateY(3px); }
+  75% { transform: scale(1.06) translateY(-1px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+.serif-header {
+  font-family: var(--font-instrument-serif), serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.serif-header.italic {
+  font-style: italic;
+  line-height: 0.8 !important;
+}
+
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.logo-track {
+  --logo-y: 0px;
+  display: flex;
+  width: max-content;
+  gap: 48px;
+  animation: logo-scroll 24s linear infinite;
+  opacity: 0.75;
+  will-change: transform;
+}
+
+.logo-track--back {
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0.22;
+  filter: blur(0.4px);
+  animation-duration: 36s;
+  animation-direction: reverse;
+  --logo-y: 6px;
+}
+
+.logo-item {
+  font-family: var(--font-instrument-serif), serif;
+  font-size: 1.1rem;
+  color: #3b3b3b;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+@keyframes logo-scroll {
+  from { transform: translate3d(0, var(--logo-y), 0); }
+  to { transform: translate3d(-50%, var(--logo-y), 0); }
+}
+
+
+/* Custom animations */
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.5); }
+}
+
+.animate-wave {
+  animation: wave 1s ease-in-out infinite;
+}
+
+/* Floating icons animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating laptop animation for mobile/tablet */
+@keyframes float-laptop {
+  0%, 100% { transform: translateX(-50%) translateY(0px) rotate(-2deg); }
+  50% { transform: translateX(-50%) translateY(-15px) rotate(2deg); }
+}
+
+.animate-float-laptop {
+  animation: float-laptop 4s ease-in-out infinite;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, #EAD7FF 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Highlighted title with lila underline */
+.highlight-title {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight-title::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: #EAD7FF;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+/* Link color utilities - use these classes for consistent link styling */
+.link-light {
+  color: #03483A;
+  transition: color 400ms ease;
+}
+
+.link-light:hover {
+  color: #025a48;
+}
+
+.link-dark {
+  color: #D6BCFF;
+  transition: color 400ms ease;
+}
+
+.link-dark:hover {
+  color: #EAD7FF;
+}
+
+/* Wavy text hover effect */
+.link-wave {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 400ms ease;
+}
+
+.link-wave:hover {
+  color: #D6BCFF;
+}
+
+/* Wavy effect without color change */
+.link-wave-no-color {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .link-wave-no-color:hover .wave-text span {
+    animation: text-wave 1s ease-in-out infinite;
+  }
+}
+
+.btn-spring.link-wave:hover {
+  color: #C9A5FF;
+}
+
+.btn-spring.link-wave:hover .wave-text span {
+  color: inherit;
+}
+
+.btn-dark.link-wave:hover {
+  color: inherit;
+}
+
+.btn-dark.link-wave:hover .wave-text span {
+  color: inherit;
+}
+
+.btn-spring.btn-no-lila.link-wave:hover {
+  color: #02362B !important;
+}
+
+.btn-spring.btn-no-lila.link-wave:hover .wave-text span {
+  color: #02362B !important;
+}
+
+.btn-hover-lila.link-wave:hover {
+  color: #D6BCFF;
+}
+
+.btn-hover-lila.link-wave:hover .wave-text span {
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .link-wave:hover .wave-text span {
+    animation: text-wave 1s ease-in-out infinite;
+  }
+}
+
+.wave-text {
+  display: inline-flex;
+}
+
+.wave-text span {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+@keyframes text-wave {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+/* Tech benefits hover bump - only on desktop */
+.tech-benefit-card {
+  transition: transform 400ms ease;
+}
+
+@media (min-width: 1024px) {
+  .tech-benefit-card:hover {
+    animation: tech-bump 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+@keyframes tech-bump {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(-6px, -4px) rotate(-0.6deg); }
+  60% { transform: translate(6px, 3px) rotate(0.6deg); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Skill pill hover effect - only on desktop */
+.skill-pill {
+  transition: all 400ms ease;
+}
+
+@media (min-width: 1024px) {
+  .skill-pill:hover {
+    background-color: #03483A;
+    border-color: #F5F0E8;
+    color: #F5F0E8;
+    animation: pill-bump 380ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+@keyframes pill-bump {
+  0% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(-3px, -2px) scale(1.05); }
+  50% { transform: translate(3px, 1px) scale(1.02); }
+  75% { transform: translate(-1px, -1px) scale(1.03); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Hero title wave effect on hover - only on desktop */
+.hero-title-wave {
+  color: #ffffff;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-title-wave .wave-char {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+@media (min-width: 1024px) {
+  .hero-title-wave .wave-char:hover {
+    animation: char-wave 0.6s ease;
+  }
+}
+
+@keyframes char-wave {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-12px); }
+  50% { transform: translateY(4px); }
+  75% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+/* Flip card styles */
+.flip-card {
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* Touch devices: no flip effect, show back side directly */
+@media (hover: none) {
+  .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Devices with hover (mouse): flip on hover */
+@media (hover: hover) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Tech Benefits flip cards - omgekeerd (donker naar licht) */
+.flip-card-tech {
+  perspective: 1000px;
+}
+
+.flip-card-inner-tech {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+/* Touch devices: no flip effect, show front side (dark) */
+@media (hover: none) {
+  .flip-card-inner-tech {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Devices with hover (mouse): flip on hover to light side */
+@media (hover: hover) {
+  .flip-card-tech:hover .flip-card-inner-tech {
+    transform: rotateY(180deg);
+  }
+}
+
+.flip-card-front-tech,
+.flip-card-back-tech {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-back-tech {
+  transform: rotateY(180deg);
+}
+
+/* Wavy underline - scroll activated */
+.wavy-underline .wavy-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.wavy-underline.animate .wavy-path {
+  animation: draw-wavy 1s ease forwards;
+}
+
+@keyframes draw-wavy {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Wavy line paused state - before scroll trigger */
+.wavy-line-paused {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+}
+
+/* Animated wavy line - smooth draw animation */
+.animate-wavy-line {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: wavy-line-draw 5s ease-out forwards;
+}
+
+/* Animated wavy line with 0.5s delay */
+.animate-wavy-line-delay {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: wavy-line-draw 5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes wavy-line-draw {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animated wavy line - draws from top to bottom */
+.animate-wavy-line-down {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: -2000;
+  animation: wavy-line-draw-down 3s ease-out forwards;
+}
+
+@keyframes wavy-line-draw-down {
+  0% {
+    stroke-dashoffset: -2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Hand-drawn underline animation */
+.animate-hand-draw {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: hand-draw 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes hand-draw {
+  0% {
+    stroke-dashoffset: 300;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Testimonial sliding animation - seamless infinite loop */
+.animate-testimonial-scroll-fast {
+  animation: testimonial-scroll 45s linear infinite;
+}
+
+@keyframes testimonial-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+/* Hand-drawn heart animation - 10 hearts, one after another */
+/* Total cycle: 50s = 10 hearts × 5s each (2s draw + 3s visible) */
+.heart-path-1, .heart-path-2, .heart-path-3, .heart-path-4, .heart-path-5,
+.heart-path-6, .heart-path-7, .heart-path-8, .heart-path-9, .heart-path-10 {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+}
+
+/* Each heart: 10% of cycle = 5s */
+.animate-heart-loop-1 { animation: heart-show 50s ease-in-out infinite; animation-delay: 0s; }
+.animate-heart-loop-2 { animation: heart-show 50s ease-in-out infinite; animation-delay: 5s; }
+.animate-heart-loop-3 { animation: heart-show 50s ease-in-out infinite; animation-delay: 10s; }
+.animate-heart-loop-4 { animation: heart-show 50s ease-in-out infinite; animation-delay: 15s; }
+.animate-heart-loop-5 { animation: heart-show 50s ease-in-out infinite; animation-delay: 20s; }
+.animate-heart-loop-6 { animation: heart-show 50s ease-in-out infinite; animation-delay: 25s; }
+.animate-heart-loop-7 { animation: heart-show 50s ease-in-out infinite; animation-delay: 30s; }
+.animate-heart-loop-8 { animation: heart-show 50s ease-in-out infinite; animation-delay: 35s; }
+.animate-heart-loop-9 { animation: heart-show 50s ease-in-out infinite; animation-delay: 40s; }
+.animate-heart-loop-10 { animation: heart-show 50s ease-in-out infinite; animation-delay: 45s; }
+
+.heart-path-1 { animation: heart-draw 50s ease-out infinite; animation-delay: 0s; }
+.heart-path-2 { animation: heart-draw 50s ease-out infinite; animation-delay: 5s; }
+.heart-path-3 { animation: heart-draw 50s ease-out infinite; animation-delay: 10s; }
+.heart-path-4 { animation: heart-draw 50s ease-out infinite; animation-delay: 15s; }
+.heart-path-5 { animation: heart-draw 50s ease-out infinite; animation-delay: 20s; }
+.heart-path-6 { animation: heart-draw 50s ease-out infinite; animation-delay: 25s; }
+.heart-path-7 { animation: heart-draw 50s ease-out infinite; animation-delay: 30s; }
+.heart-path-8 { animation: heart-draw 50s ease-out infinite; animation-delay: 35s; }
+.heart-path-9 { animation: heart-draw 50s ease-out infinite; animation-delay: 40s; }
+.heart-path-10 { animation: heart-draw 50s ease-out infinite; animation-delay: 45s; }
+
+/* Heart visible for 10% of cycle (5s), then hidden for 90% */
+@keyframes heart-show {
+  0% { opacity: 0; }
+  1% { opacity: 1; }
+  9% { opacity: 1; }
+  10%, 100% { opacity: 0; }
+}
+
+/* Draw in 2s (4% of 50s), stay drawn until fade out */
+@keyframes heart-draw {
+  0% { stroke-dashoffset: 350; }
+  4% { stroke-dashoffset: 0; }
+  10%, 100% { stroke-dashoffset: 350; }
+}
+
+/* CTA animated wavy line - draws continuously */
+.animate-cta-line {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: cta-line-draw 3s ease-out infinite;
+}
+
+@keyframes cta-line-draw {
+  0% {
+    stroke-dashoffset: 800;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -800;
+  }
+}
+
+/* CTA line grow animation - draws once from bottom to top */
+.animate-cta-line-grow {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: cta-line-grow 2.5s ease-out forwards;
+}
+
+@keyframes cta-line-grow {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Success popup animation */
+.animate-popup {
+  animation: popup-in 0.3s ease-out;
+}
+
+@keyframes popup-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
