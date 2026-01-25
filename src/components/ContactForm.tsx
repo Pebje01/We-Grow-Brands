@@ -43,7 +43,7 @@ export default function ContactForm() {
           onSubmit={handleSubmit}
           className="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
-          <input type="hidden" name="access_key" value="8be3f602-ca63-4ef2-a697-2acb45d4a0e4" />
+          <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
           <input type="hidden" name="subject" value="Nieuwe aanvraag via Contact pagina" />
           <input type="hidden" name="from_name" value="We Grow Brands Website" />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
