@@ -295,7 +295,7 @@ export default function KortingPage() {
               onSubmit={handleSubmit}
               className="space-y-6 max-w-xl mx-auto"
             >
-              <input type="hidden" name="access_key" value="8be3f602-ca63-4ef2-a697-2acb45d4a0e4" />
+              <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
               <input type="hidden" name="subject" value="50% Korting aanvraag via Korting pagina" />
               <input type="hidden" name="from_name" value="We Grow Brands Website" />
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
