@@ -63,7 +63,7 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-16 left-4 right-4 bottom-4 rounded-xl bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/Header-laptop-invul.jpeg?v=2"
+              src="/afbeeldingen/Header-laptop-invul.webp"
               alt="Website preview"
               fill
               sizes="(min-width: 1024px) 520px, 65vw"
@@ -83,7 +83,7 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/Iphone-murthel.jpeg"
+              src="/afbeeldingen/Iphone-murthel.webp"
               alt="Murthel mobile preview"
               fill
               sizes="(min-width: 1024px) 150px, 25vw"
@@ -102,7 +102,7 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/iphonemurthel.jpeg"
+              src="/afbeeldingen/iphonemurthel.webp"
               alt="Murthel mobile preview 2"
               fill
               sizes="(min-width: 1024px) 130px, 22vw"
@@ -141,7 +141,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="font-sans text-white leading-relaxed text-center max-w-xl 3xl:max-w-2xl 4xl:max-w-3xl mb-6 md:mb-8 lg:mb-10 4xl:mb-14 text-base 4xl:text-xl">
-            Nooit meer onzeker over je website. Wij helpen je richting aanbrengen in je merk en website, zodat je website past bij de ambities van je bedrijf.
+            Nooit meer balen van je website. Wij maken sites waar je trots op bent. Passend bij je merk en de ambities van je bedrijf.
           </p>
 
           <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3">

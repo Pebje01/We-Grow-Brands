@@ -8,7 +8,7 @@ export default function NotFound() {
       {/* 404 Error Image */}
       <div className="relative w-[320px] h-[280px] md:w-[420px] md:h-[360px] mb-8">
         <Image
-          src="/afbeeldingen/404errorpic.png"
+          src="/afbeeldingen/404errorpic.webp"
           alt="404 Not Found"
           fill
           className="object-contain"

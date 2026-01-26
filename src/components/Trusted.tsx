@@ -2,12 +2,12 @@ import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 
 const logos = [
-  { name: 'Bleijenberg', src: '/afbeeldingen/Bleijenberg-logo.png' },
-  { name: 'Groenhart Gym', src: '/afbeeldingen/Groenhart-Gym-logo_wit.png' },
-  { name: 'Systemisch Verbinden', src: '/afbeeldingen/logo-systemischverbinden.png' },
+  { name: 'Bleijenberg', src: '/afbeeldingen/Bleijenberg-logo.webp' },
+  { name: 'Groenhart Gym', src: '/afbeeldingen/Groenhart-Gym-logo_wit.webp' },
+  { name: 'Systemisch Verbinden', src: '/afbeeldingen/logo-systemischverbinden.webp' },
   { name: 'Meet the Locals', src: '/afbeeldingen/meetthelocals-logo.webp' },
-  { name: 'The Daley Edit', src: '/afbeeldingen/thedaleyedit-logo.png' },
-  { name: 'Van Rijn Works', src: '/afbeeldingen/vanrijnworks-logo.png' },
+  { name: 'The Daley Edit', src: '/afbeeldingen/thedaleyedit-logo.webp' },
+  { name: 'Van Rijn Works', src: '/afbeeldingen/vanrijnworks-logo.webp' },
 ]
 
 export default function Trusted() {

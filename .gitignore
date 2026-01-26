@@ -23,6 +23,11 @@
 # original images (webp versions are used)
 /_originals/
 
+# Original image formats in afbeeldingen (keep WebP only)
+/public/afbeeldingen/*.png
+/public/afbeeldingen/*.jpg
+/public/afbeeldingen/*.jpeg
+
 # debug
 npm-debug.log*
 yarn-debug.log*
