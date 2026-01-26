@@ -30,7 +30,7 @@ const servicesData = [
     description: 'Voor ambitieuze merken die het groots willen aanpakken. Volledig op maat en high-end uitgevoerd.',
     price: '€2.650+',
     unit: '+',
-    features: ['Onbeperkt pagina\'s', 'Maatwerk functionaliteit', 'Koppelingen met tools', 'Webshop mogelijk', 'Volledige begeleiding'],
+    features: ['8+ pagina\'s', 'Website met diepere structuur', 'Maatwerk functionaliteit', 'Koppelingen met tools', 'Webshop mogelijk'],
     popular: false,
   },
 ]
@@ -83,7 +83,8 @@ const plans = [
     deposit: 495,
     oneTime: true,
     features: [
-      { text: 'Onbeperkt pagina\'s', included: true },
+      { text: '8+ pagina\'s', included: true },
+      { text: 'Website met diepere structuur', included: true },
       { text: 'Responsive design', included: true },
       { text: 'Complete SEO-strategie', included: true },
       { text: 'Geavanceerde formulieren', included: true },

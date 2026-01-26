@@ -474,14 +474,14 @@ export default function WebsitesPage() {
               <span className="serif-header italic text-green-dark">add-ons</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
-              Breid je website uit met extra functionaliteiten.
+              Bovenop je pakket nog extra functionaliteiten nodig? Kies voor verschillende add-ons.
             </p>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up">
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                'Extra pagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'A/B testing', 'Cookiebanner (AVG)', 'Snelheidsoptimalisatie', 'Extra feedbackrondes', 'Spoedondersteuning'
+                'Extra pagina\'s / landingspagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'Snelheidsoptimalisatie', 'Extra feedbackrondes'
               ].map((addon, index) => {
                 const colors = [
                   'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
@@ -519,10 +519,10 @@ export default function WebsitesPage() {
           <ScrollReveal animation="fade-up">
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                'Logo ontwerp', 'Huisstijl / brand guidelines', 'Brand fundament', 'Naamgeving / naming',
-                'AI-content', 'Copywriting / webteksten', 'Social media content', 'E-mail marketing setup', 'SEO', 'Google Ads beheer', 'Contentkalender', 'Leadgeneratie',
-                'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk',
-                'AI & automatisering', 'CRM setup', 'Strategiesessie', 'Brand audit', 'Website analyse'
+                'Logo ontwerp', 'Huisstijl', 'Opfrissen van bestaande huisstijl', 'Brand guidelines', 'Brand fundament',
+                'Copywriting / webteksten', 'Social media content', 'E-mail marketing', 'SEO', 'SEA', 'Leadgeneratie',
+                'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk', 'DTP diensten', 'Grafische vormgeving',
+                'AI & automatisering', 'Strategiesessie', 'Brand audit', 'Website analyse', 'Website opfrisser', 'Rebranding'
               ].map((service, index) => {
                 const colors = [
                   'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',

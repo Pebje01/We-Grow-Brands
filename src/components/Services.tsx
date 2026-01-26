@@ -47,7 +47,8 @@ const services = [
     deposit: '€495',
     term: '€448',
     features: [
-      { text: 'Onbeperkt pagina\'s', included: true },
+      { text: '8+ pagina\'s', included: true },
+      { text: 'Website met diepere structuur', included: true },
       { text: 'Maatwerk functionaliteit', included: true },
       { text: 'Koppelingen met tools', included: true },
       { text: 'Webshop mogelijk', included: true },
