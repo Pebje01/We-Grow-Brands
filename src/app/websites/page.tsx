@@ -12,73 +12,6 @@ export const metadata = {
   description: 'Professionele website laten maken die groeit met je bedrijf. Premium webdesign met 99.9% uptime, snelle laadtijden en veilige hosting. Vraag een vrijblijvend gesprek aan.',
 }
 
-const includedFeatures = [
-  {
-    icon: '🎨',
-    title: 'Website in jouw huisstijl',
-    description: 'Volledig ontworpen volgens jouw branding.',
-  },
-  {
-    icon: '✨',
-    title: 'AI-gegenereerde content',
-    description: 'Afbeeldingen en iconen die passen bij jouw branding waar nodig, zonder afbreuk te doen aan de geloofwaardigheid van je bedrijf.',
-  },
-  {
-    icon: '🖼️',
-    title: 'Beeld bibliotheek',
-    description: 'Als er (nog) geen eigen beeldmateriaal beschikbaar is zoeken we beelden die passen bij jouw bedrijf.',
-  },
-  {
-    icon: '📝',
-    title: 'Structuur in je teksten',
-    description: 'Wij brengen lijn in aangeleverde content.',
-  },
-  {
-    icon: '📱',
-    title: 'Responsive design',
-    description: 'Perfect op desktop, tablet én mobiel.',
-  },
-  {
-    icon: '🔍',
-    title: 'Basis SEO',
-    description: 'Technische basis voor SEO goed ingesteld, extra pakketten mogelijk.',
-  },
-]
-
-const technicalFeatures = [
-  {
-    icon: '⚡',
-    title: '99.9% uptime',
-    description: 'Praktisch altijd online.',
-  },
-  {
-    icon: '🔒',
-    title: 'SSL-certificaat',
-    description: 'Veilige verbinding voor je bezoekers.',
-  },
-  {
-    icon: '💾',
-    title: 'Dagelijkse back-ups',
-    description: 'Altijd terug te zetten als er iets misgaat.',
-  },
-  {
-    icon: '🛡️',
-    title: 'Beveiliging',
-    description: 'Beschermd tegen aanvallen en spam.',
-  },
-  {
-    icon: '🛠️',
-    title: 'Onderhoud inbegrepen',
-    description: 'Wij zorgen dat alles blijft draaien.',
-  },
-  {
-    icon: '📊',
-    title: 'Hosting inbegrepen',
-    description: 'Eerste jaar hosting zit in de prijs.',
-  },
-]
-
-
 export default function WebsitesPage() {
   return (
     <div className="overflow-x-hidden">
@@ -322,7 +255,7 @@ export default function WebsitesPage() {
           <WavyLineScroll
             className="lg:hidden absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
             viewBox="0 0 400 600"
-            path="M-30 -10 C 80 -60, 0 120, 100 100 C 200 80, 120 220, 240 200 C 360 180, 280 320, 420 300"
+            path="M-50 -10 C 60 -60, -20 120, 80 100 C 180 80, 100 220, 220 200 C 340 180, 260 320, 400 300"
             strokeColor="#EAD7FF"
             strokeWidth={5}
             direction="up"
@@ -424,78 +357,160 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Inbegrepen vlak - met ruimte ertussen */}
-      <section id="inbegrepen" className="relative py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
-        {/* Achtergrond - zelfde als pagina achtergrond */}
-        <div className="absolute inset-0 bg-cream rounded-[20px] md:rounded-[30px] z-0"></div>
+      {/* Inbegrepen Section - Inhoudelijk */}
+      <section className="bg-cream py-20 md:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
+          <ScrollReveal animation="fade-up">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left side - Title */}
+              <div>
+                <h2 className="text-text-dark mb-8">
+                  <span className="font-serif">Inbegrepen in</span>
+                  <br />
+                  <span className="relative inline-block serif-header italic text-green-dark">
+                    elk pakket
+                    <WavyUnderline color="#EAD7FF" strokeWidth={6} />
+                  </span>
+                </h2>
+                <p className="text-text-muted leading-relaxed">
+                  Dit zit standaard in elke website die we maken. Geen extra kosten, gewoon inbegrepen.
+                </p>
+              </div>
 
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
-          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-8 md:gap-12 lg:gap-16 items-start" animation="fade-up">
-            <div>
-              <h2 className="text-text-dark mb-8" style={{ lineHeight: 0.95 }}>
-                <span className="font-serif">Inbegrepen in</span>
-                <br />
-                <span className="relative inline-block serif-header italic text-green-dark">
-                  elk pakket
-                  <WavyUnderline color="#03483A" strokeWidth={6} />
-                </span>
-              </h2>
-              <p className="text-text-dark/70 leading-relaxed">
-                Kies je voor een website van We Grow Brands? Dan zit dit minimaal in je pakket inbegrepen.
-              </p>
+              {/* Right side - Feature cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">🎨</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Design in jouw huisstijl</h4>
+                  <p className="text-text-muted text-sm">Volledig ontworpen volgens jouw branding.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">📄</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Basis pagina's</h4>
+                  <p className="text-text-muted text-sm">Home, over ons, contact en call-to-actions.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">🖼️</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Beeldbibliotheek</h4>
+                  <p className="text-text-muted text-sm">Toegang tot passende afbeeldingen voor je website.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">✨</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">AI-beelden op maat</h4>
+                  <p className="text-text-muted text-sm">Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">📱</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Responsive design</h4>
+                  <p className="text-text-muted text-sm">Perfect op desktop, tablet én mobiel.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">📝</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Contactformulier</h4>
+                  <p className="text-text-muted text-sm">Bezoekers kunnen direct contact opnemen.</p>
+                </div>
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              {includedFeatures.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl border border-text-dark/10 p-3 md:p-5 flex items-start gap-2 md:gap-4 hover:bg-white hover:shadow-lg transition-all"
-                >
-                  <span className="text-lg md:text-2xl">{feature.icon}</span>
-                  <div>
-                    <p className="text-text-dark font-serif text-sm md:text-base">{feature.title}</p>
-                    <p className="text-text-dark/60 text-xs md:text-sm">{feature.description}</p>
-                  </div>
+            <p className="text-text-muted text-sm mt-8 text-center">
+              Nog geen huisstijl? Geen probleem. We kunnen ook je <span className="text-green-dark font-medium">huisstijl ontwerpen</span> als add-on.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Technische Section */}
+      <section className="bg-cream pt-4 md:pt-6 pb-20 md:pb-28 px-4 md:px-6 lg:px-8">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
+          <ScrollReveal animation="fade-up">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left side - Feature cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 lg:order-1">
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">⚡</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">99.9% uptime</h4>
+                  <p className="text-text-muted text-sm">Praktisch altijd online.</p>
                 </div>
-              ))}
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">🚀</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Snelle laadtijden</h4>
+                  <p className="text-text-muted text-sm">Bezoekers haken minder snel af.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">🔒</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Veilig en beschermd</h4>
+                  <p className="text-text-muted text-sm">Je site blijft schoon en betrouwbaar.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">💾</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Back-ups geregeld</h4>
+                  <p className="text-text-muted text-sm">Altijd terug te zetten als er iets misgaat.</p>
+                </div>
+                <div className="bg-white rounded-2xl p-5 border border-black/5">
+                  <span className="text-2xl mb-3 block">🔧</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Onderhoud inbegrepen</h4>
+                  <p className="text-text-muted text-sm">Wij zorgen dat je website blijft draaien.</p>
+                </div>
+              </div>
+
+              {/* Right side - Title */}
+              <div className="order-1 lg:order-2">
+                <h2 className="text-text-dark mb-8">
+                  <span className="font-serif">Technisch</span>
+                  <br />
+                  <span className="relative inline-block serif-header italic text-green-dark">
+                    allemaal geregeld
+                    <WavyUnderline color="#EAD7FF" strokeWidth={6} />
+                  </span>
+                </h2>
+                <p className="text-text-muted leading-relaxed">
+                  Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
       {/* Add-ons Section */}
-      <section className="relative pt-4 md:pt-6 pb-16 md:pb-24 lg:pb-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
-        <div className="absolute inset-0 bg-cream rounded-[20px] md:rounded-[30px] z-0"></div>
-
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
-          <ScrollReveal className="text-center mb-12" animation="fade-up">
-            <h2 className="text-text-dark mb-4">
-              <span className="font-serif">Website</span>{' '}
-              <span className="serif-header italic text-green-dark">add-ons</span>
-            </h2>
-            <p className="text-text-muted max-w-2xl mx-auto">
-              Bovenop je pakket nog extra functionaliteiten nodig? Kies voor verschillende add-ons.
-            </p>
-          </ScrollReveal>
-
+      <section className="bg-cream pt-4 md:pt-6 pb-20 md:pb-28 px-4 md:px-6 lg:px-8">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
           <ScrollReveal animation="fade-up">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {[
-                'Extra pagina\'s / landingspagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'Snelheidsoptimalisatie', 'Extra feedbackrondes'
-              ].map((addon, index) => {
-                const colors = [
-                  'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
-                  'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
-                  'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
-                  'bg-[#F0EDE8] border-[#E0DDD8] hover:bg-[#E0DDD8]',
-                ]
-                const colorClass = colors[index % colors.length]
-                return (
-                  <span key={addon} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
-                    {addon}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Left side - Pills */}
+              <div className="flex flex-wrap gap-2 order-2 lg:order-1">
+                {[
+                  'Extra pagina\'s / landingspagina\'s', 'Complexe formulieren', 'Reviews/klantverhalen', 'Blog', 'Webshop', 'Meertalige website', 'Boekingssysteem', 'Nieuwsbrief integratie', 'Chatbot / live chat', 'Klantportaal', 'Vacaturemodule', 'FAQ sectie', 'Zoekfunctie', 'GA4 integratie', 'Extra feedbackrondes'
+                ].map((addon, index) => {
+                  const colors = [
+                    'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                    'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                    'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                    'bg-[#F0EDE8] border-[#E0DDD8] hover:bg-[#E0DDD8]',
+                  ]
+                  const colorClass = colors[index % colors.length]
+                  return (
+                    <span key={addon} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
+                      {addon}
+                    </span>
+                  )
+                })}
+              </div>
+
+              {/* Right side - Title */}
+              <div className="order-1 lg:order-2">
+                <h2 className="text-text-dark mb-8">
+                  <span className="font-serif">Website</span>
+                  <br />
+                  <span className="relative inline-block serif-header italic text-green-dark">
+                    add-ons
+                    <WavyUnderline color="#EAD7FF" strokeWidth={6} />
                   </span>
-                )
-              })}
+                </h2>
+                <p className="text-text-muted leading-relaxed">
+                  Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
+                </p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -519,10 +534,10 @@ export default function WebsitesPage() {
           <ScrollReveal animation="fade-up">
             <div className="flex flex-wrap gap-2 justify-center">
               {[
-                'Logo ontwerp', 'Huisstijl', 'Opfrissen van bestaande huisstijl', 'Brand guidelines', 'Brand fundament',
+                'Logo ontwerp', 'Huisstijl', 'Rebranding', 'Opfrissen van bestaande huisstijl', 'Brand fundament',
                 'Copywriting / webteksten', 'Social media content', 'E-mail marketing', 'SEO', 'SEA', 'Leadgeneratie',
                 'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk', 'DTP diensten', 'Grafische vormgeving',
-                'AI & automatisering', 'Strategiesessie', 'Brand audit', 'Website analyse', 'Website opfrisser', 'Rebranding'
+                'AI & automatisering', 'Brand audit', 'Website analyse', 'Website opfrisser'
               ].map((service, index) => {
                 const colors = [
                   'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
@@ -544,42 +559,6 @@ export default function WebsitesPage() {
 
       {/* Website Trajecten Section - Green dark background */}
       <WebsiteTrajecten />
-
-      {/* Technische sectie - Je website altijd online */}
-      <section id="technisch" className="bg-cream py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full">
-          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 md:gap-12 lg:gap-16 items-start" animation="fade-up">
-            <div className="grid grid-cols-2 gap-3 md:gap-4 order-2 lg:order-1">
-              {technicalFeatures.map((feature) => (
-                <div
-                  key={feature.title}
-                  className="bg-white rounded-xl md:rounded-2xl border border-green-dark/10 p-3 md:p-5 flex items-start gap-2 md:gap-4 hover:bg-white/80 transition-all"
-                >
-                  <span className="text-lg md:text-2xl">{feature.icon}</span>
-                  <div>
-                    <p className="text-text-dark font-serif text-sm md:text-base">{feature.title}</p>
-                    <p className="text-text-muted text-xs md:text-sm">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <h2 className="text-text-dark mb-4 md:mb-8" style={{ lineHeight: 0.95 }}>
-                <span className="font-serif">Je website</span>
-                <br />
-                <span className="relative inline-block serif-header italic text-green-dark">
-                  altijd online
-                  <WavyUnderline color="#02362B" strokeWidth={6} />
-                </span>
-              </h2>
-              <p className="text-text-muted leading-relaxed">
-                ...en dit hoort er natuurlijk ook standaard bij.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
       </div>{/* Einde wrapper voor Waarom Ons + Inbegrepen */}
 
       {/* CTA Section - Dark background */}

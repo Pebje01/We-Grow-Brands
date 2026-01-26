@@ -99,6 +99,7 @@ export default function WavyLineScroll({
         stroke={strokeColor}
         strokeWidth={strokeWidth}
         strokeLinecap="round"
+        strokeLinejoin="round"
         fill="none"
         opacity="1"
       />
