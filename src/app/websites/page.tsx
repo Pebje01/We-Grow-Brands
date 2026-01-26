@@ -20,15 +20,15 @@ export default function WebsitesPage() {
         <Breadcrumbs variant="dark" className="mb-8" />
         <div className="px-6 md:px-10">
           <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-12 items-center">
               <ScrollReveal animation="fade-up">
                 <h1 className="text-white mb-6">
-                  <span className="font-serif">Maatwerk websites,</span>
+                  <span className="font-serif lg:whitespace-nowrap">Maatwerk websites,</span>
                   <br />
-                  <span className="serif-header italic text-lila">volledig ontzorgd</span>
+                  <span className="serif-header italic text-lila lg:whitespace-nowrap">volledig ontzorgd</span>
                 </h1>
                 <p className="text-white/80 leading-relaxed mb-8 max-w-lg">
-                  Geen templates, geen vage betalingsconstructies en geen woekerprijzen, maar een website waar je blij van wordt.
+                  Geen templates, geen vage betalingsconstructies, maar een website waar je blij van wordt en die compleet aansluit op jouw merk en uitstraling.
                 </p>
                 <div className="flex flex-row gap-2 sm:gap-4">
                   <Link
@@ -76,8 +76,11 @@ export default function WebsitesPage() {
               <span className="font-serif">Zo pakken we</span>{' '}
               <span className="serif-header italic text-green-dark">het aan</span>
             </h2>
-            <p className="text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Goede voorbereiding is het halve werk. Daarom spreken we vooraf goed af wat je nodig hebt, en vooral ook wat niet. Geen overkill, gewoon precies wat werkt. Mocht je later toch iets extra&apos;s willen? Dan pak je een add-on. Zo krijg je een duidelijk verhaal, heldere stappen en een website die klopt van begin tot eind.
+            <p className="text-text-muted leading-relaxed max-w-3xl mx-auto mb-4">
+              Goede voorbereiding is het halve werk. Daarom spreken we vooraf goed af wat je nodig hebt, maar vooral ook wat niet. Geen overkill, gewoon precies wat je nodig hebt.
+            </p>
+            <p className="text-text-muted leading-relaxed max-w-3xl mx-auto">
+              Wil je later toch iets extra&apos;s toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
             </p>
           </ScrollReveal>
 
@@ -320,22 +323,23 @@ export default function WebsitesPage() {
                   <path d="M9 12l2 2 4-4"/>
                 </svg>
                 <h4 className="text-white font-medium mb-2">100% jouw eigendom</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Geen vage lease constructies of lock-in. Flexibele betaaltermijnen, daarna volledig van jou. Hosting bij ons of migreren naar eigen hosting.</p>
+                <p className="text-white/60 text-sm leading-relaxed">Geen vage leaseconstructies of lock-in. Voordelige websitepakketten of flexibele betaaltermijnen, daarna volledig van jou. Hosting bij ons inbegrepen, maar je bent vrij om te kiezen na volledige betaling.</p>
               </div>
               <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
                 <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                  <path d="M2 12h20"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Strategisch meedenken</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Geen ja-knikkers. Wij denken mee over wat werkt voor jouw doelgroep en doelen.</p>
+                <h4 className="text-white font-medium mb-2">Alles vanuit je merk</h4>
+                <p className="text-white/60 text-sm leading-relaxed">Wij ontwerpen niet zomaar een mooie website. Alles is doordacht en gebouwd vanuit jouw branding, waardoor je een sterkere en herkenbare online aanwezigheid krijgt.</p>
               </div>
               <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
                 <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Direct contact</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Niet lang wachten op wijzigingen en antwoorden. Je kunt direct contact opnemen via e-mail en WhatsApp.</p>
+                <h4 className="text-white font-medium mb-2">Directe communicatie</h4>
+                <p className="text-white/60 text-sm leading-relaxed">Je hoeft niet lang te wachten op wijzigingen en antwoorden. Neem contact op via e-mail en WhatsApp. We zorgen dat je snel reactie krijgt en dat dingen snel aangepast worden.</p>
               </div>
               <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
                 <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -344,14 +348,14 @@ export default function WebsitesPage() {
                   <path d="M2 12l10 5 10-5"/>
                 </svg>
                 <h4 className="text-white font-medium mb-2">Meer dan websites</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Met ervaring in branding en marketing maken we een website die een sterk verlengstuk van je bedrijf is.</p>
+                <p className="text-white/60 text-sm leading-relaxed">Met ervaring in branding en marketing maken we een website die een sterk verlengstuk van je bedrijf is. Naast websites bieden we ook diensten zoals branding, huisstijl en fotografie. Bekijk de add-ons en extra services hieronder.</p>
               </div>
               <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
                 <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                 </svg>
                 <h4 className="text-white font-medium mb-2">Voordelig onderhoud</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Optionele pakketten voor aanpassingen na oplevering. Geen hoge facturen voor kleine wijzigingen.</p>
+                <p className="text-white/60 text-sm leading-relaxed">Wij bieden optionele pakketten voor aanpassingen en onderhoud na oplevering. Je kunt zelf kiezen of je pakketten voor 6 maanden of een jaar afsluit. Zo hoef je niet voor elke kleine wijziging een hoge factuur te verwachten.</p>
               </div>
             </ScrollReveal>
         </div>
@@ -365,10 +369,10 @@ export default function WebsitesPage() {
               {/* Left side - Title */}
               <div>
                 <h2 className="text-text-dark mb-8">
-                  <span className="font-serif">Inbegrepen in</span>
+                  <span className="font-serif">Dit zit standaard bij</span>
                   <br />
                   <span className="relative inline-block serif-header italic text-green-dark">
-                    elk pakket
+                    elk website pakket
                     <WavyUnderline color="#EAD7FF" strokeWidth={6} />
                   </span>
                 </h2>
@@ -386,7 +390,7 @@ export default function WebsitesPage() {
                 </div>
                 <div className="bg-white rounded-2xl p-5 border border-black/5">
                   <span className="text-2xl mb-3 block">📄</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Basis pagina's</h4>
+                  <h4 className="text-green-dark font-medium mb-1 text-base">Basis pagina&apos;s</h4>
                   <p className="text-text-muted text-sm">Home, over ons, contact en call-to-actions.</p>
                 </div>
                 <div className="bg-white rounded-2xl p-5 border border-black/5">
@@ -413,61 +417,8 @@ export default function WebsitesPage() {
             </div>
 
             <p className="text-text-muted text-sm mt-8 text-center">
-              Nog geen huisstijl? Geen probleem. We kunnen ook je <span className="text-green-dark font-medium">huisstijl ontwerpen</span> als add-on.
+              Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="text-green-dark font-medium link-wavy-underline">Neem contact op</Link> als je ook een huisstijl nodig hebt.
             </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Technische Section */}
-      <section className="bg-cream pt-4 md:pt-6 pb-20 md:pb-28 px-4 md:px-6 lg:px-8">
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
-          <ScrollReveal animation="fade-up">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-              {/* Left side - Feature cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 lg:order-1">
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">⚡</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">99.9% uptime</h4>
-                  <p className="text-text-muted text-sm">Praktisch altijd online.</p>
-                </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">🚀</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Snelle laadtijden</h4>
-                  <p className="text-text-muted text-sm">Bezoekers haken minder snel af.</p>
-                </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">🔒</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Veilig en beschermd</h4>
-                  <p className="text-text-muted text-sm">Je site blijft schoon en betrouwbaar.</p>
-                </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">💾</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Back-ups geregeld</h4>
-                  <p className="text-text-muted text-sm">Altijd terug te zetten als er iets misgaat.</p>
-                </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">🔧</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Onderhoud inbegrepen</h4>
-                  <p className="text-text-muted text-sm">Wij zorgen dat je website blijft draaien.</p>
-                </div>
-              </div>
-
-              {/* Right side - Title */}
-              <div className="order-1 lg:order-2">
-                <h2 className="text-text-dark mb-8">
-                  <span className="font-serif">Technisch</span>
-                  <br />
-                  <span className="relative inline-block serif-header italic text-green-dark">
-                    allemaal geregeld
-                    <WavyUnderline color="#EAD7FF" strokeWidth={6} />
-                  </span>
-                </h2>
-                <p className="text-text-muted leading-relaxed">
-                  Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken.
-                </p>
-              </div>
-            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -508,7 +459,7 @@ export default function WebsitesPage() {
                   </span>
                 </h2>
                 <p className="text-text-muted leading-relaxed">
-                  Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
+                  Wil je later toch iets extra&apos;s toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
                 </p>
               </div>
             </div>
@@ -516,42 +467,86 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Extra Services Section */}
-      <section className="relative py-16 md:py-24 lg:py-28 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mt-6">
-        <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] z-0"></div>
+      {/* Technisch & Extra Services - Diagonale layout */}
+      <section className="py-12 md:py-16 lg:py-20 px-4 md:px-6 lg:px-8">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto">
+          {/* Technisch allemaal geregeld - Links uitgelijnd */}
+          <ScrollReveal animation="fade-up">
+            <div className="bg-[#02362B] rounded-[20px] md:rounded-[30px] py-10 md:py-14 lg:py-16 px-6 md:px-10 lg:px-12 max-w-2xl lg:max-w-3xl">
+              <div className="text-center mb-8">
+                <h2 className="text-white mb-4">
+                  <span className="font-serif">Technisch</span>{' '}
+                  <span className="serif-header italic text-lila">allemaal geregeld</span>
+                </h2>
+                <p className="text-white/70 leading-relaxed max-w-xl mx-auto text-sm md:text-base">
+                  Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken.
+                </p>
+              </div>
 
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
-          <ScrollReveal className="text-center mb-12" animation="fade-up">
-            <h2 className="text-white mb-4">
-              <span className="font-serif">Extra</span>{' '}
-              <span className="serif-header italic text-lila">services</span>
-            </h2>
-            <p className="text-white/70 max-w-2xl mx-auto">
-              Wij kunnen je naast een strakke website ook helpen met andere diensten.
-            </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 text-center">
+                  <span className="text-lg md:text-xl mb-2 block">⚡</span>
+                  <h4 className="text-white font-medium mb-1 text-xs md:text-sm">99.9% uptime</h4>
+                  <p className="text-white/60 text-[10px] md:text-xs hidden sm:block">Praktisch altijd online.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 text-center">
+                  <span className="text-lg md:text-xl mb-2 block">🚀</span>
+                  <h4 className="text-white font-medium mb-1 text-xs md:text-sm">Snelle laadtijden</h4>
+                  <p className="text-white/60 text-[10px] md:text-xs hidden sm:block">Bezoekers haken minder snel af.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 text-center">
+                  <span className="text-lg md:text-xl mb-2 block">🔒</span>
+                  <h4 className="text-white font-medium mb-1 text-xs md:text-sm">Veilig en beschermd</h4>
+                  <p className="text-white/60 text-[10px] md:text-xs hidden sm:block">Je site blijft schoon en betrouwbaar.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 text-center">
+                  <span className="text-lg md:text-xl mb-2 block">💾</span>
+                  <h4 className="text-white font-medium mb-1 text-xs md:text-sm">Dagelijkse back-ups</h4>
+                  <p className="text-white/60 text-[10px] md:text-xs hidden sm:block">Altijd terug te zetten als er iets misgaat.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 md:p-4 border border-white/10 text-center col-span-2 sm:col-span-1">
+                  <span className="text-lg md:text-xl mb-2 block">🔧</span>
+                  <h4 className="text-white font-medium mb-1 text-xs md:text-sm">Onderhoud inbegrepen</h4>
+                  <p className="text-white/60 text-[10px] md:text-xs hidden sm:block">Wij zorgen dat je website blijft draaien.</p>
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
 
-          <ScrollReveal animation="fade-up">
-            <div className="flex flex-wrap gap-2 justify-center">
-              {[
-                'Logo ontwerp', 'Huisstijl', 'Rebranding', 'Opfrissen van bestaande huisstijl', 'Brand fundament',
-                'Copywriting / webteksten', 'Social media content', 'E-mail marketing', 'SEO', 'SEA', 'Leadgeneratie',
-                'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk', 'DTP diensten', 'Grafische vormgeving',
-                'AI & automatisering', 'Brand audit', 'Website analyse', 'Website opfrisser'
-              ].map((service, index) => {
-                const colors = [
-                  'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
-                  'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
-                  'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
-                  'bg-lila border-[#D6BCFF] hover:bg-[#D6BCFF]',
-                ]
-                const colorClass = colors[index % colors.length]
-                return (
-                  <span key={service} className={`${colorClass} text-green-dark px-4 py-2 rounded-full text-sm border transition-colors cursor-default`}>
-                    {service}
-                  </span>
-                )
-              })}
+          {/* Extra Services - Rechts uitgelijnd */}
+          <ScrollReveal animation="fade-up" className="mt-8 md:mt-12 lg:mt-16 flex justify-end">
+            <div className="bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] py-10 md:py-14 lg:py-16 px-6 md:px-10 lg:px-12 max-w-2xl lg:max-w-3xl">
+              <div className="text-center mb-8">
+                <h2 className="text-white mb-4">
+                  <span className="font-serif">Extra</span>{' '}
+                  <span className="serif-header italic text-lila">services</span>
+                </h2>
+                <p className="text-white/70 max-w-xl mx-auto text-sm md:text-base">
+                  Wij kunnen je naast een strakke website ook helpen met andere diensten.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-2 justify-center">
+                {[
+                  'Logo ontwerp', 'Huisstijl', 'Rebranding', 'Opfrissen van bestaande huisstijl', 'Brand fundament',
+                  'Copywriting / webteksten', 'Social media content', 'E-mail marketing', 'SEO', 'SEA', 'Leadgeneratie',
+                  'Fotografie', 'Social media templates', 'Presentatie ontwerp', 'Drukwerk', 'DTP diensten', 'Grafische vormgeving',
+                  'AI & automatisering', 'Brand audit', 'Website analyse', 'Website opfrisser'
+                ].map((service, index) => {
+                  const colors = [
+                    'bg-[#F5EEFF] border-[#EAD7FF] hover:bg-[#EAD7FF]',
+                    'bg-[#EAD7FF] border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                    'bg-[#D6BCFF] border-[#C9A8FF] hover:bg-[#C9A8FF]',
+                    'bg-lila border-[#D6BCFF] hover:bg-[#D6BCFF]',
+                  ]
+                  const colorClass = colors[index % colors.length]
+                  return (
+                    <span key={service} className={`${colorClass} text-green-dark px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm border transition-colors cursor-default`}>
+                      {service}
+                    </span>
+                  )
+                })}
+              </div>
             </div>
           </ScrollReveal>
         </div>

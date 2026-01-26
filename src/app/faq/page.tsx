@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
-const categories = ['Alles', 'Algemeen', 'Pakketten', 'Proces', 'Support'] as const
+const categories = ['Alles', 'Algemeen', 'Pakketten', 'Hosting', 'Proces', 'Support'] as const
 
 const faqs = [
   {
@@ -64,18 +64,39 @@ const faqs = [
       'Nee, het volledige bedrag moet altijd worden voldaan. Je kunt niet na een paar maanden stoppen. Als je achterloopt met betalen gaat de website offline, maar de betalingsverplichting blijft bestaan.',
   },
   {
-    category: 'Pakketten',
+    category: 'Hosting',
     icon: 'shield',
     question: 'Zit hosting en onderhoud erbij?',
     answer:
       'De eerste 6 maanden zit hosting inbegrepen. Daarna kun je kiezen: je website op je eigen hosting zetten, of hosting bij ons afnemen. Je bent volledig vrij in je keuze.',
   },
   {
-    category: 'Pakketten',
+    category: 'Hosting',
+    icon: 'shield',
+    question: 'Ben ik verplicht om hosting en onderhoud bij jullie af te nemen?',
+    answer:
+      'Nee, je bent niet verplicht om hosting en onderhoud bij ons af te nemen. Na volledige betaling is de website van jou en kun je zelf kiezen waar je host. We raden wel aan om bij ons te hosten, omdat we dan kunnen garanderen dat je website snel, veilig en up-to-date blijft. Als je elders host, kunnen wij niet verantwoordelijk zijn voor de technische prestaties, snelheid of beveiliging van je website.',
+  },
+  {
+    category: 'Hosting',
+    icon: 'shield',
+    question: 'Wat als ik mijn website elders wil hosten?',
+    answer:
+      'Dat mag, je bent volledig vrij in je keuze. Houd er wel rekening mee dat we dan niet dezelfde technische snelheid, uptime en beveiliging kunnen garanderen. Bij externe hosting zijn wij niet verantwoordelijk voor hoe de website functioneert. We dragen de website netjes aan je over, maar daarna ligt de verantwoordelijkheid bij jou of je hostingpartij.',
+  },
+  {
+    category: 'Hosting',
     icon: 'shield',
     question: 'Welke hostingpakketten bieden jullie aan?',
     answer:
       'We hebben verschillende pakketten: alleen hosting (vanaf €14,50/maand met AI-geoptimaliseerde optimalisaties), hosting met onderhoud, of hosting met onderhoud én regelmatige aanpassingen (vanaf €39,95/maand). Je kiest wat bij je past.',
+  },
+  {
+    category: 'Hosting',
+    icon: 'shield',
+    question: 'Wat zijn de voordelen van hosting bij jullie?',
+    answer:
+      'Bij ons krijg je 99.9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. We houden je website veilig en up-to-date. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken.',
   },
   {
     category: 'Proces',

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import WavyText from '@/components/WavyText'
@@ -11,7 +11,7 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 const plans = [
   {
     name: 'Essentials',
-    description: 'Perfect voor starters en kleine ondernemers die wel willen investeren in een hoogwaardige website.',
+    description: 'Perfect voor starters die willen investeren in een professionele website.',
     price: { monthly: 999, annual: 151 },
     deposit: 295,
     oneTime: true,
@@ -22,6 +22,8 @@ const plans = [
       { text: 'Contactformulier', included: true },
       { text: 'SSL-certificaat', included: true },
       { text: 'Blog functionaliteit', included: false },
+      { text: 'Maatwerk animaties', included: false },
+      { text: 'Webshop functionaliteit', included: false },
     ],
     cta: 'Start met Essentials',
     buttonColor: 'bg-[#F0E6FF] hover:bg-[#E5D6FF]',
@@ -29,7 +31,7 @@ const plans = [
   },
   {
     name: 'Groei',
-    description: 'Voor bedrijven die willen groeien met een website die meebeweegt met hun ambities.',
+    description: 'Voor bedrijven die willen groeien met een website die meebeweegt.',
     price: { monthly: 1450, annual: 224 },
     deposit: 395,
     oneTime: true,
@@ -41,13 +43,15 @@ const plans = [
       { text: 'Contactformulier', included: true },
       { text: 'SSL-certificaat', included: true },
       { text: 'Blog functionaliteit', included: true },
+      { text: 'Maatwerk animaties', included: false },
+      { text: 'Webshop functionaliteit', included: false },
     ],
     cta: 'Start met Groei',
     popular: true,
   },
   {
     name: 'Premium',
-    description: 'Volledig maatwerk voor ambitieuze merken met grote plannen en specifieke wensen.',
+    description: 'Volledig maatwerk voor ambitieuze merken met specifieke wensen.',
     price: { monthly: 2650, annual: 448 },
     deposit: 495,
     oneTime: true,
@@ -60,6 +64,7 @@ const plans = [
       { text: 'SSL-certificaat', included: true },
       { text: 'Blog functionaliteit', included: true },
       { text: 'Maatwerk animaties', included: true },
+      { text: 'Webshop functionaliteit', included: true },
     ],
     cta: 'Start met Premium',
     buttonColor: 'bg-[#B794F6] hover:bg-[#A67DF0]',
@@ -69,6 +74,29 @@ const plans = [
 
 export default function PakkettenPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
+  const greenWavyRef = useRef<SVGSVGElement>(null)
+
+  // Green wavy underline animation - triggers when section is in view
+  useEffect(() => {
+    const wavySvg = greenWavyRef.current
+    if (!wavySvg) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            wavySvg.classList.add('animate')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    observer.observe(wavySvg)
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <>
@@ -83,14 +111,14 @@ export default function PakkettenPage() {
         direction="up"
       />
 
-      {/* Decoratieve golvende lila lijn - Mobiel (korter en proportioneel) */}
+      {/* Decoratieve golvende lila lijn - Mobiel (stopt net voorbij het groene vlak) */}
       <WavyLineScroll
-        className="md:hidden absolute top-0 left-0 w-full h-[250px] pointer-events-none"
-        viewBox="0 0 400 200"
-        path="M-20 40 Q 100 0, 200 60 Q 300 120, 420 80"
+        className="md:hidden absolute top-0 left-0 w-full h-[600px] pointer-events-none"
+        viewBox="0 0 400 500"
+        path="M-20 0 C 80 40, 40 100, 120 140 C 200 180, 160 240, 260 280 C 360 320, 300 400, 420 450"
         strokeColor="#EAD7FF"
         strokeWidth={8}
-        direction="down"
+        direction="up"
       />
 
       <Breadcrumbs className="mb-8 relative z-10" />
@@ -138,7 +166,7 @@ export default function PakkettenPage() {
           {/* Donkergroen achtergrondvlak */}
           <div className="absolute -inset-x-6 md:-inset-x-10 -inset-y-16 bg-green-dark rounded-[30px] -z-10"></div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch max-w-5xl mx-auto justify-items-center py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-5 items-stretch max-w-5xl mx-auto justify-items-center py-8">
           {plans.map((plan) => (
             <div
               key={plan.name}
@@ -156,12 +184,12 @@ export default function PakkettenPage() {
                 </div>
               )}
 
-              <div className="mb-5 min-h-[132px] text-center">
+              <div className="mb-4 h-[100px] text-center flex flex-col justify-end">
                 <h3 className="text-green-dark text-xl font-medium mb-2">{plan.name}</h3>
-                <p className="text-text-muted text-sm leading-relaxed">{plan.description}</p>
+                <p className="text-text-muted text-sm leading-snug">{plan.description}</p>
               </div>
 
-              <div className="mb-4 min-h-[96px] text-center">
+              <div className="mb-4 h-[56px] lg:h-[80px] text-center flex flex-col justify-center">
                 <div className="flex items-baseline justify-center gap-1">
                   {plan.name === 'Premium' && (
                     <span className="text-text-muted/70 text-xs mr-1">vanaf</span>
@@ -181,7 +209,7 @@ export default function PakkettenPage() {
               </div>
 
               <div className="flex-1">
-                <p className="text-text-dark text-xs font-medium uppercase tracking-wider mb-3 text-center">
+                <p className="text-green-dark text-xs font-bold uppercase tracking-wider mb-3">
                   Wat je krijgt
                 </p>
                 <ul className="space-y-3">
@@ -233,10 +261,10 @@ export default function PakkettenPage() {
             {/* Left side - Title */}
             <div>
               <h2 className="text-text-dark mb-8">
-                <span className="font-serif">Inbegrepen in</span>
+                <span className="font-serif">Dit zit standaard bij</span>
                 <br />
                 <span className="relative inline-block serif-header italic text-green-dark">
-                  elk pakket
+                  elk website pakket
                   <WavyUnderline color="#EAD7FF" strokeWidth={6} />
                 </span>
               </h2>
@@ -246,90 +274,90 @@ export default function PakkettenPage() {
             </div>
 
             {/* Right side - Feature cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">🎨</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Design in jouw huisstijl</h4>
-                <p className="text-text-muted text-sm">Volledig ontworpen volgens jouw branding.</p>
+            <div className="grid grid-cols-2 gap-2 sm:gap-4">
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🎨</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Design in jouw huisstijl</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Volledig ontworpen volgens jouw branding.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">📄</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Basis pagina's</h4>
-                <p className="text-text-muted text-sm">Home, over ons, contact en call-to-actions.</p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📄</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Basis pagina&apos;s</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Home, over ons, contact en call-to-actions.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">🖼️</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Beeldbibliotheek</h4>
-                <p className="text-text-muted text-sm">Toegang tot passende afbeeldingen voor je website.</p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🖼️</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Beeldbibliotheek</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Toegang tot passende afbeeldingen voor je website.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">✨</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">AI-beelden op maat</h4>
-                <p className="text-text-muted text-sm">Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit.</p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">✨</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">AI-beelden op maat</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">📱</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Responsive design</h4>
-                <p className="text-text-muted text-sm">Perfect op desktop, tablet én mobiel.</p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📱</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Responsive design</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Perfect op desktop, tablet én mobiel.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">📝</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Contactformulier</h4>
-                <p className="text-text-muted text-sm">Bezoekers kunnen direct contact opnemen.</p>
+              <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📝</span>
+                <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Contactformulier</h4>
+                <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Bezoekers kunnen direct contact opnemen.</p>
               </div>
             </div>
           </div>
 
           <p className="text-text-muted text-sm mt-8 text-center">
-            Nog geen huisstijl? Geen probleem. We kunnen ook je <span className="text-green-dark font-medium">huisstijl ontwerpen</span> als add-on.
+            Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="text-green-dark font-medium link-wavy-underline">Neem contact op</Link> als je ook een huisstijl nodig hebt.
           </p>
         </div>
       </section>
 
       {/* Technische Section */}
-      <section className="bg-cream pt-4 md:pt-6 pb-20 md:pb-28">
+      <section className="bg-[#1a1a1a] py-20 md:py-28">
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left side - Feature cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 order-2 lg:order-1">
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">⚡</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">99.9% uptime</h4>
-                <p className="text-text-muted text-sm">Praktisch altijd online.</p>
+            <div className="grid grid-cols-2 gap-2 sm:gap-4 order-2 lg:order-1">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-white/10">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">⚡</span>
+                <h4 className="text-white font-medium mb-1 text-xs sm:text-base">99.9% uptime</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm hidden sm:block">Praktisch altijd online.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">🚀</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Snelle laadtijden</h4>
-                <p className="text-text-muted text-sm">Bezoekers haken minder snel af.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-white/10">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🚀</span>
+                <h4 className="text-white font-medium mb-1 text-xs sm:text-base">Snelle laadtijden</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm hidden sm:block">Bezoekers haken minder snel af.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">🔒</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Veilig en beschermd</h4>
-                <p className="text-text-muted text-sm">Je site blijft schoon en betrouwbaar.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-white/10">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🔒</span>
+                <h4 className="text-white font-medium mb-1 text-xs sm:text-base">Veilig en beschermd</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm hidden sm:block">Je site blijft schoon en betrouwbaar.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">💾</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Back-ups geregeld</h4>
-                <p className="text-text-muted text-sm">Altijd terug te zetten als er iets misgaat.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-white/10">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">💾</span>
+                <h4 className="text-white font-medium mb-1 text-xs sm:text-base">Dagelijkse back-ups</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm hidden sm:block">Altijd terug te zetten als er iets misgaat.</p>
               </div>
-              <div className="bg-white rounded-2xl p-5 border border-black/5">
-                <span className="text-2xl mb-3 block">🔧</span>
-                <h4 className="text-green-dark font-medium mb-1 text-base">Onderhoud inbegrepen</h4>
-                <p className="text-text-muted text-sm">Wij zorgen dat je website blijft draaien.</p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-white/10 col-span-2 sm:col-span-1">
+                <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🔧</span>
+                <h4 className="text-white font-medium mb-1 text-xs sm:text-base">Onderhoud inbegrepen</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm hidden sm:block">Wij zorgen dat je website blijft draaien.</p>
               </div>
             </div>
 
             {/* Right side - Title */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-text-dark mb-8">
+              <h2 className="text-white mb-8">
                 <span className="font-serif">Technisch</span>
                 <br />
-                <span className="relative inline-block serif-header italic text-green-dark">
+                <span className="relative inline-block serif-header italic text-lila">
                   allemaal geregeld
                   <WavyUnderline color="#EAD7FF" strokeWidth={6} />
                 </span>
               </h2>
-              <p className="text-text-muted leading-relaxed">
+              <p className="text-white/70 leading-relaxed">
                 Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken.
               </p>
             </div>
@@ -372,7 +400,7 @@ export default function PakkettenPage() {
                 </span>
               </h2>
               <p className="text-text-muted leading-relaxed">
-                Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
+                Wil je later toch iets extra&apos;s toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.
               </p>
             </div>
           </div>
@@ -385,7 +413,7 @@ export default function PakkettenPage() {
           <div className="text-center mb-12">
             <h2 className="text-white mb-4">
               <span className="font-serif">Extra</span>{' '}
-              <span className="serif-header italic text-lila">services</span>
+              <span className="serif-header italic" style={{ color: '#044538' }}>services</span>
             </h2>
             <p className="text-white/70 max-w-2xl mx-auto">
               Wij kunnen je naast een strakke website ook helpen met andere diensten.
@@ -440,20 +468,22 @@ export default function PakkettenPage() {
                 <br />
                 <span className="relative inline-block serif-header italic text-white">
                   jouw eigendom
-                  {/* Groene golvende lijn eronder */}
+                  {/* Groene golvende lijn eronder - zelfde animatie als homepage */}
                   <svg
-                    className="absolute -bottom-4 left-0 w-full h-6"
-                    viewBox="0 0 200 24"
+                    ref={greenWavyRef}
+                    className="absolute -bottom-4 left-0 w-full h-4 wavy-underline"
+                    style={{ zIndex: -1 }}
+                    viewBox="0 0 100 12"
                     fill="none"
                     preserveAspectRatio="none"
                   >
                     <path
-                      d="M2 12 Q 25 2, 50 14 Q 75 26, 100 12 Q 125 -2, 150 14 Q 175 26, 198 12"
+                      d="M0 6 Q 12.5 0, 25 6 T 50 6 T 75 6 T 100 6"
                       stroke="#03483A"
-                      strokeWidth="5"
+                      strokeWidth="4"
                       strokeLinecap="round"
                       fill="none"
-                      className="animate-hand-draw"
+                      className="wavy-path"
                     />
                   </svg>
                 </span>
