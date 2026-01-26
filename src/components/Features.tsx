@@ -51,12 +51,13 @@ export default function Features() {
           </div>
           <div className="bg-green-dark rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 min-h-[400px] md:min-h-[480px] lg:min-h-[520px] flex flex-col justify-center relative overflow-hidden">
             {/* Grote pil rechtsboven - speels effect */}
-            <span
-              className="absolute top-6 right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 bg-cream text-green-dark px-5 py-1 md:px-6 md:py-1.5 rounded-2xl text-sm md:text-base lg:text-lg font-serif border-2 border-green-dark/20 shadow-md"
+            <Link
+              href="/pakketten#add-ons"
+              className="absolute top-6 right-6 md:top-8 md:right-8 lg:top-10 lg:right-10 bg-cream text-green-dark px-5 py-1 md:px-6 md:py-1.5 rounded-2xl text-sm md:text-base lg:text-lg font-serif border-2 border-green-dark/20 shadow-md hover:bg-lila transition-colors cursor-pointer"
               style={{ transform: 'rotate(3deg)' }}
             >
               Add-ons & diensten
-            </span>
+            </Link>
 
             <h3 className="text-white mb-3 mt-12 md:mt-14 lg:mt-16">
               <span className="font-serif text-lila">Meer nodig?</span>

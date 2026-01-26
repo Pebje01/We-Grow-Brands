@@ -141,7 +141,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="font-sans text-white leading-relaxed text-center max-w-xl 3xl:max-w-2xl 4xl:max-w-3xl mb-6 md:mb-8 lg:mb-10 4xl:mb-14 text-base 4xl:text-xl">
-            Nooit meer balen van je website. Wij maken sites waar je trots op bent. Passend bij je merk en de ambities van je bedrijf.
+            Nooit meer balen van je website. Wij creëren websites die kloppen: sterk in design, passend bij je merk en gebouwd om mee te groeien met je ambities.
           </p>
 
           <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3">

@@ -307,55 +307,55 @@ export default function WebsitesPage() {
           </div>
 
           {/* Feature cards below */}
-          <ScrollReveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-16 relative z-10" animation="fade-up" stagger={0.1}>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+          <ScrollReveal className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 mt-16 relative z-10" animation="fade-up" stagger={0.1}>
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                   <path d="M2 17l10 5 10-5"/>
                   <path d="M2 12l10 5 10-5"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Volledig op maat</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Premium design, onderscheidende branding. Alles gebouwd vanuit jouw merk.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">Volledig op maat</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Premium design, onderscheidende branding. Alles gebouwd vanuit jouw merk.</p>
               </div>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                   <path d="M9 12l2 2 4-4"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">100% jouw eigendom</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Geen vage leaseconstructies of lock-in. Voordelige websitepakketten of flexibele betaaltermijnen, daarna volledig van jou. Hosting bij ons inbegrepen, maar je bent vrij om te kiezen na volledige betaling.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">100% jouw eigendom</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Geen vage leaseconstructies of lock-in. Voordelige websitepakketten of flexibele betaaltermijnen, daarna volledig van jou.</p>
               </div>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
                   <path d="M2 12h20"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Alles vanuit je merk</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Wij ontwerpen niet zomaar een mooie website. Alles is doordacht en gebouwd vanuit jouw branding, waardoor je een sterkere en herkenbare online aanwezigheid krijgt.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">Alles vanuit je merk</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Wij ontwerpen niet zomaar een mooie website. Alles is doordacht en gebouwd vanuit jouw branding.</p>
               </div>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Directe communicatie</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Je hoeft niet lang te wachten op wijzigingen en antwoorden. Neem contact op via e-mail en WhatsApp. We zorgen dat je snel reactie krijgt en dat dingen snel aangepast worden.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">Directe communicatie</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Neem contact op via e-mail en WhatsApp. We zorgen dat je snel reactie krijgt.</p>
               </div>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                   <path d="M2 17l10 5 10-5"/>
                   <path d="M2 12l10 5 10-5"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Meer dan websites</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Met ervaring in branding en marketing maken we een website die een sterk verlengstuk van je bedrijf is. Naast websites bieden we ook diensten zoals branding, huisstijl en fotografie. Bekijk de add-ons en extra services hieronder.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">Meer dan websites</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Naast websites bieden we ook diensten zoals branding, huisstijl en fotografie.</p>
               </div>
-              <div className="bg-[#2a2a2a] rounded-2xl p-6 border border-white/10">
-                <svg className="w-8 h-8 text-lila mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <div className="bg-[#2a2a2a] rounded-xl sm:rounded-2xl p-3 sm:p-6 border border-white/10">
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-lila mb-2 sm:mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
                 </svg>
-                <h4 className="text-white font-medium mb-2">Voordelig onderhoud</h4>
-                <p className="text-white/60 text-sm leading-relaxed">Wij bieden optionele pakketten voor aanpassingen en onderhoud na oplevering. Je kunt zelf kiezen of je pakketten voor 6 maanden of een jaar afsluit. Zo hoef je niet voor elke kleine wijziging een hoge factuur te verwachten.</p>
+                <h4 className="text-white font-medium mb-1 sm:mb-2 text-xs sm:text-base">Voordelig onderhoud</h4>
+                <p className="text-white/60 text-[10px] sm:text-sm leading-relaxed hidden sm:block">Optionele pakketten voor aanpassingen en onderhoud na oplevering.</p>
               </div>
             </ScrollReveal>
         </div>
@@ -376,48 +376,45 @@ export default function WebsitesPage() {
                     <WavyUnderline color="#EAD7FF" strokeWidth={6} />
                   </span>
                 </h2>
-                <p className="text-text-muted leading-relaxed">
-                  Dit zit standaard in elke website die we maken. Geen extra kosten, gewoon inbegrepen.
-                </p>
               </div>
 
               {/* Right side - Feature cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">🎨</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Design in jouw huisstijl</h4>
-                  <p className="text-text-muted text-sm">Volledig ontworpen volgens jouw branding.</p>
+              <div className="grid grid-cols-2 gap-2 sm:gap-4">
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🎨</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Design in jouw huisstijl</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Volledig ontworpen volgens jouw branding.</p>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">📄</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Basis pagina&apos;s</h4>
-                  <p className="text-text-muted text-sm">Home, over ons, contact en call-to-actions.</p>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📄</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Basis pagina&apos;s</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Home, over ons, contact en call-to-actions.</p>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">🖼️</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Beeldbibliotheek</h4>
-                  <p className="text-text-muted text-sm">Toegang tot passende afbeeldingen voor je website.</p>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">🖼️</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Beeldbibliotheek</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Toegang tot passende afbeeldingen voor je website.</p>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">✨</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">AI-beelden op maat</h4>
-                  <p className="text-text-muted text-sm">Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit.</p>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">✨</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">AI-beelden op maat</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit.</p>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">📱</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Responsive design</h4>
-                  <p className="text-text-muted text-sm">Perfect op desktop, tablet én mobiel.</p>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📱</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Responsive design</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Perfect op desktop, tablet én mobiel.</p>
                 </div>
-                <div className="bg-white rounded-2xl p-5 border border-black/5">
-                  <span className="text-2xl mb-3 block">📝</span>
-                  <h4 className="text-green-dark font-medium mb-1 text-base">Contactformulier</h4>
-                  <p className="text-text-muted text-sm">Bezoekers kunnen direct contact opnemen.</p>
+                <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-5 border border-black/5">
+                  <span className="text-lg sm:text-2xl mb-2 sm:mb-3 block">📝</span>
+                  <h4 className="text-green-dark font-medium mb-1 text-xs sm:text-base">Contactformulier</h4>
+                  <p className="text-text-muted text-[10px] sm:text-sm hidden sm:block">Bezoekers kunnen direct contact opnemen.</p>
                 </div>
               </div>
             </div>
 
             <p className="text-text-muted text-sm mt-8 text-center">
-              Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="text-green-dark font-medium link-wavy-underline">Neem contact op</Link> als je ook een huisstijl nodig hebt.
+              Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="text-green-dark font-medium underline hover:no-underline transition-all">Neem contact op</Link> als je ook een huisstijl nodig hebt.
             </p>
           </ScrollReveal>
         </div>

@@ -4,18 +4,18 @@ export default function Recognition() {
   const painPoints = [
     {
       icon: '😕',
-      title: 'Websites die niet voelen als jouw bedrijf',
-      quote: 'Je kijkt naar je website met teleurstelling. Je huidige website is gewoon niet "jou".',
+      title: 'Jouw website voelt niet passend bij je bedrijf',
+      quote: 'Je kijkt naar je website met teleurstelling. Je huidige website is het gewoon net niet.',
     },
     {
       icon: '🤯',
-      title: 'Te technisch gedoe',
-      quote: 'Hosting, DNS, plugins, updates... je wilde gewoon een website, geen IT-diploma.',
+      title: 'Technische rompslomp',
+      quote: 'Hosting, DNS, plugins, werken in een CMS... Je wilt gewoon een mooie website, niet een IT-diploma.',
     },
     {
       icon: '🎨',
-      title: 'Zelf lopen aanrommelen',
-      quote: 'Je hebt het zelf geprobeerd, maar het resultaat is steeds niet waar je op hoopte.',
+      title: 'Zelf lopen klungelen',
+      quote: 'Je hebt het wel zelf geprobeerd, maar het werd niet wat je er van hoopte. Of je wilt helemaal niet zelf aanmodderen.',
     },
     {
       icon: '📦',
@@ -25,12 +25,12 @@ export default function Recognition() {
     {
       icon: '🐢',
       title: 'Je website staat, maar hoe...',
-      quote: 'Lange laadtijden, trage pagina\'s en een gevoel dat het beter kan.',
+      quote: 'Lange laadtijden, trage pagina\'s en een design waar je ongelukkig van wordt.',
     },
     {
       icon: '💸',
       title: 'Je hebt een agency gevonden die mooie websites maakt...',
-      quote: '...maar daar zit ook een torenhoog prijskaartje aan.',
+      quote: '...maar daar zit ook een torenhoog prijskaartje aan. Yikes.',
     },
   ]
 
