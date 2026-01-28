@@ -77,7 +77,6 @@ export default function DynamicOffertePage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('[OFFERTE_LOGIN] Attempting login with slug:', slug, 'password length:', password.length)
     try {
       const res = await fetch('/api/auth/verify-offerte/', {
         method: 'POST',
@@ -86,7 +85,6 @@ export default function DynamicOffertePage() {
       })
 
       const data = await res.json()
-      console.log('[OFFERTE_LOGIN] Response:', data)
 
       if (data.authorized) {
         setIsLoggedIn(true)
@@ -98,7 +96,7 @@ export default function DynamicOffertePage() {
         setPassword('')
       }
     } catch (err) {
-      console.error('[OFFERTE_LOGIN] Login error:', err)
+      console.error('Login error:', err)
       setError('Er is een fout opgetreden')
     }
   }
