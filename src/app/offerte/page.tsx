@@ -387,12 +387,6 @@ export default function OffertePage() {
         return
       }
 
-      // Get the type for the email
-      const type = offerteType === 'with-photo' ? 'Met Fotografie' : 'Zonder Fotografie'
-      const totalAmount = offerteType === 'with-photo' ? '€1.960,20' : '€1.603,25'
-      const priceExclVat = offerteType === 'with-photo' ? '€1.620,00' : '€1.325,00'
-      const vat = offerteType === 'with-photo' ? '€340,20' : '€278,25'
-
       // Send notification email via Resend (server-side, reliable)
       try {
         console.log('[OFFERTE] Starting email send via Resend...', {
