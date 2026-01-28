@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import WavyText from '@/components/WavyText'
 
 const categories = ['Alles', 'Algemeen', 'Pakketten', 'Hosting', 'Proces', 'Support'] as const
 
@@ -68,7 +69,7 @@ const faqs = [
     icon: 'shield',
     question: 'Zit hosting en onderhoud erbij?',
     answer:
-      'De eerste 6 maanden zit hosting inbegrepen. Daarna kun je kiezen: je website op je eigen hosting zetten, of hosting bij ons afnemen. Je bent volledig vrij in je keuze.',
+      'We raden aan de hosting & onderhoud bij ons te doen, maar het staat je vrij om een eigen hostingprovider te nemen. Bij alle pakketten zit 6 maanden hosting inbegrepen.',
   },
   {
     category: 'Hosting',
@@ -216,8 +217,8 @@ export default function FaqPage() {
           <p className="text-text-muted max-w-2xl mx-auto">
             Dit zijn de meest voorkomende vragen. Kun je het antwoord niet vinden?
             <br />
-            <Link href="/contact" className="text-green-dark underline">
-              Stuur ons een bericht
+            <Link href="/contact" className="text-green-dark underline link-wave inline-block">
+              <WavyText text="Stuur ons een bericht" />
             </Link>
           </p>
           </div>

@@ -1,69 +1,33 @@
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 import WavyText from '@/components/WavyText'
-
-const services = [
-  {
-    icon: '🧱',
-    title: 'Essentials',
-    description: 'Voor een sterke, professionele basis. Strak design, helder verhaal en een site waar je trots op bent.',
-    price: '€999',
-    deposit: '€295',
-    term: '€151',
-    features: [
-      { text: 'Tot 3 pagina\'s', included: true },
-      { text: 'Mooi op elk scherm', included: true },
-      { text: 'Goed vindbaar', included: true },
-      { text: 'Contactformulier', included: true },
-      { text: 'Blog functionaliteit', included: false },
-      { text: 'Maatwerk animaties', included: false },
-    ],
-    cta: 'Start met Essentials',
-    popular: false,
-  },
-  {
-    icon: '🚀',
-    title: 'Groei',
-    description: 'Voor bedrijven die willen doorgroeien met meer pagina\'s, meer uitstraling en meer vertrouwen.',
-    price: '€1.450',
-    deposit: '€395',
-    term: '€224',
-    features: [
-      { text: 'Tot 8 pagina\'s', included: true },
-      { text: 'Custom design', included: true },
-      { text: 'Meer zichtbaarheid', included: true },
-      { text: 'Blog of portfolio', included: true },
-      { text: 'Inzicht in bezoekers', included: true },
-      { text: 'Maatwerk animaties', included: false },
-    ],
-    cta: 'Start met Groei',
-    popular: true,
-  },
-  {
-    icon: '👨‍💼',
-    title: 'Premium',
-    description: 'Voor ambitieuze merken die het groots willen aanpakken. Volledig op maat en high-end uitgevoerd.',
-    price: '€2.650',
-    deposit: '€495',
-    term: '€448',
-    features: [
-      { text: '8+ pagina\'s', included: true },
-      { text: 'Website met diepere structuur', included: true },
-      { text: 'Maatwerk functionaliteit', included: true },
-      { text: 'Koppelingen met tools', included: true },
-      { text: 'Webshop mogelijk', included: true },
-      { text: 'Volledige begeleiding', included: true },
-      { text: 'Maatwerk animaties', included: true },
-    ],
-    cta: 'Start met Premium',
-    popular: false,
-  },
-]
+import WavyLineScroll from '@/components/WavyLineScroll'
+import { packages } from '@/data/packages'
 
 export default function Services() {
   return (
-    <section id="diensten" className="bg-[#1a1a1a] min-h-screen flex items-center py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mb-6 md:mb-0">
-      <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto text-center w-full">
+    <section id="diensten" className="bg-[#1a1a1a] min-h-screen flex items-center py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mb-6 md:mb-0 relative overflow-hidden">
+      {/* Decoratieve golvende lila lijn - Desktop (linksboven naar rechtsonder) */}
+      <WavyLineScroll
+        className="hidden md:block absolute top-0 left-0 w-full h-full pointer-events-none opacity-60"
+        viewBox="0 0 1200 800"
+        path="M-100 50 Q 100 150, 300 100 Q 500 50, 700 200 Q 900 350, 1100 300 Q 1250 250, 1300 400"
+        strokeColor="#EAD7FF"
+        strokeWidth={8}
+        direction="up"
+      />
+
+      {/* Decoratieve golvende lila lijn - Mobiel (linksboven naar rechtsonder) */}
+      <WavyLineScroll
+        className="md:hidden absolute top-0 left-0 w-full h-full pointer-events-none opacity-60"
+        viewBox="0 0 400 600"
+        path="M-20 30 C 100 80, 50 150, 150 200 C 250 250, 180 350, 300 420 C 380 470, 350 550, 420 620"
+        strokeColor="#EAD7FF"
+        strokeWidth={6}
+        direction="up"
+      />
+
+      <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto text-center w-full relative z-10">
         <h2 className="text-white mb-4">
           <span className="font-serif">Premium website</span>
           <br />
@@ -91,7 +55,7 @@ export default function Services() {
             animation="fade-up"
             stagger={0.2}
           >
-            {services.map((service, index) => (
+            {packages.map((service, index) => (
               <div
                 key={index}
                 className={`relative bg-white rounded-2xl md:rounded-3xl p-5 md:p-6 lg:p-8 border transition-all hover:shadow-xl flex flex-col h-full w-full max-w-[340px] text-left ${
@@ -100,7 +64,7 @@ export default function Services() {
                     : 'border-black/5 hover:border-black/10'
                 }`}
               >
-                {service.title === 'Premium' && (
+                {service.name === 'Premium' && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="bg-lila text-green-dark text-xs font-medium px-4 py-1.5 rounded-full">
                       Maatwerk
@@ -109,13 +73,13 @@ export default function Services() {
                 )}
 
                 <div className="mb-5 min-h-[132px] text-center">
-                  <h3 className="text-green-dark text-xl font-medium mb-2">{service.title}</h3>
+                  <h3 className="text-green-dark text-xl font-medium mb-2">{service.name}</h3>
                   <p className="text-text-muted text-sm leading-relaxed">{service.description}</p>
                 </div>
 
                 <div className="mb-4 min-h-[72px] text-center">
                   <div className="flex items-baseline justify-center gap-1">
-                    {service.title === 'Premium' && (
+                    {service.name === 'Premium' && (
                       <span className="text-text-muted/70 text-xs mr-1">vanaf</span>
                     )}
                     <span className="text-green-dark text-3xl font-medium font-serif">

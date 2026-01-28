@@ -55,7 +55,7 @@ export default function Footer() {
                   06 36 16 26 39
                 </Link>
               </li>
-              <li><span className="text-white/60 text-sm">KvK: 12345678</span></li>
+              <li><span className="text-white/60 text-sm">KvK: 84818883</span></li>
             </ul>
           </div>
 

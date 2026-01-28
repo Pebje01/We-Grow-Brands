@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Grow Brands - Offerte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #FBF8F4;
+            padding: 40px 20px;
+        }
+
+        /* Login Screen */
+        .login-screen {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #FBF8F4;
+        }
+
+        .login-card {
+            background: white;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .login-card h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 32px;
+            color: #03483A;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .login-card p {
+            color: #3a3a3a;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #EBE5DC;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .login-card input:focus {
+            outline: none;
+            border-color: #03483A;
+        }
+
+        .login-card button {
+            width: 100%;
+            padding: 12px 16px;
+            background: #03483A;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-card button:hover {
+            background: #022E26;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 12px;
+            margin-bottom: 16px;
+            display: none;
+        }
+
+        /* Offerte Container */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            display: none;
+        }
+
+        .container.visible {
+            display: block;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #EBE5DC;
+        }
+
+        .company-info h1 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
+            color: #03483A;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .company-info p {
+            font-size: 13px;
+            color: #3a3a3a;
+            line-height: 1.8;
+            margin-bottom: 3px;
+        }
+
+        .quote-meta {
+            text-align: right;
+        }
+
+        .quote-meta .label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #03483A;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .quote-meta .value {
+            font-size: 13px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        /* Title Section */
+        .title-section {
+            margin-bottom: 40px;
+        }
+
+        .title-section h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 48px;
+            color: #03483A;
+            margin-bottom: 8px;
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+
+        .title-section p {
+            color: #3a3a3a;
+            font-size: 14px;
+        }
+
+        /* Client Section */
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #03483A;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #EBE5DC;
+        }
+
+        .client-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            font-size: 13px;
+            color: #3a3a3a;
+        }
+
+        .client-info-group label {
+            font-weight: 600;
+            color: #03483A;
+            display: block;
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+
+        .client-info-group input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #EBE5DC;
+            padding: 6px 0;
+            font-size: 13px;
+            color: #1a1a1a;
+            background: transparent;
+            font-family: inherit;
+            margin-bottom: 12px;
+        }
+
+        .client-info-group input:focus {
+            outline: none;
+            border-bottom-color: #03483A;
+        }
+
+        /* Services Table */
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            font-size: 13px;
+        }
+
+        .services-table thead {
+            background: #03483A;
+            color: white;
+        }
+
+        .services-table th {
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-family: inherit;
+        }
+
+        .services-table td {
+            padding: 16px 12px;
+            border-bottom: 1px solid #EBE5DC;
+            color: #1a1a1a;
+        }
+
+        .services-table tbody tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        .services-table tbody tr:hover {
+            background: #F5F0E8;
+        }
+
+        .service-name {
+            font-weight: 600;
+            color: #03483A;
+            margin-bottom: 4px;
+        }
+
+        .service-desc {
+            font-size: 12px;
+            color: #3a3a3a;
+            line-height: 1.5;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Summary Section */
+        .summary {
+            margin-top: 30px;
+            margin-bottom: 35px;
+        }
+
+        .summary-table {
+            width: 100%;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            color: #3a3a3a;
+        }
+
+        .summary-row.total {
+            padding: 12px 0;
+            border-top: 2px solid #03483A;
+            border-bottom: 2px solid #03483A;
+            margin-top: 8px;
+            color: #03483A;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .summary-label {
+            flex: 1;
+        }
+
+        .summary-value {
+            text-align: right;
+            min-width: 80px;
+        }
+
+        /* Terms Section */
+        .terms {
+            font-size: 12px;
+            color: #3a3a3a;
+            line-height: 1.8;
+        }
+
+        .terms ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .terms li {
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .terms li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #03483A;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #EBE5DC;
+            text-align: center;
+            font-size: 12px;
+            color: #3a3a3a;
+            font-style: italic;
+        }
+
+        .signature-line {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+        }
+
+        .signature {
+            flex: 1;
+            text-align: center;
+            border-top: 1px solid #1a1a1a;
+            padding-top: 8px;
+            font-size: 12px;
+            color: #1a1a1a;
+        }
+
+        /* Approval Section */
+        .approval-section {
+            background: #F5F0E8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-left: 4px solid #03483A;
+        }
+
+        .approval-section h3 {
+            font-family: 'Instrument Serif', serif;
+            font-size: 16px;
+            color: #03483A;
+            margin-bottom: 12px;
+            font-weight: 400;
+        }
+
+        .approval-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .approval-buttons button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .approve-btn {
+            background: #03483A;
+            color: white;
+        }
+
+        .approve-btn:hover {
+            background: #022E26;
+        }
+
+        .reject-btn {
+            background: white;
+            color: #03483A;
+            border: 2px solid #03483A;
+        }
+
+        .reject-btn:hover {
+            background: #F5F0E8;
+        }
+
+        .logout-btn {
+            background: #EBE5DC;
+            color: #1a1a1a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background: #DDD5CC;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .approval-section,
+            .logout-btn {
+                display: none;
+            }
+
+            @page {
+                margin: 20mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-card">
+            <h1>We Grow Brands</h1>
+            <p>Voer het wachtwoord in om de offerte te bekijken</p>
+
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="error-message" id="errorMessage">Wachtwoord onjuist</div>
+                <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Wachtwoord"
+                    required
+                    autofocus
+                >
+                <button type="submit">Offerte bekijken</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Offerte Container -->
+    <div class="container" id="offerteContainer">
+        <!-- Header -->
+        <div class="header">
+            <div class="company-info">
+                <h1>We Grow Brands</h1>
+                <p>Web Design Agency</p>
+                <p>Amsterdam, Netherlands</p>
+                <p>hello@wegrowbrands.nl</p>
+                <p>+31 (0) 6 12345678</p>
+            </div>
+            <div class="quote-meta">
+                <div class="label">Offertenummer</div>
+                <div class="value">wgb-2025-0127</div>
+                <div class="label">Datum</div>
+                <div class="value" id="current-date"></div>
+                <div class="label">Geldig tot</div>
+                <div class="value" id="valid-until"></div>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <div class="title-section">
+            <h2>OFFERTE</h2>
+            <p>Premium Pakket - Website met Product Verkoop & Email Marketing</p>
+        </div>
+
+        <!-- Client Section -->
+        <div class="section">
+            <div class="section-title">Klantgegevens</div>
+            <div class="client-info">
+                <div>
+                    <div class="client-info-group">
+                        <label>Bedrijfsnaam</label>
+                        <input type="text" placeholder="Vul in">
+                    </div>
+                    <div class="client-info-group">
+                        <label>Contactpersoon</label>
+                        <input type="text" placeholder="Vul in">
+                    </div>
+                </div>
+                <div>
+                    <div class="client-info-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Vul in">
+                    </div>
+                    <div class="client-info-group">
+                        <label>Telefoonnummer</label>
+                        <input type="tel" placeholder="Vul in">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="section">
+            <div class="section-title">Beschrijving Diensten</div>
+            <table class="services-table">
+                <thead>
+                    <tr>
+                        <th>Dienst</th>
+                        <th>Beschrijving</th>
+                        <th class="text-center">Aantal</th>
+                        <th class="text-right">Prijs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="service-name">Premium Website Pakket</div>
+                        </td>
+                        <td>
+                            <div class="service-desc">
+                                <strong>Compleet website- en e-commerce pakket met email marketing</strong><br><br>
+                                <strong style="color: #03483A;">Website & Design</strong><br>
+                                • Responsive design, geoptimaliseerd voor desktop, tablet & mobile<br>
+                                • <strong>CMS via Elementor</strong> - zelf aanpassen en updaten<br>
+                                • <strong>Blog functionaliteit</strong> - artikelen & berichten beheren<br>
+                                • <strong>Contactformulier</strong> - automatische berichtafhandeling<br>
+                                • <strong>Merk integratie</strong> - volledig in lijn met jouw identiteit<br>
+                                • SEO-geoptimaliseerd & snelle laadtijden<br><br>
+                                <strong style="color: #03483A;">Product Verkoop</strong><br>
+                                • <strong>4-7 Product pagina's</strong> - met betaallinks geïntegreerd<br>
+                                • Mini webshop functionaliteit<br>
+                                • Betaalsysteem setup & integratie<br><br>
+                                <strong style="color: #03483A;">Email Marketing & Begeleiding</strong><br>
+                                • Email provider integratie & volledige setup<br>
+                                • Email formulieren & opt-in pagina's<br>
+                                • Begeleiding bij aanmaken & instellen nieuwsbrief<br>
+                                • Subscriber beheer configuratie<br>
+                                • Testing & validatie<br><br>
+                                <strong style="color: #03483A;">Support</strong><br>
+                                • Uitgebreide training & documentatie<br>
+                                • 3 ronden revisions per fase
+                            </div>
+                        </td>
+                        <td class="text-center">1x</td>
+                        <td class="text-right">€1.325</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <div class="summary-table">
+                <div class="summary-row">
+                    <span class="summary-label">Premium Website Pakket (alles inbegrepen)</span>
+                    <span class="summary-value">€1.325</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">Subtotaal</span>
+                    <span class="summary-value">€1.325</span>
+                </div>
+                <div class="summary-row">
+                    <span class="summary-label">BTW (21%)</span>
+                    <span class="summary-value">€278,25</span>
+                </div>
+                <div class="summary-row total">
+                    <span class="summary-label">TOTAAL OFFERTE</span>
+                    <span class="summary-value">€1.603,25</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Optional Additions -->
+        <div class="section" style="background: #F5F0E8; padding: 16px; border-radius: 8px; margin-bottom: 35px;">
+            <div class="section-title" style="border: none; margin-bottom: 12px;">Optionele Toevoegingen</div>
+            <table class="services-table" style="background: transparent;">
+                <thead style="display: none;"></thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px 0; border: none;">
+                            <div class="service-name">Professionele Fotografie</div>
+                        </td>
+                        <td style="padding: 12px 0; border: none;">
+                            <div class="service-desc">
+                                <strong>Product- en/of persoonlijke fotografie</strong><br>
+                                • 15 professioneel bewerkte foto's<br>
+                                • Geschikt voor website, social media & print<br>
+                                • Inclusief licentie voor commercieel gebruik
+                            </div>
+                        </td>
+                        <td class="text-center" style="padding: 12px 0; border: none;">1x</td>
+                        <td class="text-right" style="padding: 12px 0; border: none;">€295</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Terms -->
+        <div class="section">
+            <div class="section-title">Voorwaarden & Informatie</div>
+            <div class="terms">
+                <ul>
+                    <li><strong>Betaling:</strong> 50% vooruitbetaling bij acceptatie offerte, 50% bij oplevering</li>
+                    <li><strong>Timeline:</strong> 4-6 weken na kickoff en content briefing</li>
+                    <li><strong>Inclusief:</strong> Website ontwerp & development, product pagina's, betaalsysteem, email marketing setup & begeleiding, Elementor CMS training, begeleiding bij nieuwsbriefopzet</li>
+                    <li><strong>Exclusief:</strong> Fotografie, hosting, domein registratie, doorlopende ondersteuning</li>
+                    <li><strong>Geldigheid:</strong> Deze offerte is geldig voor 14 dagen na datum</li>
+                    <li><strong>Revisions:</strong> 3 ronden revisions per designfase inbegrepen</li>
+                    <li><strong>Betaalmogelijkheden:</strong> Bankoverschrijving, creditcard</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Approval Section -->
+        <div class="approval-section">
+            <h3>Akkoord met deze offerte?</h3>
+            <p style="font-size: 13px; color: #3a3a3a; margin-bottom: 12px;">
+                Laat ons weten of je akkoord gaat met deze offerte of wanneer je meer informatie wilt.
+            </p>
+            <div class="approval-buttons">
+                <button class="approve-btn" onclick="handleApproval('approved')">✓ Akkoord</button>
+                <button class="reject-btn" onclick="handleApproval('rejected')">✗ Nog niet akkoord</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>We kijken uit naar samenwerking! Neem contact op voor vragen of aanpassingen.</p>
+        </div>
+
+        <button class="logout-btn" onclick="handleLogout()">Uitloggen</button>
+    </div>
+
+    <script>
+        // Change this password to your preferred password
+        const PASSWORD = "Rhoofs01!";
+
+        // Check if already logged in
+        window.addEventListener('load', () => {
+            const isLoggedIn = sessionStorage.getItem('offerteLoggedIn');
+            if (isLoggedIn === 'true') {
+                showOfferte();
+            }
+        });
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+
+            if (password === PASSWORD) {
+                sessionStorage.setItem('offerteLoggedIn', 'true');
+                showOfferte();
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+            }
+        }
+
+        function showOfferte() {
+            document.getElementById('loginScreen').style.display = 'none';
+            document.getElementById('offerteContainer').classList.add('visible');
+            populateDates();
+        }
+
+        function handleLogout() {
+            sessionStorage.removeItem('offerteLoggedIn');
+            document.getElementById('loginScreen').style.display = 'flex';
+            document.getElementById('offerteContainer').classList.remove('visible');
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('passwordInput').focus();
+        }
+
+        function handleApproval(status) {
+            if (status === 'approved') {
+                alert('Dank je! Je hebt de offerte goedgekeurd. We nemen binnenkort contact op.');
+            } else {
+                alert('Geen probleem. Laat ons weten als je vragen hebt of aanpassingen wilt.');
+            }
+        }
+
+        function populateDates() {
+            const today = new Date();
+            const validUntil = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);
+
+            function formatDate(date) {
+                const day = String(date.getDate()).padStart(2, '0');
+                const month = String(date.getMonth() + 1).padStart(2, '0');
+                const year = date.getFullYear();
+                return `${day}-${month}-${year}`;
+            }
+
+            document.getElementById('current-date').textContent = formatDate(today);
+            document.getElementById('valid-until').textContent = formatDate(validUntil);
+        }
+    </script>
+</body>
+</html>

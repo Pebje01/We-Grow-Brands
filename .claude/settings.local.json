@@ -8,7 +8,25 @@
       "Bash(ffmpeg:*)",
       "Bash(ffprobe:*)",
       "Bash(convert:*)",
-      "Bash(identify:*)"
+      "Bash(identify:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm install)",
+      "Bash(npx next dev)",
+      "Bash(git fetch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate wavy lines, add-ons sections, and OG images\n\n- Refactor mobile wavy lines to use WavyLineScroll component\n- Add add-ons and extra services sections to websites and pakketten pages\n- Change \"Je website altijd online\" section to beige background\n- Add OpenGraph images for all pages\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate packages and extra services sections\n\n- Update Premium package: \"8+ pagina 's\" and \"Website met diepere structuur\"\n- Remove \"Naamgeving / naming\" from extra services\n- Add \"Opfrissen van bestaande huisstijl\" to extra services\n- Sync add-ons and extra services between websites and pakketten pages\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(ls:*)",
+      "Bash(npm i:*)",
+      "Bash(grep:*)",
+      "Bash(npm install:*)"
     ]
   }
 }

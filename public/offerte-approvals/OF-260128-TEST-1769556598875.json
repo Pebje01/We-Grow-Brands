@@ -1,0 +1,13 @@
+{
+  "offerteId": "OF-260128-TEST",
+  "clientName": "Daley Jansen",
+  "clientEmail": "daleyjansen@gmail.com",
+  "offerteType": "Zonder Fotografie",
+  "totalAmount": "€1.603,25",
+  "priceExclVat": "€1.325,00",
+  "vat": "€278,25",
+  "timestamp": "2026-01-27T23:29:58.875Z",
+  "clientIp": "::1",
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36",
+  "acceptanceMethod": "Web Signature"
+}

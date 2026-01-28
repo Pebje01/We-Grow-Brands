@@ -7,70 +7,7 @@ import WavyText from '@/components/WavyText'
 import WavyUnderline from '@/components/WavyUnderline'
 import WavyLineScroll from '@/components/WavyLineScroll'
 import Breadcrumbs from '@/components/Breadcrumbs'
-
-const plans = [
-  {
-    name: 'Essentials',
-    description: 'Perfect voor starters die willen investeren in een professionele website.',
-    price: { monthly: 999, annual: 151 },
-    deposit: 295,
-    oneTime: true,
-    features: [
-      { text: 'Tot 3 pagina\'s', included: true },
-      { text: 'Responsive design', included: true },
-      { text: 'Basis SEO-optimalisatie', included: true },
-      { text: 'Contactformulier', included: true },
-      { text: 'SSL-certificaat', included: true },
-      { text: 'Blog functionaliteit', included: false },
-      { text: 'Maatwerk animaties', included: false },
-      { text: 'Webshop functionaliteit', included: false },
-    ],
-    cta: 'Start met Essentials',
-    buttonColor: 'bg-[#F0E6FF] hover:bg-[#E5D6FF]',
-    popular: false,
-  },
-  {
-    name: 'Groei',
-    description: 'Voor bedrijven die willen groeien met een website die meebeweegt.',
-    price: { monthly: 1450, annual: 224 },
-    deposit: 395,
-    oneTime: true,
-    buttonColor: 'bg-[#D6BCFF] hover:bg-[#C9A8FF]',
-    features: [
-      { text: 'Tot 8 pagina\'s', included: true },
-      { text: 'Responsive design', included: true },
-      { text: 'Uitgebreide SEO-optimalisatie', included: true },
-      { text: 'Contactformulier', included: true },
-      { text: 'SSL-certificaat', included: true },
-      { text: 'Blog functionaliteit', included: true },
-      { text: 'Maatwerk animaties', included: false },
-      { text: 'Webshop functionaliteit', included: false },
-    ],
-    cta: 'Start met Groei',
-    popular: true,
-  },
-  {
-    name: 'Premium',
-    description: 'Volledig maatwerk voor ambitieuze merken met specifieke wensen.',
-    price: { monthly: 2650, annual: 448 },
-    deposit: 495,
-    oneTime: true,
-    features: [
-      { text: '8+ pagina\'s', included: true },
-      { text: 'Website met diepere structuur', included: true },
-      { text: 'Responsive design', included: true },
-      { text: 'Complete SEO-strategie', included: true },
-      { text: 'Geavanceerde formulieren', included: true },
-      { text: 'SSL-certificaat', included: true },
-      { text: 'Blog functionaliteit', included: true },
-      { text: 'Maatwerk animaties', included: true },
-      { text: 'Webshop functionaliteit', included: true },
-    ],
-    cta: 'Start met Premium',
-    buttonColor: 'bg-[#B794F6] hover:bg-[#A67DF0]',
-    popular: false,
-  },
-]
+import { packages } from '@/data/packages'
 
 export default function PakkettenPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
@@ -167,7 +104,7 @@ export default function PakkettenPage() {
           <div className="absolute -inset-x-6 md:-inset-x-10 -inset-y-16 bg-green-dark rounded-[30px] -z-10"></div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-5 items-stretch max-w-5xl mx-auto justify-items-center py-8">
-          {plans.map((plan) => (
+          {packages.map((plan) => (
             <div
               key={plan.name}
               className={`relative bg-white rounded-3xl p-8 border transition-all hover:shadow-xl flex flex-col h-full w-full max-w-[340px] ${
@@ -195,7 +132,7 @@ export default function PakkettenPage() {
                     <span className="text-text-muted/70 text-xs mr-1">vanaf</span>
                   )}
                   <span className="text-green-dark text-3xl font-medium font-serif">
-                    €{billingPeriod === 'monthly' ? plan.price.monthly : plan.price.annual}
+                    €{billingPeriod === 'monthly' ? plan.priceNumber : plan.termNumber}
                   </span>
                   {billingPeriod === 'annual' && (
                     <span className="text-text-muted/70 text-xs">/ maand</span>
@@ -203,7 +140,7 @@ export default function PakkettenPage() {
                 </div>
                 {billingPeriod === 'annual' && (
                   <p className="text-text-muted/70 text-xs mt-1">
-                    €{plan.deposit} aanbetaling, daarna 6× €{plan.price.annual}
+                    €{plan.depositNumber} aanbetaling, daarna 6× €{plan.termNumber}
                   </p>
                 )}
               </div>

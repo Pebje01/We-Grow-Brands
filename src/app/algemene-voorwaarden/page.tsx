@@ -60,52 +60,62 @@ const sections = [
     items: [
       'Wijzigingen buiten de afgesproken scope worden als meerwerk gefactureerd.',
       'Meerwerk wordt vooraf afgestemd op basis van tarief of vaste prijs.',
+      'Aanvullende wijzigingen worden tegen een uurtarief van €80,- gedaan of een vast bedrag in overleg met de klant.',
     ],
   },
   {
     title: '8. Hosting en onderhoud',
     items: [
       'Hosting en onderhoud zijn optioneel en worden separaat aangeboden.',
+      'Hostingkosten bedragen circa €10-20 per maand en zijn niet inbegrepen in de offerte.',
       'Bij beeindiging van hosting kan We Grow Brands meewerken aan verhuizing.',
     ],
   },
   {
-    title: '9. Intellectueel eigendom',
+    title: '9. Ondersteuning',
+    items: [
+      'Doorlopende begeleiding en technische ondersteuning worden via email en WhatsApp geboden.',
+      'Ondersteuning is inbegrepen in het eerste jaar na oplevering.',
+      'Na het eerste jaar kunnen ondersteuningsafspraken afzonderlijk worden gemaakt.',
+    ],
+  },
+  {
+    title: '10. Intellectueel eigendom',
     items: [
       'Na volledige betaling gaan gebruiksrechten over op de klant.',
       'We Grow Brands behoudt het recht om werk te tonen in portfolio en marketing.',
     ],
   },
   {
-    title: '10. Aansprakelijkheid',
+    title: '11. Aansprakelijkheid',
     items: [
       'We Grow Brands is niet aansprakelijk voor indirecte schade of omzetverlies.',
       'Aansprakelijkheid is beperkt tot het bedrag van de betreffende opdracht.',
     ],
   },
   {
-    title: '11. Overmacht',
+    title: '12. Overmacht',
     items: [
       'Bij overmacht kan de uitvoering worden opgeschort zonder schadeplicht.',
       'Onder overmacht valt onder andere storing, ziekte of externe afhankelijkheden.',
     ],
   },
   {
-    title: '12. Klachten en ontbinding',
+    title: '13. Klachten en ontbinding',
     items: [
       'Klachten worden zo snel mogelijk en binnen 14 dagen gemeld.',
       'Bij ernstige tekortkoming kan de overeenkomst worden ontbonden na overleg.',
     ],
   },
   {
-    title: '13. Privacy en gegevens',
+    title: '14. Privacy en gegevens',
     items: [
       'We Grow Brands verwerkt gegevens volgens de geldende privacyregels.',
       'Gegevens worden alleen gebruikt voor de uitvoering van de opdracht.',
     ],
   },
   {
-    title: '14. Toepasselijk recht',
+    title: '15. Toepasselijk recht',
     items: [
       'Op alle overeenkomsten is Nederlands recht van toepassing.',
       'Geschillen worden voorgelegd aan de bevoegde rechter in Nederland.',

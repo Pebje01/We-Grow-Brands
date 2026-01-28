@@ -1,0 +1,30 @@
+[
+  {
+    "id": "OF-260127-01",
+    "slug": "OF-260127-01-richard-hoofs",
+    "bedrijfsnaam": "Richard Hoofs",
+    "contactpersoon": "Denise Hulst",
+    "email": "post@denisehulst.nl",
+    "telefoon": "06 55 70 7201",
+    "type": "premium",
+    "wachtwoord": "$2a$10$.8cQkI.yJ0mVtIdivG/VIulpJMn5nVVPpwY4dVNDE/jubXWXwIWcq",
+    "createdAt": "2026-01-27T00:00:00Z",
+    "updatedAt": "2026-01-27T00:00:00Z",
+    "isActive": true,
+    "offerteType": "without-photo"
+  },
+  {
+    "id": "OF-260128-TEST",
+    "slug": "OF-260128-test-offerte",
+    "bedrijfsnaam": "Test Company",
+    "contactpersoon": "Test Contact",
+    "email": "hello@wegrowbrands.online",
+    "telefoon": "06 00 00 0000",
+    "type": "groei",
+    "wachtwoord": "",
+    "createdAt": "2026-01-28T00:00:00Z",
+    "updatedAt": "2026-01-28T00:00:00Z",
+    "isActive": true,
+    "offerteType": "with-photo"
+  }
+]
