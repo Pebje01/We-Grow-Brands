@@ -763,7 +763,7 @@ export default function DynamicOffertePage() {
                 <ul className="text-base text-white/90 space-y-3 list-disc list-inside leading-relaxed">
                   <li><strong>Betaling:</strong> 50% vooruitbetaling bij acceptatie offerte, 50% bij oplevering</li>
                   <li><strong>Timeline:</strong> 3-6 weken na kickoff en content briefing</li>
-                  <li><strong>Inclusief:</strong> Website ontwerp &amp; development, product pagina&apos;s, betaalsysteem, email marketing setup &amp; begeleiding, Elementor CMS training, begeleiding bij nieuwsbriefopzet</li>
+                  <li><strong>Inclusief:</strong> Website ontwerp &amp; development, product pagina&apos;s, betaalsysteem, email marketing setup &amp; begeleiding, Elementor CMS</li>
                   <li><strong>Geldigheid:</strong> Deze offerte is geldig voor 14 dagen na datum</li>
                   <li><strong>Revisions:</strong> 2 feedback ronden voor webdesign</li>
                 </ul>
