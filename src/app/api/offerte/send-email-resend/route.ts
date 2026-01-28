@@ -5,6 +5,14 @@ export async function POST(request: NextRequest) {
   try {
     const { contactName, contactEmail, type, totalAmount, offerteId } = await request.json()
 
+    console.log('[RESEND] POST request received:', {
+      timestamp: new Date().toISOString(),
+      contactName,
+      contactEmail,
+      type,
+      offerteId,
+    })
+
     if (!contactName || !contactEmail) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -13,10 +21,20 @@ export async function POST(request: NextRequest) {
     }
 
     const apiKey = process.env.RESEND_API_KEY
+    console.log('[RESEND] Checking API key:', {
+      hasApiKey: !!apiKey,
+      apiKeyPrefix: apiKey ? apiKey.substring(0, 10) : 'NOT_SET',
+    })
+
     if (!apiKey) {
-      console.error('RESEND_API_KEY not configured')
+      console.error('[RESEND] RESEND_API_KEY not configured', {
+        timestamp: new Date().toISOString(),
+        availableEnvVars: Object.keys(process.env)
+          .filter((k) => k.includes('RESEND') || k.includes('EMAIL'))
+          .map((k) => `${k}=${process.env[k]?.substring(0, 10)}...`),
+      })
       return NextResponse.json(
-        { error: 'Email service not configured' },
+        { error: 'Email service not configured', missing: 'RESEND_API_KEY' },
         { status: 500 }
       )
     }
@@ -24,10 +42,15 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(apiKey)
 
     const notificationEmail = process.env.OFFERTE_NOTIFICATION_EMAIL
+    console.log('[RESEND] Checking notification email:', {
+      hasEmail: !!notificationEmail,
+      email: notificationEmail,
+    })
+
     if (!notificationEmail) {
-      console.error('OFFERTE_NOTIFICATION_EMAIL not configured')
+      console.error('[RESEND] OFFERTE_NOTIFICATION_EMAIL not configured')
       return NextResponse.json(
-        { error: 'Email service not configured' },
+        { error: 'Email service not configured', missing: 'OFFERTE_NOTIFICATION_EMAIL' },
         { status: 500 }
       )
     }
