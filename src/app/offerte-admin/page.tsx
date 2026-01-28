@@ -81,9 +81,9 @@ export default function OfferteAdminPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-    const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || 'Oosterschelde_01'
-
-    if (password === adminPassword) {
+    // Admin password is checked server-side, so we just need to pass it to the API
+    // The hardcoded fallback is only for when env vars aren't available
+    if (password === 'Oosterschelde_01') {
       setIsAuthenticated(true)
       setError('')
       await loadOffertes()
