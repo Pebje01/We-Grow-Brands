@@ -39,6 +39,11 @@ export async function POST(request: NextRequest) {
     }
 
     const offertes = readOffertes()
+    console.log('[OFFERTE_AUTH] Loaded offertes:', {
+      count: offertes.length,
+      offertes: offertes.map((o) => ({ id: o.id, slug: o.slug, isActive: o.isActive })),
+    })
+
     const offerte = offertes.find((o) => o.slug === slug && o.isActive)
 
     if (!offerte) {
@@ -63,10 +68,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify password if it exists
-    console.log('[OFFERTE_AUTH] Verifying password...')
+    console.log('[OFFERTE_AUTH] Verifying password...', {
+      passwordLength: password?.length || 0,
+      hashLength: offerte.wachtwoord?.length || 0,
+      hashPrefix: offerte.wachtwoord?.substring(0, 20) || 'EMPTY',
+    })
     const isPasswordValid = await verifyPassword(password, offerte.wachtwoord)
 
-    console.log('[OFFERTE_AUTH] Password verification result:', isPasswordValid)
+    console.log('[OFFERTE_AUTH] Password verification result:', isPasswordValid, {
+      password: password,
+      hash: offerte.wachtwoord,
+    })
 
     if (!isPasswordValid) {
       console.log('[OFFERTE_AUTH] Password verification failed')
