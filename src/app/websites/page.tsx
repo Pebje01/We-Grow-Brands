@@ -279,14 +279,16 @@ export default function WebsitesPage() {
 
             {/* Right side - Title & Text */}
             <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left relative z-20" animation="fade-up">
-              <h2 className="text-white mb-6 relative z-20 bg-[#1a1a1a] lg:bg-transparent">
-                <span className="font-serif">Waarom kiezen voor</span>
-                <br />
-                <span className="serif-header italic text-lila">We Grow Brands</span>
-              </h2>
-              <p className="text-white/60 leading-relaxed mb-8 relative z-20 bg-[#1a1a1a] lg:bg-transparent">
-                Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
-              </p>
+              <div className="lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none">
+                <h2 className="text-white mb-6 relative z-20">
+                  <span className="font-serif">Waarom kiezen voor</span>
+                  <br />
+                  <span className="serif-header italic text-lila">We Grow Brands</span>
+                </h2>
+                <p className="text-white/60 leading-relaxed mb-8 relative z-20">
+                  Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
+                </p>
+              </div>
               <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
                 <Link
                   href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
