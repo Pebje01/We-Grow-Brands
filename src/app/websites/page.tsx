@@ -246,7 +246,7 @@ export default function WebsitesPage() {
 
           {/* Lila lijn in het zwarte vlak - Desktop: originele WavyLineScroll */}
           <WavyLineScroll
-            className="hidden lg:block absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
+            className="hidden lg:block absolute left-0 top-0 w-full h-full z-0 pointer-events-none"
             viewBox="0 0 1200 800"
             path="M -50 -30 C 100 80, 180 180, 250 120 C 320 60, 380 160, 420 250 C 460 340, 520 280, 580 350 C 640 420, 700 380, 760 450 C 820 520, 880 480, 940 550 C 1000 620, 1060 580, 1120 650 C 1180 720, 1220 780, 1280 850"
             strokeColor="#EAD7FF"
@@ -256,7 +256,7 @@ export default function WebsitesPage() {
 
           {/* Lila lijn - Mobiel */}
           <WavyLineScroll
-            className="lg:hidden absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
+            className="lg:hidden absolute left-0 top-0 w-full h-full z-0 pointer-events-none"
             viewBox="0 0 400 600"
             path="M-50 -10 C 60 -60, -20 120, 80 100 C 180 80, 100 220, 220 200 C 340 180, 260 320, 400 300"
             strokeColor="#EAD7FF"
