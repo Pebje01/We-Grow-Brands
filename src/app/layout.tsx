@@ -3,7 +3,7 @@ import { Instrument_Serif } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar'
-// Footer is handled per-page to avoid duplicates
+import ConditionalFooter from '@/components/ConditionalFooter'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -75,6 +75,7 @@ export default function RootLayout({
       <body className={`${polysansSlim.className} text-text-dark bg-cream overflow-x-hidden`}>
         <Navbar />
         <main>{children}</main>
+        <ConditionalFooter />
       </body>
     </html>
   )
