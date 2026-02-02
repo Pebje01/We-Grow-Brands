@@ -511,7 +511,7 @@ export default function WebsitesPage() {
           </ScrollReveal>
 
           {/* Extra Services - Rechts uitgelijnd */}
-          <ScrollReveal animation="fade-up" className="mt-8 md:mt-12 lg:mt-16 flex justify-end">
+          <ScrollReveal animation="fade-up" className="mt-8 md:mt-12 lg:mt-16 flex justify-end" id="andere-services">
             <div className="bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] py-10 md:py-14 lg:py-16 px-6 md:px-10 lg:px-12 max-w-2xl lg:max-w-3xl">
               <div className="text-center mb-8">
                 <h2 className="text-white mb-4">
