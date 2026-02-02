@@ -240,10 +240,13 @@ export default function WebsitesPage() {
       {/* Wrapper voor Waarom Ons + Inbegrepen */}
       <div className="relative">
         {/* Waarom Ons Section - Dark background */}
-        <section id="waarom-ons" className="relative flex items-center py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] overflow-hidden isolate">
+        <section id="waarom-ons" className="relative flex items-center py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] overflow-hidden">
+          {/* Achtergrond */}
+          <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] z-0"></div>
+
           {/* Lila lijn in het zwarte vlak - Desktop: originele WavyLineScroll */}
           <WavyLineScroll
-            className="hidden lg:block absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
+            className="hidden lg:block absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
             viewBox="0 0 1200 800"
             path="M -50 -30 C 100 80, 180 180, 250 120 C 320 60, 380 160, 420 250 C 460 340, 520 280, 580 350 C 640 420, 700 380, 760 450 C 820 520, 880 480, 940 550 C 1000 620, 1060 580, 1120 650 C 1180 720, 1220 780, 1280 850"
             strokeColor="#EAD7FF"
@@ -253,7 +256,7 @@ export default function WebsitesPage() {
 
           {/* Lila lijn - Mobiel */}
           <WavyLineScroll
-            className="lg:hidden absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
+            className="lg:hidden absolute left-0 top-0 w-full h-full z-[1] pointer-events-none"
             viewBox="0 0 400 600"
             path="M-50 -10 C 60 -60, -20 120, 80 100 C 180 80, 100 220, 220 200 C 340 180, 260 320, 400 300"
             strokeColor="#EAD7FF"
@@ -261,34 +264,29 @@ export default function WebsitesPage() {
             direction="up"
           />
 
-          {/* Achtergrond */}
-          <div className="absolute inset-0 bg-[#1a1a1a] rounded-[20px] md:rounded-[30px] -z-20"></div>
-
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Illustratie */}
-            <ScrollReveal className="order-2 lg:order-1 relative z-20" animation="fade-up">
+            <ScrollReveal className="order-2 lg:order-1" animation="fade-up">
               <Image
                 src="/afbeeldingen/waaromwegrowbrands.webp"
                 alt="Waarom kiezen voor We Grow Brands illustratie"
                 width={500}
                 height={400}
-                className="w-full max-w-md mx-auto relative z-20"
+                className="w-full max-w-md mx-auto"
               />
             </ScrollReveal>
 
             {/* Right side - Title & Text */}
-            <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left relative z-20" animation="fade-up">
-              <div className="lg:bg-transparent backdrop-blur-sm lg:backdrop-blur-none">
-                <h2 className="text-white mb-6 relative z-20">
-                  <span className="font-serif">Waarom kiezen voor</span>
-                  <br />
-                  <span className="serif-header italic text-lila">We Grow Brands</span>
-                </h2>
-                <p className="text-white/60 leading-relaxed mb-8 relative z-20">
-                  Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
-                </p>
-              </div>
+            <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left" animation="fade-up">
+              <h2 className="text-white mb-6">
+                <span className="font-serif">Waarom kiezen voor</span>
+                <br />
+                <span className="serif-header italic text-lila">We Grow Brands</span>
+              </h2>
+              <p className="text-white/60 leading-relaxed mb-8">
+                Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
+              </p>
               <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
                 <Link
                   href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
