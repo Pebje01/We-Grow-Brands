@@ -267,24 +267,24 @@ export default function WebsitesPage() {
         <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Illustratie */}
-            <ScrollReveal className="order-2 lg:order-1" animation="fade-up">
+            <ScrollReveal className="order-2 lg:order-1 relative z-20" animation="fade-up">
               <Image
                 src="/afbeeldingen/waaromwegrowbrands.webp"
                 alt="Waarom kiezen voor We Grow Brands illustratie"
                 width={500}
                 height={400}
-                className="w-full max-w-md mx-auto"
+                className="w-full max-w-md mx-auto relative z-20"
               />
             </ScrollReveal>
 
             {/* Right side - Title & Text */}
-            <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left" animation="fade-up">
-              <h2 className="text-white mb-6">
+            <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left relative z-20" animation="fade-up">
+              <h2 className="text-white mb-6 relative z-20">
                 <span className="font-serif">Waarom kiezen voor</span>
                 <br />
                 <span className="serif-header italic text-lila">We Grow Brands</span>
               </h2>
-              <p className="text-white/60 leading-relaxed mb-8">
+              <p className="text-white/60 leading-relaxed mb-8 relative z-20">
                 Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
               </p>
               <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
