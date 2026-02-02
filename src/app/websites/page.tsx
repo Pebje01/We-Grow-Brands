@@ -414,7 +414,7 @@ export default function WebsitesPage() {
             </div>
 
             <p className="text-text-muted text-sm mt-8 text-center">
-              Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="text-green-dark font-medium underline hover:no-underline transition-all">Neem contact op</Link> als je ook een huisstijl nodig hebt.
+              Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten. <Link href="/contact" className="link-wave text-lila font-medium underline hover:no-underline"><WavyText text="Neem contact op" /></Link> als je ook een huisstijl nodig hebt.
             </p>
           </ScrollReveal>
         </div>
