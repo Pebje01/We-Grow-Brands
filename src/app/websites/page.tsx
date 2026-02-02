@@ -251,9 +251,9 @@ export default function WebsitesPage() {
             direction="up"
           />
 
-          {/* Lila lijn - Mobiel - verborgen vanwege z-index issues */}
+          {/* Lila lijn - Mobiel */}
           <WavyLineScroll
-            className="hidden absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
+            className="lg:hidden absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
             viewBox="0 0 400 600"
             path="M-50 -10 C 60 -60, -20 120, 80 100 C 180 80, 100 220, 220 200 C 340 180, 260 320, 400 300"
             strokeColor="#EAD7FF"
@@ -279,12 +279,12 @@ export default function WebsitesPage() {
 
             {/* Right side - Title & Text */}
             <ScrollReveal className="order-1 lg:order-2 text-center lg:text-left relative z-20" animation="fade-up">
-              <h2 className="text-white mb-6 relative z-20">
+              <h2 className="text-white mb-6 relative z-20 bg-[#1a1a1a] lg:bg-transparent">
                 <span className="font-serif">Waarom kiezen voor</span>
                 <br />
                 <span className="serif-header italic text-lila">We Grow Brands</span>
               </h2>
-              <p className="text-white/60 leading-relaxed mb-8 relative z-20">
+              <p className="text-white/60 leading-relaxed mb-8 relative z-20 bg-[#1a1a1a] lg:bg-transparent">
                 Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.
               </p>
               <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
