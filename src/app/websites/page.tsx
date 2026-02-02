@@ -251,9 +251,9 @@ export default function WebsitesPage() {
             direction="up"
           />
 
-          {/* Lila lijn - Mobiel */}
+          {/* Lila lijn - Mobiel - verborgen vanwege z-index issues */}
           <WavyLineScroll
-            className="lg:hidden absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
+            className="hidden absolute left-0 top-0 w-full h-full -z-10 pointer-events-none"
             viewBox="0 0 400 600"
             path="M-50 -10 C 60 -60, -20 120, 80 100 C 180 80, 100 220, 220 200 C 340 180, 260 320, 400 300"
             strokeColor="#EAD7FF"
