@@ -158,7 +158,7 @@ export default function KortingPage() {
           </div>
 
           <h1 className="text-white leading-tight mb-6">
-            <span className="font-serif">50% korting</span>
+            <span className="font-serif">30% korting</span>
             <br />
             <span className="serif-header text-lila italic">op je nieuwe website</span>
           </h1>
@@ -167,7 +167,7 @@ export default function KortingPage() {
             Start 2026 met een website waar je wél gelukkig van wordt.
           </p>
           <p className="text-white/60 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-            Tot het einde van januari krijg je 50% korting op onze Groei en Premium pakketten.
+            Tot het einde van januari krijg je 30% korting op onze Groei en Premium pakketten.
             Een serieuze, professionele website voor een prikkie.
           </p>
 
@@ -195,7 +195,7 @@ export default function KortingPage() {
           <div className="text-center mb-16 px-2 md:px-0">
             <h2 className="text-text-dark mb-4">
               <span className="font-serif">Kies je pakket</span>{' '}
-              <span className="serif-header text-green-dark">met 50% korting</span>
+              <span className="serif-header text-green-dark">met 30% korting</span>
             </h2>
             <p className="text-text-muted max-w-2xl mx-auto">
               Dezelfde premium kwaliteit, nu tijdelijk met korting.
@@ -296,7 +296,7 @@ export default function KortingPage() {
               className="space-y-6 max-w-xl mx-auto"
             >
               <input type="hidden" name="access_key" value="8be3f602-ca63-4ef2-a697-2acb45d4a0e4" />
-              <input type="hidden" name="subject" value="50% Korting aanvraag via Korting pagina" />
+              <input type="hidden" name="subject" value="30% Korting aanvraag via Korting pagina" />
               <input type="hidden" name="from_name" value="We Grow Brands Website" />
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
@@ -379,7 +379,7 @@ export default function KortingPage() {
                 disabled={isSubmitting}
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] transition-all py-4 px-12 text-base disabled:opacity-70 mx-auto block"
               >
-                <WavyText text={isSubmitting ? 'Versturen...' : 'Claim mijn 50% korting'} />
+                <WavyText text={isSubmitting ? 'Versturen...' : 'Claim mijn 30% korting'} />
               </button>
             </form>
           </div>
@@ -463,7 +463,7 @@ export default function KortingPage() {
                   </li>
                   <li className="flex gap-2">
                     <span className="text-green-dark">•</span>
-                    <span>Add-ons mogelijk tegen meerprijs (ook 50% korting indien aangegeven in eerste gesprek)</span>
+                    <span>Add-ons mogelijk tegen meerprijs (ook 30% korting indien aangegeven in eerste gesprek)</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="text-green-dark">•</span>
