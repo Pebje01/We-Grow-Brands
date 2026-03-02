@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import ActieForm from '@/components/ActieForm'
 
 export const metadata = {
@@ -105,7 +105,7 @@ export default function ActiePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/31636162639"
+                href={"https://wa.me/31636162639" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 text-[#25D366] hover:text-[#1FAF57] transition-colors"
@@ -117,7 +117,7 @@ export default function ActiePage() {
               </Link>
               <span className="text-text-muted hidden sm:inline">of</span>
               <Link
-                href="tel:+31636162639"
+                href={"tel:+31636162639" as any}
                 className="inline-flex items-center justify-center gap-2 text-green-dark hover:text-green-dark/80 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import WavyText from '@/components/WavyText'
 import SuccessPopup from '@/components/SuccessPopup'
 
@@ -179,7 +179,7 @@ export default function KortingPage() {
 
           {/* CTA Button */}
           <Link
-            href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+            href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-spring btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all px-6 py-3 text-base rounded-[15px] border border-black inline-flex items-center gap-2"
@@ -265,7 +265,7 @@ export default function KortingPage() {
                 </ul>
 
                 <Link
-                  href="#aanvragen"
+                  href={"#aanvragen" as any}
                   onClick={() => setSelectedPakket(`${pakket.name} - €${pakket.discountedPrice}`)}
                   className={`block text-center py-3 rounded-xl transition-all ${
                     pakket.popular

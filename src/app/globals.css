@@ -581,7 +581,7 @@ h6 {
 
 /* Testimonial sliding animation - seamless infinite loop */
 .animate-testimonial-scroll-fast {
-  animation: testimonial-scroll 45s linear infinite;
+  animation: testimonial-scroll 25s linear infinite;
 }
 
 @keyframes testimonial-scroll {

@@ -1,7 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -9,49 +10,51 @@ import WavyText from '@/components/WavyText'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const cases = [
-  {
-    name: 'MURTHEL GROENHART',
-    label: 'Essentials website',
-    quote: '"Een sportieve website die past bij kickboxlessen, groepstrainingen en personal training."',
-    image: '/mock-ups/murthel-mockup.webp',
-    slug: 'murthel-groenhart',
-    bgColor: 'bg-green-dark',
-    textLight: true,
-  },
-  {
-    name: 'SYSTEMISCH VERBINDEN',
-    label: 'Grow website',
-    quote: '"Ik ben heel blij met mijn website dit is echt helemaal passend!"',
-    image: '/mock-ups/systemisch-verbinden-mockup-laptop.webp',
-    slug: 'systemisch-verbinden',
-    bgColor: 'bg-[#7DB8C6]',
-  },
-  {
-    name: 'BLEIJENBERG',
-    label: 'Premium webshop',
-    quote: '"Eindelijk een website die echt past bij de kwaliteit en uitstraling die we voor ogen hadden."',
-    image: '/mock-ups/bleijenberg-mockup-laptop.webp',
-    slug: 'bleijenberg',
-    bgColor: 'bg-[#F5F0EB]',
-  },
-  {
-    name: 'MEET THE LOCALS',
-    label: 'Premium blog',
-    quote: '"Een website met een avontuurlijke uitstraling voor een reisblog."',
-    image: '/mock-ups/Meetthelocals-mockup-top.webp',
-    slug: 'meet-the-locals',
-    bgColor: 'bg-[#2D5A42]',
-    textLight: true,
-  },
-]
-
 export default function CasesSlider() {
   const sectionRef = useRef<HTMLElement>(null)
   const cardsRef = useRef<(HTMLDivElement | null)[]>([])
   const wavyRef = useRef<HTMLSpanElement>(null)
   const [flippedCards, setFlippedCards] = useState<boolean[]>([false, false, false, false])
   const [isDesktop, setIsDesktop] = useState(false)
+
+  const t = useTranslations('casesSlider')
+
+  const cases = [
+    {
+      name: 'MURTHEL GROENHART',
+      label: t('cases.murthel.label'),
+      quote: t('cases.murthel.quote'),
+      image: '/mock-ups/murthel-mockup.webp',
+      slug: 'murthel-groenhart',
+      bgColor: 'bg-green-dark',
+      textLight: true,
+    },
+    {
+      name: 'SYSTEMISCH VERBINDEN',
+      label: t('cases.systemisch.label'),
+      quote: t('cases.systemisch.quote'),
+      image: '/mock-ups/systemisch-verbinden-mockup-laptop.webp',
+      slug: 'systemisch-verbinden',
+      bgColor: 'bg-[#7DB8C6]',
+    },
+    {
+      name: 'BLEIJENBERG',
+      label: t('cases.bleijenberg.label'),
+      quote: t('cases.bleijenberg.quote'),
+      image: '/mock-ups/bleijenberg-mockup-laptop.webp',
+      slug: 'bleijenberg',
+      bgColor: 'bg-[#F5F0EB]',
+    },
+    {
+      name: 'MEET THE LOCALS',
+      label: t('cases.meetthelocals.label'),
+      quote: t('cases.meetthelocals.quote'),
+      image: '/mock-ups/Meetthelocals-mockup-top.webp',
+      slug: 'meet-the-locals',
+      bgColor: 'bg-[#2D5A42]',
+      textLight: true,
+    },
+  ]
 
   // Check if we're on desktop (hover-capable device)
   useEffect(() => {
@@ -179,10 +182,10 @@ export default function CasesSlider() {
                   {caseItem.quote}
                 </p>
                 <Link
-                  href={`/portfolio/${caseItem.slug}`}
+                  href={`/portfolio/${caseItem.slug}` as any}
                   className={`btn-spring btn-uniform btn-no-lila link-wave ${caseItem.textLight ? 'bg-white text-green-dark' : 'bg-white text-text-dark'} border border-black/10 hover:bg-cream transition-all inline-block w-fit`}
                 >
-                  <WavyText text="Bekijk case" />
+                  <WavyText text={t('viewCase')} />
                 </Link>
               </div>
             </div>
@@ -218,10 +221,10 @@ export default function CasesSlider() {
                   {caseItem.quote}
                 </p>
                 <Link
-                  href={`/portfolio/${caseItem.slug}`}
+                  href={`/portfolio/${caseItem.slug}` as any}
                   className={`btn-spring btn-uniform btn-no-lila link-wave ${caseItem.textLight ? 'bg-white text-green-dark' : 'bg-white text-text-dark'} border border-black/10 hover:bg-cream transition-all inline-block`}
                 >
-                  <WavyText text="Bekijk case" />
+                  <WavyText text={t('viewCase')} />
                 </Link>
               </div>
             </div>
@@ -237,10 +240,10 @@ export default function CasesSlider() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 lg:gap-8 mb-12 md:mb-16 lg:mb-20">
           <h2 className="text-white" style={{ lineHeight: 0.95 }}>
-            <span className="font-serif">Een aantal</span>
+            <span className="font-serif">{t('title1')}</span>
             <br />
             <span ref={wavyRef} className="relative inline-block serif-header italic text-cream wavy-underline">
-              mooie projecten
+              {t('titleHighlight')}
               <svg
                 className="absolute -bottom-2 left-0 w-full h-3"
                 viewBox="0 0 200 12"
@@ -259,7 +262,7 @@ export default function CasesSlider() {
             </span>
           </h2>
           <p className="text-white/70 text-sm md:text-base lg:text-lg max-w-md lg:text-right">
-            Bekijk een selectie van de websites die we hebben gebouwd voor onze klanten.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -279,7 +282,7 @@ export default function CasesSlider() {
             href="/portfolio"
             className="text-[#EAD7FF] hover:text-lila transition-colors text-sm md:text-base inline-flex items-center gap-2 link-wave"
           >
-            <WavyText text="Bekijk onze cases" />
+            <WavyText text={t('viewCases')} />
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="mt-0.5">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

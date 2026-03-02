@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link, usePathname } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import WavyText from '@/components/WavyText'
 
 export default function Navbar() {
+  const t = useTranslations('nav')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const pathname = usePathname()
@@ -50,7 +51,7 @@ export default function Navbar() {
 
       {/* Menu Items - Center */}
       <ul className="hidden xl:flex gap-6 2xl:gap-8 absolute left-1/2 -translate-x-1/2 items-center">
-        <li><Link href="/" className="text-white/80 hover:text-lila transition-colors text-sm">Home</Link></li>
+        <li><Link href="/" className="text-white/80 hover:text-lila transition-colors text-sm">{t('home')}</Link></li>
 
         {/* Websites Dropdown */}
         <li
@@ -59,7 +60,7 @@ export default function Navbar() {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           <Link href="/websites" className="text-white/80 hover:text-lila transition-colors text-sm flex items-center gap-1">
-            Websites
+            {t('websites')}
             <svg
               width="12"
               height="12"
@@ -85,7 +86,7 @@ export default function Navbar() {
             <div className="bg-white rounded-2xl shadow-2xl p-4 min-w-[380px]">
               <div className="space-y-0.5">
                 <Link
-                  href="/websites#website-laten-maken"
+                  href={"/websites#website-laten-maken" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-lila-light transition-colors group"
                 >
                   <div className="w-10 h-10 bg-lila rounded-full flex items-center justify-center text-green-dark flex-shrink-0">
@@ -96,17 +97,17 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Website laten maken
+                      {t('dropdown.websiteLatenMaken')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-text-muted text-xs">Strategische websites op maat</p>
+                    <p className="text-text-muted text-xs">{t('dropdown.websiteLatenMakenDesc')}</p>
                   </div>
                 </Link>
 
                 <Link
-                  href="/websites#onze-aanpak"
+                  href={"/websites#onze-aanpak" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-lila-light transition-colors group"
                 >
                   <div className="w-10 h-10 bg-green-dark rounded-full flex items-center justify-center text-white flex-shrink-0">
@@ -116,17 +117,17 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Onze aanpak
+                      {t('dropdown.onzeAanpak')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-text-muted text-xs">Van idee naar live in 4 stappen</p>
+                    <p className="text-text-muted text-xs">{t('dropdown.onzeAanpakDesc')}</p>
                   </div>
                 </Link>
 
                 <Link
-                  href="/websites#waarom-ons"
+                  href={"/websites#waarom-ons" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-lila-light transition-colors group"
                 >
                   <div className="w-10 h-10 bg-cream rounded-full flex items-center justify-center text-green-dark flex-shrink-0">
@@ -136,17 +137,17 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Waarom kiezen voor ons
+                      {t('dropdown.waaromOns')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-text-muted text-xs">Geen templates, wel strategie</p>
+                    <p className="text-text-muted text-xs">{t('dropdown.waaromOnsDesc')}</p>
                   </div>
                 </Link>
 
                 <Link
-                  href="/websites#trajecten"
+                  href={"/websites#trajecten" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-lila-light transition-colors group"
                 >
                   <div className="w-10 h-10 bg-lila/30 rounded-full flex items-center justify-center text-green-dark flex-shrink-0">
@@ -158,17 +159,17 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Website trajecten
+                      {t('dropdown.trajecten')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-text-muted text-xs">Essentials, Groei of Premium</p>
+                    <p className="text-text-muted text-xs">{t('dropdown.trajectenDesc')}</p>
                   </div>
                 </Link>
 
                 <Link
-                  href="/websites#andere-services"
+                  href={"/websites#andere-services" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-lila-light transition-colors group"
                 >
                   <div className="w-10 h-10 bg-green-dark/10 rounded-full flex items-center justify-center text-green-dark flex-shrink-0">
@@ -181,19 +182,19 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Branding en andere services
+                      {t('dropdown.branding')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-text-muted text-xs">Logo, huisstijl en meer</p>
+                    <p className="text-text-muted text-xs">{t('dropdown.brandingDesc')}</p>
                   </div>
                 </Link>
               </div>
 
               <div className="border-t border-black/5 mt-3 pt-3">
                 <Link
-                  href="/websites#plan-traject"
+                  href={"/websites#plan-traject" as any}
                   className="flex items-center gap-3 p-2.5 rounded-xl bg-lila hover:bg-[#D6BCFF] transition-colors group"
                 >
                   <div className="w-10 h-10 bg-green-dark rounded-full flex items-center justify-center text-white flex-shrink-0">
@@ -204,12 +205,12 @@ export default function Navbar() {
                   </div>
                   <div>
                     <p className="text-green-dark font-medium text-sm flex items-center gap-1">
-                      Plan een traject
+                      {t('dropdown.planTraject')}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                       </svg>
                     </p>
-                    <p className="text-green-dark/70 text-xs">Start een vrijblijvend gesprek</p>
+                    <p className="text-green-dark/70 text-xs">{t('dropdown.planTrajectDesc')}</p>
                   </div>
                 </Link>
               </div>
@@ -217,9 +218,9 @@ export default function Navbar() {
           </div>
         </li>
 
-        <li><Link href="/pakketten" className="text-white/80 hover:text-lila transition-colors text-sm">Pakketten</Link></li>
-        <li><Link href="/portfolio" className="text-white/80 hover:text-lila transition-colors text-sm">Cases</Link></li>
-        <li><Link href="/contact" className="text-white/80 hover:text-lila transition-colors text-sm">Contact</Link></li>
+        <li><Link href="/pakketten" className="text-white/80 hover:text-lila transition-colors text-sm">{t('packages')}</Link></li>
+        <li><Link href="/portfolio" className="text-white/80 hover:text-lila transition-colors text-sm">{t('cases')}</Link></li>
+        <li><Link href="/contact" className="text-white/80 hover:text-lila transition-colors text-sm">{t('contact')}</Link></li>
       </ul>
 
       {/* CTA + Mobile Toggle - Right */}
@@ -228,12 +229,12 @@ export default function Navbar() {
           href="/contact"
           className="hidden xl:inline-flex btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:text-[#02362B] hover:shadow-lg transition-all"
         >
-          <WavyText text="→ Vraag website aan" />
+          <WavyText text={`→ ${t('cta')}`} />
         </Link>
         <button
           type="button"
           className="xl:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/20 text-white/90 hover:text-lila transition-colors"
-          aria-label="Menu openen"
+          aria-label={t('menuOpen')}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((open) => !open)}
         >
@@ -254,12 +255,12 @@ export default function Navbar() {
           <div className="bg-white rounded-2xl shadow-2xl p-5 text-green-dark">
             <nav className="space-y-4 text-sm">
               <Link href="/" className="block font-medium" onClick={() => setMobileOpen(false)}>
-                Home
+                {t('home')}
               </Link>
 
               <details className="group">
                 <summary className="flex items-center justify-between cursor-pointer font-medium">
-                  Websites
+                  {t('websites')}
                   <svg
                     width="14"
                     height="14"
@@ -274,37 +275,37 @@ export default function Navbar() {
                 </summary>
                 <div className="mt-3 space-y-2 pl-3 border-l border-black/10 text-text-muted">
                   <Link href="/websites" className="block" onClick={() => setMobileOpen(false)}>
-                    Overzicht
+                    {t('mobile.overview')}
                   </Link>
-                  <Link href="/websites#website-laten-maken" className="block" onClick={() => setMobileOpen(false)}>
-                    Website laten maken
+                  <Link href={"/websites#website-laten-maken" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.websiteLatenMaken')}
                   </Link>
-                  <Link href="/websites#onze-aanpak" className="block" onClick={() => setMobileOpen(false)}>
-                    Onze aanpak
+                  <Link href={"/websites#onze-aanpak" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.onzeAanpak')}
                   </Link>
-                  <Link href="/websites#waarom-ons" className="block" onClick={() => setMobileOpen(false)}>
-                    Waarom kiezen voor ons
+                  <Link href={"/websites#waarom-ons" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.waaromOns')}
                   </Link>
-                  <Link href="/websites#trajecten" className="block" onClick={() => setMobileOpen(false)}>
-                    Website trajecten
+                  <Link href={"/websites#trajecten" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.trajecten')}
                   </Link>
-                  <Link href="/websites#andere-services" className="block" onClick={() => setMobileOpen(false)}>
-                    Branding en andere services
+                  <Link href={"/websites#andere-services" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.branding')}
                   </Link>
-                  <Link href="/websites#plan-traject" className="block" onClick={() => setMobileOpen(false)}>
-                    Plan een traject
+                  <Link href={"/websites#plan-traject" as any} className="block" onClick={() => setMobileOpen(false)}>
+                    {t('mobile.planTraject')}
                   </Link>
                 </div>
               </details>
 
               <Link href="/pakketten" className="block font-medium" onClick={() => setMobileOpen(false)}>
-                Pakketten
+                {t('packages')}
               </Link>
               <Link href="/portfolio" className="block font-medium" onClick={() => setMobileOpen(false)}>
-                Cases
+                {t('cases')}
               </Link>
               <Link href="/contact" className="block font-medium" onClick={() => setMobileOpen(false)}>
-                Contact
+                {t('contact')}
               </Link>
             </nav>
           </div>

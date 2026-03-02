@@ -1,12 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import WavyText from '@/components/WavyText'
+import { useTranslations } from 'next-intl'
 
 export default function Solution() {
+  const t = useTranslations('solution')
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -110,13 +112,13 @@ export default function Solution() {
           {/* Tekst */}
           <ScrollReveal className="text-center lg:text-left order-1 lg:order-2" animation="fade-up">
             <h2 className="text-white mb-6" style={{ lineHeight: 0.95 }}>
-              <span className="font-serif">Nooit meer balen</span>
+              <span className="font-serif">{t('title1')}</span>
               <br />
-              <span className="serif-header italic text-lila">van je website</span>
+              <span className="serif-header italic text-lila">{t('titleHighlight')}</span>
             </h2>
 
             <p className="text-white/90 text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-6 md:mb-8 lg:mb-10">
-              Je wilt gewoon ontzorgd worden. Geen gedoe, geen technische hoofdpijn, geen eindeloze facturen. Supermooie, supersnelle websites. Een professionele website waar je trots op kunt zijn en die je durft te delen met je potentiële doelgroep.
+              {t('description')}
             </p>
 
             <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
@@ -124,13 +126,13 @@ export default function Solution() {
                 href="/contact"
                 className="btn-spring btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all whitespace-nowrap shrink-0 px-4 py-2 text-sm rounded-[15px] border border-black"
               >
-                <WavyText text="Plan een gesprek" />
+                <WavyText text={t('ctaPlan')} />
               </Link>
               <Link
-                href="#diensten"
+                href={"#diensten" as any}
                 className="btn-spring link-wave bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 transition-all whitespace-nowrap shrink-0 px-4 py-2 text-sm rounded-[15px] border"
               >
-                <WavyText text="Bekijk pakketten" />
+                <WavyText text={t('ctaPackages')} />
               </Link>
             </div>
           </ScrollReveal>

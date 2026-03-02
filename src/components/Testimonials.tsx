@@ -1,59 +1,62 @@
 'use client'
 
 import Image from 'next/image'
-
-const testimonials = [
-  {
-    quote: '"Warme, aardse tinten en een luxe uitstraling. Perfect passend bij ons merk."',
-    author: 'Bleijenberg',
-    company: 'Tuinpotten & interieur',
-    logo: '/afbeeldingen/Bleijenberg-logo.webp',
-    bgColor: 'bg-lila',
-    textColor: 'text-text-dark',
-    mutedColor: 'text-text-muted',
-  },
-  {
-    quote: '"Een sportieve website die past bij kickboxen en personal training."',
-    author: 'Murthel Groenhart',
-    company: 'Groenhart Gym',
-    logo: '/afbeeldingen/Groenhart-Gym-logo_wit.webp',
-    bgColor: 'bg-green-dark',
-    textColor: 'text-white',
-    mutedColor: 'text-white/70',
-  },
-  {
-    quote: '"Strak, luxe en perfect passend bij onze huisstijl."',
-    author: 'Frida de Koning',
-    company: 'Systemischverbinden.nl',
-    logo: '/afbeeldingen/logo-systemischverbinden.webp',
-    bgColor: 'bg-[#D6BCFF]',
-    textColor: 'text-text-dark',
-    mutedColor: 'text-text-muted',
-  },
-  {
-    quote: '"Een website met een avontuurlijke uitstraling voor een reisblog."',
-    author: 'Meet the Locals',
-    company: 'Reisblog',
-    logo: '/afbeeldingen/meetthelocals-logo.webp',
-    bgColor: 'bg-cream',
-    textColor: 'text-text-dark',
-    mutedColor: 'text-text-muted',
-  },
-  {
-    quote: '"Professioneel, snel en betaalbaar. Precies wat we zochten."',
-    author: 'The Daley Edit',
-    company: 'Branddesigner & fotograaf',
-    logo: '/afbeeldingen/thedaleyedit-logo.webp',
-    bgColor: 'bg-green-dark',
-    textColor: 'text-white',
-    mutedColor: 'text-white/70',
-  },
-]
-
-// Triplicate testimonials for seamless infinite scroll
-const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials]
+import { useTranslations } from 'next-intl'
 
 export default function Testimonials() {
+  const t = useTranslations('testimonials')
+
+  const testimonials = [
+    {
+      quote: t('items.bleijenberg.quote'),
+      author: 'Bleijenberg',
+      company: t('items.bleijenberg.company'),
+      logo: '/afbeeldingen/Bleijenberg-logo.webp',
+      bgColor: 'bg-lila',
+      textColor: 'text-text-dark',
+      mutedColor: 'text-text-muted',
+    },
+    {
+      quote: t('items.murthel.quote'),
+      author: 'Murthel Groenhart',
+      company: t('items.murthel.company'),
+      logo: '/afbeeldingen/Groenhart-Gym-logo_wit.webp',
+      bgColor: 'bg-green-dark',
+      textColor: 'text-white',
+      mutedColor: 'text-white/70',
+    },
+    {
+      quote: t('items.systemisch.quote'),
+      author: 'Frida de Koning',
+      company: t('items.systemisch.company'),
+      logo: '/afbeeldingen/logo-systemischverbinden.webp',
+      bgColor: 'bg-[#D6BCFF]',
+      textColor: 'text-text-dark',
+      mutedColor: 'text-text-muted',
+    },
+    {
+      quote: t('items.meetthelocals.quote'),
+      author: 'Meet the Locals',
+      company: t('items.meetthelocals.company'),
+      logo: '/afbeeldingen/meetthelocals-logo.webp',
+      bgColor: 'bg-cream',
+      textColor: 'text-text-dark',
+      mutedColor: 'text-text-muted',
+    },
+    {
+      quote: t('items.daleyedit.quote'),
+      author: 'The Daley Edit',
+      company: t('items.daleyedit.company'),
+      logo: '/afbeeldingen/thedaleyedit-logo.webp',
+      bgColor: 'bg-green-dark',
+      textColor: 'text-white',
+      mutedColor: 'text-white/70',
+    },
+  ]
+
+  // Triplicate testimonials for seamless infinite scroll
+  const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials]
+
   return (
     <section id="reviews" className="bg-[#1a1a1a] min-h-screen py-12 md:py-16 lg:py-24 rounded-[20px] md:rounded-[30px] overflow-hidden relative flex flex-col justify-center mb-6 md:mb-0">
       {/* Hand-drawn hearts - 10 hearts spread across entire section, z-0 behind content */}
@@ -102,7 +105,7 @@ export default function Testimonials() {
 
       <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto text-center px-4 md:px-6 lg:px-8 mb-8 md:mb-10 lg:mb-12 relative z-10">
         <h2 className="text-white font-serif">
-          Dit zeggen onze klanten over ons
+          {t('title')}
         </h2>
       </div>
 
@@ -126,7 +129,7 @@ export default function Testimonials() {
                       className="h-[80px] w-auto object-contain"
                     />
                   </div>
-                  <p className={`${testimonial.mutedColor} text-[10px] italic mb-3`}>Deze klanttestimonial wordt nog opgevraagd</p>
+                  <p className={`${testimonial.mutedColor} text-[10px] italic mb-3`}>{t('disclaimer')}</p>
 
                   {/* Quote in het midden */}
                   <p className={`${testimonial.textColor} text-sm leading-relaxed mb-3`}>{testimonial.quote}</p>

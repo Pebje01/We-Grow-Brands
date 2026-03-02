@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import WavyText from '@/components/WavyText'
 import WavyUnderline from '@/components/WavyUnderline'
@@ -189,6 +189,9 @@ export default function PakkettenPage() {
         </div>
         </div>
       </div>
+        <p className="text-text-muted text-sm text-center mt-8 px-6">
+          Website af? Bekijk onze <Link href="/hosting" className="link-wave text-green-dark font-medium underline hover:no-underline"><WavyText text="hosting- en onderhoudspakketten" /></Link> om je website veilig en up-to-date te houden.
+        </p>
       </section>
 
       {/* Inbegrepen Section - Inhoudelijk */}
@@ -466,7 +469,7 @@ export default function PakkettenPage() {
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link
-                href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+                href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all inline-block"
@@ -474,7 +477,7 @@ export default function PakkettenPage() {
                 <WavyText text="Plan een gesprek" />
               </Link>
               <Link
-                href="https://wa.me/31636162639"
+                href={"https://wa.me/31636162639" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#1FAF57] flex items-center justify-center transition-colors"

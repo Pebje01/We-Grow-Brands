@@ -26,7 +26,19 @@
       "Bash(ls:*)",
       "Bash(npm i:*)",
       "Bash(grep:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git restore:*)",
+      "Bash(for page in \"actie\" \"algemene-voorwaarden\" \"website-in-termijnen\")",
+      "Bash(do echo \"=== /$page ===\" if [ -f \"src/app/$page/page.tsx\" ])",
+      "Bash(then grep -A5 \"export const metadata\\\\|export const openGraph\" \"src/app/$page/page.tsx\")",
+      "Bash(fi)",
+      "Bash(done)",
+      "WebFetch(domain:wegrowbrands.online)",
+      "WebFetch(domain:coolpixel.nl)",
+      "WebFetch(domain:www.antum.nl)",
+      "Bash(npx next build:*)",
+      "Bash(./node_modules/.bin/next build:*)",
+      "Bash(npm rebuild:*)"
     ]
   }
 }

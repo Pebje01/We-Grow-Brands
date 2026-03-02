@@ -1,7 +1,8 @@
 'use client'
 
 import { useRef } from 'react'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -13,6 +14,7 @@ if (typeof window !== 'undefined') {
 }
 
 export default function CTA() {
+  const t = useTranslations('cta')
   const sectionRef = useRef<HTMLElement>(null)
   const pathRef = useRef<SVGPathElement>(null)
 
@@ -69,28 +71,28 @@ export default function CTA() {
 
       <div className="max-w-2xl mx-auto w-full relative z-10">
         <h2 className="text-text-dark mb-6">
-          <span className="font-serif">Klaar om je merk</span>{' '}
-          <span className="serif-header italic text-green-dark">te laten groeien?</span>
+          <span className="font-serif">{t('title1')}</span>{' '}
+          <span className="serif-header italic text-green-dark">{t('titleHighlight')}</span>
         </h2>
         <p className="text-text-muted text-base md:text-lg leading-relaxed mb-6 md:mb-8 lg:mb-10">
-          Laten we samen een website bouwen waar je trots op bent.
+          {t('subtitle')}
         </p>
 
         <div className="flex justify-center mb-6 md:mb-8">
           <Link
-            href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+            href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-spring btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all px-6 py-3 rounded-full font-medium"
           >
-            <WavyText text="Plan een gesprek" />
+            <WavyText text={t('button')} />
           </Link>
         </div>
 
         <p className="text-text-muted text-sm">
-          Liever eerst appen?{' '}
+          {t('whatsapp')}{' '}
           <Link
-            href="https://wa.me/31636162639"
+            href={"https://wa.me/31636162639" as any}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center relative top-[3px] text-[#25D366] hover:text-[#1FAF57] transition-colors"

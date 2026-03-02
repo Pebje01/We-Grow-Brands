@@ -1,41 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync, writeFileSync } from 'fs'
-import path from 'path'
-import { generateSlug, generatePassword, hashPassword, generateOfferteId } from '@/lib/offerteUtils'
-
-interface Offerte {
-  id: string
-  slug: string
-  bedrijfsnaam: string
-  contactpersoon: string
-  email: string
-  telefoon: string
-  type: string
-  wachtwoord: string
-  createdAt: string
-  updatedAt: string
-  isActive: boolean
-  offerteType?: string
-}
-
-function readOffertes(): Offerte[] {
-  try {
-    const filePath = path.join(process.cwd(), 'src/data/offertes.json')
-    const data = readFileSync(filePath, 'utf-8')
-    return JSON.parse(data)
-  } catch {
-    return []
-  }
-}
-
-function writeOffertes(offertes: Offerte[]): void {
-  const filePath = path.join(process.cwd(), 'src/data/offertes.json')
-  writeFileSync(filePath, JSON.stringify(offertes, null, 2))
-}
+import { generateOfferteNumber, generatePassword, hashPassword, calculateValidUntil } from '@/lib/offerteUtils'
+import { createWgbOfferte, getTodayWgbOfferteCount } from '@/lib/supabaseOffertes'
+import { getOfferteTemplate, PackageType } from '@/lib/offerteTemplates'
 
 export async function POST(request: NextRequest) {
   try {
-    // Check authorization - require password header
+    // Auth check
     const authHeader = request.headers.get('authorization')
     const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Oosterschelde_01'
 
@@ -43,59 +13,90 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const providedPassword = authHeader.slice(7) // Remove 'Bearer ' prefix
-    if (providedPassword !== ADMIN_PASSWORD) {
+    if (authHeader.slice(7) !== ADMIN_PASSWORD) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const body = await request.json()
     const { bedrijfsnaam, contactpersoon, email, telefoon, type, offerteType } = body
 
-    // Validate required fields
     if (!bedrijfsnaam || !contactpersoon || !email || !type) {
-      return NextResponse.json(
-        { error: 'Missing required fields' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    // Read existing offertes
-    const offertes = readOffertes()
+    // Genereer offerte nummer via Supabase telling
+    const todayCount = await getTodayWgbOfferteCount()
+    const number = generateOfferteNumber(todayCount)
+    const slug = number.toLowerCase()
+    const plainPassword = generatePassword()
+    const passwordHash = await hashPassword(plainPassword)
+    const validUntil = calculateValidUntil()
 
-    // Generate new offerte
-    const id = generateOfferteId(offertes.map(o => o.id))
-    const slug = generateSlug(bedrijfsnaam, id)
-    const plainPassword = generatePassword(10)
-    const hashedPassword = await hashPassword(plainPassword)
-    const now = new Date().toISOString()
+    // Haal template op basis van pakkettype
+    const packageType = (type as PackageType) || 'custom'
+    const template = getOfferteTemplate(packageType, contactpersoon)
 
-    const newOfferte: Offerte = {
-      id,
-      slug,
-      bedrijfsnaam,
-      contactpersoon,
-      email,
-      telefoon,
-      type,
-      wachtwoord: hashedPassword,
-      createdAt: now,
-      updatedAt: now,
-      isActive: true,
-      offerteType: offerteType || 'without-photo',
+    // Bereken totalen
+    const subtotal = template.items.reduce((sum, i) => sum + i.quantity * i.unitPrice, 0)
+    const btwAmount = Math.round(subtotal * (template.btwPercentage / 100) * 100) / 100
+    const total = subtotal + btwAmount
+
+    // Sla op in Supabase (retry bij collision)
+    let offerte
+    let retries = 0
+    while (retries < 3) {
+      try {
+        offerte = await createWgbOfferte({
+          number: retries > 0 ? generateOfferteNumber(todayCount + retries) : number,
+          slug: retries > 0 ? generateOfferteNumber(todayCount + retries).toLowerCase() : slug,
+          clientName: bedrijfsnaam,
+          clientContactPerson: contactpersoon,
+          clientEmail: email,
+          clientPhone: telefoon,
+          items: template.items,
+          subtotal,
+          btwPercentage: template.btwPercentage,
+          btwAmount,
+          total,
+          introText: template.introText,
+          termsText: template.termsText,
+          notes: `Pakket: ${type}${offerteType ? ` | Fotografie: ${offerteType}` : ''}`,
+          passwordHash,
+          validUntil,
+        })
+        break
+      } catch (e: unknown) {
+        const errorMsg = e instanceof Error ? e.message : String(e)
+        if (errorMsg.includes('duplicate') || errorMsg.includes('unique')) {
+          retries++
+          continue
+        }
+        throw e
+      }
     }
 
-    // Add to list and save
-    offertes.push(newOfferte)
-    writeOffertes(offertes)
+    if (!offerte) {
+      return NextResponse.json({ error: 'Could not create offerte' }, { status: 500 })
+    }
 
-    // Return offerte with plain password (only shown once)
+    // Return met plain password (eenmalig)
     return NextResponse.json({
       success: true,
       offerte: {
-        ...newOfferte,
-        wachtwoord: plainPassword, // Return plain password only in creation response
+        id: offerte.number,
+        slug: offerte.slug,
+        bedrijfsnaam: offerte.clientName,
+        contactpersoon: offerte.clientContactPerson,
+        email: offerte.clientEmail,
+        telefoon: offerte.clientPhone,
+        type,
+        createdAt: offerte.createdAt,
+        updatedAt: offerte.createdAt,
+        isActive: true,
+        offerteType: offerteType || 'without-photo',
+        wachtwoord: plainPassword,
       },
-      link: `/offerte/${slug}`,
+      link: `/offerte/${offerte.slug}`,
     })
   } catch (error) {
     console.error('Create offerte error:', error)

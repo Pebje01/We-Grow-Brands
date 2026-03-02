@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import WavyText from '@/components/WavyText'
 import SuccessPopup from '@/components/SuccessPopup'
 
 export default function ContactForm() {
+  const t = useTranslations('contactForm')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [showError, setShowError] = useState(false)
@@ -44,71 +46,71 @@ export default function ContactForm() {
           className="grid grid-cols-1 md:grid-cols-2 gap-5"
         >
           <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
-          <input type="hidden" name="subject" value="Nieuwe aanvraag via Contact pagina" />
+          <input type="hidden" name="subject" value={t('subject')} />
           <input type="hidden" name="from_name" value="We Grow Brands Website" />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
           <div className="md:col-span-1">
-            <label htmlFor="contact-name" className="sr-only">Naam*</label>
+            <label htmlFor="contact-name" className="sr-only">{t('namePlaceholder')}</label>
             <input
               id="contact-name"
               type="text"
               name="name"
               required
               className="mt-2 w-full border-b border-white/25 bg-transparent pb-2 font-serif italic text-cream placeholder:text-white/50 placeholder:font-serif placeholder:italic focus:border-lila focus:outline-none"
-              placeholder="Naam*"
+              placeholder={t('namePlaceholder')}
             />
           </div>
           <div className="md:col-span-1">
-            <label htmlFor="contact-email" className="sr-only">Email*</label>
+            <label htmlFor="contact-email" className="sr-only">{t('emailPlaceholder')}</label>
             <input
               id="contact-email"
               type="email"
               name="email"
               required
               className="mt-2 w-full border-b border-white/25 bg-transparent pb-2 font-serif italic text-cream placeholder:text-white/50 placeholder:font-serif placeholder:italic focus:border-lila focus:outline-none"
-              placeholder="Email*"
+              placeholder={t('emailPlaceholder')}
             />
           </div>
           <div className="md:col-span-1">
-            <label htmlFor="contact-phone" className="sr-only">Telefoon</label>
+            <label htmlFor="contact-phone" className="sr-only">{t('phonePlaceholder')}</label>
             <input
               id="contact-phone"
               type="tel"
               name="phone"
               className="mt-2 w-full border-b border-white/25 bg-transparent pb-2 font-serif italic text-cream placeholder:text-white/50 placeholder:font-serif placeholder:italic focus:border-lila focus:outline-none"
-              placeholder="Telefoon"
+              placeholder={t('phonePlaceholder')}
             />
           </div>
           <div className="md:col-span-1">
-            <label htmlFor="contact-company" className="sr-only">Bedrijf</label>
+            <label htmlFor="contact-company" className="sr-only">{t('companyPlaceholder')}</label>
             <input
               id="contact-company"
               type="text"
               name="company"
               className="mt-2 w-full border-b border-white/25 bg-transparent pb-2 font-serif italic text-cream placeholder:text-white/50 placeholder:font-serif placeholder:italic focus:border-lila focus:outline-none"
-              placeholder="Bedrijf"
+              placeholder={t('companyPlaceholder')}
             />
           </div>
           <div className="md:col-span-2">
-            <label htmlFor="contact-message" className="sr-only">Waar ben je naar op zoek?*</label>
+            <label htmlFor="contact-message" className="sr-only">{t('messagePlaceholder')}</label>
             <textarea
               id="contact-message"
               name="message"
               rows={4}
               required
               className="mt-2 w-full border-b border-white/25 bg-transparent pb-2 font-serif italic text-cream placeholder:text-white/50 placeholder:font-serif placeholder:italic focus:border-lila focus:outline-none"
-              placeholder="Waar ben je naar op zoek?*"
+              placeholder={t('messagePlaceholder')}
             />
           </div>
           <div className="md:col-span-2 flex items-center justify-between pt-2">
-            <p className="text-xs text-white/60">Velden met * zijn verplicht.</p>
+            <p className="text-xs text-white/60">{t('requiredFields')}</p>
             <button
               type="submit"
               disabled={isSubmitting}
               className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all disabled:opacity-70"
             >
-              <WavyText text={isSubmitting ? 'Versturen...' : 'Vraag website aan'} />
+              <WavyText text={isSubmitting ? t('submitting') : t('submit')} />
             </button>
           </div>
         </form>

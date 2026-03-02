@@ -1,10 +1,12 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { getTranslations } from 'next-intl/server'
 import ScrollReveal from '@/components/ScrollReveal'
 import WavyText from '@/components/WavyText'
 import WavyLineScroll from '@/components/WavyLineScroll'
 import { packages } from '@/data/packages'
 
-export default function Services() {
+export default async function Services() {
+  const t = await getTranslations('services')
   return (
     <section id="diensten" className="bg-[#1a1a1a] min-h-screen flex items-center py-12 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 rounded-[20px] md:rounded-[30px] mb-6 md:mb-0 relative overflow-hidden">
       {/* Decoratieve golvende lila lijn - Desktop (linksboven naar rechtsonder) */}
@@ -29,13 +31,12 @@ export default function Services() {
 
       <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto text-center w-full relative z-10">
         <h2 className="text-white mb-4">
-          <span className="font-serif">Premium website</span>
+          <span className="font-serif">{t('title1')}</span>
           <br />
-          <span className="serif-header italic text-[#09604E]">Welke fase je ook bent</span>
+          <span className="serif-header italic text-[#09604E]">{t('titleHighlight')}</span>
         </h2>
         <p className="text-white/70 max-w-2xl mx-auto leading-relaxed mb-6 md:mb-8 text-sm md:text-base">
-          Je krijgt een website die past bij je merk, je huisstijl en je groei. Eerlijk,
-          helder en professioneel, zonder gedoe of verborgen kosten.
+          {t('subtitle')}
         </p>
 
         <div className="mb-6 md:mb-8">
@@ -43,7 +44,7 @@ export default function Services() {
             href="/contact"
             className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all inline-flex"
           >
-            <WavyText text="Vraag een website aan" />
+            <WavyText text={t('cta')} />
           </Link>
         </div>
 
@@ -67,7 +68,7 @@ export default function Services() {
                 {service.name === 'Premium' && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="bg-lila text-green-dark text-xs font-medium px-4 py-1.5 rounded-full">
-                      Maatwerk
+                      {t('custom')}
                     </span>
                   </div>
                 )}
@@ -80,7 +81,7 @@ export default function Services() {
                 <div className="mb-4 min-h-[72px] text-center">
                   <div className="flex items-baseline justify-center gap-1">
                     {service.name === 'Premium' && (
-                      <span className="text-text-muted/70 text-xs mr-1">vanaf</span>
+                      <span className="text-text-muted/70 text-xs mr-1">{t('from')}</span>
                     )}
                     <span className="text-green-dark text-3xl font-medium font-serif">
                       {service.price}
@@ -90,7 +91,7 @@ export default function Services() {
 
                 <div className="flex-1">
                   <p className="text-text-dark text-xs font-medium uppercase tracking-wider mb-3 text-center">
-                    Wat je krijgt
+                    {t('whatYouGet')}
                   </p>
                   <ul className="space-y-3">
                     {service.features.map((feature, i) => (
@@ -135,7 +136,7 @@ export default function Services() {
             href="/website-in-termijnen"
             className="text-lila underline underline-offset-4 hover:text-[#D6BCFF] transition-colors"
           >
-            Bekijk onze mogelijkheden en voorwaarden voor betaling
+            {t('paymentLink')}
           </Link>
           .
         </p>

@@ -2,12 +2,14 @@
 
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import WavyText from '@/components/WavyText'
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
   const wavyUnderlineRef = useRef<SVGSVGElement>(null)
+  const t = useTranslations('hero')
 
   useEffect(() => {
     const container = containerRef.current
@@ -116,11 +118,11 @@ export default function Hero() {
       <div className="flex-1 flex flex-col justify-start pt-24 md:pt-28 lg:pt-36 3xl:pt-44 relative z-10">
         <div className="px-4 md:px-6 lg:px-8 flex flex-col items-center">
           <h1 className="text-white text-center mb-6 4xl:mb-10">
-            Meer dan websites.
+            {t('title1')}
             <br />
-            Wij bouwen{' '}
+            {t('title2')}{' '}
             <span className="relative inline-block serif-header italic">
-              merken.
+              {t('titleHighlight')}
               {/* Wavy underline - animates on scroll */}
               <svg
                 ref={wavyUnderlineRef}
@@ -141,23 +143,23 @@ export default function Hero() {
             </span>
           </h1>
           <p className="font-sans text-white leading-relaxed text-center max-w-xl 3xl:max-w-2xl 4xl:max-w-3xl mb-6 md:mb-8 lg:mb-10 4xl:mb-14 text-base 4xl:text-xl">
-            Nooit meer balen van je website. Wij creëren websites die kloppen: sterk in design, passend bij je merk en gebouwd om mee te groeien met je ambities.
+            {t('subtitle')}
           </p>
 
           <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3">
             <Link
-              href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+              href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-spring btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:text-[#02362B] hover:shadow-xl transition-all whitespace-nowrap shrink-0 px-4 py-2 text-sm rounded-[15px] border border-black"
             >
-              <WavyText text="Plan gesprek" />
+              <WavyText text={t('ctaPlan')} />
             </Link>
             <Link
               href="/portfolio"
               className="btn-spring btn-no-lila link-wave bg-cream text-green-dark hover:bg-white hover:shadow-xl transition-all whitespace-nowrap shrink-0 px-4 py-2 text-sm rounded-[15px] border border-black"
             >
-              <WavyText text="Bekijk ons werk" />
+              <WavyText text={t('ctaWork')} />
             </Link>
           </div>
 

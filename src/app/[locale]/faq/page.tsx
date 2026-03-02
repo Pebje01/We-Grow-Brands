@@ -134,7 +134,7 @@ const faqs = [
     answer: (
       <>
         Ja, naast webdesign bieden we ook branding (logo, huisstijl, visuele identiteit), copywriting, SEO-optimalisatie, fotografie en videografie, social media content en strategie aan. We kunnen je merk van A tot Z ondersteunen, afgestemd op jouw fase en doelgroep. Kijk ook bij onze{' '}
-        <Link href="/pakketten#add-ons" className="text-green-dark underline">
+        <Link href={"/pakketten#add-ons" as any} className="text-green-dark underline">
           add-ons
         </Link>{' '}
         op de pakketten pagina.

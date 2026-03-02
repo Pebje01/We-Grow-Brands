@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import WavyText from '@/components/WavyText'
 import WavyUnderline from '@/components/WavyUnderline'
 import WavyLineScroll from '@/components/WavyLineScroll'
@@ -160,7 +160,7 @@ export default function WebsiteInTermijnenPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link
-                href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+                href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:text-green-dark hover:shadow-xl transition-all"
@@ -177,7 +177,7 @@ export default function WebsiteInTermijnenPage() {
             <p className="text-text-muted text-sm mt-4">
               Liever eerst appen?{' '}
               <Link
-                href="https://wa.me/31636162639"
+                href={"https://wa.me/31636162639" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center relative top-[3px] text-[#25D366] hover:text-[#1FAF57] transition-colors"
@@ -351,7 +351,7 @@ export default function WebsiteInTermijnenPage() {
               </p>
               <div className="flex items-center justify-center gap-4">
                 <Link
-                  href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+                  href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all"
@@ -359,7 +359,7 @@ export default function WebsiteInTermijnenPage() {
                   <WavyText text="Plan een gesprek" />
                 </Link>
                 <Link
-                  href="https://wa.me/31636162639"
+                  href={"https://wa.me/31636162639" as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#1FAF57] flex items-center justify-center transition-colors"

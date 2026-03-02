@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { Link, usePathname } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 
 type BreadcrumbItem = {
   label: string
@@ -14,61 +14,12 @@ type BreadcrumbsProps = {
   className?: string
 }
 
-const labelMap: Record<string, string> = {
-  'algemene-voorwaarden': 'Voorwaarden',
-  'website-in-termijnen': 'In termijnen',
-  'portfolio': 'Cases',
-  'pakketten': 'Pakketten',
-  'websites': 'Websites',
-  'contact': 'Contact',
-  'faq': 'FAQ',
-}
-
-// Define logical parent paths for pages that should show a specific hierarchy
-const parentPaths: Record<string, BreadcrumbItem[]> = {
-  '/algemene-voorwaarden': [
-    { label: 'Pakketten', href: '/pakketten' },
-  ],
-  '/website-in-termijnen': [
-    { label: 'Websites', href: '/websites' },
-  ],
-}
-
 const toTitleCase = (value: string) =>
   value
     .replace(/-/g, ' ')
     .split(' ')
     .map((word) => (word ? word[0].toUpperCase() + word.slice(1) : word))
     .join(' ')
-
-const getLabel = (segment: string) => labelMap[segment] || toTitleCase(segment)
-
-const buildItems = (pathname: string): BreadcrumbItem[] => {
-  const items: BreadcrumbItem[] = [{ label: 'Home', href: '/' }]
-
-  // Check if this path has a custom parent hierarchy
-  if (parentPaths[pathname]) {
-    items.push(...parentPaths[pathname])
-    const lastSegment = pathname.split('/').filter(Boolean).pop() || ''
-    items.push({ label: getLabel(lastSegment) })
-    return items
-  }
-
-  // Default behavior: build from URL segments
-  const segments = pathname.split('/').filter(Boolean)
-  let currentPath = ''
-
-  segments.forEach((segment, index) => {
-    currentPath += `/${segment}`
-    const isLast = index === segments.length - 1
-    items.push({
-      label: getLabel(segment),
-      href: isLast ? undefined : currentPath,
-    })
-  })
-
-  return items
-}
 
 function HomeIcon({ className }: { className?: string }) {
   return (
@@ -95,6 +46,55 @@ export default function Breadcrumbs({
   className = '',
 }: BreadcrumbsProps) {
   const pathname = usePathname() || '/'
+  const t = useTranslations('breadcrumbs')
+
+  const labelMap: Record<string, string> = {
+    'algemene-voorwaarden': t('algVoorwaarden'),
+    'website-in-termijnen': t('websiteTermijnen'),
+    'portfolio': t('portfolio'),
+    'pakketten': t('pakketten'),
+    'websites': t('websites'),
+    'contact': t('contact'),
+    'faq': t('faq'),
+    'hosting': t('hosting'),
+  }
+
+  const parentPaths: Record<string, BreadcrumbItem[]> = {
+    '/algemene-voorwaarden': [
+      { label: t('pakketten'), href: '/pakketten' },
+    ],
+    '/website-in-termijnen': [
+      { label: t('websites'), href: '/websites' },
+    ],
+  }
+
+  const getLabel = (segment: string) => labelMap[segment] || toTitleCase(segment)
+
+  const buildItems = (path: string): BreadcrumbItem[] => {
+    const crumbItems: BreadcrumbItem[] = [{ label: t('home'), href: '/' }]
+
+    if (parentPaths[path]) {
+      crumbItems.push(...parentPaths[path])
+      const lastSegment = path.split('/').filter(Boolean).pop() || ''
+      crumbItems.push({ label: getLabel(lastSegment) })
+      return crumbItems
+    }
+
+    const segments = path.split('/').filter(Boolean)
+    let currentPath = ''
+
+    segments.forEach((segment, index) => {
+      currentPath += `/${segment}`
+      const isLast = index === segments.length - 1
+      crumbItems.push({
+        label: getLabel(segment),
+        href: isLast ? undefined : currentPath,
+      })
+    })
+
+    return crumbItems
+  }
+
   const crumbs = items && items.length ? items : buildItems(pathname)
 
   const isDark = variant === 'dark'
@@ -133,7 +133,7 @@ export default function Breadcrumbs({
               ) : null}
               {item.href ? (
                 <Link
-                  href={item.href}
+                  href={item.href as any}
                   className={`flex items-center px-3 py-1.5 rounded-full transition-colors ${linkColor}`}
                 >
                   {isHome ? <HomeIcon /> : item.label}

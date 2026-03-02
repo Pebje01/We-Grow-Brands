@@ -1,73 +1,54 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { readFileSync } from 'fs'
-import path from 'path'
-import { verifyPassword } from '@/lib/offerteUtils'
+import { listWgbOffertes } from '@/lib/supabaseOffertes'
 
-interface Offerte {
-  id: string
-  slug: string
-  bedrijfsnaam: string
-  contactpersoon: string
-  email: string
-  telefoon: string
-  type: string
-  wachtwoord: string
-  createdAt: string
-  updatedAt: string
-  isActive: boolean
-  offerteType?: string
-}
-
-// Helper to get client IP
 function getClientIP(request: NextRequest): string {
   const forwardedFor = request.headers.get('x-forwarded-for')
   const realIp = request.headers.get('x-real-ip')
   return forwardedFor ? forwardedFor.split(',')[0].trim() : realIp || 'unknown'
 }
 
-// Helper to read offertes
-function readOffertes(): Offerte[] {
+export async function GET(request: NextRequest) {
+  const clientIP = getClientIP(request)
+  const ADMIN_IPS = (process.env.ADMIN_IP || '83.82.102.98').split(',').map((ip) => ip.trim())
+  const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Oosterschelde_01'
+
+  // Check IP of auth header
+  const isAdminIp = ADMIN_IPS.includes(clientIP)
+  const authHeader = request.headers.get('authorization')
+  const isPasswordValid = authHeader?.startsWith('Bearer ') && authHeader.slice(7) === ADMIN_PASSWORD
+
+  if (!isAdminIp && !isPasswordValid) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
+
   try {
-    const filePath = path.join(process.cwd(), 'src/data/offertes.json')
-    const data = readFileSync(filePath, 'utf-8')
-    return JSON.parse(data)
-  } catch {
-    return []
+    const offertes = await listWgbOffertes()
+
+    // Map naar het formaat dat de admin UI verwacht
+    return NextResponse.json({
+      offertes: offertes.map((o) => ({
+        id: o.number,
+        slug: o.slug,
+        bedrijfsnaam: o.clientName,
+        contactpersoon: o.clientContactPerson,
+        email: o.clientEmail,
+        telefoon: o.clientPhone,
+        type: extractPackageType(o.notes),
+        createdAt: o.createdAt,
+        updatedAt: o.createdAt,
+        isActive: o.status !== 'afgewezen',
+        status: o.status,
+        total: o.total,
+      })),
+    })
+  } catch (error) {
+    console.error('List offertes error:', error)
+    return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
 }
 
-// GET - List all offertes (admin only)
-export async function GET(request: NextRequest) {
-  const clientIP = getClientIP(request)
-  const ADMIN_IP = process.env.ADMIN_IP || '83.82.102.98'
-
-  // Check if IP matches
-  if (clientIP === ADMIN_IP) {
-    const offertes = readOffertes()
-    // Return without passwords
-    return NextResponse.json({
-      offertes: offertes.map(({ wachtwoord, ...rest }) => rest),
-    })
-  }
-
-  // Otherwise check authorization header
-  const authHeader = request.headers.get('authorization')
-  if (!authHeader) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
-  const adminPassword = process.env.ADMIN_PASSWORD || 'Oosterschelde_01'
-  const isPasswordValid = await verifyPassword(
-    authHeader.replace('Bearer ', ''),
-    await require('bcryptjs').hash(adminPassword, 10)
-  )
-
-  if (!isPasswordValid) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  }
-
-  const offertes = readOffertes()
-  return NextResponse.json({
-    offertes: offertes.map(({ wachtwoord, ...rest }) => rest),
-  })
+function extractPackageType(notes: string | null): string {
+  if (!notes) return 'custom'
+  const match = notes.match(/Pakket:\s*(\w+)/)
+  return match ? match[1] : 'custom'
 }

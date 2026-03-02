@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import { notFound } from 'next/navigation'
 import WavyText from '@/components/WavyText'
 import WavyLink from '@/components/WavyLink'
@@ -457,7 +457,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
               Plan een gesprek om je mogelijkheden te bespreken.
             </p>
             <Link
-              href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+              href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all inline-block"
@@ -467,7 +467,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
             <p className="text-white/60 text-sm mt-4">
               Liever eerst appen?{' '}
               <Link
-                href="https://wa.me/31636162639"
+                href={"https://wa.me/31636162639" as any}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center relative top-[3px] text-[#25D366] hover:text-[#1FAF57] transition-colors"

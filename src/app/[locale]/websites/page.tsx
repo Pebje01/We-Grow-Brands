@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Image from 'next/image'
 import WavyText from '@/components/WavyText'
 import WavyUnderline from '@/components/WavyUnderline'
@@ -32,7 +32,7 @@ export default function WebsitesPage() {
                 </p>
                 <div className="flex flex-row gap-2 sm:gap-4">
                   <Link
-                    href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+                    href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all text-xs sm:text-sm"
@@ -227,7 +227,7 @@ export default function WebsitesPage() {
 
           {/* CTA link */}
           <ScrollReveal className="text-center mt-10" animation="fade-up">
-            <Link href="https://calendar.app.google/DbuJ9656ZDLm6b1d7" target="_blank" rel="noopener noreferrer" className="link-wave text-green-dark text-sm inline-flex items-center gap-2">
+            <Link href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any} target="_blank" rel="noopener noreferrer" className="link-wave text-green-dark text-sm inline-flex items-center gap-2">
               <WavyText text="Sparren over je website?" />
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -289,7 +289,7 @@ export default function WebsitesPage() {
               </p>
               <div className="flex flex-row flex-nowrap gap-3 justify-center lg:justify-start">
                 <Link
-                  href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+                  href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-spring btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all whitespace-nowrap shrink-0 px-4 py-2 text-sm rounded-[15px] border border-black"
@@ -566,7 +566,7 @@ export default function WebsitesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="https://calendar.app.google/DbuJ9656ZDLm6b1d7"
+              href={"https://calendar.app.google/DbuJ9656ZDLm6b1d7" as any}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-xl transition-all"
@@ -577,7 +577,7 @@ export default function WebsitesPage() {
           <p className="mt-6 text-sm text-white/50">
             Liever eerst appen?{' '}
             <Link
-              href="https://wa.me/31636162639"
+              href={"https://wa.me/31636162639" as any}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center relative top-[3px] text-[#25D366] hover:text-[#1FAF57] transition-colors"

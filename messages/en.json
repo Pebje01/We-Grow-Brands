@@ -1,0 +1,584 @@
+{
+  "metadata": {
+    "title": "We Grow Brands | Premium Websites Built from Your Brand",
+    "description": "Premium custom websites that start from your brand. No templates. Never disappointed with your website again.",
+    "keywords": "website design, web design, premium website, custom website, branding, brand identity"
+  },
+  "nav": {
+    "home": "Home",
+    "websites": "Websites",
+    "packages": "Packages",
+    "cases": "Cases",
+    "contact": "Contact",
+    "cta": "Request a website",
+    "menuOpen": "Open menu",
+    "dropdown": {
+      "websiteLatenMaken": "Custom websites",
+      "websiteLatenMakenDesc": "Strategic custom-built websites",
+      "onzeAanpak": "Our approach",
+      "onzeAanpakDesc": "From idea to live in 4 steps",
+      "waaromOns": "Why choose us",
+      "waaromOnsDesc": "No templates, just strategy",
+      "trajecten": "Website plans",
+      "trajectenDesc": "Essentials, Growth or Premium",
+      "branding": "Branding & other services",
+      "brandingDesc": "Logo, brand identity and more",
+      "planTraject": "Schedule a plan",
+      "planTrajectDesc": "Start a free consultation"
+    },
+    "mobile": {
+      "overview": "Overview",
+      "websiteLatenMaken": "Custom websites",
+      "onzeAanpak": "Our approach",
+      "waaromOns": "Why choose us",
+      "trajecten": "Website plans",
+      "branding": "Branding & other services",
+      "planTraject": "Schedule a plan"
+    }
+  },
+  "hero": {
+    "title1": "More than websites.",
+    "title2": "We build",
+    "titleHighlight": "brands.",
+    "subtitle": "Never disappointed with your website again. We create websites that work: strong in design, aligned with your brand and built to grow with your ambitions.",
+    "ctaPlan": "Schedule a call",
+    "ctaWork": "View our work"
+  },
+  "recognition": {
+    "title1": "Do you",
+    "titleHighlight": "recognize this?",
+    "painPoints": {
+      "1": {
+        "title": "Your website doesn't feel right for your business",
+        "quote": "You look at your website with disappointment. Your current website just isn't quite right."
+      },
+      "2": {
+        "title": "Technical hassle",
+        "quote": "Hosting, DNS, plugins, working in a CMS... You just want a beautiful website, not an IT degree."
+      },
+      "3": {
+        "title": "DIY struggles",
+        "quote": "You've tried it yourself, but it didn't turn out the way you hoped. Or you don't want to tinker with it at all."
+      },
+      "4": {
+        "title": "Unnecessary tools and costs",
+        "quote": "Paying a lot for features you don't really need, or expensive ongoing subscriptions for websites you're not happy with."
+      },
+      "5": {
+        "title": "Your website is up, but how...",
+        "quote": "Long loading times, slow pages and a design that makes you unhappy."
+      },
+      "6": {
+        "title": "You found an agency that makes beautiful websites...",
+        "quote": "...but the price tag is sky-high. Yikes."
+      }
+    }
+  },
+  "solution": {
+    "title1": "Never disappointed",
+    "titleHighlight": "with your website",
+    "description": "You just want to be taken care of. No hassle, no technical headaches, no endless invoices. Beautiful, lightning-fast websites. A professional website you can be proud of and dare to share with your target audience.",
+    "ctaPlan": "Schedule a call",
+    "ctaPackages": "View packages"
+  },
+  "features": {
+    "title1": "Custom design,",
+    "titleHighlight": "strong brand",
+    "description1": "Whether you choose <strong>Essentials</strong>, <strong>Growth</strong> or fully custom: every package delivers the same high-quality design. The difference is in scope, not in appearance.",
+    "description2": "Whatever package you choose, you always get a website that's an extension of your brand. No standard stuff. No website you'll regret. And if it's not enough? Simply expand with add-ons.",
+    "check1": "Always premium design, regardless of your package",
+    "check2": "Your website feels like your business",
+    "check3": "Expand anytime, whenever you want",
+    "ctaPackages": "View packages",
+    "addonsTitle": "Add-ons & services",
+    "moreNeeded": "Need more?",
+    "moreNeededDesc": "Besides your website, we can help with everything your brand needs. From extra functionality to complete brand identity.",
+    "addons": {
+      "extraPages": "Extra pages",
+      "complexForms": "Complex forms",
+      "reviews": "Reviews/testimonials",
+      "blog": "Blog",
+      "webshop": "Webshop",
+      "aiContent": "AI content",
+      "logoDesign": "Logo design",
+      "branding": "Brand identity",
+      "brandFoundation": "Brand foundation",
+      "photography": "Photography",
+      "seo": "SEO",
+      "content": "Content",
+      "leadGeneration": "Lead generation",
+      "aiAutomation": "AI & automation",
+      "multilingual": "Multilingual"
+    }
+  },
+  "trusted": {
+    "title": "We've already built beautiful websites for these companies"
+  },
+  "casesSlider": {
+    "title1": "A selection of",
+    "titleHighlight": "beautiful projects",
+    "subtitle": "View a selection of websites we've built for our clients.",
+    "viewCase": "View case",
+    "viewCases": "View our cases",
+    "cases": {
+      "murthel": {
+        "label": "Essentials website",
+        "quote": "\"A sporty website that fits kickboxing, group training and personal training.\""
+      },
+      "systemisch": {
+        "label": "Growth website",
+        "quote": "\"I'm so happy with my website, it really fits perfectly!\""
+      },
+      "bleijenberg": {
+        "label": "Premium webshop",
+        "quote": "\"Finally a website that truly matches the quality and look we had in mind.\""
+      },
+      "meetthelocals": {
+        "label": "Premium blog",
+        "quote": "\"A website with an adventurous feel for a travel blog.\""
+      }
+    }
+  },
+  "stats": {
+    "title1": "Why choose",
+    "titleHighlight": "We Grow Brands",
+    "ctaRequest": "Request a website",
+    "ctaPlan": "Schedule a call",
+    "columns": {
+      "wgb": "We Grow Brands",
+      "agencies": "Web designers",
+      "lease": "Website lease"
+    },
+    "comparison": {
+      "brandIntegration": {
+        "label": "Brand integration",
+        "wgb": "You start from your brand: direction, design and choices.",
+        "agencies": "Usually from technology, not from branding.",
+        "lease": "Generic branding."
+      },
+      "design": {
+        "label": "Design & appearance",
+        "wgb": "Premium design, distinctive branding.",
+        "agencies": "Good design, not always distinctive branding.",
+        "lease": "Template look."
+      },
+      "custom": {
+        "label": "Custom work",
+        "wgb": "Fully custom-built.",
+        "agencies": "Sometimes custom, sometimes template-based.",
+        "lease": "None, standard setup."
+      },
+      "ownership": {
+        "label": "Ownership",
+        "wgb": "After payment: 100% your property.",
+        "agencies": "After payment: 100% your property.",
+        "lease": "Never your property."
+      },
+      "pricing": {
+        "label": "Price level",
+        "wgb": "Fair prices for premium quality.",
+        "agencies": "High custom rates.",
+        "lease": "Low monthly rate."
+      },
+      "payment": {
+        "label": "Payment",
+        "wgb": "Installments available. Discount for upfront payment.",
+        "agencies": "One-time or max 2-3 installments.",
+        "lease": "Ongoing payment as long as the website runs."
+      },
+      "support": {
+        "label": "Support",
+        "wgb": "Personal support via email and WhatsApp.",
+        "agencies": "Varies.",
+        "lease": "Often basic support."
+      },
+      "changes": {
+        "label": "Website changes",
+        "wgb": "Choose your own maintenance packages.",
+        "agencies": "Hourly billing.",
+        "lease": "Small changes often possible."
+      },
+      "management": {
+        "label": "Management",
+        "wgb": "Self-manage via CMS or fully outsource.",
+        "agencies": "Wait for response, then invoice.",
+        "lease": "Limited access, depends on provider."
+      }
+    }
+  },
+  "services": {
+    "title1": "Premium website",
+    "titleHighlight": "Whatever stage you're in",
+    "subtitle": "You get a website that fits your brand, your style and your growth. Honest, clear and professional, without hassle or hidden costs.",
+    "cta": "Request a website",
+    "whatYouGet": "What you get",
+    "custom": "Custom",
+    "from": "from",
+    "paymentLink": "View our payment options and conditions"
+  },
+  "techBenefits": {
+    "title1": "Okay, now let's put that",
+    "titleHighlight": "in plain",
+    "titleHighlight2": "English",
+    "subtitle": "These are the technical specs of your website. We translate that into what it means for you.",
+    "benefits": {
+      "1": {
+        "techDetails": "99.9% uptime · Google Cloud",
+        "title": "Your site just keeps running smoothly."
+      },
+      "2": {
+        "techDetails": "PageSpeed 99/100 · Image optimization · Caching",
+        "title": "Pages load super fast. Visitors stay longer."
+      },
+      "3": {
+        "techDetails": "SSL · DDoS protection · Malware scan & removal",
+        "title": "Safe for you and your visitors."
+      },
+      "4": {
+        "techDetails": "Daily backups · One-click restore via dashboard",
+        "title": "Something went wrong? Your website is restored instantly."
+      },
+      "5": {
+        "techDetails": "WordPress access · Drag & drop · Edit yourself if desired",
+        "title": "Want to edit yourself? Fine. Prefer to outsource? Also fine."
+      },
+      "6": {
+        "techDetails": "Uptime monitoring · Security scans · 24/7 support",
+        "title": "We keep watch. You sleep well."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What our clients say about us",
+    "disclaimer": "This client testimonial is still being collected",
+    "items": {
+      "bleijenberg": {
+        "quote": "\"Warm, earthy tones and a luxurious look. Perfectly matching our brand.\"",
+        "company": "Garden pots & interior"
+      },
+      "murthel": {
+        "quote": "\"A sporty website that fits kickboxing and personal training.\"",
+        "company": "Groenhart Gym"
+      },
+      "systemisch": {
+        "quote": "\"Sleek, luxurious and perfectly matching our brand identity.\"",
+        "company": "Systemischverbinden.nl"
+      },
+      "meetthelocals": {
+        "quote": "\"A website with an adventurous feel for a travel blog.\"",
+        "company": "Travel blog"
+      },
+      "daleyedit": {
+        "quote": "\"Professional, fast and affordable. Exactly what we were looking for.\"",
+        "company": "Brand designer & photographer"
+      }
+    }
+  },
+  "cta": {
+    "title1": "Ready to grow",
+    "titleHighlight": "your brand?",
+    "subtitle": "Let's build a website you can be proud of together.",
+    "button": "Schedule a call",
+    "whatsapp": "Prefer to message first?"
+  },
+  "footer": {
+    "tagline": "More than websites. We build brands.",
+    "services": "Services",
+    "servicesWebsites": "Websites",
+    "servicesBranding": "Branding",
+    "servicesPhotography": "Photography",
+    "servicesGraphicDesign": "Graphic design",
+    "information": "Information",
+    "infoFaq": "FAQ",
+    "infoTerms": "Terms & conditions",
+    "infoContact": "Contact",
+    "contact": "Contact",
+    "partners": "Partners",
+    "copyright": "© 2026 We Grow Brands. All rights reserved."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "algVoorwaarden": "Terms",
+    "websiteTermijnen": "Installments",
+    "portfolio": "Cases",
+    "pakketten": "Packages",
+    "websites": "Websites",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "notFound": {
+    "message": "It seems you've gotten lost.",
+    "backHome": "Back to home"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "subtitle": "Tell us what we can do to help you with your website.",
+    "formTitle1": "Let's plan",
+    "formTitle2": "your website",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "metadata": {
+      "title": "Contact - Get in Touch | We Grow Brands",
+      "description": "Get in touch for a free consultation about your new website. We respond within 24 hours with a suitable proposal. Call, email or schedule a meeting directly."
+    }
+  },
+  "contactForm": {
+    "namePlaceholder": "Name*",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Phone",
+    "companyPlaceholder": "Company",
+    "messagePlaceholder": "What are you looking for?*",
+    "requiredFields": "Fields marked with * are required.",
+    "submit": "Request a website",
+    "submitting": "Sending...",
+    "subject": "New inquiry via Contact page"
+  },
+  "heroContactForm": {
+    "namePlaceholder": "Name*",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Phone number",
+    "companyPlaceholder": "Company name",
+    "messagePlaceholder": "Project description*",
+    "submit": "Contact",
+    "submitting": "Sending...",
+    "subject": "New inquiry via Contact page"
+  },
+  "successPopup": {
+    "defaultTitle": "Thank you!",
+    "defaultMessage": "Your message has been sent. We'll get back to you as soon as possible.",
+    "close": "Close",
+    "closeLabel": "Close",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "Sending failed. Please try again or send us a message via WhatsApp.",
+    "tryAgain": "Try again",
+    "whatsappLink": "Send us a message via WhatsApp"
+  },
+  "websitesPage": {
+    "metadata": {
+      "title": "Professional Website Design - Web Design | We Grow Brands",
+      "description": "Professional website design that grows with your business. Premium web design with 99.9% uptime, fast loading times and secure hosting. Request a free consultation."
+    },
+    "hero": {
+      "title1": "Custom websites,",
+      "titleHighlight": "fully taken care of",
+      "description": "No templates, no vague payment schemes, but a website that makes you happy and perfectly aligns with your brand and identity.",
+      "ctaPlan": "Schedule a call",
+      "ctaPackages": "View packages"
+    },
+    "approach": {
+      "title1": "This is how we",
+      "titleHighlight": "approach it",
+      "description1": "Good preparation is half the work. That's why we discuss upfront what you need, but especially what you don't. No overkill, just exactly what you need.",
+      "description2": "Want to add something extra to your website later? Choose one of the add-ons. This way you get a website that's consistent from start to finish, fits your brand and you'll never regret.",
+      "step1": "Step 1",
+      "step1Title": "Strategy meeting",
+      "step1Desc": "An online call to determine the strategy and setup of your website. What's needed, what's not? What are the goals? What should your brand convey?",
+      "step2": "Step 2",
+      "step2Title": "Design direction",
+      "step2Desc": "We look at your current brand identity and create a design that matches. No brand identity yet? We can create one for you.",
+      "step3": "Step 3",
+      "step3Title": "Content delivery",
+      "step3Desc": "You provide texts and images. Need texts created? We can handle that too.",
+      "step4": "Step 4",
+      "step4Title": "Build & feedback",
+      "step4Desc": "We create the first draft. Not satisfied? You can still choose a different direction.",
+      "step4a": "Feedback round 1",
+      "step4b": "Feedback round 2",
+      "step5": "Step 5",
+      "step5Title": "We go live!",
+      "step5Desc": "Your website goes live and is ready to welcome visitors and grow your brand.",
+      "ctaSparren": "Want to discuss your website?"
+    },
+    "whyUs": {
+      "title1": "Why choose",
+      "titleHighlight": "We Grow Brands",
+      "description": "We build websites that fit your brand, your ambitions and your audience. No standard templates, but premium design with personal attention.",
+      "ctaPlan": "Schedule a call",
+      "ctaPackages": "View packages",
+      "cards": {
+        "custom": { "title": "Fully custom", "desc": "Premium design, distinctive branding. Everything built from your brand." },
+        "ownership": { "title": "100% your property", "desc": "No vague lease schemes or lock-in. Affordable website packages or flexible installments, then fully yours." },
+        "brand": { "title": "Everything from your brand", "desc": "We don't just design a pretty website. Everything is thought through and built from your branding." },
+        "communication": { "title": "Direct communication", "desc": "Reach out via email and WhatsApp. We make sure you get a quick response." },
+        "moreThanWebsites": { "title": "More than websites", "desc": "Besides websites, we also offer services like branding, identity design and photography." },
+        "maintenance": { "title": "Affordable maintenance", "desc": "Optional packages for changes and maintenance after delivery." }
+      }
+    },
+    "included": {
+      "title1": "This comes standard with",
+      "titleHighlight": "every website package",
+      "cards": {
+        "design": { "title": "Design in your brand style", "desc": "Fully designed according to your branding." },
+        "pages": { "title": "Basic pages", "desc": "Home, about us, contact and call-to-actions." },
+        "images": { "title": "Image library", "desc": "Access to matching images for your website." },
+        "ai": { "title": "Custom AI images", "desc": "Unique visuals that match your brand, without compromising authenticity." },
+        "responsive": { "title": "Responsive design", "desc": "Perfect on desktop, tablet and mobile." },
+        "contactForm": { "title": "Contact form", "desc": "Visitors can reach out directly." }
+      },
+      "brandingNote": "No brand identity yet? Branding and identity design is one of our strengths.",
+      "brandingCta": "Get in touch"
+    },
+    "addons": {
+      "title1": "Website",
+      "titleHighlight": "add-ons",
+      "description": "Want to add something extra to your website later? Choose one of the add-ons. This way you get a website that's consistent from start to finish, fits your brand and you'll never regret.",
+      "items": ["Extra pages / landing pages", "Complex forms", "Reviews/testimonials", "Blog", "Webshop", "Multilingual website", "Booking system", "Newsletter integration", "Chatbot / live chat", "Client portal", "Job module", "FAQ section", "Search function", "GA4 integration", "Extra feedback rounds"]
+    },
+    "technical": {
+      "title1": "Technically",
+      "titleHighlight": "all taken care of",
+      "subtitle": "No technical hassle. Just knowing your website keeps working.",
+      "cards": {
+        "uptime": { "title": "99.9% uptime", "desc": "Virtually always online." },
+        "speed": { "title": "Fast loading times", "desc": "Visitors drop off less quickly." },
+        "security": { "title": "Safe and secure", "desc": "Your site stays clean and reliable." },
+        "backups": { "title": "Daily backups", "desc": "Always restorable if something goes wrong." },
+        "maintenance": { "title": "Maintenance included", "desc": "We make sure your website keeps running." }
+      }
+    },
+    "extraServices": {
+      "title1": "Extra",
+      "titleHighlight": "services",
+      "subtitle": "Besides a sleek website, we can also help with other services.",
+      "items": ["Logo design", "Brand identity", "Rebranding", "Refreshing existing brand identity", "Brand foundation", "Copywriting / web texts", "Social media content", "Email marketing", "SEO", "SEA", "Lead generation", "Photography", "Social media templates", "Presentation design", "Print work", "DTP services", "Graphic design", "AI & automation", "Brand audit", "Website analysis", "Website refresh"]
+    },
+    "ctaSection": {
+      "title1": "Ready for a",
+      "titleHighlight": "premium website?",
+      "description": "Schedule a call. We're honest about what works and what doesn't, so you can confidently choose a website that fits your business.",
+      "button": "Schedule a call",
+      "whatsapp": "Prefer to message first?"
+    }
+  },
+  "websiteTrajecten": {
+    "title1": "Start your",
+    "titleHighlight": "website plan",
+    "custom": "Custom",
+    "from": "from",
+    "cta": "View all packages",
+    "plans": {
+      "essentials": {
+        "description": "A strong foundation, sleek design and a professional look. Perfect to get started."
+      },
+      "groei": {
+        "description": "More pages, more impact, and a website that grows with your ambitions."
+      },
+      "premium": {
+        "description": "Fully custom for ambitious brands with big plans."
+      }
+    }
+  },
+  "packages": {
+    "metadata": {
+      "title": "Website Packages & Pricing | We Grow Brands",
+      "description": "View our website packages. From Essentials (€999) to Premium (€2,650+). No hidden costs, transparent pricing."
+    },
+    "title1": "Our",
+    "titleHighlight": "packages",
+    "subtitle": "No hidden costs, no surprises. Choose the package that fits your ambitions.",
+    "billingOnce": "One-time",
+    "billingMonthly": "Monthly",
+    "perMonth": "/ month",
+    "deposit": "deposit, then 6×",
+    "whatYouGet": "What you get",
+    "custom": "Custom",
+    "from": "from",
+    "data": {
+      "essentials": {
+        "description": "Perfect for starters who want to invest in a professional website.",
+        "cta": "Start with Essentials",
+        "features": ["Up to 3 pages", "Responsive design", "Basic SEO optimization", "Contact form", "SSL certificate", "Blog functionality", "Custom animations", "Webshop functionality"]
+      },
+      "groei": {
+        "description": "For businesses that want to grow with a website that moves along.",
+        "cta": "Start with Growth",
+        "features": ["Up to 8 pages", "Responsive design", "Extended SEO optimization", "Contact form", "SSL certificate", "Blog functionality", "Custom animations", "Webshop functionality"]
+      },
+      "premium": {
+        "description": "Fully custom for ambitious brands with specific needs.",
+        "cta": "Start with Premium",
+        "features": ["8+ pages", "Website with deeper structure", "Responsive design", "Complete SEO strategy", "Advanced forms", "SSL certificate", "Blog functionality", "Custom animations", "Webshop functionality"]
+      }
+    },
+    "included": {
+      "title1": "This comes standard with",
+      "titleHighlight": "every website package",
+      "brandingNote": "No brand identity yet? Branding and identity design is one of our strengths.",
+      "brandingCta": "Get in touch"
+    },
+    "technical": {
+      "title1": "Technically",
+      "titleHighlight": "all taken care of",
+      "subtitle": "No technical hassle. Just knowing your website keeps working."
+    },
+    "addons": {
+      "title1": "Website",
+      "titleHighlight": "add-ons",
+      "description": "Want to add something extra to your website later? Choose one of the add-ons. This way you get a website that's consistent from start to finish, fits your brand and you'll never regret."
+    },
+    "extraServices": {
+      "title1": "Extra",
+      "titleHighlight": "services",
+      "subtitle": "Besides a sleek website, we can also help with other services."
+    },
+    "ownership": {
+      "title1": "Your website,",
+      "titleHighlight": "your property",
+      "description": "After full payment of your website, you're the complete owner. You're not locked in. Want to host your website elsewhere after the term? No problem. Want to keep it on our super-fast and reliable hosting? Then you only pay a small fee for hosting and maintenance.",
+      "check1": "Website under your control",
+      "check2": "No hidden costs",
+      "check3": "Flexible hosting and maintenance options",
+      "termsLink": "Read our terms and conditions"
+    },
+    "ctaSection": {
+      "title1": "Not sure which package",
+      "titleHighlight": "fits you?",
+      "description": "Schedule a free consultation. We'll look at your needs together and honestly advise you on the best option.",
+      "button": "Schedule a call"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Frequently Asked Questions (FAQ) | We Grow Brands",
+      "description": "Answers to frequently asked questions about our website packages, hosting, process and support."
+    },
+    "title": "Frequently asked questions",
+    "subtitle": "These are the most common questions. Can't find your answer?",
+    "contactLink": "Send us a message",
+    "categories": {
+      "all": "All",
+      "general": "General",
+      "packages": "Packages",
+      "hosting": "Hosting",
+      "process": "Process",
+      "support": "Support"
+    },
+    "items": {
+      "speed": { "q": "How quickly can my website go live?", "a": "Usually within 2 to 4 weeks, depending on complexity and how quickly we receive content." },
+      "type": { "q": "What kind of websites do you make?", "a": "We create premium custom websites: from landing pages and business websites to portfolios and webshops. Always with a focus on branding and conversion." },
+      "redesign": { "q": "Can I have my current website redesigned?", "a": "Yes, we'd love to help with a redesign or complete makeover of your existing website. We look at what works and what can be improved." },
+      "installments": { "q": "Can I pay in installments?", "a": "Yes. You pay a down payment and then 6 monthly installments. After 7 months you're the full owner of your website." },
+      "ownership": { "q": "When do I become the owner of my website?", "a": "After the down payment and 6 monthly installments (7 months total) you're 100% owner. Your website is then completely yours." },
+      "leaseVsInstallments": { "q": "What's the difference between installments and website lease?", "a": "With installments, the website becomes fully your property after 7 months and mandatory payments stop. With lease, you keep paying every month, even when nothing happens to your website - you're never the owner and you're stuck in a lock-in. We believe in fair deals: building a beautiful, high-quality website that becomes yours, without endless payments. After 7 months you're completely free: you can choose optional packages like hosting, maintenance or changes - all at your own discretion." },
+      "nonPayment": { "q": "What happens if I miss an installment payment?", "a": "You'll receive one reminder. If the payment isn't made within 7 days, the website goes offline. This is the only way to offer flexible payment options. Having payment issues? Always contact us in advance, so we can think along about a solution." },
+      "stopPayment": { "q": "Can I stop paying during the term?", "a": "No, the full amount must always be paid. You can't stop after a few months. If you fall behind on payments the website goes offline, but the payment obligation remains." },
+      "hostingIncluded": { "q": "Is hosting and maintenance included?", "a": "We recommend having hosting & maintenance with us, but you're free to choose your own hosting provider. All packages include 6 months of hosting." },
+      "hostingRequired": { "q": "Am I required to take hosting and maintenance from you?", "a": "No, you're not required to take hosting and maintenance from us. After full payment, the website is yours and you can choose where to host. We do recommend hosting with us, as we can then guarantee your website stays fast, secure and up-to-date. If you host elsewhere, we cannot be responsible for the technical performance, speed or security of your website." },
+      "externalHosting": { "q": "What if I want to host my website elsewhere?", "a": "That's fine, you're completely free in your choice. Keep in mind that we can't guarantee the same technical speed, uptime and security. With external hosting, we are not responsible for how the website functions. We hand over the website properly, but after that the responsibility lies with you or your hosting party." },
+      "hostingPackages": { "q": "What hosting packages do you offer?", "a": "We have different packages: hosting only (from €14.50/month with AI-optimized optimizations), hosting with maintenance, or hosting with maintenance and regular changes (from €39.95/month). You choose what suits you." },
+      "hostingBenefits": { "q": "What are the benefits of hosting with you?", "a": "With us you get 99.9% uptime, fast loading times, daily backups, SSL certificate and technical maintenance. We keep your website secure and up-to-date. If something goes wrong, we fix it. With external hosting, you're responsible for all these things yourself." },
+      "process": { "q": "How does the process from design to launch work?", "a": "The process follows clear steps: 1) Introduction and briefing - we discuss your wishes, goals and audience. 2) Strategy and structure - we determine the layout and page structure. 3) Design - we create the visual design based on your branding. 4) Feedback and revisions - you provide feedback and we process changes. 5) Development - we build the website technically. 6) Content and finishing - texts and images are placed. 7) Launch - your website goes live after your approval." },
+      "feedbackRounds": { "q": "How many feedback rounds are there?", "a": "There are always 2 feedback rounds included. We provide clear information upfront, and we expect concrete feedback from you. This way we can keep the price attractive for this quality. Extra rounds are possible at additional cost." },
+      "extraFeatures": { "q": "What if I want extra pages or features later?", "a": "No problem. We can expand whenever you grow, from extra pages to custom functionality." },
+      "selfEdit": { "q": "Can I edit content myself after delivery?", "a": "With the Growth and Essentials packages you get access to a user-friendly dashboard where you can edit texts and images yourself. Note: if you break something and don't have a maintenance package, there are costs involved." },
+      "otherServices": { "q": "Do you offer other services?", "a": "Yes, besides web design we also offer branding (logo, brand identity, visual identity), copywriting, SEO optimization, photography and videography, social media content and strategy. We can support your brand from A to Z, tailored to your stage and audience. Also check out our add-ons on the packages page." },
+      "supportAfter": { "q": "How does support work after delivery?", "a": "We remain available for maintenance, optimization and expansions. You're not locked in, but you are in good hands." },
+      "responseTime": { "q": "How quickly do you respond to questions?", "a": "We respond as quickly as we can. For urgent matters, we're also reachable via WhatsApp." }
+    }
+  },
+  "languageSwitcher": {
+    "nl": "NL",
+    "en": "EN"
+  }
+}

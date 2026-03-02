@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { Link } from '@/i18n/routing'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import HeroContactForm from '@/components/HeroContactForm'
 
@@ -53,20 +53,20 @@ export default function ContactPage() {
             <div className="flex justify-center gap-10 sm:gap-16 text-center text-xs">
               <div>
                 <p className="text-text-light mb-0.5">Email</p>
-                <Link href="mailto:hello@wegrowbrands.online" className="text-text-dark hover:text-green-dark transition-colors">
+                <Link href={"mailto:hello@wegrowbrands.online" as any} className="text-text-dark hover:text-green-dark transition-colors">
                   hello@wegrowbrands.online
                 </Link>
               </div>
               <div>
                 <p className="text-text-light mb-0.5">Telefoon</p>
-                <Link href="tel:+31636162639" className="text-text-dark hover:text-green-dark transition-colors">
+                <Link href={"tel:+31636162639" as any} className="text-text-dark hover:text-green-dark transition-colors">
                   06 36 16 26 39
                 </Link>
               </div>
               <div>
                 <p className="text-text-light mb-0.5">LinkedIn</p>
                 <Link
-                  href="https://www.linkedin.com/in/daley-jansen"
+                  href={"https://www.linkedin.com/in/daley-jansen" as any}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-dark hover:text-green-dark transition-colors"

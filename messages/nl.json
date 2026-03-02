@@ -1,0 +1,587 @@
+{
+  "metadata": {
+    "title": "We Grow Brands | Premium Websites vanuit jouw Merk",
+    "description": "Premium maatwerk websites die starten vanuit jouw merk. Geen templates. Nooit meer balen van je website.",
+    "keywords": "website laten maken, webdesign, premium website, maatwerk website, branding, merkidentiteit"
+  },
+  "nav": {
+    "home": "Home",
+    "websites": "Websites",
+    "packages": "Pakketten",
+    "cases": "Cases",
+    "contact": "Contact",
+    "hosting": "Hosting",
+    "cta": "Vraag website aan",
+    "menuOpen": "Menu openen",
+    "dropdown": {
+      "websiteLatenMaken": "Website laten maken",
+      "websiteLatenMakenDesc": "Strategische websites op maat",
+      "onzeAanpak": "Onze aanpak",
+      "onzeAanpakDesc": "Van idee naar live in 4 stappen",
+      "waaromOns": "Waarom kiezen voor ons",
+      "waaromOnsDesc": "Geen templates, wel strategie",
+      "trajecten": "Website trajecten",
+      "trajectenDesc": "Essentials, Groei of Premium",
+      "branding": "Branding en andere services",
+      "brandingDesc": "Logo, huisstijl en meer",
+      "planTraject": "Plan een traject",
+      "planTrajectDesc": "Start een vrijblijvend gesprek"
+    },
+    "mobile": {
+      "overview": "Overzicht",
+      "websiteLatenMaken": "Website laten maken",
+      "onzeAanpak": "Onze aanpak",
+      "waaromOns": "Waarom kiezen voor ons",
+      "trajecten": "Website trajecten",
+      "branding": "Branding en andere services",
+      "planTraject": "Plan een traject"
+    }
+  },
+  "hero": {
+    "title1": "Meer dan websites.",
+    "title2": "Wij bouwen",
+    "titleHighlight": "merken.",
+    "subtitle": "Nooit meer balen van je website. Wij creëren websites die kloppen: sterk in design, passend bij je merk en gebouwd om mee te groeien met je ambities.",
+    "ctaPlan": "Plan gesprek",
+    "ctaWork": "Bekijk ons werk"
+  },
+  "recognition": {
+    "title1": "Herken je",
+    "titleHighlight": "dit?",
+    "painPoints": {
+      "1": {
+        "title": "Jouw website voelt niet passend bij je bedrijf",
+        "quote": "Je kijkt naar je website met teleurstelling. Je huidige website is het gewoon net niet."
+      },
+      "2": {
+        "title": "Technische rompslomp",
+        "quote": "Hosting, DNS, plugins, werken in een CMS... Je wilt gewoon een mooie website, niet een IT-diploma."
+      },
+      "3": {
+        "title": "Zelf lopen klungelen",
+        "quote": "Je hebt het wel zelf geprobeerd, maar het werd niet wat je er van hoopte. Of je wilt helemaal niet zelf aanmodderen."
+      },
+      "4": {
+        "title": "Onnodige tools en kosten",
+        "quote": "Veel betalen voor functies die je niet echt nodig hebt, of dure doorlopende abonnementen voor websites waar je niet blij mee bent."
+      },
+      "5": {
+        "title": "Je website staat, maar hoe...",
+        "quote": "Lange laadtijden, trage pagina's en een design waar je ongelukkig van wordt."
+      },
+      "6": {
+        "title": "Je hebt een agency gevonden die mooie websites maakt...",
+        "quote": "...maar daar zit ook een torenhoog prijskaartje aan. Yikes."
+      }
+    }
+  },
+  "solution": {
+    "title1": "Nooit meer balen",
+    "titleHighlight": "van je website",
+    "description": "Je wilt gewoon ontzorgd worden. Geen gedoe, geen technische hoofdpijn, geen eindeloze facturen. Supermooie, supersnelle websites. Een professionele website waar je trots op kunt zijn en die je durft te delen met je potentiële doelgroep.",
+    "ctaPlan": "Plan een gesprek",
+    "ctaPackages": "Bekijk pakketten"
+  },
+  "features": {
+    "title1": "Custom design,",
+    "titleHighlight": "sterk merk",
+    "description1": "Of je nu kiest voor <strong>Essentials</strong>, <strong>Groei</strong> of volledig custom: elk pakket levert dezelfde hoogwaardige design en kwaliteit. Het verschil zit in de omvang, niet in de uitstraling.",
+    "description2": "Welk pakket je ook kiest, je krijgt altijd een website die een verlengstuk is van je merk. Geen standaard gedoe. Geen website waar je alsnog van baalt. En mocht het toch niet genoeg zijn? Dan breid je gewoon uit met add-ons.",
+    "check1": "Altijd premium design, ongeacht je pakket",
+    "check2": "Je website voelt als jouw bedrijf",
+    "check3": "Uitbreiden kan altijd, wanneer jij wilt",
+    "ctaPackages": "Bekijk de pakketten",
+    "addonsTitle": "Add-ons & diensten",
+    "moreNeeded": "Meer nodig?",
+    "moreNeededDesc": "Naast je website kun je bij ons terecht voor alles wat je merk nodig heeft. Van extra functionaliteit tot complete merkidentiteit.",
+    "addons": {
+      "extraPages": "Extra pagina's",
+      "complexForms": "Complexe formulieren",
+      "reviews": "Reviews/klantverhalen",
+      "blog": "Blog",
+      "webshop": "Webshop",
+      "aiContent": "AI-content",
+      "logoDesign": "Logo ontwerp",
+      "branding": "Huisstijl",
+      "brandFoundation": "Brand fundament",
+      "photography": "Fotografie",
+      "seo": "SEO",
+      "content": "Content",
+      "leadGeneration": "Leadgeneratie",
+      "aiAutomation": "AI & automatisering",
+      "multilingual": "Meertalig"
+    }
+  },
+  "trusted": {
+    "title": "Voor deze bedrijven hebben we al mooie websites gemaakt"
+  },
+  "casesSlider": {
+    "title1": "Een aantal",
+    "titleHighlight": "mooie projecten",
+    "subtitle": "Bekijk een selectie van de websites die we hebben gebouwd voor onze klanten.",
+    "viewCase": "Bekijk case",
+    "viewCases": "Bekijk onze cases",
+    "cases": {
+      "murthel": {
+        "label": "Essentials website",
+        "quote": "\"Een sportieve website die past bij kickboxlessen, groepstrainingen en personal training.\""
+      },
+      "systemisch": {
+        "label": "Grow website",
+        "quote": "\"Ik ben heel blij met mijn website dit is echt helemaal passend!\""
+      },
+      "bleijenberg": {
+        "label": "Premium webshop",
+        "quote": "\"Eindelijk een website die echt past bij de kwaliteit en uitstraling die we voor ogen hadden.\""
+      },
+      "meetthelocals": {
+        "label": "Premium blog",
+        "quote": "\"Een website met een avontuurlijke uitstraling voor een reisblog.\""
+      }
+    }
+  },
+  "stats": {
+    "title1": "Waarom kiezen voor",
+    "titleHighlight": "We Grow Brands",
+    "ctaRequest": "Vraag website aan",
+    "ctaPlan": "Plan een gesprek",
+    "columns": {
+      "wgb": "We Grow Brands",
+      "agencies": "Webdesigners",
+      "lease": "Website lease"
+    },
+    "comparison": {
+      "brandIntegration": {
+        "label": "Merk integratie",
+        "wgb": "Je start vanuit je merk: richting, design en keuzes.",
+        "agencies": "Meestal vanuit techniek, niet vanuit branding.",
+        "lease": "Generieke branding."
+      },
+      "design": {
+        "label": "Design & uitstraling",
+        "wgb": "Premium design, onderscheidende branding.",
+        "agencies": "Goed design, niet altijd onderscheidende branding.",
+        "lease": "Template look."
+      },
+      "custom": {
+        "label": "Maatwerk",
+        "wgb": "Volledig op maat.",
+        "agencies": "Soms maatwerk, soms template based.",
+        "lease": "Geen, standaard opzet."
+      },
+      "ownership": {
+        "label": "Eigendom",
+        "wgb": "Na betaling: 100% jouw eigendom.",
+        "agencies": "Na betaling: 100% jouw eigendom.",
+        "lease": "Nooit jouw eigendom."
+      },
+      "pricing": {
+        "label": "Prijsniveau",
+        "wgb": "Eerlijke prijzen voor premium niveau.",
+        "agencies": "Hoge maatwerktarieven.",
+        "lease": "Laag maandelijks tarief."
+      },
+      "payment": {
+        "label": "Betaling",
+        "wgb": "In termijnen mogelijk. Korting bij betaling ineens.",
+        "agencies": "In één keer of max 2-3 termijnen.",
+        "lease": "Doorlopende betaling zolang de website draait."
+      },
+      "support": {
+        "label": "Ondersteuning",
+        "wgb": "Persoonlijke ondersteuning via e-mail en WhatsApp.",
+        "agencies": "Wisselend.",
+        "lease": "Vaak basisondersteuning."
+      },
+      "changes": {
+        "label": "Website aanpassingen",
+        "wgb": "Zelf kiezen voor onderhoudspakketten.",
+        "agencies": "Uurtje, factuurtje.",
+        "lease": "Kleine aanpassingen vaak mogelijk."
+      },
+      "management": {
+        "label": "Beheer",
+        "wgb": "Zelf aanpassen via CMS óf volledig uitbesteden.",
+        "agencies": "Wachten op reactie, dan factuur.",
+        "lease": "Beperkte toegang, afhankelijk van aanbieder."
+      }
+    }
+  },
+  "services": {
+    "title1": "Premium website",
+    "titleHighlight": "Welke fase je ook bent",
+    "subtitle": "Je krijgt een website die past bij je merk, je huisstijl en je groei. Eerlijk, helder en professioneel, zonder gedoe of verborgen kosten.",
+    "cta": "Vraag een website aan",
+    "whatYouGet": "Wat je krijgt",
+    "custom": "Maatwerk",
+    "from": "vanaf",
+    "paymentLink": "Bekijk onze mogelijkheden en voorwaarden voor betaling"
+  },
+  "techBenefits": {
+    "title1": "Oké, en nu even",
+    "titleHighlight": "in gewone",
+    "titleHighlight2": "mensentaal",
+    "subtitle": "Dit zijn de technische specs van je website. Wij vertalen dat naar wat het voor jou betekent.",
+    "benefits": {
+      "1": {
+        "techDetails": "99,9% uptime · Google Cloud",
+        "title": "Je site blijft gewoon lekker draaien."
+      },
+      "2": {
+        "techDetails": "PageSpeed 99/100 · Image optimization · Caching",
+        "title": "Pagina's laden supersnel. Bezoekers blijven hangen."
+      },
+      "3": {
+        "techDetails": "SSL · DDoS protection · Malware scan & removal",
+        "title": "Veilig voor jou én je bezoekers."
+      },
+      "4": {
+        "techDetails": "Daily backups · One-click restore via dashboard",
+        "title": "Gaat er iets mis? Je website is zo teruggezet."
+      },
+      "5": {
+        "techDetails": "WordPress toegang · Drag & drop · Zelf aanpassen indien gewenst",
+        "title": "Zelf aanpassen? Prima. Liever uitbesteden? Kan ook."
+      },
+      "6": {
+        "techDetails": "Uptime monitoring · Security scans · 24/7 support",
+        "title": "Wij houden de wacht. Jij slaapt lekker."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Dit zeggen onze klanten over ons",
+    "disclaimer": "Deze klanttestimonial wordt nog opgevraagd",
+    "items": {
+      "bleijenberg": {
+        "quote": "\"Warme, aardse tinten en een luxe uitstraling. Perfect passend bij ons merk.\"",
+        "company": "Tuinpotten & interieur"
+      },
+      "murthel": {
+        "quote": "\"Een sportieve website die past bij kickboxen en personal training.\"",
+        "company": "Groenhart Gym"
+      },
+      "systemisch": {
+        "quote": "\"Strak, luxe en perfect passend bij onze huisstijl.\"",
+        "company": "Systemischverbinden.nl"
+      },
+      "meetthelocals": {
+        "quote": "\"Een website met een avontuurlijke uitstraling voor een reisblog.\"",
+        "company": "Reisblog"
+      },
+      "daleyedit": {
+        "quote": "\"Professioneel, snel en betaalbaar. Precies wat we zochten.\"",
+        "company": "Branddesigner & fotograaf"
+      }
+    }
+  },
+  "cta": {
+    "title1": "Klaar om je merk",
+    "titleHighlight": "te laten groeien?",
+    "subtitle": "Laten we samen een website bouwen waar je trots op bent.",
+    "button": "Plan een gesprek",
+    "whatsapp": "Liever eerst appen?"
+  },
+  "footer": {
+    "tagline": "Meer dan websites. Wij bouwen merken.",
+    "services": "Diensten",
+    "servicesWebsites": "Websites",
+    "servicesBranding": "Branding",
+    "servicesPhotography": "Fotografie",
+    "servicesGraphicDesign": "Grafische vormgeving",
+    "servicesHosting": "Hosting & onderhoud",
+    "information": "Informatie",
+    "infoFaq": "Veelgestelde vragen",
+    "infoTerms": "Algemene voorwaarden",
+    "infoContact": "Contact",
+    "contact": "Contact",
+    "partners": "Partners",
+    "copyright": "© 2026 We Grow Brands. Alle rechten voorbehouden."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "algVoorwaarden": "Voorwaarden",
+    "websiteTermijnen": "In termijnen",
+    "portfolio": "Cases",
+    "pakketten": "Pakketten",
+    "websites": "Websites",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "hosting": "Hosting & onderhoud"
+  },
+  "notFound": {
+    "message": "Het lijkt erop dat je verdwaald bent.",
+    "backHome": "Terug naar home"
+  },
+  "contactPage": {
+    "title": "Contact",
+    "subtitle": "Vertel ons wat we kunnen doen om jou te helpen met je website.",
+    "formTitle1": "Laten we jouw",
+    "formTitle2": "website plannen",
+    "email": "Email",
+    "phone": "Telefoon",
+    "linkedin": "LinkedIn",
+    "metadata": {
+      "title": "Contact - Neem Contact Op | We Grow Brands",
+      "description": "Neem contact op voor een vrijblijvend gesprek over jouw nieuwe website. We reageren binnen 24 uur met een passend voorstel. Bel, mail of plan direct een afspraak."
+    }
+  },
+  "contactForm": {
+    "namePlaceholder": "Naam*",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Telefoon",
+    "companyPlaceholder": "Bedrijf",
+    "messagePlaceholder": "Waar ben je naar op zoek?*",
+    "requiredFields": "Velden met * zijn verplicht.",
+    "submit": "Vraag website aan",
+    "submitting": "Versturen...",
+    "subject": "Nieuwe aanvraag via Contact pagina"
+  },
+  "heroContactForm": {
+    "namePlaceholder": "Naam*",
+    "emailPlaceholder": "Email*",
+    "phonePlaceholder": "Telefoonnummer",
+    "companyPlaceholder": "Bedrijfsnaam",
+    "messagePlaceholder": "Projectomschrijving*",
+    "submit": "Contact",
+    "submitting": "Versturen...",
+    "subject": "Nieuwe aanvraag via Contact pagina"
+  },
+  "successPopup": {
+    "defaultTitle": "Bedankt!",
+    "defaultMessage": "Je bericht is verstuurd. We nemen zo snel mogelijk contact met je op.",
+    "close": "Sluiten",
+    "closeLabel": "Sluiten",
+    "errorTitle": "Er ging iets mis",
+    "errorMessage": "Het versturen is niet gelukt. Probeer het opnieuw of stuur ons een berichtje via WhatsApp.",
+    "tryAgain": "Probeer opnieuw",
+    "whatsappLink": "Stuur ons een berichtje via WhatsApp"
+  },
+  "websitesPage": {
+    "metadata": {
+      "title": "Professionele Website Laten Maken - Webdesign | We Grow Brands",
+      "description": "Professionele website laten maken die groeit met je bedrijf. Premium webdesign met 99.9% uptime, snelle laadtijden en veilige hosting. Vraag een vrijblijvend gesprek aan."
+    },
+    "hero": {
+      "title1": "Maatwerk websites,",
+      "titleHighlight": "volledig ontzorgd",
+      "description": "Geen templates, geen vage betalingsconstructies, maar een website waar je blij van wordt en die compleet aansluit op jouw merk en uitstraling.",
+      "ctaPlan": "Plan gesprek",
+      "ctaPackages": "Bekijk pakketten"
+    },
+    "approach": {
+      "title1": "Zo pakken we",
+      "titleHighlight": "het aan",
+      "description1": "Goede voorbereiding is het halve werk. Daarom spreken we vooraf goed af wat je nodig hebt, maar vooral ook wat niet. Geen overkill, gewoon precies wat je nodig hebt.",
+      "description2": "Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.",
+      "step1": "Stap 1",
+      "step1Title": "Strategiegesprek",
+      "step1Desc": "Een online call om de strategie en opzet van je website te bepalen. Wat is wel nodig, wat niet? Wat zijn de doelen? Wat moet je merk uitstralen?",
+      "step2": "Stap 2",
+      "step2Title": "Designrichting",
+      "step2Desc": "We kijken naar je huidige huisstijl en bedenken een design dat hierbij past. Nog geen huisstijl? Die kunnen we ook voor je maken.",
+      "step3": "Stap 3",
+      "step3Title": "Content aanleveren",
+      "step3Desc": "Jij levert teksten en afbeeldingen aan. Moeten er nog teksten gemaakt worden? Kunnen we ook voor je verzorgen.",
+      "step4": "Stap 4",
+      "step4Title": "Bouwen & feedback",
+      "step4Desc": "We maken de eerste opzet. Niet tevreden? Je kunt nog een andere richting kiezen.",
+      "step4a": "Feedbackronde 1",
+      "step4b": "Feedbackronde 2",
+      "step5": "Stap 5",
+      "step5Title": "We gaan live!",
+      "step5Desc": "Je website gaat live en is klaar om bezoekers te ontvangen en je merk te laten groeien.",
+      "ctaSparren": "Sparren over je website?"
+    },
+    "whyUs": {
+      "title1": "Waarom kiezen voor",
+      "titleHighlight": "We Grow Brands",
+      "description": "Wij bouwen websites die passen bij je merk, je ambities en je doelgroep. Geen standaard templates, maar premium design met persoonlijke aandacht.",
+      "ctaPlan": "Plan een gesprek",
+      "ctaPackages": "Bekijk pakketten",
+      "cards": {
+        "custom": { "title": "Volledig op maat", "desc": "Premium design, onderscheidende branding. Alles gebouwd vanuit jouw merk." },
+        "ownership": { "title": "100% jouw eigendom", "desc": "Geen vage leaseconstructies of lock-in. Voordelige websitepakketten of flexibele betaaltermijnen, daarna volledig van jou." },
+        "brand": { "title": "Alles vanuit je merk", "desc": "Wij ontwerpen niet zomaar een mooie website. Alles is doordacht en gebouwd vanuit jouw branding." },
+        "communication": { "title": "Directe communicatie", "desc": "Neem contact op via e-mail en WhatsApp. We zorgen dat je snel reactie krijgt." },
+        "moreThanWebsites": { "title": "Meer dan websites", "desc": "Naast websites bieden we ook diensten zoals branding, huisstijl en fotografie." },
+        "maintenance": { "title": "Voordelig onderhoud", "desc": "Optionele pakketten voor aanpassingen en onderhoud na oplevering." }
+      }
+    },
+    "included": {
+      "title1": "Dit zit standaard bij",
+      "titleHighlight": "elk website pakket",
+      "cards": {
+        "design": { "title": "Design in jouw huisstijl", "desc": "Volledig ontworpen volgens jouw branding." },
+        "pages": { "title": "Basis pagina's", "desc": "Home, over ons, contact en call-to-actions." },
+        "images": { "title": "Beeldbibliotheek", "desc": "Toegang tot passende afbeeldingen voor je website." },
+        "ai": { "title": "AI-beelden op maat", "desc": "Unieke visuals die passen bij je merk, zonder afbreuk aan authenticiteit." },
+        "responsive": { "title": "Responsive design", "desc": "Perfect op desktop, tablet én mobiel." },
+        "contactForm": { "title": "Contactformulier", "desc": "Bezoekers kunnen direct contact opnemen." }
+      },
+      "brandingNote": "Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten.",
+      "brandingCta": "Neem contact op"
+    },
+    "addons": {
+      "title1": "Website",
+      "titleHighlight": "add-ons",
+      "description": "Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt.",
+      "items": ["Extra pagina's / landingspagina's", "Complexe formulieren", "Reviews/klantverhalen", "Blog", "Webshop", "Meertalige website", "Boekingssysteem", "Nieuwsbrief integratie", "Chatbot / live chat", "Klantportaal", "Vacaturemodule", "FAQ sectie", "Zoekfunctie", "GA4 integratie", "Extra feedbackrondes"]
+    },
+    "technical": {
+      "title1": "Technisch",
+      "titleHighlight": "allemaal geregeld",
+      "subtitle": "Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken.",
+      "cards": {
+        "uptime": { "title": "99.9% uptime", "desc": "Praktisch altijd online." },
+        "speed": { "title": "Snelle laadtijden", "desc": "Bezoekers haken minder snel af." },
+        "security": { "title": "Veilig en beschermd", "desc": "Je site blijft schoon en betrouwbaar." },
+        "backups": { "title": "Dagelijkse back-ups", "desc": "Altijd terug te zetten als er iets misgaat." },
+        "maintenance": { "title": "Onderhoud inbegrepen", "desc": "Wij zorgen dat je website blijft draaien." }
+      }
+    },
+    "extraServices": {
+      "title1": "Extra",
+      "titleHighlight": "services",
+      "subtitle": "Wij kunnen je naast een strakke website ook helpen met andere diensten.",
+      "items": ["Logo ontwerp", "Huisstijl", "Rebranding", "Opfrissen van bestaande huisstijl", "Brand fundament", "Copywriting / webteksten", "Social media content", "E-mail marketing", "SEO", "SEA", "Leadgeneratie", "Fotografie", "Social media templates", "Presentatie ontwerp", "Drukwerk", "DTP diensten", "Grafische vormgeving", "AI & automatisering", "Brand audit", "Website analyse", "Website opfrisser"]
+    },
+    "ctaSection": {
+      "title1": "Klaar voor een",
+      "titleHighlight": "premium website?",
+      "description": "Plan een gesprek. We zijn eerlijk over wat werkt en wat niet, zodat je met vertrouwen kiest voor een website die bij je bedrijf past.",
+      "button": "Plan een gesprek",
+      "whatsapp": "Liever eerst appen?"
+    }
+  },
+  "websiteTrajecten": {
+    "title1": "Start nu jouw",
+    "titleHighlight": "website traject",
+    "custom": "Maatwerk",
+    "from": "vanaf",
+    "cta": "Bekijk alle pakketten",
+    "plans": {
+      "essentials": {
+        "description": "Een sterke basis, strak design en een professionele uitstraling. Perfect om te starten."
+      },
+      "groei": {
+        "description": "Meer pagina's, meer impact, en een website die meegroeit met je ambities."
+      },
+      "premium": {
+        "description": "Volledig maatwerk voor ambitieuze merken met grote plannen."
+      }
+    }
+  },
+  "packages": {
+    "metadata": {
+      "title": "Website Pakketten & Prijzen | We Grow Brands",
+      "description": "Bekijk onze website pakketten. Van Essentials (€999) tot Premium (€2.650+). Geen verborgen kosten, transparante prijzen."
+    },
+    "title1": "Onze",
+    "titleHighlight": "pakketten",
+    "subtitle": "Geen verborgen kosten, geen verrassingen. Kies het pakket dat past bij jouw ambities.",
+    "billingOnce": "Eenmalig",
+    "billingMonthly": "Maandelijks",
+    "perMonth": "/ maand",
+    "deposit": "aanbetaling, daarna 6×",
+    "whatYouGet": "Wat je krijgt",
+    "custom": "Maatwerk",
+    "from": "vanaf",
+    "data": {
+      "essentials": {
+        "description": "Perfect voor starters die willen investeren in een professionele website.",
+        "cta": "Start met Essentials",
+        "features": ["Tot 3 pagina's", "Responsive design", "Basis SEO-optimalisatie", "Contactformulier", "SSL-certificaat", "Blog functionaliteit", "Maatwerk animaties", "Webshop functionaliteit"]
+      },
+      "groei": {
+        "description": "Voor bedrijven die willen groeien met een website die meebeweegt.",
+        "cta": "Start met Groei",
+        "features": ["Tot 8 pagina's", "Responsive design", "Uitgebreide SEO-optimalisatie", "Contactformulier", "SSL-certificaat", "Blog functionaliteit", "Maatwerk animaties", "Webshop functionaliteit"]
+      },
+      "premium": {
+        "description": "Volledig maatwerk voor ambitieuze merken met specifieke wensen.",
+        "cta": "Start met Premium",
+        "features": ["8+ pagina's", "Website met diepere structuur", "Responsive design", "Complete SEO-strategie", "Geavanceerde formulieren", "SSL-certificaat", "Blog functionaliteit", "Maatwerk animaties", "Webshop functionaliteit"]
+      }
+    },
+    "included": {
+      "title1": "Dit zit standaard bij",
+      "titleHighlight": "elk website pakket",
+      "brandingNote": "Nog geen huisstijl? Branding en huisstijlontwerp is een van onze krachten.",
+      "brandingCta": "Neem contact op"
+    },
+    "technical": {
+      "title1": "Technisch",
+      "titleHighlight": "allemaal geregeld",
+      "subtitle": "Geen technisch gedoe. Gewoon zeker weten dat je website blijft werken."
+    },
+    "addons": {
+      "title1": "Website",
+      "titleHighlight": "add-ons",
+      "description": "Wil je later toch iets extra's toevoegen aan je website? Kies dan voor een van de add-ons. Zo krijg je een website die van begin tot einde klopt, past bij je merk en waar je nooit meer van baalt."
+    },
+    "extraServices": {
+      "title1": "Extra",
+      "titleHighlight": "services",
+      "subtitle": "Wij kunnen je naast een strakke website ook helpen met andere diensten."
+    },
+    "ownership": {
+      "title1": "Jouw website,",
+      "titleHighlight": "jouw eigendom",
+      "description": "Na de volledige betaling van je website ben je volledig eigenaar. Je zit nergens aan vast. Wil je na de looptijd je website elders hosten? Dat kan, geen probleem. Wil je de website laten staan op onze supersnelle en betrouwbare hosting? Dan betaal je alleen nog een laag bedrag voor de hosting en onderhoud.",
+      "check1": "Website in eigen beheer",
+      "check2": "Geen verborgen kosten",
+      "check3": "Flexibele hosting en onderhoud opties",
+      "termsLink": "Lees hier de algemene voorwaarden"
+    },
+    "ctaSection": {
+      "title1": "Niet zeker welk pakket",
+      "titleHighlight": "bij je past?",
+      "description": "Plan een vrijblijvend gesprek. We kijken samen naar je wensen en adviseren je eerlijk over de beste optie.",
+      "button": "Plan een gesprek"
+    }
+  },
+  "faq": {
+    "metadata": {
+      "title": "Veelgestelde Vragen (FAQ) | We Grow Brands",
+      "description": "Antwoorden op veelgestelde vragen over onze website pakketten, hosting, het proces en support."
+    },
+    "title": "Veelgestelde vragen",
+    "subtitle": "Dit zijn de meest voorkomende vragen. Kun je het antwoord niet vinden?",
+    "contactLink": "Stuur ons een bericht",
+    "categories": {
+      "all": "Alles",
+      "general": "Algemeen",
+      "packages": "Pakketten",
+      "hosting": "Hosting",
+      "process": "Proces",
+      "support": "Support"
+    },
+    "items": {
+      "speed": { "q": "Hoe snel kan mijn website live staan?", "a": "Meestal binnen 2 tot 4 weken, afhankelijk van de complexiteit en hoe snel we content ontvangen." },
+      "type": { "q": "Wat voor soort websites maken jullie?", "a": "We maken premium websites op maat: van landingspagina's en bedrijfswebsites tot portfolio's en webshops. Altijd met focus op branding en conversie." },
+      "redesign": { "q": "Kan ik mijn huidige website laten vernieuwen?", "a": "Ja, we helpen je graag met een redesign of complete make-over van je bestaande website. We kijken naar wat werkt en wat beter kan." },
+      "installments": { "q": "Kan ik in termijnen betalen?", "a": "Ja. Je betaalt een aanbetaling en daarna 6 maandtermijnen. Na 7 maanden ben je volledig eigenaar van je website." },
+      "ownership": { "q": "Wanneer word ik eigenaar van mijn website?", "a": "Na de aanbetaling en 6 maandtermijnen (totaal 7 maanden) ben je 100% eigenaar. Je website is dan volledig van jou." },
+      "leaseVsInstallments": { "q": "Wat is het verschil tussen termijnen en website lease?", "a": "Bij termijnen wordt de website na 7 maanden volledig jouw eigendom en stoppen de verplichte betalingen. Bij lease blijf je elke maand betalen, ook als er niks meer aan je website gebeurt - je bent nooit eigenaar en zit vast in een lock-in. Wij geloven in eerlijke deals: een mooie, hoogwaardige website bouwen die van jou wordt, zonder eeuwigdurende betalingen. Na de 7 maanden ben je helemaal vrij: je kunt zelf kiezen voor optionele pakketten zoals hosting, onderhoud of aanpassingen - allemaal naar eigen wens." },
+      "nonPayment": { "q": "Wat gebeurt er bij niet-betaling van een termijn?", "a": "Je ontvangt één herinnering. Als de betaling niet binnen 7 dagen wordt voldaan, gaat de website offline. Dit is de enige manier om flexibele betalingsmogelijkheden mogelijk te maken. Heb je betalingsproblemen? Neem altijd even van tevoren contact met ons op, dan kunnen we meedenken over een oplossing." },
+      "stopPayment": { "q": "Kan ik tussentijds stoppen met betalen?", "a": "Nee, het volledige bedrag moet altijd worden voldaan. Je kunt niet na een paar maanden stoppen. Als je achterloopt met betalen gaat de website offline, maar de betalingsverplichting blijft bestaan." },
+      "hostingIncluded": { "q": "Zit hosting en onderhoud erbij?", "a": "We raden aan de hosting & onderhoud bij ons te doen, maar het staat je vrij om een eigen hostingprovider te nemen. Bij alle pakketten zit 6 maanden hosting inbegrepen." },
+      "hostingRequired": { "q": "Ben ik verplicht om hosting en onderhoud bij jullie af te nemen?", "a": "Nee, je bent niet verplicht om hosting en onderhoud bij ons af te nemen. Na volledige betaling is de website van jou en kun je zelf kiezen waar je host. We raden wel aan om bij ons te hosten, omdat we dan kunnen garanderen dat je website snel, veilig en up-to-date blijft. Als je elders host, kunnen wij niet verantwoordelijk zijn voor de technische prestaties, snelheid of beveiliging van je website." },
+      "externalHosting": { "q": "Wat als ik mijn website elders wil hosten?", "a": "Dat mag, je bent volledig vrij in je keuze. Houd er wel rekening mee dat we dan niet dezelfde technische snelheid, uptime en beveiliging kunnen garanderen. Bij externe hosting zijn wij niet verantwoordelijk voor hoe de website functioneert. We dragen de website netjes aan je over, maar daarna ligt de verantwoordelijkheid bij jou of je hostingpartij." },
+      "hostingPackages": { "q": "Welke hostingpakketten bieden jullie aan?", "a": "We hebben verschillende pakketten: alleen hosting (vanaf €14,50/maand met AI-geoptimaliseerde optimalisaties), hosting met onderhoud, of hosting met onderhoud én regelmatige aanpassingen (vanaf €39,95/maand). Je kiest wat bij je past." },
+      "hostingBenefits": { "q": "Wat zijn de voordelen van hosting bij jullie?", "a": "Bij ons krijg je 99.9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. We houden je website veilig en up-to-date. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken." },
+      "process": { "q": "Hoe verloopt het proces van ontwerp tot livegang?", "a": "Het proces verloopt in duidelijke stappen: 1) Kennismaking en briefing - we bespreken je wensen, doelen en doelgroep. 2) Strategie en structuur - we bepalen de opbouw en pagina-indeling. 3) Design - we maken het visuele ontwerp op basis van je branding. 4) Feedback en revisies - je geeft feedback en we verwerken aanpassingen. 5) Ontwikkeling - we bouwen de website technisch uit. 6) Content en afronding - teksten en afbeeldingen worden geplaatst. 7) Livegang - je website gaat online na jouw goedkeuring." },
+      "feedbackRounds": { "q": "Hoeveel feedbackrondes zijn er?", "a": "Er zijn altijd 2 feedbackrondes inbegrepen. We zorgen vooraf voor duidelijke informatie, en van jou verwachten we concrete feedbackpunten. Zo kunnen we de prijs aantrekkelijk houden voor deze kwaliteit. Extra rondes zijn mogelijk tegen meerprijs." },
+      "extraFeatures": { "q": "Wat als ik later extra pagina's of functies wil?", "a": "Geen probleem. We kunnen uitbreiden wanneer je groeit, van extra pagina's tot custom functionaliteit." },
+      "selfEdit": { "q": "Kan ik zelf content aanpassen na oplevering?", "a": "Bij de Grow en Essential pakketten krijg je toegang tot een gebruiksvriendelijk dashboard waarmee je zelf teksten en afbeeldingen kunt aanpassen. Let op: als je iets breekt en je hebt geen onderhoudspakket, dan zitten daar kosten aan verbonden." },
+      "otherServices": { "q": "Bieden jullie nog meer diensten aan?", "a": "Ja, naast webdesign bieden we ook branding (logo, huisstijl, visuele identiteit), copywriting, SEO-optimalisatie, fotografie en videografie, social media content en strategie aan. We kunnen je merk van A tot Z ondersteunen, afgestemd op jouw fase en doelgroep. Kijk ook bij onze add-ons op de pakketten pagina." },
+      "supportAfter": { "q": "Hoe werkt support na oplevering?", "a": "We blijven beschikbaar voor onderhoud, optimalisatie en uitbreidingen. Je zit niet vast, maar wél in goede handen." },
+      "responseTime": { "q": "Hoe snel reageren jullie op vragen?", "a": "We reageren zo snel als we kunnen. Voor urgente zaken zijn we ook bereikbaar via WhatsApp." }
+    }
+  },
+  "languageSwitcher": {
+    "nl": "NL",
+    "en": "EN"
+  }
+}

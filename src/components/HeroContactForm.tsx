@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import WavyText from '@/components/WavyText'
 import SuccessPopup from '@/components/SuccessPopup'
 
 export default function HeroContactForm() {
+  const t = useTranslations('heroContactForm')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [showError, setShowError] = useState(false)
@@ -41,70 +43,70 @@ export default function HeroContactForm() {
       <div className="bg-[#F5F5F5] rounded-3xl p-8">
         <form onSubmit={handleSubmit} className="space-y-6">
           <input type="hidden" name="access_key" value="8be3f602-ca63-4ef2-a697-2acb45d4a0e4" />
-          <input type="hidden" name="subject" value="Nieuwe aanvraag via Contact pagina" />
+          <input type="hidden" name="subject" value={t('subject')} />
           <input type="hidden" name="from_name" value="We Grow Brands Website" />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
           {/* Volledige naam */}
           <div>
-            <label htmlFor="hero-name" className="sr-only">Naam*</label>
+            <label htmlFor="hero-name" className="sr-only">{t('namePlaceholder')}</label>
             <input
               id="hero-name"
               type="text"
               name="name"
               required
               className="w-full border-b-2 border-green-dark/20 bg-transparent py-3 font-serif italic text-green-dark placeholder:text-green-dark/50 placeholder:font-serif placeholder:italic focus:border-green-dark focus:outline-none transition-colors"
-              placeholder="Naam*"
+              placeholder={t('namePlaceholder')}
             />
           </div>
 
           {/* Email & Telefoon */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="hero-email" className="sr-only">Email*</label>
+              <label htmlFor="hero-email" className="sr-only">{t('emailPlaceholder')}</label>
               <input
                 id="hero-email"
                 type="email"
                 name="email"
                 required
                 className="w-full border-b-2 border-green-dark/20 bg-transparent py-3 font-serif italic text-green-dark placeholder:text-green-dark/50 placeholder:font-serif placeholder:italic focus:border-green-dark focus:outline-none transition-colors"
-                placeholder="Email*"
+                placeholder={t('emailPlaceholder')}
               />
             </div>
             <div>
-              <label htmlFor="hero-phone" className="sr-only">Telefoonnummer</label>
+              <label htmlFor="hero-phone" className="sr-only">{t('phonePlaceholder')}</label>
               <input
                 id="hero-phone"
                 type="tel"
                 name="phone"
                 className="w-full border-b-2 border-green-dark/20 bg-transparent py-3 font-serif italic text-green-dark placeholder:text-green-dark/50 placeholder:font-serif placeholder:italic focus:border-green-dark focus:outline-none transition-colors"
-                placeholder="Telefoonnummer"
+                placeholder={t('phonePlaceholder')}
               />
             </div>
           </div>
 
           {/* Bedrijfsnaam */}
           <div>
-            <label htmlFor="hero-company" className="sr-only">Bedrijfsnaam</label>
+            <label htmlFor="hero-company" className="sr-only">{t('companyPlaceholder')}</label>
             <input
               id="hero-company"
               type="text"
               name="company"
               className="w-full border-b-2 border-green-dark/20 bg-transparent py-3 font-serif italic text-green-dark placeholder:text-green-dark/50 placeholder:font-serif placeholder:italic focus:border-green-dark focus:outline-none transition-colors"
-              placeholder="Bedrijfsnaam"
+              placeholder={t('companyPlaceholder')}
             />
           </div>
 
           {/* Project details */}
           <div>
-            <label htmlFor="hero-details" className="sr-only">Projectomschrijving*</label>
+            <label htmlFor="hero-details" className="sr-only">{t('messagePlaceholder')}</label>
             <textarea
               id="hero-details"
               name="message"
               rows={3}
               required
               className="w-full border-b-2 border-green-dark/20 bg-transparent py-3 font-serif italic text-green-dark placeholder:text-green-dark/50 placeholder:font-serif placeholder:italic focus:border-green-dark focus:outline-none transition-colors resize-none"
-              placeholder="Projectomschrijving*"
+              placeholder={t('messagePlaceholder')}
             />
           </div>
 
@@ -115,7 +117,7 @@ export default function HeroContactForm() {
               disabled={isSubmitting}
               className="px-6 py-2 rounded-2xl border-2 border-green-dark bg-transparent text-green-dark font-medium hover:bg-green-dark hover:text-white transition-all disabled:opacity-70"
             >
-              {isSubmitting ? 'Versturen...' : 'Contact'}
+              {isSubmitting ? t('submitting') : t('submit')}
             </button>
             <a
               href="https://wa.me/31636162639"
