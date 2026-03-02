@@ -1,4 +1,4 @@
-import { supabase, getAdminClient } from './supabase'
+import { getSupabase, getAdminClient } from './supabase'
 
 // ── Types (compatible met daley-admin schema) ───────────────────────
 
@@ -277,7 +277,7 @@ async function getOfferteById(id: string): Promise<WgbOfferte | null> {
  * Haal publieke offerte op via slug (voor de viewer pagina)
  */
 export async function getPublicOfferteBySlug(slug: string): Promise<WgbOfferte | null> {
-  const { data, error } = await supabase
+  const { data, error } = await getSupabase()
     .from('offertes')
     .select('*')
     .eq('company_id', 'wgb')
@@ -287,7 +287,7 @@ export async function getPublicOfferteBySlug(slug: string): Promise<WgbOfferte |
 
   if (error) return null
 
-  const { data: items } = await supabase
+  const { data: items } = await getSupabase()
     .from('line_items')
     .select('*')
     .eq('offerte_id', (data as DbOfferte).id)

@@ -1,10 +1,17 @@
 import { createClient } from '@supabase/supabase-js'
 
 // Publieke client (anon key) — voor offerte-viewer en client-facing pagina's
-export const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
+// Lazy geïnitialiseerd zodat de build niet faalt zonder env vars
+let _supabase: ReturnType<typeof createClient> | null = null
+export function getSupabase() {
+  if (!_supabase) {
+    _supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    )
+  }
+  return _supabase
+}
 
 // Admin client (service role key) — alleen server-side, bypassed RLS
 // Gebruik dit voor admin operaties: offertes aanmaken, lijst ophalen, etc.
