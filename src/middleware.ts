@@ -10,6 +10,6 @@ export const config = {
   // - Static files
   // - Next.js internals
   matcher: [
-    '/((?!api|offerte|offerte-admin|_next|_vercel|.*\\..*).*)',
+    '/((?!api|offerte|offerte-admin|factuur|_next|_vercel|.*\\..*).*)',
   ],
 }

@@ -52,6 +52,15 @@ export default function Testimonials() {
       textColor: 'text-white',
       mutedColor: 'text-white/70',
     },
+    {
+      quote: '',
+      author: 'Van Rijn-Works',
+      company: 'Van Rijn-Works',
+      logo: '/afbeeldingen/vanrijnworks-logo.webp',
+      bgColor: 'bg-cream',
+      textColor: 'text-text-dark',
+      mutedColor: 'text-text-muted',
+    },
   ]
 
   // Triplicate testimonials for seamless infinite scroll
@@ -118,27 +127,14 @@ export default function Testimonials() {
                 key={index}
                 className="flex-shrink-0 w-[240px] md:w-[260px] lg:w-[280px] mx-2 md:mx-3"
               >
-                <div className={`${testimonial.bgColor} rounded-xl md:rounded-2xl p-4 md:p-5 lg:p-6 text-center flex flex-col items-center`}>
-                  {/* Logo bovenaan */}
-                  <div className="h-[80px] mb-2 flex items-center justify-center flex-shrink-0">
-                    <Image
-                      src={testimonial.logo}
-                      alt={`${testimonial.company} logo`}
-                      width={160}
-                      height={80}
-                      className="h-[80px] w-auto object-contain"
-                    />
-                  </div>
-                  <p className={`${testimonial.mutedColor} text-[10px] italic mb-3`}>{t('disclaimer')}</p>
-
-                  {/* Quote in het midden */}
-                  <p className={`${testimonial.textColor} text-sm leading-relaxed mb-3`}>{testimonial.quote}</p>
-
-                  {/* Naam en bedrijf onderaan */}
-                  <div className="flex-shrink-0">
-                    <p className={`${testimonial.textColor} text-sm font-medium`}>{testimonial.author}</p>
-                    <p className={`${testimonial.mutedColor} text-xs`}>{testimonial.company}</p>
-                  </div>
+                <div className={`${testimonial.bgColor} rounded-xl md:rounded-2xl p-6 md:p-8 flex items-center justify-center`}>
+                  <Image
+                    src={testimonial.logo}
+                    alt={`${testimonial.author} logo`}
+                    width={160}
+                    height={80}
+                    className="h-[60px] md:h-[70px] w-auto object-contain"
+                  />
                 </div>
               </div>
           ))}
