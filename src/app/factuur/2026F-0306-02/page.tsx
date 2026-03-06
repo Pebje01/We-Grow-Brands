@@ -9,7 +9,6 @@ const factuur = {
   number: '2026F-0306-02',
   date: '6 maart 2026',
   dueDate: '20 maart 2026',
-  status: 'open' as const,
   client: {
     name: 'Van Rijn Works',
     contactPerson: 'Billy van Rijn',
@@ -72,12 +71,6 @@ export default function FactuurPage() {
                 <div>
                   <p className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Vervaldatum</p>
                   <p className="text-sm text-white">{factuur.dueDate}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Status</p>
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wide bg-yellow-100 text-yellow-700">
-                    Open
-                  </span>
                 </div>
               </div>
             </div>
