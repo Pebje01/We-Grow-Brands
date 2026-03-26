@@ -1,14 +1,14 @@
 export const hostingPackages = [
   {
     name: 'Managed Hosting',
-    description: 'Betrouwbare hosting op Google Cloud. Wij regelen alles, jij hoeft nergens naar om te kijken.',
+    description: 'Betrouwbare Europese hosting binnen de EU. Wij regelen alles, jij hoeft nergens naar om te kijken.',
     pricing: {
       6: { price: '14,50', priceNumber: 14.50 },
       12: { price: '14,50', priceNumber: 14.50 },
       24: { price: '14,50', priceNumber: 14.50 },
     },
     features: [
-      { text: 'High-performance hosting (Google Cloud)', included: true },
+      { text: 'Europese hosting (EU, AVG-compliant)', included: true },
       { text: 'SSL-certificaat', included: true },
       { text: 'Dagelijkse back-ups', included: true },
       { text: '99,9% uptime', included: true },
@@ -31,7 +31,7 @@ export const hostingPackages = [
       24: { price: '34,99', priceNumber: 34.99 },
     },
     features: [
-      { text: 'High-performance hosting (Google Cloud)', included: true },
+      { text: 'Europese hosting (EU, AVG-compliant)', included: true },
       { text: 'SSL-certificaat', included: true },
       { text: 'Dagelijkse back-ups', included: true },
       { text: '99,9% uptime', included: true },
@@ -54,7 +54,7 @@ export const hostingPackages = [
       24: { price: '49,99', priceNumber: 49.99 },
     },
     features: [
-      { text: 'High-performance hosting (Google Cloud)', included: true },
+      { text: 'Europese hosting (EU, AVG-compliant)', included: true },
       { text: 'SSL-certificaat', included: true },
       { text: 'Dagelijkse back-ups', included: true },
       { text: '99,9% uptime', included: true },

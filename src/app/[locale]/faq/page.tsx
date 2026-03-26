@@ -97,7 +97,7 @@ const faqs = [
     icon: 'shield',
     question: 'Wat zijn de voordelen van hosting bij jullie?',
     answer:
-      'Bij ons krijg je 99.9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. We houden je website veilig en up-to-date. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken.',
+      'Bij ons krijg je 99,9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. Je website draait op Europese servers binnen de EU, volledig AVG/GDPR-compliant. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken.',
   },
   {
     category: 'Proces',

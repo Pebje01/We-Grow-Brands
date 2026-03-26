@@ -224,12 +224,12 @@
     "subtitle": "Dit zijn de technische specs van je website. Wij vertalen dat naar wat het voor jou betekent.",
     "benefits": {
       "1": {
-        "techDetails": "99,9% uptime · Google Cloud",
-        "title": "Je site blijft gewoon lekker draaien."
+        "techDetails": "Europese hosting · Servers in de EU · AVG-compliant",
+        "title": "Je data blijft in Europa. Beschermd volgens Europese privacywetgeving."
       },
       "2": {
-        "techDetails": "PageSpeed 99/100 · Image optimization · Caching",
-        "title": "Pagina's laden supersnel. Bezoekers blijven hangen."
+        "techDetails": "99,9% uptime · 24/7 monitoring · Automatisch herstel",
+        "title": "Je site blijft gewoon lekker draaien. Altijd bereikbaar."
       },
       "3": {
         "techDetails": "SSL · DDoS protection · Malware scan & removal",
@@ -240,8 +240,8 @@
         "title": "Gaat er iets mis? Je website is zo teruggezet."
       },
       "5": {
-        "techDetails": "WordPress toegang · Drag & drop · Zelf aanpassen indien gewenst",
-        "title": "Zelf aanpassen? Prima. Liever uitbesteden? Kan ook."
+        "techDetails": "WordPress · Next.js · HTML · Optie voor CMS",
+        "title": "Makkelijk zelf aanpassen? Kan. Liever uitbesteden? Kan ook."
       },
       "6": {
         "techDetails": "Uptime monitoring · Security scans · 24/7 support",
@@ -360,7 +360,7 @@
   "websitesPage": {
     "metadata": {
       "title": "Professionele Website Laten Maken - Webdesign | We Grow Brands",
-      "description": "Professionele website laten maken die groeit met je bedrijf. Premium webdesign met 99.9% uptime, snelle laadtijden en veilige hosting. Vraag een vrijblijvend gesprek aan."
+      "description": "Professionele website laten maken die groeit met je bedrijf. Premium webdesign met 99,9% uptime, Europese hosting binnen de EU en AVG-compliant. Vraag een vrijblijvend gesprek aan."
     },
     "hero": {
       "title1": "Maatwerk websites,",
@@ -570,7 +570,7 @@
       "hostingRequired": { "q": "Ben ik verplicht om hosting en onderhoud bij jullie af te nemen?", "a": "Nee, je bent niet verplicht om hosting en onderhoud bij ons af te nemen. Na volledige betaling is de website van jou en kun je zelf kiezen waar je host. We raden wel aan om bij ons te hosten, omdat we dan kunnen garanderen dat je website snel, veilig en up-to-date blijft. Als je elders host, kunnen wij niet verantwoordelijk zijn voor de technische prestaties, snelheid of beveiliging van je website." },
       "externalHosting": { "q": "Wat als ik mijn website elders wil hosten?", "a": "Dat mag, je bent volledig vrij in je keuze. Houd er wel rekening mee dat we dan niet dezelfde technische snelheid, uptime en beveiliging kunnen garanderen. Bij externe hosting zijn wij niet verantwoordelijk voor hoe de website functioneert. We dragen de website netjes aan je over, maar daarna ligt de verantwoordelijkheid bij jou of je hostingpartij." },
       "hostingPackages": { "q": "Welke hostingpakketten bieden jullie aan?", "a": "We hebben verschillende pakketten: alleen hosting (vanaf €14,50/maand met AI-geoptimaliseerde optimalisaties), hosting met onderhoud, of hosting met onderhoud én regelmatige aanpassingen (vanaf €39,95/maand). Je kiest wat bij je past." },
-      "hostingBenefits": { "q": "Wat zijn de voordelen van hosting bij jullie?", "a": "Bij ons krijg je 99.9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. We houden je website veilig en up-to-date. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken." },
+      "hostingBenefits": { "q": "Wat zijn de voordelen van hosting bij jullie?", "a": "Bij ons krijg je 99,9% uptime, snelle laadtijden, dagelijkse back-ups, SSL-certificaat en technisch onderhoud. Je website draait op Europese servers binnen de EU, volledig AVG/GDPR-compliant. Mocht er iets misgaan, dan lossen wij het op. Bij externe hosting ben je zelf verantwoordelijk voor al deze zaken." },
       "process": { "q": "Hoe verloopt het proces van ontwerp tot livegang?", "a": "Het proces verloopt in duidelijke stappen: 1) Kennismaking en briefing - we bespreken je wensen, doelen en doelgroep. 2) Strategie en structuur - we bepalen de opbouw en pagina-indeling. 3) Design - we maken het visuele ontwerp op basis van je branding. 4) Feedback en revisies - je geeft feedback en we verwerken aanpassingen. 5) Ontwikkeling - we bouwen de website technisch uit. 6) Content en afronding - teksten en afbeeldingen worden geplaatst. 7) Livegang - je website gaat online na jouw goedkeuring." },
       "feedbackRounds": { "q": "Hoeveel feedbackrondes zijn er?", "a": "Er zijn altijd 2 feedbackrondes inbegrepen. We zorgen vooraf voor duidelijke informatie, en van jou verwachten we concrete feedbackpunten. Zo kunnen we de prijs aantrekkelijk houden voor deze kwaliteit. Extra rondes zijn mogelijk tegen meerprijs." },
       "extraFeatures": { "q": "Wat als ik later extra pagina's of functies wil?", "a": "Geen probleem. We kunnen uitbreiden wanneer je groeit, van extra pagina's tot custom functionaliteit." },

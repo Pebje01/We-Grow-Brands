@@ -39,7 +39,7 @@ export default function HostingPage() {
     },
     {
       q: 'Waar draait mijn website?',
-      a: 'Je website draait op de infrastructuur van Google Cloud, beheerd via een professionele hostingpartner. Wij verzorgen het volledige beheer, updates, back-ups en support.',
+      a: 'Je website draait op professionele Europese servers binnen de EU. Alle data blijft in Europa, volledig AVG/GDPR-compliant. Wij verzorgen het volledige beheer, updates, back-ups en support.',
     },
   ]
 
@@ -355,7 +355,7 @@ export default function HostingPage() {
             {/* Left side - Feature cards */}
             <div className="grid grid-cols-2 gap-2 sm:gap-4 order-2 lg:order-1">
               {[
-                { icon: '☁️', title: 'Google Cloud hosting', desc: 'High-performance servers wereldwijd.' },
+                { icon: '🇪🇺', title: 'Europese hosting', desc: 'Servers binnen de EU, AVG/GDPR-compliant.' },
                 { icon: '🔒', title: 'SSL-certificaat', desc: 'Veilige verbinding voor je bezoekers.' },
                 { icon: '💾', title: 'Dagelijkse back-ups', desc: 'Altijd terug te zetten als er iets misgaat.' },
                 { icon: '⚡', title: '99,9% uptime', desc: 'Je website is praktisch altijd online.' },
@@ -384,7 +384,7 @@ export default function HostingPage() {
                 Ongeacht welk pakket je kiest, je website draait altijd op snelle, betrouwbare en beveiligde servers. Geen technisch gedoe voor jou.
               </p>
               <p className="text-white/40 text-xs mt-6">
-                De hosting draait op infrastructuur van een professionele hostingpartner (Google Cloud). Wij verzorgen beheer, updates, back-ups en support.
+                De hosting draait op professionele Europese servers binnen de EU — volledig AVG/GDPR-compliant. Wij verzorgen beheer, updates, back-ups en support.
               </p>
             </div>
           </div>

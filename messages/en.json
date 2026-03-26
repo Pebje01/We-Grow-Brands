@@ -223,12 +223,12 @@
     "subtitle": "These are the technical specs of your website. We translate that into what it means for you.",
     "benefits": {
       "1": {
-        "techDetails": "99.9% uptime · Google Cloud",
-        "title": "Your site just keeps running smoothly."
+        "techDetails": "European hosting · Servers in the EU · GDPR-compliant",
+        "title": "Your data stays in Europe. Protected by European privacy law."
       },
       "2": {
-        "techDetails": "PageSpeed 99/100 · Image optimization · Caching",
-        "title": "Pages load super fast. Visitors stay longer."
+        "techDetails": "99.9% uptime · 24/7 monitoring · Automatic recovery",
+        "title": "Your site just keeps running smoothly. Always reachable."
       },
       "3": {
         "techDetails": "SSL · DDoS protection · Malware scan & removal",
@@ -239,8 +239,8 @@
         "title": "Something went wrong? Your website is restored instantly."
       },
       "5": {
-        "techDetails": "WordPress access · Drag & drop · Edit yourself if desired",
-        "title": "Want to edit yourself? Fine. Prefer to outsource? Also fine."
+        "techDetails": "WordPress · Next.js · HTML · The right tech for your needs",
+        "title": "Easy to edit yourself? Sure. Prefer to outsource? Also fine."
       },
       "6": {
         "techDetails": "Uptime monitoring · Security scans · 24/7 support",
