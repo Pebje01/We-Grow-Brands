@@ -4,6 +4,7 @@ import localFont from 'next/font/local'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { notFound } from 'next/navigation'
+import Script from 'next/script'
 import { routing } from '@/i18n/routing'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
@@ -87,6 +88,20 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${instrumentSerif.variable} ${polysansSlim.variable} ${polysansNeutralWide.variable}`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BG4FHPKTP2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BG4FHPKTP2');
+          `}
+        </Script>
+      </head>
       <body className={`${polysansSlim.className} text-text-dark bg-cream overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
