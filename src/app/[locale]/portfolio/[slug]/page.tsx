@@ -348,7 +348,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
           <div className="mb-12">
             <p className="text-text-muted text-sm uppercase tracking-wider mb-3">{study.label}</p>
             <h2 className="text-text-dark mb-4">Over de case</h2>
-            <p className="text-text-muted leading-relaxed max-w-3xl">{study.story ?? study.summary}</p>
+            <p className="text-text-muted leading-relaxed">{study.story ?? study.summary}</p>
             {study.tags.length ? (
               <div className="flex flex-wrap gap-2 mt-6">
                 {study.tags.map((tag) => (

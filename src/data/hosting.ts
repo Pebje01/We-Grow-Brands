@@ -38,7 +38,7 @@ export const hostingPackages = [
       { text: 'DDoS-bescherming', included: true },
       { text: 'Malware scanning & verwijdering', included: true },
       { text: '24/7 uptime monitoring', included: true },
-      { text: 'Kleine aanpassingen (tekst/afbeeldingen)', included: true },
+      { text: '1 aanpassing tekst of beeld', included: true },
       { text: 'Layout wijzigingen & nieuwe secties', included: false },
       { text: 'Prioriteit support', included: false },
     ],
@@ -49,9 +49,9 @@ export const hostingPackages = [
     name: 'Onderhoud Plus',
     description: 'Hosting met uitgebreide mogelijkheden. Voor wie regelmatig wil bijwerken en voorrang wil bij support.',
     pricing: {
-      6: { price: '59,99', priceNumber: 59.99 },
-      12: { price: '54,99', priceNumber: 54.99 },
-      24: { price: '49,99', priceNumber: 49.99 },
+      6: { price: '99,00', priceNumber: 99.00 },
+      12: { price: '99,00', priceNumber: 99.00 },
+      24: { price: '99,00', priceNumber: 99.00 },
     },
     features: [
       { text: 'Europese hosting (EU, AVG-compliant)', included: true },
