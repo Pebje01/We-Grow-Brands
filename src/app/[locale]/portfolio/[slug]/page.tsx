@@ -319,6 +319,24 @@ export default function CasePage({ params }: { params: { slug: string } }) {
             ) : null}
           </div>
 
+          <div className="mb-12">
+            <p className="text-text-muted text-sm uppercase tracking-wider mb-3">{study.label}</p>
+            <h2 className="text-text-dark mb-4">Over de case</h2>
+            <p className="text-text-muted leading-relaxed">{study.story ?? study.summary}</p>
+            {study.tags.length ? (
+              <div className="flex flex-wrap gap-2 mt-6">
+                {study.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs uppercase tracking-wider border border-black/10 rounded-full px-3 py-1 text-text-muted"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+          </div>
+
           <div className={`relative ${study.highlights ? 'mb-24' : 'mb-12'}`}>
             <div className="rounded-[32px] overflow-hidden border-2 border-cream-dark bg-cream-dark">
               <Image
@@ -340,24 +358,6 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                     <p className="text-green-dark text-xl md:text-2xl font-serif">{highlight.value}</p>
                     <p className="text-text-muted text-[10px] md:text-xs mt-2 leading-tight">{highlight.label}</p>
                   </div>
-                ))}
-              </div>
-            ) : null}
-          </div>
-
-          <div className="mb-12">
-            <p className="text-text-muted text-sm uppercase tracking-wider mb-3">{study.label}</p>
-            <h2 className="text-text-dark mb-4">Over de case</h2>
-            <p className="text-text-muted leading-relaxed">{study.story ?? study.summary}</p>
-            {study.tags.length ? (
-              <div className="flex flex-wrap gap-2 mt-6">
-                {study.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs uppercase tracking-wider border border-black/10 rounded-full px-3 py-1 text-text-muted"
-                  >
-                    {tag}
-                  </span>
                 ))}
               </div>
             ) : null}
