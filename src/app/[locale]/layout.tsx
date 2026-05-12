@@ -62,6 +62,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wegrowbrands.online'),
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }))
+}
+
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
