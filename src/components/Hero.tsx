@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Laptop Mockup - Hidden on mobile, visible on tablet and desktop */}
         <div
           data-parallax="1.2"
-          className="hidden lg:block absolute lg:-left-[5%] xl:left-[2%] 3xl:left-[10%] 4xl:left-[12%] lg:top-[62%] xl:top-[58%] 3xl:top-[52%] 4xl:top-[48%] lg:w-[480px] xl:w-[520px] 3xl:w-[720px] 4xl:w-[860px] aspect-[5/3] rounded-[24px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_30px_100px_rgba(0,0,0,0.3)]"
+          className="hidden lg:block absolute lg:left-[1%] xl:left-[5%] 3xl:left-[9%] 4xl:left-[11%] lg:top-[58%] xl:top-[55%] 3xl:top-[50%] 4xl:top-[47%] lg:w-[600px] xl:w-[700px] 3xl:w-[880px] 4xl:w-[1020px] aspect-[5/3] rounded-[24px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_30px_100px_rgba(0,0,0,0.3)]"
         >
           {/* Browser dots */}
           <div className="absolute top-2.5 left-4 flex gap-1.5">
@@ -65,10 +65,10 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-16 left-4 right-4 bottom-4 rounded-xl bg-black overflow-hidden">
             <Image
-              src="/mock-ups/montung-mockup-top.webp"
+              src="/mock-ups/montung-blog-mockup.webp"
               alt="Montung website preview"
               fill
-              sizes="(min-width: 1024px) 520px, 65vw"
+              sizes="(min-width: 1024px) 700px, 65vw"
               className="object-cover object-top"
               priority
             />
@@ -78,7 +78,7 @@ export default function Hero() {
         {/* iPhone Mockup 1 - Right side front - hidden on tablet and mobile */}
         <div
           data-parallax="2"
-          className="hidden lg:block absolute lg:-right-[2%] xl:right-[3%] 3xl:right-[12%] 4xl:right-[14%] lg:top-[38%] xl:top-[32%] 3xl:top-[28%] 4xl:top-[24%] lg:w-[160px] xl:w-[180px] 3xl:w-[240px] 4xl:w-[280px] aspect-[9/19] rounded-[36px] 3xl:rounded-[44px] 4xl:rounded-[52px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)] z-10"
+          className="hidden lg:block absolute lg:right-[2%] xl:right-[6%] 3xl:right-[11%] 4xl:right-[13%] lg:top-[44%] xl:top-[42%] 3xl:top-[38%] 4xl:top-[36%] lg:w-[210px] xl:w-[240px] 3xl:w-[290px] 4xl:w-[330px] aspect-[9/19] rounded-[36px] 3xl:rounded-[44px] 4xl:rounded-[52px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)] z-10"
         >
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
@@ -97,7 +97,7 @@ export default function Hero() {
         {/* iPhone Mockup 2 - Right side back - hidden on tablet and mobile */}
         <div
           data-parallax="1.5"
-          className="hidden xl:block absolute xl:right-[12%] 3xl:right-[20%] 4xl:right-[22%] xl:top-[38%] 3xl:top-[32%] 4xl:top-[28%] xl:w-[150px] 3xl:w-[210px] 4xl:w-[250px] aspect-[9/19] rounded-[36px] 3xl:rounded-[44px] 4xl:rounded-[52px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)]"
+          className="hidden xl:block absolute xl:right-[16%] 3xl:right-[20%] 4xl:right-[22%] xl:top-[46%] 3xl:top-[42%] 4xl:top-[40%] xl:w-[200px] 3xl:w-[260px] 4xl:w-[300px] aspect-[9/19] rounded-[36px] 3xl:rounded-[44px] 4xl:rounded-[52px] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)]"
         >
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
