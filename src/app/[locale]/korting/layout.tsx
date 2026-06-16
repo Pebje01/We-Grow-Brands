@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: false },
   title: '50% Korting op Premium Website | We Grow Brands',
   description: 'Alleen januari: ontvang 50% korting op je maatwerk website. Nu €725 voor Groei pakket, €1.325 voor Premium. Limited time offer!',
   openGraph: {
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '50% Korting op Premium Website | We Grow Brands',
     description: 'Alleen januari: 50% korting op maatwerk websites. Limited time!',
+  },
+  alternates: {
+    canonical: '/korting/',
   },
 }
 

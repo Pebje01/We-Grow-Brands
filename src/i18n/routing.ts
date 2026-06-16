@@ -34,6 +34,11 @@ export const routing = defineRouting({
       en: '/discount',
     },
     '/hosting': '/hosting',
+    '/diensten': {
+      nl: '/diensten',
+      en: '/services',
+    },
+    '/marketing': '/marketing',
   },
 })
 

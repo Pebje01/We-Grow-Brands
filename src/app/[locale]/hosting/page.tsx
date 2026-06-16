@@ -6,11 +6,11 @@ import WavyUnderline from '@/components/WavyUnderline'
 import WavyLineScroll from '@/components/WavyLineScroll'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import { Link } from '@/i18n/routing'
-import { hostingPackages, type HostingPeriod } from '@/data/hosting'
+import PricingCard from '@/components/PricingCard'
+import { hostingStandalone, maintenancePackages } from '@/data/hosting'
 
 export default function HostingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const [period, setPeriod] = useState<HostingPeriod>(12)
 
   const faqItems = [
     {
@@ -18,8 +18,8 @@ export default function HostingPage() {
       a: 'Geen probleem. Je kunt altijd upgraden naar een uitgebreider pakket. Heb je eenmalig iets groters nodig? Dan kunnen we dat apart bespreken.',
     },
     {
-      q: 'Wat is de minimale looptijd?',
-      a: 'De minimale looptijd is 6 maanden. Je kunt ook kiezen voor 12 of 24 maanden — hoe langer de looptijd, hoe voordeliger de maandprijs. Na afloop van de looptijd kun je verlengen, wijzigen of opzeggen.',
+      q: 'Kan ik maandelijks opzeggen?',
+      a: 'Ja. Alle hosting- en onderhoudspakketten worden per maand afgenomen en zijn maandelijks opzegbaar, je zit nergens aan vast. Let op: bij opzegging stopt de hosting en gaat je website direct offline.',
     },
     {
       q: 'Wat valt onder fair use?',
@@ -80,234 +80,50 @@ export default function HostingPage() {
             </p>
           </div>
 
-        {/* Looptijd Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white rounded-full p-1.5 inline-flex shadow-sm border border-black/5">
-            {([6, 12, 24] as HostingPeriod[]).map((months) => (
-              <button
-                key={months}
-                onClick={() => setPeriod(months)}
-                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all relative ${
-                  period === months
-                    ? 'bg-green-dark text-white shadow-md'
-                    : 'text-text-muted hover:text-text-dark'
-                }`}
-              >
-                {months} maanden
-              </button>
-            ))}
-          </div>
-        </div>
+        {/* Prijzen */}
+        <div className="mb-28">
+          <div className="bg-green-dark rounded-[20px] md:rounded-[30px] px-6 md:px-10 py-12 md:py-16">
 
-        {/* Pricing Cards met donkergroen vlak erachter */}
-        <div className="relative mb-28">
-          {/* Donkergroen achtergrondvlak */}
-          <div className="absolute -inset-x-6 md:-inset-x-10 -inset-y-16 bg-green-dark rounded-[30px] -z-10"></div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-5 items-stretch max-w-5xl mx-auto justify-items-center py-8">
-          {hostingPackages.map((plan) => {
-            const currentPricing = plan.pricing[period]
-            const basePricing = plan.pricing[6]
-            const savings = period > 6
-              ? Math.round((1 - currentPricing.priceNumber / basePricing.priceNumber) * 100)
-              : 0
-
-            return (
-            <div
-              key={plan.name}
-              className={`relative bg-white rounded-3xl p-8 border transition-all hover:shadow-xl flex flex-col h-full w-full max-w-[340px] ${
-                plan.popular
-                  ? 'border-green-dark shadow-lg scale-[1.02]'
-                  : 'border-black/5 hover:border-black/10'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="bg-lila text-green-dark text-xs font-medium px-4 py-1.5 rounded-full whitespace-nowrap">
-                    Populairst
-                  </span>
-                </div>
-              )}
-
-              <div className="mb-4 h-[140px] text-center flex flex-col justify-end">
-                <h3 className="text-green-dark text-xl font-medium mb-2">{plan.name}</h3>
-                <p className="text-text-muted text-sm leading-snug">{plan.description}</p>
-              </div>
-
-              <div className="mb-4 h-[56px] lg:h-[80px] text-center flex flex-col justify-center">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-green-dark text-3xl font-medium font-serif">
-                    &euro;{currentPricing.price}
-                  </span>
-                  <span className="text-text-muted/70 text-xs">/ maand</span>
-                </div>
-                {savings > 0 && (
-                  <p className="text-emerald-600 text-xs font-medium mt-1">
-                    {savings}% korting t.o.v. 6 maanden
-                  </p>
-                )}
-              </div>
-
-              <div className="flex-1">
-                <p className="text-green-dark text-xs font-bold uppercase tracking-wider mb-3">
-                  Wat je krijgt
+            {/* Hosting los */}
+            <div>
+              <div className="text-center mb-10">
+                <h2 className="text-white font-serif text-2xl md:text-3xl mb-3">Hosting los</h2>
+                <p className="text-white/60 text-sm max-w-md mx-auto leading-relaxed">
+                  Alleen hosting, zonder onderhoud. Wij regelen de techniek, jij hoeft nergens naar om te kijken.
                 </p>
-                <ul className="space-y-3">
-                  {plan.features.map((feature) => (
-                    <li key={feature.text} className="flex items-center gap-3">
-                      {feature.included ? (
-                        <span className="w-5 h-5 rounded-full bg-emerald-500/15 flex items-center justify-center flex-shrink-0">
-                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-emerald-500">
-                            <polyline points="20 6 9 17 4 12"/>
-                          </svg>
-                        </span>
-                      ) : (
-                        <span className="w-5 h-5 rounded-full bg-red-500/15 flex items-center justify-center flex-shrink-0">
-                          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-red-500">
-                            <line x1="6" y1="6" x2="18" y2="18"/>
-                            <line x1="6" y1="18" x2="18" y2="6"/>
-                          </svg>
-                        </span>
-                      )}
-                      <span className={feature.included ? 'text-text-dark text-sm' : 'text-text-muted/60 text-sm'}>
-                        {feature.text}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-
-              {/* Button onderaan */}
-              <div className="mt-6 pt-6 border-t border-black/5">
-                <Link
-                  href="/contact"
-                  className="btn-spring btn-uniform btn-no-lila link-wave w-full inline-flex justify-center bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all"
-                >
-                  <WavyText text={plan.cta} />
-                </Link>
+              <div className="flex justify-center">
+                <PricingCard plan={hostingStandalone} />
               </div>
             </div>
-            )
-          })}
+
+            {/* Scheidingslijn */}
+            <div className="border-t border-white/10 my-12 md:my-16"></div>
+
+            {/* Website beheer & onderhoud */}
+            <div>
+              <div className="text-center mb-10">
+                <h2 className="text-white font-serif text-2xl md:text-3xl mb-3">
+                  Website beheer & onderhoud
+                </h2>
+                <p className="text-white/60 text-sm max-w-md mx-auto leading-relaxed">
+                  Hosting plus aanpassingen aan je website. Maandelijks opzegbaar, je zit nergens aan vast.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-6 items-stretch max-w-3xl mx-auto justify-items-center pt-4">
+                {maintenancePackages.map((plan) => (
+                  <PricingCard key={plan.name} plan={plan} />
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
         </div>
       </div>
         <p className="text-text-muted text-sm text-center mt-8 px-6">
-          Bij elk websitepakket zit 6 maanden gratis hosting inbegrepen. Alle prijzen zijn inclusief hosting. Minimale looptijd: {period} maanden.
+          Bij elk websitepakket zit 6 maanden gratis hosting inbegrepen. Alle prijzen zijn per maand en maandelijks opzegbaar.
         </p>
-      </section>
-
-      {/* Losse Add-ons Section */}
-      <section className="bg-cream py-20 md:py-28">
-        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10">
-          <div className="text-center mb-16">
-            <h2 className="text-text-dark mb-4">
-              <span className="font-serif">Losse</span>{' '}
-              <span className="relative inline-block serif-header italic text-green-dark">
-                add-ons
-                <WavyUnderline color="#EAD7FF" strokeWidth={6} />
-              </span>
-            </h2>
-            <p className="text-text-muted max-w-2xl mx-auto">
-              Aanvullingen op je hosting of onderhoudspakket. Flexibel in te zetten, zonder verplichtingen.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Strippenkaart Card */}
-            <div className="bg-white rounded-3xl p-8 border border-black/5 hover:shadow-xl transition-all flex flex-col">
-              <div className="text-center mb-6">
-                <span className="text-4xl mb-3 block">🎟️</span>
-                <h3 className="text-green-dark text-xl font-medium mb-2">Strippenkaart</h3>
-                <p className="text-text-muted text-sm">100 minuten aan werkzaamheden, flexibel inzetbaar</p>
-              </div>
-
-              <div className="text-center mb-6 py-4 border-y border-black/5">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-green-dark text-3xl font-medium font-serif">&euro;120</span>
-                  <span className="text-text-muted/70 text-xs">eenmalig</span>
-                </div>
-                <p className="text-text-muted text-xs mt-1">&euro;1,20 per minuut</p>
-              </div>
-
-              <ul className="space-y-3 mb-6 flex-1">
-                {[
-                  'Tekst- en afbeeldingswijzigingen',
-                  'Layout aanpassingen',
-                  'Nieuwe secties of pagina\'s',
-                  'Design tweaks',
-                  '6 maanden geldig',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/15 flex items-center justify-center flex-shrink-0">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-emerald-500">
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
-                    </span>
-                    <span className="text-text-dark text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="btn-spring btn-uniform btn-no-lila link-wave w-full inline-flex justify-center bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all"
-              >
-                <WavyText text="Strippenkaart aanvragen" />
-              </Link>
-            </div>
-
-            {/* Zakelijke E-mail Card */}
-            <div className="bg-white rounded-3xl p-8 border border-black/5 hover:shadow-xl transition-all flex flex-col">
-              <div className="text-center mb-6">
-                <span className="text-4xl mb-3 block">📧</span>
-                <h3 className="text-green-dark text-xl font-medium mb-2">Zakelijke e-mail</h3>
-                <p className="text-text-muted text-sm">Professionele e-mail op jouw domeinnaam, volledig beheerd</p>
-              </div>
-
-              <div className="text-center mb-6 py-4 border-y border-black/5">
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-green-dark text-3xl font-medium font-serif">&euro;3,99</span>
-                  <span className="text-text-muted/70 text-xs">/ maand</span>
-                </div>
-                <p className="text-text-muted text-xs mt-1">per mailbox</p>
-              </div>
-
-              <ul className="space-y-3 mb-6 flex-1">
-                {[
-                  'E-mail op jouw domein (@jouwbedrijf.nl)',
-                  'Onbeperkt aliassen per mailbox',
-                  'Volledige setup & configuratie',
-                  'DNS-beheer (SPF, DKIM, DMARC)',
-                  'Webmail & app toegang',
-                  'Spam- en virusfilter',
-                  'Support bij problemen',
-                ].map((item) => (
-                  <li key={item} className="flex items-center gap-3">
-                    <span className="w-5 h-5 rounded-full bg-emerald-500/15 flex items-center justify-center flex-shrink-0">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" className="text-emerald-500">
-                        <polyline points="20 6 9 17 4 12"/>
-                      </svg>
-                    </span>
-                    <span className="text-text-dark text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Link
-                href="/contact"
-                className="btn-spring btn-uniform btn-no-lila link-wave w-full inline-flex justify-center bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all"
-              >
-                <WavyText text="E-mail aanvragen" />
-              </Link>
-            </div>
-          </div>
-
-          <p className="text-text-muted text-xs text-center mt-8 max-w-2xl mx-auto">
-            E-mail wordt beheerd via een professionele e-mailpartner. Wij verzorgen de volledige setup, configuratie en het beheer zodat jij er geen omkijken naar hebt.
-          </p>
-        </div>
       </section>
 
       {/* Waarom onderhoud - Section */}
@@ -452,18 +268,18 @@ export default function HostingPage() {
               </p>
             </div>
 
-            {/* SEO/SEA Card */}
+            {/* Marketing Card */}
             <div className="bg-white rounded-[20px] md:rounded-[30px] p-8 md:p-10 border border-black/5">
-              <h3 className="text-green-dark text-xl font-medium mb-4 font-serif">Interesse in SEO of SEA?</h3>
+              <h3 className="text-green-dark text-xl font-medium mb-4 font-serif">Meer uit je website halen?</h3>
               <p className="text-text-muted leading-relaxed mb-6">
-                Wij werken samen met vaste partners die gespecialiseerd zijn in SEO en SEA. Zo zorgen we ervoor dat je website niet alleen mooi is, maar ook gevonden wordt.
+                Hosting houdt je website veilig en snel. Wil je ook groeien in bezoekers en conversie? Onze AI-gedreven marketingpakketten verzorgen nieuwsbrieven, SEO en SEA.
               </p>
-              <a
-                href="mailto:info@wegrowbrands.nl?subject=Vraag%20over%20SEO%2FSEA"
+              <Link
+                href="/marketing"
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-lila text-green-dark hover:bg-[#D6BCFF] hover:shadow-lg transition-all inline-block"
               >
-                <WavyText text="Meer info over SEO/SEA" />
-              </a>
+                <WavyText text="Bekijk marketing" />
+              </Link>
             </div>
           </div>
         </div>

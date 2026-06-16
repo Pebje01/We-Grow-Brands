@@ -10,6 +10,9 @@ import WebsiteTrajecten from '@/components/WebsiteTrajecten'
 export const metadata = {
   title: 'Professionele Website Laten Maken - Webdesign | We Grow Brands',
   description: 'Professionele website laten maken die groeit met je bedrijf. Premium webdesign met 99,9% uptime, Europese hosting binnen de EU en AVG-compliant. Vraag een vrijblijvend gesprek aan.',
+  alternates: {
+    canonical: '/websites/',
+  },
 }
 
 export default function WebsitesPage() {

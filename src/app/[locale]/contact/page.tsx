@@ -5,6 +5,23 @@ import HeroContactForm from '@/components/HeroContactForm'
 export const metadata = {
   title: 'Contact - Neem Contact Op | We Grow Brands',
   description: 'Neem contact op voor een vrijblijvend gesprek over jouw nieuwe website. We reageren binnen 24 uur met een passend voorstel. Bel, mail of plan direct een afspraak.',
+  alternates: {
+    canonical: '/contact/',
+  },
+  openGraph: {
+    title: 'Contact - Neem Contact Op | We Grow Brands',
+    description: 'Neem contact op voor een vrijblijvend gesprek. We reageren binnen 24 uur.',
+    type: 'website',
+    locale: 'nl_NL',
+    siteName: 'We Grow Brands',
+    url: 'https://wegrowbrands.online/contact/',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Contact We Grow Brands' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact - Neem Contact Op | We Grow Brands',
+    description: 'Neem contact op voor een vrijblijvend gesprek.',
+  },
 }
 
 export default function ContactPage() {

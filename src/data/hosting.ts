@@ -1,35 +1,31 @@
-export const hostingPackages = [
-  {
-    name: 'Managed Hosting',
-    description: 'Betrouwbare Europese hosting binnen de EU. Wij regelen alles, jij hoeft nergens naar om te kijken.',
-    pricing: {
-      6: { price: '14,50', priceNumber: 14.50 },
-      12: { price: '14,50', priceNumber: 14.50 },
-      24: { price: '14,50', priceNumber: 14.50 },
-    },
-    features: [
-      { text: 'Europese hosting (EU, AVG-compliant)', included: true },
-      { text: 'SSL-certificaat', included: true },
-      { text: 'Dagelijkse back-ups', included: true },
-      { text: '99,9% uptime', included: true },
-      { text: 'DDoS-bescherming', included: true },
-      { text: 'Malware scanning & verwijdering', included: true },
-      { text: '24/7 uptime monitoring', included: true },
-      { text: 'Kleine aanpassingen (tekst/afbeeldingen)', included: false },
-      { text: 'Layout wijzigingen & nieuwe secties', included: false },
-      { text: 'Prioriteit support', included: false },
-    ],
-    cta: 'Kies Managed Hosting',
-    popular: false,
-  },
+import type { PricingPlan } from '@/components/PricingCard'
+
+export const hostingStandalone: PricingPlan = {
+  name: 'Managed Hosting',
+  description: 'Betrouwbare Europese hosting binnen de EU. Wij regelen alles, jij hoeft nergens naar om te kijken.',
+  price: '14,50',
+  priceNote: 'maandelijks opzegbaar',
+  features: [
+    { text: 'Europese hosting (EU, AVG-compliant)', included: true },
+    { text: 'SSL-certificaat', included: true },
+    { text: 'Dagelijkse back-ups', included: true },
+    { text: '99,9% uptime', included: true },
+    { text: 'DDoS-bescherming', included: true },
+    { text: 'Malware scanning & verwijdering', included: true },
+    { text: '24/7 uptime monitoring', included: true },
+    { text: 'Kleine aanpassingen (tekst/afbeeldingen)', included: false },
+    { text: 'Layout wijzigingen & nieuwe secties', included: false },
+    { text: 'Prioriteit support', included: false },
+  ],
+  cta: 'Kies Managed Hosting',
+}
+
+export const maintenancePackages: PricingPlan[] = [
   {
     name: 'Onderhoud Basis',
     description: 'Hosting inclusief kleine aanpassingen aan je website. Ideaal als je af en toe iets wilt laten wijzigen.',
-    pricing: {
-      6: { price: '44,99', priceNumber: 44.99 },
-      12: { price: '39,99', priceNumber: 39.99 },
-      24: { price: '34,99', priceNumber: 34.99 },
-    },
+    price: '44,99',
+    priceNote: 'maandelijks opzegbaar',
     features: [
       { text: 'Europese hosting (EU, AVG-compliant)', included: true },
       { text: 'SSL-certificaat', included: true },
@@ -48,11 +44,8 @@ export const hostingPackages = [
   {
     name: 'Onderhoud Plus',
     description: 'Hosting met uitgebreide mogelijkheden. Voor wie regelmatig wil bijwerken en voorrang wil bij support.',
-    pricing: {
-      6: { price: '99,00', priceNumber: 99.00 },
-      12: { price: '99,00', priceNumber: 99.00 },
-      24: { price: '99,00', priceNumber: 99.00 },
-    },
+    price: '99,00',
+    priceNote: 'maandelijks opzegbaar',
     features: [
       { text: 'Europese hosting (EU, AVG-compliant)', included: true },
       { text: 'SSL-certificaat', included: true },
@@ -69,6 +62,3 @@ export const hostingPackages = [
     popular: false,
   },
 ]
-
-export type HostingPeriod = 6 | 12 | 24
-export type HostingPackage = typeof hostingPackages[number]

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'We Grow Brands',
   },
   alternates: {
-    canonical: '/website-in-termijnen',
+    canonical: '/website-in-termijnen/',
   },
 }
 

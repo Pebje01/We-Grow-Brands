@@ -7,7 +7,9 @@ import WavyText from '@/components/WavyText'
 import WavyUnderline from '@/components/WavyUnderline'
 import WavyLineScroll from '@/components/WavyLineScroll'
 import Breadcrumbs from '@/components/Breadcrumbs'
+import OfferCard from '@/components/OfferCard'
 import { packages } from '@/data/packages'
+import { eenmaligePakketten } from '@/data/eenmalige-pakketten'
 
 export default function PakkettenPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly')
@@ -452,6 +454,30 @@ export default function PakkettenPage() {
                 <WavyText text="Lees hier de algemene voorwaarden" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Eenmalige pakketten */}
+      <section id="eenmalige-pakketten" className="bg-cream py-20 md:py-28">
+        <div className="max-w-6xl 2xl:max-w-[1600px] mx-auto px-6 md:px-10">
+          <div className="text-center mb-16">
+            <h2 className="text-text-dark mb-4">
+              <span className="font-serif">Eenmalige</span>{' '}
+              <span className="relative inline-block serif-header italic text-green-dark">
+                pakketten
+                <WavyUnderline color="#EAD7FF" strokeWidth={6} />
+              </span>
+            </h2>
+            <p className="text-text-muted max-w-2xl mx-auto">
+              Losse projecten met een eenmalige prijs. Geen abonnement, je betaalt één keer voor het resultaat.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8">
+            {eenmaligePakketten.map((offer) => (
+              <OfferCard key={offer.title} offer={offer} />
+            ))}
           </div>
         </div>
       </section>

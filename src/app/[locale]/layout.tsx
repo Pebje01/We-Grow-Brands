@@ -60,6 +60,52 @@ export const metadata: Metadata = {
     description: 'Premium maatwerk websites die starten vanuit jouw merk. Geen templates. Nooit meer balen van je website.',
   },
   metadataBase: new URL('https://wegrowbrands.online'),
+  alternates: {
+    canonical: '/',
+  },
+}
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'We Grow Brands',
+  url: 'https://wegrowbrands.online',
+  email: 'hello@wegrowbrands.online',
+  telephone: '+31636162639',
+  logo: 'https://wegrowbrands.online/logo/wegrowbrandslogo.png',
+  sameAs: [
+    'https://www.linkedin.com/in/daley-jansen/',
+    'https://www.instagram.com/wegrowbrands/',
+  ],
+}
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'We Grow Brands',
+  url: 'https://wegrowbrands.online',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://wegrowbrands.online/portfolio/',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const serviceJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'We Grow Brands',
+  url: 'https://wegrowbrands.online',
+  description: 'Premium maatwerk websites en branding voor ondernemers en bedrijven in Nederland.',
+  telephone: '+31636162639',
+  email: 'hello@wegrowbrands.online',
+  areaServed: 'NL',
+  currenciesAccepted: 'EUR',
+  priceRange: '€€',
+  serviceType: ['Webdesign', 'Webdevelopment', 'Branding', 'Hosting'],
 }
 
 export function generateStaticParams() {
@@ -69,8 +115,6 @@ export function generateStaticParams() {
 export const viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover',
 }
 
@@ -93,18 +137,25 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${instrumentSerif.variable} ${polysansSlim.variable} ${polysansNeutralWide.variable}`}>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-BG4FHPKTP2"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-BG4FHPKTP2');
-          `}
-        </Script>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className={`${polysansSlim.className} text-text-dark bg-cream overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>

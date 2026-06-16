@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Algemene voorwaarden | We Grow Brands',
   description: 'Algemene voorwaarden van We Grow Brands voor webdesign, ontwikkeling en aanverwante diensten.',
   alternates: {
-    canonical: '/algemene-voorwaarden',
+    canonical: '/algemene-voorwaarden/',
   },
 }
 
@@ -68,6 +68,9 @@ const sections = [
     items: [
       'Hosting en onderhoud zijn optioneel en worden separaat aangeboden.',
       'Hostingkosten bedragen circa €10-20 per maand en zijn niet inbegrepen in de offerte.',
+      'Hosting- en onderhoudspakketten worden per maand afgenomen en zijn maandelijks opzegbaar.',
+      'Bij opzegging stopt de hosting en gaat de website direct offline.',
+      'Bij uitblijvende betaling ontvangt de klant twee betalingsherinneringen per email. Wordt daarna nog steeds niet betaald, dan gaat de website offline, uiterlijk een maand na de oorspronkelijke vervaldatum.',
       'Bij beeindiging van hosting kan We Grow Brands meewerken aan verhuizing.',
     ],
   },
@@ -135,7 +138,7 @@ export default function AlgemeneVoorwaardenPage() {
             Hieronder vind je de algemene voorwaarden van We Grow Brands. Deze voorwaarden zijn van
             toepassing op offertes, diensten en overeenkomsten.
           </p>
-          <p className="text-text-muted text-sm mt-3">Laatst bijgewerkt: 25 januari 2026</p>
+          <p className="text-text-muted text-sm mt-3">Laatst bijgewerkt: 18 mei 2026</p>
         </div>
 
         <div className="space-y-6">

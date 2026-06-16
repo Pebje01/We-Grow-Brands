@@ -186,16 +186,16 @@ const caseStudies: CaseStudy[] = [
     label: 'Premium blog over lokale ervaringen',
     intro: 'Een sfeervolle blog die lokale verhalen en ervaringen tot leven brengt.',
     summary:
-      'Meet the Locals is een platform dat authentieke lokale ervaringen deelt. De website moest rust uitstralen, vertrouwen wekken en de verhalen centraal zetten. Met een warm, uitnodigend design dat past bij de persoonlijke aanpak van het merk.',
+      'Meet the Locals is een platform dat authentieke lokale ervaringen deelt. De website moest rust uitstralen, vertrouwen wekken en de verhalen centraal zetten. Met een warm, uitnodigend design dat past bij de persoonlijke aanpak van het merk. Inmiddels is de site doorontwikkeld van WordPress naar een volledig maatwerk platform: Next.js met een eigen CMS, een fotografieportfolio en een interactieve fotokaart van alle bestemmingen.',
     heroImage: '/mock-ups/Meetthelocals-mockup-top.webp',
     featureImage: '/mock-ups/Meetthelocals-mockup-top.webp',
     resultImage: '/mock-ups/meetthelocals-tablet-mockup.webp',
     showcaseImage: '/mock-ups/meetthelocals-tablet-mockup.webp',
     showcaseImage2: '/mock-ups/meetthelocals-mockup-mobiel.webp',
     tags: [],
-    skills: ['WordPress', 'Huisstijl', 'Logo', 'Blog', 'Webteksten'],
+    skills: ['Maatwerk (Next.js)', 'Payload CMS', 'Huisstijl', 'Logo', 'Blog', 'Webteksten'],
     sector: 'Lifestyle & reizen',
-    pakket: 'Premium',
+    pakket: 'Premium + maatwerk',
     website: 'https://meetthelocals.nl',
     challenge:
       'Een platform creëren dat lokale verhalen op een persoonlijke en toegankelijke manier presenteert, met een uitstraling die rust en vertrouwen uitstraalt.',
@@ -214,6 +214,138 @@ const caseStudies: CaseStudy[] = [
     ],
     quote: '"Een website met een avontuurlijke uitstraling voor een reisblog."',
   },
+  {
+    slug: 'sales-spark',
+    name: 'Sales Spark',
+    label: 'Maatwerk website voor senior sales consultant',
+    intro: 'Een website met dezelfde energie als een goed salesgesprek: direct, persoonlijk en overtuigend.',
+    summary:
+      'Sales Spark is het bedrijf van Kevin Smith, senior sales consultant met ruim twintig jaar ervaring in vrijwel alle lagen van het commerciële vak. Naast klassieke salesexpertise helpt hij organisaties met AI-gedreven workflows. Zijn website moest dat zelfvertrouwen uitstralen: geen standaard zakelijke template, maar een uitgesproken design dat impact maakt vanaf de eerste seconde.',
+    heroImage: '/mock-ups/salesspark-mockup-laptop.webp',
+    featureImage: '/mock-ups/salesspark-mockup-laptop.webp',
+    resultImage: '/mock-ups/salesspark-mockup-phone.webp',
+    showcaseImage: '/mock-ups/salesspark-mockup-duo.webp',
+    tags: [],
+    skills: ['Maatwerk (Next.js)', 'Design', 'Webteksten'],
+    sector: 'Sales consultancy',
+    pakket: 'Maatwerk website',
+    website: 'https://salesspark.nl',
+    challenge:
+      'Kevin had een online visitekaartje nodig dat zijn persoonlijkheid en trackrecord laat zien. De site moest direct duidelijk maken wat hij doet, vertrouwen wekken bij beslissers en uitnodigen tot een kennismakingsgesprek. Zonder ruis, zonder verkooppraatjes.',
+    solution:
+      'We ontwierpen een typografisch krachtige onepager rond de boodschap "Sales met impact". Grote, zelfverzekerde koppen, een warme persoonlijke intro en duidelijke secties voor expertise, aanpak en ervaring. Elke sectie stuurt naar één doel: een gesprek inplannen.',
+    results: [
+      'Een uitgesproken design dat opvalt tussen standaard zakelijke sites',
+      'Heldere positionering: commerciële expertise plus AI-gedreven workflows',
+      'Duidelijke route naar het inplannen van een kennismakingsgesprek',
+      'Volledig maatwerk, gebouwd voor snelheid en vindbaarheid',
+    ],
+    process: [
+      { title: 'Positionering scherp', text: 'De kern van Sales Spark vertaald naar een duidelijke boodschap en structuur.' },
+      { title: 'Uitgesproken design', text: 'Typografie als beeldtaal: groot, direct en met karakter.' },
+      { title: 'Bouw & livegang', text: 'Volledig maatwerk gebouwd, geoptimaliseerd en live gezet.' },
+    ],
+    quote: '"Een website met dezelfde directheid als een goed salesgesprek."',
+  },
+  {
+    slug: 'montung',
+    name: 'Montung',
+    label: 'Rebrand en maatwerk website voor authentieke natuurstenen tuinpotten',
+    intro: 'Van Bleijenberg naar Montung: een complete rebrand met een nieuwe maatwerk website.',
+    summary:
+      'Na de eerdere webshop voor Bleijenberg was het tijd voor de volgende stap: een nieuw merk met internationale ambitie. Bleijenberg werd Montung, met een nieuwe naam, een nieuw logo en een volledig nieuwe website. De potten blijven het verhaal vertellen: handgemaakte natuurstenen tuinpotten en troggen uit Indonesië, sommige ruim honderd jaar oud. Geen pot is hetzelfde, en dat gevoel moest de website ademen.',
+    heroImage: '/mock-ups/montung-mockup-laptop.webp',
+    featureImage: '/mock-ups/montung-mockup-laptop.webp',
+    resultImage: '/mock-ups/montung-mockup-phone.webp',
+    showcaseImage: '/mock-ups/montung-mockup-duo.webp',
+    tags: [],
+    skills: ['Maatwerk (Next.js)', 'Rebranding', 'Naam & logo', 'Webteksten', 'SEO & blog'],
+    sector: 'Retail & tuin',
+    pakket: 'Premium + maatwerk',
+    website: 'https://montung.nl',
+    challenge:
+      'Een nieuwe merknaam neerzetten zonder de herkenning van Bleijenberg te verliezen, en een website bouwen die de wabi-sabi esthetiek van de potten voelbaar maakt. Sfeer en fotografie moesten leidend zijn, met een collectie die continu wisselt omdat elke pot uniek is.',
+    solution:
+      'We ontwikkelden de naam Montung met een tijdloze, organische huisstijl en bouwden een maatwerk website waarin grote sfeerbeelden het werk doen. De collectie, blog en aanvragen worden centraal beheerd, en de site is vanaf de basis ingericht op vindbaarheid rond verweerde en vintage natuursteen.',
+    results: [
+      'Een compleet nieuw merk dat klaar is voor internationale groei',
+      'Sfeervolle website waarin de fotografie van de potten centraal staat',
+      'Blog en collectie centraal te beheren',
+      'Duidelijke overgang: bezoekers van Bleijenberg landen vanzelf bij Montung',
+    ],
+    process: [
+      { title: 'Rebrand', text: 'Nieuwe naam, logo en huisstijl ontwikkeld die passen bij het authentieke product.' },
+      { title: 'Design & sfeer', text: 'Warme, aardse vormgeving met de fotografie van de potten als basis.' },
+      { title: 'Bouw & migratie', text: 'Maatwerk website gebouwd en de overgang van Bleijenberg soepel geregeld.' },
+    ],
+    quote: '"Geen pot is hetzelfde. Dat gevoel zie je nu ook terug in het merk en de website."',
+  },
+  {
+    slug: 'dokter-richard',
+    name: 'Dokter Richard',
+    label: 'Website met boekverkoop voor arts en spiritueel coach',
+    intro: 'Een warm, betrouwbaar platform voor Richard Hoofs, arts, coach en auteur van Bezield Leven op Doktersrecept.',
+    summary:
+      'Richard Hoofs is (huis)arts en spiritueel coach met ruim 25 jaar praktijkervaring, en auteur van het boek Bezield Leven op Doktersrecept. Zijn platform moest meerdere dingen tegelijk doen: zijn verhaal en trajecten presenteren, het boek verkopen via een eigen webshop en bezoekers laagdrempelig kennis laten maken via een gratis gezondheid zelfscan. Alles in een uitstraling die medisch vertrouwen combineert met warmte.',
+    heroImage: '/mock-ups/dokterrichard-mockup-laptop.webp',
+    featureImage: '/mock-ups/dokterrichard-mockup-laptop.webp',
+    resultImage: '/mock-ups/dokterrichard-mockup-phone.webp',
+    showcaseImage: '/mock-ups/dokterrichard-mockup-duo.webp',
+    tags: [],
+    skills: ['Maatwerk (Astro)', 'Sanity CMS', 'Webshop', 'Mollie betalingen', 'Webteksten'],
+    sector: 'Gezondheid & coaching',
+    pakket: 'Premium + webshop',
+    website: 'https://dokterrichard.nl',
+    challenge:
+      'Gezondheid is een onderwerp waar vertrouwen alles is. De site moest de geloofwaardigheid van een arts uitstralen en tegelijk de warmte van een coach, met een soepel verkoopproces voor het boek en duidelijke routes naar consults en trajecten.',
+    solution:
+      'We bouwden een maatwerk website met een rustige, natuurlijke huisstijl. Het boek heeft een eigen bestelflow met online betalingen en automatische orderverwerking, de content is door Richard zelf te beheren via een CMS, en de gratis zelfscan verlaagt de drempel om kennis te maken.',
+    results: [
+      'Een betrouwbaar platform dat arts en coach geloofwaardig samenbrengt',
+      'Eigen webshop voor het boek met geautomatiseerde orderafhandeling',
+      'Gratis zelfscan als laagdrempelige kennismaking',
+      'Content volledig zelf te beheren via het CMS',
+    ],
+    process: [
+      { title: 'Verhaal & structuur', text: 'De combinatie van arts, coach en auteur vertaald naar een heldere sitestructuur.' },
+      { title: 'Design met vertrouwen', text: 'Een warme, professionele huisstijl die past bij gezondheid en bezieling.' },
+      { title: 'Webshop & livegang', text: 'Bestelflow met betalingen en orderverwerking ingericht en live gezet.' },
+    ],
+    quote: '"Een website die de warmte van een coach combineert met het vertrouwen van een arts."',
+  },
+  {
+    slug: 'we-grow-brands',
+    name: 'We Grow Brands',
+    label: 'Ons eigen merk, van naam tot website',
+    intro: 'Practice what you preach: ons eigen merk als bewijs van wat we maken.',
+    summary:
+      'We Grow Brands is ons eigen merk, en daarmee ook ons eigen visitekaartje. De website moest laten zien wat we voor klanten doen: een sterk merk neerzetten en dat vertalen naar een premium maatwerk website. Van de naam en huisstijl tot de illustraties, animaties en teksten is alles in eigen huis ontwikkeld.',
+    heroImage: '/mock-ups/wegrowbrands.jpg',
+    featureImage: '/mock-ups/wegrowbrands.jpg',
+    resultImage: '/mock-ups/laptopwgb.jpg',
+    showcaseImage: '/mock-ups/tabletwgb.jpg',
+    tags: [],
+    skills: ['Maatwerk (Next.js)', 'Branding', 'Huisstijl', 'Illustraties', 'Webteksten'],
+    sector: 'Webdesign & branding',
+    pakket: 'Eigen merk',
+    website: 'https://wegrowbrands.online',
+    challenge:
+      'Een website bouwen voor een webdesignbureau is de lastigste opdracht die er is: de site is zelf het portfolio. Elk detail moest kloppen, van de eerste indruk tot de kleinste hover-animatie.',
+    solution:
+      'We ontwikkelden een eigenzinnige huisstijl met diepgroen, lila en crème, eigen illustraties en speelse animaties. De site is volledig maatwerk gebouwd, met een eigen offertesysteem zodat klanten voorstellen direct online kunnen bekijken en goedkeuren.',
+    results: [
+      'Een merk en website die laten zien wat we voor klanten kunnen betekenen',
+      'Eigenzinnige huisstijl met eigen illustraties en animaties',
+      'Eigen offertesysteem voor een soepel klantproces',
+      'Volledig maatwerk, snel en goed vindbaar',
+    ],
+    process: [
+      { title: 'Merk bepalen', text: 'Naam, huisstijl en toon ontwikkeld die laten zien waar we voor staan.' },
+      { title: 'Design & animatie', text: 'Eigen illustraties en animaties die het merk karakter geven.' },
+      { title: 'Bouw & doorontwikkeling', text: 'Volledig maatwerk gebouwd en continu doorontwikkeld.' },
+    ],
+    quote: '"Meer dan websites. Wij bouwen merken."',
+  },
 ]
 
 export function generateStaticParams() {
@@ -230,9 +362,33 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     }
   }
 
+  const title = `${study.name} - ${study.label} | We Grow Brands`
+  const description = `${study.intro} Bekijk hoe We Grow Brands dit project voor ${study.name} heeft aangepakt en welke resultaten er zijn behaald.`
+  const ogImage = study.featureImage.startsWith('/mock-ups/')
+    ? `https://wegrowbrands.online${study.featureImage}`
+    : 'https://wegrowbrands.online/og-image.jpg'
+
   return {
-    title: `${study.name} - ${study.label} | We Grow Brands`,
-    description: `Case study: ${study.name}. ${study.intro} Bekijk hoe we dit project hebben aangepakt en welke resultaten we hebben behaald.`,
+    title,
+    description,
+    alternates: {
+      canonical: `/portfolio/${study.slug}/`,
+    },
+    openGraph: {
+      title,
+      description,
+      type: 'article',
+      locale: 'nl_NL',
+      siteName: 'We Grow Brands',
+      url: `https://wegrowbrands.online/portfolio/${study.slug}/`,
+      images: [{ url: ogImage, width: 1400, height: 920, alt: `${study.name} website door We Grow Brands` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImage],
+    },
   }
 }
 
@@ -243,8 +399,37 @@ export default function CasePage({ params }: { params: { slug: string } }) {
     notFound()
   }
 
+  const BASE = 'https://wegrowbrands.online'
+  const caseJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: `${study.name} website`,
+    description: study.intro,
+    url: study.website ?? `${BASE}/portfolio/${study.slug}/`,
+    creator: {
+      '@type': 'Organization',
+      name: 'We Grow Brands',
+      url: BASE,
+    },
+    genre: study.sector,
+    keywords: study.skills.join(', '),
+  }
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
+      { '@type': 'ListItem', position: 2, name: 'Cases', item: `${BASE}/portfolio/` },
+      { '@type': 'ListItem', position: 3, name: study.name, item: `${BASE}/portfolio/${study.slug}/` },
+    ],
+  }
+
   return (
-    <section className="bg-[#1a1a1a] pt-44 pb-24">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(caseJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <section className="bg-[#1a1a1a] pt-44 pb-24">
       <Breadcrumbs
         variant="dark"
         className="mb-8"
@@ -319,7 +504,7 @@ export default function CasePage({ params }: { params: { slug: string } }) {
             ) : null}
           </div>
 
-          <div className="mb-12">
+          <div className="mb-12 md:px-12 xl:px-24">
             <p className="text-text-muted text-sm uppercase tracking-wider mb-3">{study.label}</p>
             <h2 className="text-text-dark mb-4">Over de case</h2>
             <p className="text-text-muted leading-relaxed">{study.story ?? study.summary}</p>
@@ -493,5 +678,6 @@ export default function CasePage({ params }: { params: { slug: string } }) {
         </div>
       </div>
     </section>
+    </>
   )
 }

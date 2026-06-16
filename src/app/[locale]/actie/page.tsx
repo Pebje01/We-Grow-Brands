@@ -2,8 +2,12 @@ import { Link } from '@/i18n/routing'
 import ActieForm from '@/components/ActieForm'
 
 export const metadata = {
+  robots: { index: false, follow: false },
   title: 'Droomwebsite Actie - Stuur je Inspiratie | We Grow Brands',
   description: 'Zie je een website waar je van opspringt? Stuur ons de URL en wij vertalen die stijl naar jouw merk. Tijdelijke actie t/m 28 februari 2025.',
+  alternates: {
+    canonical: '/actie/',
+  },
 }
 
 export default function ActiePage() {

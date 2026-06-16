@@ -219,6 +219,7 @@ export default function Navbar() {
         </li>
 
         <li><Link href="/pakketten" className="text-white/80 hover:text-lila transition-colors text-sm">{t('packages')}</Link></li>
+        <li><Link href="/diensten" className="text-white/80 hover:text-lila transition-colors text-sm">{t('diensten')}</Link></li>
         <li><Link href="/portfolio" className="text-white/80 hover:text-lila transition-colors text-sm">{t('cases')}</Link></li>
         <li><Link href="/contact" className="text-white/80 hover:text-lila transition-colors text-sm">{t('contact')}</Link></li>
       </ul>
@@ -300,6 +301,9 @@ export default function Navbar() {
 
               <Link href="/pakketten" className="block font-medium" onClick={() => setMobileOpen(false)}>
                 {t('packages')}
+              </Link>
+              <Link href="/diensten" className="block font-medium" onClick={() => setMobileOpen(false)}>
+                {t('diensten')}
               </Link>
               <Link href="/portfolio" className="block font-medium" onClick={() => setMobileOpen(false)}>
                 {t('cases')}
