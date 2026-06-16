@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Laptop Mockup - Hidden on mobile, visible on tablet and desktop */}
         <div
           data-parallax="1.2"
-          className="hidden lg:block absolute left-[20vw] bottom-[-3vw] w-[42vw] max-w-[1150px] aspect-[5/3] rounded-[1.6vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_30px_100px_rgba(0,0,0,0.3)]"
+          className="hidden xl:block absolute left-[20vw] bottom-[-3vw] w-[42vw] max-w-[1150px] aspect-[5/3] rounded-[1.6vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_30px_100px_rgba(0,0,0,0.3)]"
         >
           {/* Browser dots */}
           <div className="absolute top-2.5 left-4 flex gap-1.5">
@@ -78,7 +78,7 @@ export default function Hero() {
         {/* iPhone Mockup 1 - Right side front - hidden on tablet and mobile */}
         <div
           data-parallax="2"
-          className="hidden lg:block absolute left-[58vw] bottom-[-7vw] w-[14vw] max-w-[360px] aspect-[9/19] rounded-[2.4vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)] z-10"
+          className="hidden xl:block absolute left-[58vw] bottom-[-7vw] w-[14vw] max-w-[360px] aspect-[9/19] rounded-[2.4vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)] z-10"
         >
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
@@ -97,7 +97,7 @@ export default function Hero() {
         {/* iPhone Mockup 2 - Right side back - hidden on tablet and mobile */}
         <div
           data-parallax="1.5"
-          className="hidden lg:block absolute left-[68vw] bottom-[1vw] w-[12vw] max-w-[320px] aspect-[9/19] rounded-[2.4vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)]"
+          className="hidden xl:block absolute left-[68vw] bottom-[1vw] w-[12vw] max-w-[320px] aspect-[9/19] rounded-[2.4vw] bg-[#1a1a1a] border-4 border-[#2a2a2a] shadow-[0_25px_80px_rgba(0,0,0,0.3)]"
         >
           {/* Notch */}
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-10 h-1.5 rounded-full bg-[#333]"></div>
@@ -164,7 +164,7 @@ export default function Hero() {
           </div>
 
           {/* Mobile Mockup - Systemisch Verbinden - Only visible on mobile */}
-          <div className="lg:hidden mt-10 md:mt-12 w-[90vw] max-w-[500px] rounded-[16px] md:rounded-[24px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+          <div className="xl:hidden mt-10 md:mt-12 w-[90vw] max-w-[500px] rounded-[16px] md:rounded-[24px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
             <Image
               src="/mock-ups/systemisch-verbinden-mockup-laptop.webp"
               alt="Systemisch Verbinden website mockup"
