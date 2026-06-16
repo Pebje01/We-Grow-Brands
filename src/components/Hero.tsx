@@ -65,8 +65,8 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-16 left-4 right-4 bottom-4 rounded-xl bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/Header-laptop-invul.webp"
-              alt="Website preview"
+              src="/mock-ups/montung-mockup-top.webp"
+              alt="Montung website preview"
               fill
               sizes="(min-width: 1024px) 520px, 65vw"
               className="object-cover object-top"
@@ -85,8 +85,8 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/Iphone-murthel.webp"
-              alt="Murthel mobile preview"
+              src="/mock-ups/dokterrichard-mockup-mobiel.webp"
+              alt="Dokter Richard mobiele website preview"
               fill
               sizes="(min-width: 1024px) 150px, 25vw"
               className="object-cover object-top"
@@ -104,8 +104,8 @@ export default function Hero() {
           {/* Screen content */}
           <div className="absolute top-5 left-2 right-2 bottom-2 rounded-[26px] bg-black overflow-hidden">
             <Image
-              src="/afbeeldingen/iphonemurthel.webp"
-              alt="Murthel mobile preview 2"
+              src="/mock-ups/dokterrichard-mockup-mobiel.webp"
+              alt="Dokter Richard mobiele website preview"
               fill
               sizes="(min-width: 1024px) 130px, 22vw"
               className="object-cover object-top"
