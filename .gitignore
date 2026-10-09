@@ -44,3 +44,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 node_modules
+
+# Lokale tooling
+.claude/launch.json
+.claude/launch.json.bak
+.playwright-mcp/
