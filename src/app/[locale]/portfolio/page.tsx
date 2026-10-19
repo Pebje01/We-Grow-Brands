@@ -26,7 +26,7 @@ const cases = [
     slug: 'meet-the-locals',
     label: 'Premium blog',
     quote: '"Een website met een avontuurlijke uitstraling voor een reisblog."',
-    image: '/mock-ups/Meetthelocals-mockup-top.webp',
+    image: '/mock-ups/meetthelocals-mockup-sfeer.webp',
     tone: 'bg-[#B794F6]',
   },
   {
@@ -34,7 +34,7 @@ const cases = [
     slug: 'van-rijn-works',
     label: 'Essentials website',
     quote: '"Strak, professioneel en klaar voor de toekomst."',
-    image: '/mock-ups/vanrijnworksmockup-top.jpg',
+    image: '/mock-ups/vanrijnworks-mockup-sfeer.webp',
     tone: 'bg-[#FFB75E]',
   },
   {
@@ -42,7 +42,7 @@ const cases = [
     slug: 'montung',
     label: 'Rebrand + maatwerk website',
     quote: '"Geen pot is hetzelfde. Dat zie je nu ook terug in het merk."',
-    image: '/mock-ups/montung-mockup-laptop.webp',
+    image: '/mock-ups/montung-mockup-sfeer.webp',
     tone: 'bg-[#6B7A4F]',
   },
   {
@@ -58,7 +58,7 @@ const cases = [
     slug: 'sales-spark',
     label: 'Maatwerk website',
     quote: '"Een website met dezelfde directheid als een goed salesgesprek."',
-    image: '/mock-ups/salesspark-mockup-laptop.webp',
+    image: '/mock-ups/salesspark-mockup-sfeer.webp',
     tone: 'bg-[#E8632B]',
   },
 ]
@@ -81,29 +81,31 @@ export default function PortfolioPage() {
           <div className="text-center mb-4"></div>
 
           <ScrollReveal className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-6 mb-10" animation="fade-up">
-            <div className="relative rounded-[32px] overflow-hidden border-2 border-cream-dark bg-[#D9D0C3] min-h-[280px] md:min-h-[400px]">
+            <div className="relative rounded-[32px] overflow-hidden border-2 border-cream-dark bg-[#0d1117] min-h-[280px] md:min-h-[400px]">
               <Image
-                src="/Bleijenberg/bleijenberg-screenshot-1.png"
-                alt="Case Bleijenberg"
+                src="/mock-ups/dekloek-mockup-sfeer.webp"
+                alt="Case De Kloek Fitness"
                 fill
-                className="object-cover scale-125"
+                quality={90}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover"
                 priority
               />
             </div>
 
             <div className="relative rounded-[32px] border-2 border-cream-dark bg-lila text-green-dark px-8 pb-8 pt-16 flex flex-col justify-start">
               <span className="absolute top-6 left-6 inline-flex rounded-full px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-text-dark bg-white/90 border border-black/10">
-                Bleijenberg
+                De Kloek Fitness
               </span>
-              <p className="text-green-dark/70 text-xs uppercase tracking-wider mt-6">Premium webshop</p>
+              <p className="text-green-dark/70 text-xs uppercase tracking-wider mt-6">Maatwerk website</p>
               <p className="font-serif text-3xl leading-tight mt-3">
-                &ldquo;Warme, aardse tinten en een luxe uitstraling. Perfect passend bij ons merk.&rdquo;
+                &ldquo;Een website met dezelfde energie als een goede training.&rdquo;
               </p>
               <p className="text-text-muted mt-4">
-                Een website die echt uitstraalt wat het product is: authentiek en uniek.
+                Fitness, groepslessen en Hyrox helder in beeld, met een lesrooster en proefles aanvragen op elke pagina.
               </p>
               <Link
-                href="/portfolio/bleijenberg"
+                href="/portfolio/fitness-de-kloek"
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-cream text-green-dark hover:bg-white hover:shadow-xl transition-all w-fit mt-6"
               >
                 <WavyText text="Bekijk case" />
@@ -129,6 +131,8 @@ export default function PortfolioPage() {
                     src={item.image}
                     alt={`Case ${item.client}`}
                     fill
+                    quality={90}
+                    sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover scale-110"
                   />
                 </div>
@@ -171,6 +175,8 @@ export default function PortfolioPage() {
                 alt="Case Murthel Groenhart"
                 width={1000}
                 height={800}
+                quality={90}
+                sizes="(min-width: 1024px) 55vw, 100vw"
                 className="h-full w-full object-cover scale-110"
               />
             </div>
@@ -182,6 +188,8 @@ export default function PortfolioPage() {
                 src="/mock-ups/wegrowbrands.jpg"
                 alt="Case We Grow Brands"
                 fill
+                quality={90}
+                sizes="(min-width: 1024px) 60vw, 100vw"
                 className="object-cover"
               />
             </div>
@@ -199,6 +207,38 @@ export default function PortfolioPage() {
               </p>
               <Link
                 href="/portfolio/we-grow-brands"
+                className="btn-spring btn-uniform btn-no-lila link-wave bg-cream text-green-dark hover:bg-white hover:shadow-xl transition-all w-fit mt-6"
+              >
+                <WavyText text="Bekijk case" />
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-6 mt-10" animation="fade-up">
+            <div className="relative rounded-[32px] overflow-hidden border-2 border-cream-dark bg-[#D9D0C3] min-h-[280px] md:min-h-[400px]">
+              <Image
+                src="/Bleijenberg/bleijenberg-screenshot-1.png"
+                alt="Case Bleijenberg"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover scale-125"
+              />
+            </div>
+
+            <div className="relative rounded-[32px] border-2 border-cream-dark bg-lila text-green-dark px-8 pb-8 pt-16 flex flex-col justify-start">
+              <span className="absolute top-6 left-6 inline-flex rounded-full px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-text-dark bg-white/90 border border-black/10">
+                Bleijenberg
+              </span>
+              <p className="text-green-dark/70 text-xs uppercase tracking-wider mt-6">Premium webshop</p>
+              <p className="font-serif text-3xl leading-tight mt-3">
+                &ldquo;Warme, aardse tinten en een luxe uitstraling. Perfect passend bij ons merk.&rdquo;
+              </p>
+              <p className="text-text-muted mt-4">
+                Een website die echt uitstraalt wat het product is: authentiek en uniek.
+              </p>
+              <Link
+                href="/portfolio/bleijenberg"
                 className="btn-spring btn-uniform btn-no-lila link-wave bg-cream text-green-dark hover:bg-white hover:shadow-xl transition-all w-fit mt-6"
               >
                 <WavyText text="Bekijk case" />

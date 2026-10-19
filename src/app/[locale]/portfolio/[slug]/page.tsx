@@ -187,25 +187,24 @@ const caseStudies: CaseStudy[] = [
     intro: 'Een sfeervolle blog die lokale verhalen en ervaringen tot leven brengt.',
     summary:
       'Meet the Locals is een platform dat authentieke lokale ervaringen deelt. De website moest rust uitstralen, vertrouwen wekken en de verhalen centraal zetten. Met een warm, uitnodigend design dat past bij de persoonlijke aanpak van het merk. Inmiddels is de site doorontwikkeld van WordPress naar een volledig maatwerk platform: Next.js met een eigen CMS, een fotografieportfolio en een interactieve fotokaart van alle bestemmingen.',
-    heroImage: '/mock-ups/Meetthelocals-mockup-top.webp',
-    featureImage: '/mock-ups/Meetthelocals-mockup-top.webp',
-    resultImage: '/mock-ups/meetthelocals-tablet-mockup.webp',
-    showcaseImage: '/mock-ups/meetthelocals-tablet-mockup.webp',
-    showcaseImage2: '/mock-ups/meetthelocals-mockup-mobiel.webp',
+    heroImage: '/mock-ups/meetthelocals-mockup-sfeer.webp',
+    featureImage: '/mock-ups/meetthelocals-mockup-sfeer.webp',
+    resultImage: '/mock-ups/meetthelocals-mockup-phone.webp',
+    showcaseImage: '/mock-ups/meetthelocals-mockup-combo.webp',
     tags: [],
     skills: ['Maatwerk (Next.js)', 'Payload CMS', 'Huisstijl', 'Logo', 'Blog', 'Webteksten'],
     sector: 'Lifestyle & reizen',
     pakket: 'Premium + maatwerk',
     website: 'https://meetthelocals.nl',
     challenge:
-      'Een platform creëren dat lokale verhalen op een persoonlijke en toegankelijke manier presenteert, met een uitstraling die rust en vertrouwen uitstraalt.',
+      'Een platform creëren dat lokale verhalen op een persoonlijke en toegankelijke manier presenteert, met een uitstraling die rust en vertrouwen uitstraalt. Toen de blog groeide, liep WordPress tegen zijn grenzen aan: de verhalen, bestemmingen en fotografie verdienden één samenhangend platform.',
     solution:
-      'We ontwierpen een warme, uitnodigende website met focus op storytelling. De blog is overzichtelijk opgezet zodat bezoekers makkelijk door de verhalen kunnen navigeren. Het design straalt authenticiteit uit en past perfect bij de persoonlijke aanpak.',
+      'We bouwden de site opnieuw als maatwerk platform in Next.js met Payload CMS. Verhalen, bestemmingen en fotografie hebben elk hun eigen plek, met een interactieve fotokaart van alle bestemmingen en een nieuwsbrief. Het warme, avontuurlijke design is gebleven, de basis eronder is volledig vernieuwd.',
     results: [
       'Een sfeervolle website die het merkverhaal versterkt',
-      'Overzichtelijke blogstructuur voor optimale leeservaring',
-      'Warme uitstraling die past bij de lokale verhalen',
-      'Responsive design voor alle apparaten',
+      'Eigen CMS voor verhalen, bestemmingen en fotografie',
+      'Interactieve fotokaart van alle bezochte bestemmingen',
+      'Snel, responsive en klaar voor verdere groei',
     ],
     process: [
       { title: 'Verhaal bepalen', text: 'De kern van Meet the Locals scherp gedefinieerd.' },
@@ -220,11 +219,11 @@ const caseStudies: CaseStudy[] = [
     label: 'Maatwerk website voor senior sales consultant',
     intro: 'Een website met dezelfde energie als een goed salesgesprek: direct, persoonlijk en overtuigend.',
     summary:
-      'Sales Spark is het bedrijf van Kevin Smith, senior sales consultant met ruim twintig jaar ervaring in vrijwel alle lagen van het commerciële vak. Naast klassieke salesexpertise helpt hij organisaties met AI-gedreven workflows. Zijn website moest dat zelfvertrouwen uitstralen: geen standaard zakelijke template, maar een uitgesproken design dat impact maakt vanaf de eerste seconde.',
-    heroImage: '/mock-ups/salesspark-mockup-laptop.webp',
-    featureImage: '/mock-ups/salesspark-mockup-laptop.webp',
+      'Sales Spark is het bedrijf van Kevin Smith, interim en freelance sales consultant met ruim twintig jaar ervaring in vrijwel alle lagen van het commerciële vak. Hij helpt organisaties direct aan commerciële slagkracht en schakelt snel tussen strategie en uitvoering. Zijn website moest dat zelfvertrouwen uitstralen: geen standaard zakelijke template, maar een uitgesproken design dat impact maakt vanaf de eerste seconde.',
+    heroImage: '/mock-ups/salesspark-mockup-sfeer.webp',
+    featureImage: '/mock-ups/salesspark-mockup-sfeer.webp',
     resultImage: '/mock-ups/salesspark-mockup-phone.webp',
-    showcaseImage: '/mock-ups/salesspark-mockup-duo.webp',
+    showcaseImage: '/mock-ups/salesspark-mockup-combo.webp',
     tags: [],
     skills: ['Maatwerk (Next.js)', 'Design', 'Webteksten'],
     sector: 'Sales consultancy',
@@ -233,10 +232,10 @@ const caseStudies: CaseStudy[] = [
     challenge:
       'Kevin had een online visitekaartje nodig dat zijn persoonlijkheid en trackrecord laat zien. De site moest direct duidelijk maken wat hij doet, vertrouwen wekken bij beslissers en uitnodigen tot een kennismakingsgesprek. Zonder ruis, zonder verkooppraatjes.',
     solution:
-      'We ontwierpen een typografisch krachtige onepager rond de boodschap "Sales met impact". Grote, zelfverzekerde koppen, een warme persoonlijke intro en duidelijke secties voor expertise, aanpak en ervaring. Elke sectie stuurt naar één doel: een gesprek inplannen.',
+      'We ontwierpen een typografisch krachtige website rond de boodschap "Sales met impact". Grote, zelfverzekerde koppen, een warme persoonlijke intro en aparte pagina\'s voor diensten, Kevin zelf en contact. Harde cijfers zoals twintig jaar ervaring en ruim 3,1 miljoen euro extra omzet voor opdrachtgevers geven direct vertrouwen. Elke pagina stuurt naar één doel: een gesprek inplannen.',
     results: [
       'Een uitgesproken design dat opvalt tussen standaard zakelijke sites',
-      'Heldere positionering: commerciële expertise plus AI-gedreven workflows',
+      'Heldere positionering als interim en freelance sales consultant',
       'Duidelijke route naar het inplannen van een kennismakingsgesprek',
       'Volledig maatwerk, gebouwd voor snelheid en vindbaarheid',
     ],
@@ -254,10 +253,10 @@ const caseStudies: CaseStudy[] = [
     intro: 'Van Bleijenberg naar Montung: een complete rebrand met een nieuwe maatwerk website.',
     summary:
       'Na de eerdere webshop voor Bleijenberg was het tijd voor de volgende stap: een nieuw merk met internationale ambitie. Bleijenberg werd Montung, met een nieuwe naam, een nieuw logo en een volledig nieuwe website. De potten blijven het verhaal vertellen: handgemaakte natuurstenen tuinpotten en troggen uit Indonesië, sommige ruim honderd jaar oud. Geen pot is hetzelfde, en dat gevoel moest de website ademen.',
-    heroImage: '/mock-ups/montung-mockup-laptop.webp',
-    featureImage: '/mock-ups/montung-mockup-laptop.webp',
+    heroImage: '/mock-ups/montung-mockup-sfeer.webp',
+    featureImage: '/mock-ups/montung-mockup-sfeer.webp',
     resultImage: '/mock-ups/montung-mockup-phone.webp',
-    showcaseImage: '/mock-ups/montung-mockup-duo.webp',
+    showcaseImage: '/mock-ups/montung-mockup-trio.webp',
     tags: [],
     skills: ['Maatwerk (Next.js)', 'Rebranding', 'Naam & logo', 'Webteksten', 'SEO & blog'],
     sector: 'Retail & tuin',
@@ -312,6 +311,40 @@ const caseStudies: CaseStudy[] = [
       { title: 'Webshop & livegang', text: 'Bestelflow met betalingen en orderverwerking ingericht en live gezet.' },
     ],
     quote: '"Een website die de warmte van een coach combineert met het vertrouwen van een arts."',
+  },
+  {
+    slug: 'fitness-de-kloek',
+    name: 'De Kloek Fitness',
+    label: 'Maatwerk website voor sportcentrum in Middenbeemster',
+    intro: 'Een energieke nieuwe website voor het sportcentrum van de Beemster, van fitness en groepslessen tot Hyrox.',
+    summary:
+      'De Kloek Fitness in Middenbeemster is veel meer dan een sportschool: fitness, groepslessen, circuittraining, personal training, medische fitness en een sauna, allemaal onder één dak. Sinds kort is De Kloek ook Official Hyrox Training Club en komt er Reformer Pilates bij. De oude WordPress site liet dat aanbod niet meer goed zien. Tijd voor een nieuwe website met dezelfde energie als de club zelf.',
+    heroImage: '/mock-ups/dekloek-mockup-sfeer.webp',
+    featureImage: '/mock-ups/dekloek-mockup-sfeer.webp',
+    resultImage: '/mock-ups/dekloek-mockup-phone.webp',
+    showcaseImage: '/mock-ups/dekloek-mockup-combo.webp',
+    tags: [],
+    skills: ['Maatwerk (Astro)', 'Design', 'Lesrooster', 'Webteksten', 'SEO migratie'],
+    sector: 'Sport & fitness',
+    pakket: 'Maatwerk website',
+    website: 'https://www.fitnessdekloek.nl',
+    challenge:
+      'Een breed aanbod voor een brede doelgroep, van jongeren tot 70+ en medische fitness, helder presenteren zonder dat het druk wordt. Leden en nieuwe sporters moeten snel het lesrooster vinden en makkelijk een gratis proefles aanvragen. En bij de overstap van WordPress mocht de vindbaarheid in Google niet verloren gaan.',
+    solution:
+      'We ontwierpen een stoere, donkere huisstijl met lime accenten en krachtige koppen, en bouwden de site volledig op maat in Astro. Het lesrooster is één overzichtelijke pagina met filters per soort les, gevuld met de echte tijden uit Sportivity. Via een proefles pop-up kan iedereen op elke pagina direct een les aanvragen, Hyrox kreeg een eigen pagina en alle oude URL\'s sturen netjes door naar de nieuwe pagina\'s.',
+    results: [
+      'Een energieke website die past bij de sfeer van de club',
+      'Lesrooster met filters per soort les, ook fijn op mobiel',
+      'Gratis proefles aanvragen vanaf elke pagina',
+      'Nieuwsbrief aanmeldingen direct gekoppeld aan Laposta',
+      'Alle oude pagina\'s doorgestuurd, zodat de vindbaarheid behouden blijft',
+    ],
+    process: [
+      { title: 'Aanbod in kaart', text: 'Alle trainingsvormen, doelgroepen en roosters vertaald naar een heldere sitestructuur.' },
+      { title: 'Stoer design', text: 'Donker, energiek en met lime accenten: een uitstraling die net zo hard werkt als de leden.' },
+      { title: 'Bouw & livegang', text: 'Maatwerk gebouwd in Astro, oude URL\'s doorgestuurd en soepel live gezet.' },
+    ],
+    quote: '"Een website met dezelfde energie als een goede training."',
   },
   {
     slug: 'we-grow-brands',
@@ -460,12 +493,12 @@ export default function CasePage({ params }: { params: { slug: string } }) {
             {/* Links: Info */}
             <div>
               <div className="space-y-3">
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-text-light w-24">Opdrachtgever</span>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="text-text-light w-28 shrink-0">Opdrachtgever</span>
                   <span className="text-text-dark">{study.name}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-text-light w-24">Website</span>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="text-text-light w-28 shrink-0">Website</span>
                   {study.website ? (
                     <WavyLink
                       href={study.website}
@@ -478,12 +511,12 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                     <span className="text-text-light">-</span>
                   )}
                 </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-text-light w-24">Branche</span>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="text-text-light w-28 shrink-0">Branche</span>
                   <span className="text-text-dark">{study.sector}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <span className="text-text-light w-24">Pakket</span>
+                <div className="flex items-center gap-4 text-sm">
+                  <span className="text-text-light w-28 shrink-0">Pakket</span>
                   <span className="text-text-dark">{study.pakket}</span>
                 </div>
               </div>
@@ -529,6 +562,8 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                 alt={`${study.name} feature`}
                 width={1200}
                 height={720}
+                quality={90}
+                sizes="(min-width: 1536px) 1600px, (min-width: 1152px) 1152px, 100vw"
                 className="w-full h-auto"
                 priority
               />
@@ -577,6 +612,8 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                 alt={`${study.name} resultaat`}
                 width={600}
                 height={400}
+                quality={90}
+                sizes="(min-width: 1536px) 800px, (min-width: 768px) 50vw, 100vw"
                 className="w-full h-auto"
               />
             </div>
@@ -604,6 +641,8 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                     alt={`${study.name} showcase`}
                     width={600}
                     height={400}
+                    quality={90}
+                    sizes="(min-width: 1536px) 800px, (min-width: 768px) 50vw, 100vw"
                     className="w-full h-auto"
                   />
                 </div>
@@ -613,6 +652,8 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                     alt={`${study.name} showcase 2`}
                     width={600}
                     height={400}
+                    quality={90}
+                    sizes="(min-width: 1536px) 800px, (min-width: 768px) 50vw, 100vw"
                     className="w-full h-auto"
                   />
                 </div>
@@ -624,6 +665,8 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                   alt={`${study.name} showcase`}
                   width={1200}
                   height={600}
+                  quality={90}
+                  sizes="(min-width: 1536px) 1600px, (min-width: 1152px) 1152px, 100vw"
                   className="w-full h-auto"
                 />
               </div>

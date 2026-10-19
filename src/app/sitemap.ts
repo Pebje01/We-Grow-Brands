@@ -28,6 +28,7 @@ const caseSlugs = [
   'sales-spark',
   'montung',
   'dokter-richard',
+  'fitness-de-kloek',
   'we-grow-brands',
 ]
 

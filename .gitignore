@@ -49,3 +49,10 @@ node_modules
 .claude/launch.json
 .claude/launch.json.bak
 .playwright-mcp/
+
+# Werkmappen en losse factuurbestanden (horen niet bij de site)
+.claude/worktrees/
+Factuur*.pdf
+factuur.html
+factuur-screenshot.png
+generate-pdf.mjs
