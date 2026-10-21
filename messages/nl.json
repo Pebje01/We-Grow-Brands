@@ -295,6 +295,8 @@
     "infoFaq": "Veelgestelde vragen",
     "infoTerms": "Algemene voorwaarden",
     "infoContact": "Contact",
+    "infoPrivacy": "Privacy en cookies",
+    "cookieSettings": "Cookievoorkeuren",
     "contact": "Contact",
     "partners": "Partners",
     "copyright": "© 2026 We Grow Brands. Alle rechten voorbehouden."
@@ -580,6 +582,118 @@
       "supportAfter": { "q": "Hoe werkt support na oplevering?", "a": "We blijven beschikbaar voor onderhoud, optimalisatie en uitbreidingen. Je zit niet vast, maar wél in goede handen." },
       "responseTime": { "q": "Hoe snel reageren jullie op vragen?", "a": "We reageren zo snel als we kunnen. Voor urgente zaken zijn we ook bereikbaar via WhatsApp." }
     }
+  },
+  "cookieBanner": {
+    "title": "Even over cookies",
+    "text": "We gebruiken Google Analytics om te zien hoe bezoekers de site gebruiken. Cookies plaatsen we alleen als jij akkoord geeft. Advertentiecookies gebruiken we niet.",
+    "moreInfo": "Lees meer",
+    "accept": "Akkoord",
+    "decline": "Weigeren"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacy en cookies | We Grow Brands",
+    "metaDescription": "Welke gegevens We Grow Brands verwerkt, waarom, hoe lang we ze bewaren en welke cookies deze website gebruikt.",
+    "title": "Privacy en cookies",
+    "intro": "Hier lees je welke gegevens We Grow Brands verwerkt, waarom we dat doen en welke cookies deze website gebruikt. Kort en zonder kleine lettertjes.",
+    "updated": "Laatst bijgewerkt: 21 oktober 2026",
+    "sections": [
+      {
+        "title": "1. Wie wij zijn",
+        "items": [
+          "We Grow Brands is een handelsnaam van de eenmanszaak van Daley Jansen, ingeschreven bij de KvK onder nummer 84818883.",
+          "Vragen over privacy? Mail naar hello@wegrowbrands.online of bel 06 36 16 26 39."
+        ]
+      },
+      {
+        "title": "2. Welke gegevens we verwerken",
+        "items": [
+          "Contactformulier: je naam, mailadres, telefoonnummer, bedrijfsnaam en je bericht. Alleen wat je zelf invult.",
+          "Offertes en facturen: je naam, bedrijfsnaam, adres en de contactgegevens die nodig zijn om een offerte of factuur te maken.",
+          "Websitebezoek: als je cookies accepteert, meet Google Analytics hoe de site gebruikt wordt, zoals bezochte pagina's, je regio bij benadering, je apparaat en je browser."
+        ]
+      },
+      {
+        "title": "3. Waarom we dat doen",
+        "items": [
+          "Om je vraag te beantwoorden en een offerte te maken. Dat zijn stappen op weg naar een overeenkomst.",
+          "Om een opdracht uit te voeren en te factureren. Dat hoort bij de uitvoering van de overeenkomst.",
+          "Om onze administratie te bewaren, omdat de wet dat vraagt.",
+          "Om te meten hoe de site gebruikt wordt, zodat we hem kunnen verbeteren. Dat doen we alleen met jouw toestemming."
+        ]
+      },
+      {
+        "title": "4. Hoe lang we gegevens bewaren",
+        "items": [
+          "Berichten via het contactformulier: tot twee jaar na het laatste contact, tenzij er een opdracht uit voortkomt.",
+          "Offertes, facturen en administratie: zeven jaar, want dat is de wettelijke bewaarplicht.",
+          "Gegevens in Google Analytics: maximaal 14 maanden."
+        ]
+      },
+      {
+        "title": "5. Met wie we gegevens delen",
+        "items": [
+          "We verkopen je gegevens nooit. We werken wel met een paar diensten die gegevens voor ons verwerken.",
+          "Vercel host deze website en houdt technische logbestanden bij.",
+          "Web3Forms stuurt berichten uit het contactformulier door naar ons mailadres.",
+          "Supabase en Resend gebruiken we om offertes op te slaan en te versturen.",
+          "Google verwerkt de gegevens van Google Analytics, alleen als je akkoord geeft.",
+          "Een deel van deze diensten zit in de Verenigde Staten. Zij vallen onder het Data Privacy Framework tussen de EU en de VS, of werken met de standaardafspraken van de Europese Commissie."
+        ]
+      },
+      {
+        "title": "6. Jouw rechten",
+        "items": [
+          "Je mag je gegevens inzien, laten aanpassen of laten verwijderen.",
+          "Je kunt bezwaar maken tegen een verwerking of vragen om je gegevens over te dragen.",
+          "Je toestemming voor cookies kun je altijd weer intrekken via Cookievoorkeuren onderaan elke pagina.",
+          "Mail je verzoek naar hello@wegrowbrands.online. We reageren binnen een maand.",
+          "Ben je het niet eens met hoe we met je gegevens omgaan? Dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens."
+        ]
+      },
+      {
+        "title": "7. Beveiliging",
+        "items": [
+          "De site werkt alleen via een beveiligde verbinding (https). Alleen wij hebben toegang tot de gegevens die je instuurt."
+        ]
+      }
+    ],
+    "cookies": {
+      "title": "8. Cookies",
+      "intro": [
+        "Deze website gebruikt alleen cookies van Google Analytics, en pas nadat je op Akkoord klikt. Advertentiecookies gebruiken we niet en we delen niets met advertentienetwerken.",
+        "Klik je op Weigeren of maak je nog geen keuze, dan stuurt de site Google alleen een signaal zonder cookies en zonder gegevens waarmee je herkend kunt worden. Zo kloppen de bezoekersaantallen globaal, zonder dat we jou volgen."
+      ],
+      "columns": {
+        "name": "Naam",
+        "purpose": "Waarvoor",
+        "duration": "Bewaartijd",
+        "when": "Wanneer"
+      },
+      "rows": [
+        {
+          "name": "wgb_consent",
+          "purpose": "Onthoudt je keuze over cookies. Staat in je browser, wordt niet naar ons verstuurd.",
+          "duration": "12 maanden",
+          "when": "Altijd"
+        },
+        {
+          "name": "_ga",
+          "purpose": "Herkent je browser bij een volgend bezoek, zodat Google Analytics bezoekers kan tellen.",
+          "duration": "2 jaar",
+          "when": "Na Akkoord"
+        },
+        {
+          "name": "_ga_BG4FHPKTP2",
+          "purpose": "Houdt bij welke pagina's bij hetzelfde bezoek horen.",
+          "duration": "2 jaar",
+          "when": "Na Akkoord"
+        }
+      ],
+      "settings": "Cookievoorkeuren wijzigen"
+    },
+    "contactTitle": "Vragen over je gegevens?",
+    "contactText": "Mail of app ons gerust, dan zoeken we het samen uit.",
+    "contactButton": "Contact opnemen"
   },
   "languageSwitcher": {
     "nl": "NL",

@@ -16,6 +16,7 @@ const routes: { path: string; priority: number; changeFrequency: MetadataRoute.S
   { path: '/website-in-termijnen/', priority: 0.7, changeFrequency: 'monthly' },
   // /korting/ en /actie/ zijn verlopen promoties met noindex — bewust niet in sitemap
   { path: '/algemene-voorwaarden/', priority: 0.3, changeFrequency: 'yearly' },
+  { path: '/privacy/', priority: 0.3, changeFrequency: 'yearly' },
 ]
 
 // Houd deze lijst gelijk aan de caseStudies in portfolio/[slug]/page.tsx
