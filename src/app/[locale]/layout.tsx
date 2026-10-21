@@ -9,6 +9,8 @@ import { routing } from '@/i18n/routing'
 import '../globals.css'
 import Navbar from '@/components/Navbar'
 import ConditionalFooter from '@/components/ConditionalFooter'
+import CookieBanner from '@/components/CookieBanner'
+import { consentBootstrapScript } from '@/lib/consent'
 
 const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
@@ -142,18 +144,15 @@ export default async function LocaleLayout({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <>
+            {/* Consent default moet in de dataLayer staan voordat gtag.js laadt */}
+            <script
+              id="google-consent"
+              dangerouslySetInnerHTML={{ __html: consentBootstrapScript(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID) }}
+            />
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
               strategy="afterInteractive"
             />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
-              `}
-            </Script>
           </>
         )}
       </head>
@@ -162,6 +161,7 @@ export default async function LocaleLayout({
           <Navbar />
           <main>{children}</main>
           <ConditionalFooter />
+          {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <CookieBanner />}
         </NextIntlClientProvider>
       </body>
     </html>

@@ -39,6 +39,7 @@ export const routing = defineRouting({
       en: '/services',
     },
     '/marketing': '/marketing',
+    '/privacy': '/privacy',
   },
 })
 

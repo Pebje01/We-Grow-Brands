@@ -293,6 +293,8 @@
     "infoFaq": "FAQ",
     "infoTerms": "Terms & conditions",
     "infoContact": "Contact",
+    "infoPrivacy": "Privacy and cookies",
+    "cookieSettings": "Cookie preferences",
     "contact": "Contact",
     "partners": "Partners",
     "copyright": "© 2026 We Grow Brands. All rights reserved."
@@ -577,6 +579,118 @@
       "supportAfter": { "q": "How does support work after delivery?", "a": "We remain available for maintenance, optimization and expansions. You're not locked in, but you are in good hands." },
       "responseTime": { "q": "How quickly do you respond to questions?", "a": "We respond as quickly as we can. For urgent matters, we're also reachable via WhatsApp." }
     }
+  },
+  "cookieBanner": {
+    "title": "About cookies",
+    "text": "We use Google Analytics to see how visitors use this site. We only place cookies if you agree. We do not use advertising cookies.",
+    "moreInfo": "Read more",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "privacyPage": {
+    "metaTitle": "Privacy and cookies | We Grow Brands",
+    "metaDescription": "Which data We Grow Brands processes, why, how long we keep it and which cookies this website uses.",
+    "title": "Privacy and cookies",
+    "intro": "This page explains which data We Grow Brands processes, why we do so and which cookies this website uses.",
+    "updated": "Last updated: 21 October 2026",
+    "sections": [
+      {
+        "title": "1. Who we are",
+        "items": [
+          "We Grow Brands is a trade name of the sole proprietorship of Daley Jansen, registered with the Dutch Chamber of Commerce under number 84818883.",
+          "Questions about privacy? Email hello@wegrowbrands.online or call +31 6 36 16 26 39."
+        ]
+      },
+      {
+        "title": "2. Which data we process",
+        "items": [
+          "Contact form: your name, email address, phone number, company name and message. Only what you fill in yourself.",
+          "Quotes and invoices: your name, company name, address and the contact details needed for a quote or invoice.",
+          "Website visits: if you accept cookies, Google Analytics measures how the site is used, such as pages visited, your approximate region, device and browser."
+        ]
+      },
+      {
+        "title": "3. Why we do this",
+        "items": [
+          "To answer your question and prepare a quote, as steps towards an agreement.",
+          "To carry out and invoice an assignment, as part of performing the agreement.",
+          "To keep our records, because the law requires it.",
+          "To measure how the site is used so we can improve it, only with your consent."
+        ]
+      },
+      {
+        "title": "4. How long we keep data",
+        "items": [
+          "Contact form messages: up to two years after the last contact, unless they lead to an assignment.",
+          "Quotes, invoices and records: seven years, the statutory retention period.",
+          "Google Analytics data: up to 14 months."
+        ]
+      },
+      {
+        "title": "5. Who we share data with",
+        "items": [
+          "We never sell your data. We do work with a few services that process data on our behalf.",
+          "Vercel hosts this website and keeps technical log files.",
+          "Web3Forms forwards contact form messages to our email address.",
+          "Supabase and Resend are used to store and send quotes.",
+          "Google processes Google Analytics data, only if you accept.",
+          "Some of these services are based in the United States. They fall under the EU and US Data Privacy Framework or use the standard contractual clauses of the European Commission."
+        ]
+      },
+      {
+        "title": "6. Your rights",
+        "items": [
+          "You may view, correct or delete your data.",
+          "You can object to processing or ask us to transfer your data.",
+          "You can withdraw your consent for cookies at any time via Cookie preferences at the bottom of every page.",
+          "Email your request to hello@wegrowbrands.online. We respond within one month.",
+          "Not happy with how we handle your data? You can file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens)."
+        ]
+      },
+      {
+        "title": "7. Security",
+        "items": [
+          "The site only works over a secure connection (https). Only we have access to the data you send us."
+        ]
+      }
+    ],
+    "cookies": {
+      "title": "8. Cookies",
+      "intro": [
+        "This website only uses Google Analytics cookies, and only after you click Accept. We do not use advertising cookies and share nothing with ad networks.",
+        "If you click Decline or make no choice yet, the site only sends Google a signal without cookies and without data that can identify you."
+      ],
+      "columns": {
+        "name": "Name",
+        "purpose": "Purpose",
+        "duration": "Retention",
+        "when": "When"
+      },
+      "rows": [
+        {
+          "name": "wgb_consent",
+          "purpose": "Remembers your cookie choice. Stored in your browser, never sent to us.",
+          "duration": "12 months",
+          "when": "Always"
+        },
+        {
+          "name": "_ga",
+          "purpose": "Recognises your browser on a next visit so Google Analytics can count visitors.",
+          "duration": "2 years",
+          "when": "After Accept"
+        },
+        {
+          "name": "_ga_BG4FHPKTP2",
+          "purpose": "Keeps track of which pages belong to the same visit.",
+          "duration": "2 years",
+          "when": "After Accept"
+        }
+      ],
+      "settings": "Change cookie preferences"
+    },
+    "contactTitle": "Questions about your data?",
+    "contactText": "Feel free to email or message us and we will sort it out together.",
+    "contactButton": "Get in touch"
   },
   "languageSwitcher": {
     "nl": "NL",

@@ -2,6 +2,7 @@
 
 import { Link } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
+import CookieSettingsButton from './CookieSettingsButton'
 
 export default function Footer() {
   const t = useTranslations('footer')
@@ -36,6 +37,10 @@ export default function Footer() {
               <li><Link href="/faq" className="text-white/60 hover:text-lila text-sm transition-colors">{t('infoFaq')}</Link></li>
               <li><Link href="/algemene-voorwaarden" className="text-white/60 hover:text-lila text-sm transition-colors">{t('infoTerms')}</Link></li>
               <li><Link href="/contact" className="text-white/60 hover:text-lila text-sm transition-colors">{t('infoContact')}</Link></li>
+              <li><Link href="/privacy" className="text-white/60 hover:text-lila text-sm transition-colors">{t('infoPrivacy')}</Link></li>
+              {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+                <li><CookieSettingsButton label={t('cookieSettings')} className="text-white/60 hover:text-lila text-sm transition-colors" /></li>
+              )}
             </ul>
           </div>
 
