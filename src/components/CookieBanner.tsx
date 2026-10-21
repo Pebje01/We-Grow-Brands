@@ -4,7 +4,15 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import WavyText from './WavyText'
-import { CONSENT_EVENT, readConsent, saveConsent, type ConsentChoice } from '@/lib/consent'
+import {
+  CONSENT_EVENT,
+  CONSENT_KEY,
+  applyConsent,
+  parseConsent,
+  readConsent,
+  saveConsent,
+  type ConsentChoice,
+} from '@/lib/consent'
 
 export default function CookieBanner() {
   const t = useTranslations('cookieBanner')
@@ -13,8 +21,19 @@ export default function CookieBanner() {
   useEffect(() => {
     if (!readConsent()) setOpen(true)
     const reopen = () => setOpen(true)
+    const syncFromOtherTab = (event: StorageEvent) => {
+      if (event.key !== CONSENT_KEY) return
+      const choice = parseConsent(event.newValue)
+      if (!choice) return
+      applyConsent(choice)
+      setOpen(false)
+    }
     window.addEventListener(CONSENT_EVENT, reopen)
-    return () => window.removeEventListener(CONSENT_EVENT, reopen)
+    window.addEventListener('storage', syncFromOtherTab)
+    return () => {
+      window.removeEventListener(CONSENT_EVENT, reopen)
+      window.removeEventListener('storage', syncFromOtherTab)
+    }
   }, [])
 
   const choose = (choice: ConsentChoice) => {

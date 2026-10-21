@@ -37,10 +37,9 @@ export function consentBootstrapScript(measurementId: string) {
   `
 }
 
-export function readConsent(): ConsentChoice | null {
+export function parseConsent(raw: string | null): ConsentChoice | null {
+  if (!raw) return null
   try {
-    const raw = localStorage.getItem(CONSENT_KEY)
-    if (!raw) return null
     const stored = JSON.parse(raw)
     if (Date.now() - stored.date > CONSENT_MAX_AGE) return null
     return stored.analytics === 'granted' || stored.analytics === 'denied' ? stored.analytics : null
@@ -49,14 +48,34 @@ export function readConsent(): ConsentChoice | null {
   }
 }
 
+export function readConsent(): ConsentChoice | null {
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY)
+    const choice = parseConsent(raw)
+    // Verlopen of ongeldige keuze: opruimen, zodat er zonder geldige toestemming geen cookies blijven staan
+    if (raw && !choice) {
+      localStorage.removeItem(CONSENT_KEY)
+      removeAnalyticsCookies()
+    }
+    return choice
+  } catch {
+    return null
+  }
+}
+
+// Zet de keuze door naar gtag in dit tabblad, ook als hij in een ander tabblad gemaakt is
+export function applyConsent(choice: ConsentChoice) {
+  window.gtag?.('consent', 'update', { analytics_storage: choice })
+  if (choice === 'denied') removeAnalyticsCookies()
+}
+
 export function saveConsent(choice: ConsentChoice) {
   try {
     localStorage.setItem(CONSENT_KEY, JSON.stringify({ analytics: choice, date: Date.now() }))
   } catch {
     // Geen opslag beschikbaar (privévenster), de keuze geldt dan alleen voor dit bezoek
   }
-  window.gtag?.('consent', 'update', { analytics_storage: choice })
-  if (choice === 'denied') removeAnalyticsCookies()
+  applyConsent(choice)
 }
 
 export function openConsentSettings() {
